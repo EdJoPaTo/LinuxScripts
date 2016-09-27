@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=EFT
+Exec=wine ~/Dropbox/Tools/Win/Portable/EFT/EFT.exe
+Terminal=false
