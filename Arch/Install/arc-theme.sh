@@ -3,5 +3,5 @@
 yaourt -Sy
 param="--noconfirm --needed -S"
 
-yaourt $param gtk-theme-arc arc-icon-theme
+sudo pacman $param arc-gtk-theme arc-icon-theme 
 
