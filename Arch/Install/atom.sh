@@ -1,11 +1,10 @@
 #!/bin/bash
-
-yaourt -Sy
+sudo pacman -Sy
 param="--noconfirm --needed -S"
 
 # atom-beautify dependency for c++
-yaourt $param clang
+sudo pacman $param clang
 
-yaourt $param atom-editor-bin
+sudo pacman $param atom
 
 ../../Install/Atom.sh
