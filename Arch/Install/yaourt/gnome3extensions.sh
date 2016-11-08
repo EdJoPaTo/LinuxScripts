@@ -3,5 +3,4 @@
 yaourt -Sy
 param="--noconfirm --needed -S"
 
-yaourt $param gnome-shell-system-monitor-applet-git gnome-shell-extension-remove-dropdown-arrows-git gnome-shell-extension-caffeine-git gnome-shell-extension-topicons-plus-git
-
+yaourt $param gnome-shell-extension-system-monitor-git gnome-shell-extension-remove-dropdown-arrows gnome-shell-extension-caffeine-git gnome-shell-extension-topicons-plus
