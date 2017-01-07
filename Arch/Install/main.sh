@@ -4,16 +4,16 @@ sudo pacman -Sy
 param="--noconfirm --needed -S"
 
 # arch
-sudo pacman $param binutils fakeroot patch bash-completion
+sudo pacman $param base-devel bash-completion
 
 # console
-sudo pacman $param sudo git htop openssh wget rsync screen tree acpi apg
+sudo pacman $param git htop openssh wget rsync screen tree acpi apg
 
 # console network tools
 sudo pacman $param nmap traceroute mtr whois
 
 # programming
-sudo pacman $param make cmake gcc cloc
+sudo pacman $param cmake cloc
 
 # Picture Tools
 sudo pacman $param imagemagick
@@ -24,4 +24,3 @@ sudo pacman $param imagemagick
 # sensors
 sudo pacman $param lm_sensors
 sudo sensors-detect --auto
-
