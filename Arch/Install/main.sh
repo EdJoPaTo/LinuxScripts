@@ -4,7 +4,8 @@ sudo pacman -Sy
 param="--noconfirm --needed -S"
 
 # arch
-sudo pacman $param base-devel bash-completion
+sudo pacman $param base-devel
+sudo pacman $param --asdeps bash-completion
 
 # console
 sudo pacman $param git htop openssh wget rsync screen tree acpi apg

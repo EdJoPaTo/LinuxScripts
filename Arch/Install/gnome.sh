@@ -19,7 +19,8 @@ sudo pacman $param baobab
 sudo pacman $param gnome-power-manager
 
 # tools for ntfs, fat
-sudo pacman $param gparted ntfsprogs dosfstools mtools
+sudo pacman $param gparted
+sudo pacman $param --asdeps ntfs-3g dosfstools mtools
 sudo ln -s /usr/bin/ntfsfix /usr/sbin/fsck.ntfs
 sudo ln -s /usr/bin/ntfsfix /usr/sbin/fsck.ntfs-3g
 
@@ -27,6 +28,7 @@ sudo ln -s /usr/bin/ntfsfix /usr/sbin/fsck.ntfs-3g
 sudo pacman $param xdg-user-dirs
 
 # gnome fileroller
-sudo pacman $param file-roller p7zip unrar lrzip unace
+sudo pacman $param file-roller
+sudo pacman $param --asdeps p7zip unrar lrzip unace
 
 ../../Install/gnome3.sh

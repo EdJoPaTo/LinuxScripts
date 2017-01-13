@@ -3,8 +3,9 @@ sudo pacman -Sy
 
 param="--noconfirm --needed -S"
 
-# GUI Tools
-sudo pacman $param vlc qt4
+# VLC
+sudo pacman $param vlc
+sudo pacman $param --asdeps qt4
 
 # Picture Tools
 sudo pacman $param gimp inkscape
@@ -22,7 +23,8 @@ sudo pacman $param chromium firefox
 sudo pacman $param libreoffice-fresh libreoffice-extension-texmaths
 
 # Languages
-sudo pacman $param hyphen hyphen-de hyphen-en hunspell hunspell-de hunspell-en libmythes mythes-de mythes-en
+sudo pacman $param hyphen-de hyphen-en hunspell-de hunspell-en mythes-de mythes-en
+sudo pacman $param --asdeps libmythes
 
 # wireshark
 sudo pacman $param wireshark-gtk

@@ -3,5 +3,5 @@
 yaourt -Sy
 param="--noconfirm --needed -S"
 
-yaourt $param jre8-openjdk yed
-
+yaourt $param --asdeps jre8-openjdk
+yaourt $param yed
