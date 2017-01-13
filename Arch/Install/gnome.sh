@@ -7,7 +7,7 @@ param="--noconfirm --needed -S"
 sudo pacman $param adwaita-icon-theme gdm gnome-control-center gnome-screenshot gnome-shell-extensions gnome-terminal gnome-backgrounds
 
 # gnome tools
-sudo pacman $param eog evince gnome-calculator gnome-tweak-tool gedit gucharmap nautilus gnome-mines gnome-logs gnome-boxes
+sudo pacman $param eog evince gnome-calculator gnome-tweak-tool gedit gucharmap nautilus gnome-mines
 
 # Gnome maps (contains evolution and zeitgeist)
 # sudo pacman $param gnome-maps
