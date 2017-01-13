@@ -9,6 +9,9 @@ sudo pacman $param adwaita-icon-theme gdm gnome-control-center gnome-screenshot 
 # gnome tools
 sudo pacman $param eog evince gnome-calculator gnome-tweak-tool gedit gucharmap nautilus gnome-mines
 
+# remote locations
+sudo pacman $param --asdeps gvfs-afc gvfs-smb gvfs-gphoto2 gvfs-mtp gvfs-goa gvfs-nfs gvfs-google
+
 # Gnome maps (contains evolution and zeitgeist)
 # sudo pacman $param gnome-maps
 
