@@ -4,10 +4,10 @@ sudo pacman -Sy
 param="--noconfirm --needed -S"
 
 # gnome basis
-sudo pacman $param adwaita-icon-theme gdm gnome-control-center gnome-desktop gnome-screenshot gnome-session gnome-shell gnome-shell-extensions gnome-terminal gnome-themes-standard gnome-backgrounds
+sudo pacman $param adwaita-icon-theme gdm gnome-control-center gnome-screenshot gnome-shell-extensions gnome-terminal gnome-backgrounds
 
 # gnome tools
-sudo pacman $param xorg wayland eog evince gnome-calculator gnome-tweak-tool gedit gucharmap nautilus gnome-mines gnome-logs gnome-boxes
+sudo pacman $param eog evince gnome-calculator gnome-tweak-tool gedit gucharmap nautilus gnome-mines gnome-logs gnome-boxes
 
 # Gnome maps (contains evolution and zeitgeist)
 # sudo pacman $param gnome-maps
