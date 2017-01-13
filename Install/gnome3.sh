@@ -17,7 +17,7 @@ dconf write /org/gnome/desktop/peripherals/touchpad/tap-to-click true
 echo "         terminal…"
 dconf write /org/gnome/terminal/legacy/menu-accelerator-enabled false
 dconf write /org/gnome/terminal/legacy/default-show-menubar false
-dconf write /org/gnome/terminal/legacy/theme-variant 'dark'
+dconf write /org/gnome/terminal/legacy/theme-variant "'dark'"
 echo "         privacy…"
 dconf write /org/gnome/desktop/privacy/remove-old-trash-files true
 dconf write /org/gnome/desktop/privacy/remove-old-temp-files true
