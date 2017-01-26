@@ -8,6 +8,7 @@ apm install minimap minimap-git-diff minimap-find-and-replace minimap-selection
 
 ### file icons
 apm install file-icons
+# setting file-icons: only colour when changed
 
 ### formating
 apm install atom-beautify sort-lines
