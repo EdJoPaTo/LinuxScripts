@@ -30,6 +30,7 @@ apm install linter-gcc
 apm install autoclose-html
 apm install linter-tslint language-typescript-grammars-only
 apm install linter-jshint linter-jsonlint linter-sass-lint
+apm install linter-package-json-validator # npm package.json
 
 ### latex
 apm install language-latex latex
