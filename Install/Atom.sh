@@ -1,5 +1,8 @@
 # apm upgrade --no-confirm
 
+# Only use as much as you need. Every package will slow down the Startup of Atom
+# See Timecop (Ctrl + Shift + P, then type Timecop)
+
 ### general
 apm install editorconfig
 
@@ -44,4 +47,4 @@ apm install git-time-machine split-diff minimap-split-diff
 
 ### color viewer
 # apm install pigments
-apm install color-picker
+# apm install color-picker
