@@ -29,3 +29,7 @@ sudo pacman $param --asdeps libmythes
 # wireshark
 sudo pacman $param wireshark-gtk
 sudo usermod -aG wireshark "$USER"
+
+# remmina remote desktop
+sudo pacman $param remmina
+sudo pacman $param --asdeps freerdp libvncserver
