@@ -4,8 +4,9 @@ for file in $NAUTILUS_SCRIPT_SELECTED_URIS
 do
   filename=$(basename "$file")
   extension="${filename##*.}"
+  basename="${filename%.*}"
 
-  target="${filename}.pdf"
+  target="${basename}.pdf"
 
   if [ "$extension" = "tex" ]
   then
