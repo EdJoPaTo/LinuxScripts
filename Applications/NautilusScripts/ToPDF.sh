@@ -12,6 +12,9 @@ do
   then
     pdflatex -interaction=batchmode $filename
     pdflatex -interaction=batchmode $filename
+  elif [ "$extension" = "dot" ]
+  then
+    dot -Tpdf "$filename" -o "$target"
   elif [ "$extension" = "svg" ]
   then
     inkscape -D -z --file="$filename" --export-pdf="$target"

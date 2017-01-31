@@ -37,6 +37,9 @@ apm install language-latex latex
 apm install pdf-view
 apm install linter-chktex
 
+### graphviz / dot
+apm install language-dot graphviz-preview-plus
+
 ### highlight selected
 apm install highlight-selected minimap-highlight-selected
 
