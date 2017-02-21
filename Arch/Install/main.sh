@@ -17,7 +17,7 @@ sudo pacman $param nmap traceroute mtr whois
 sudo pacman $param cmake cloc
 
 # Picture Tools
-sudo pacman $param imagemagick graphviz
+sudo pacman $param imagemagick graphviz gnuplot
 
 # lol
 # sudo pacman $param sl lolcat
