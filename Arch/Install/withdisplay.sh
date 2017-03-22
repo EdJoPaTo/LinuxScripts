@@ -32,6 +32,9 @@ sudo pacman $param --asdeps libmythes
 sudo pacman $param wireshark-gtk
 sudo usermod -aG wireshark "$USER"
 
+# hex editor
+sudo pacman $param ghex
+
 # remmina remote desktop
 sudo pacman $param remmina
 sudo pacman $param --asdeps freerdp libvncserver
