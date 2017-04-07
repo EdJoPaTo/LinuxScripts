@@ -8,7 +8,7 @@ do
 
   mkdir appicon
 
-  for SIZE in 57 72 76 114 120 144 152 192 512
+  for SIZE in 16 32 57 60 72 76 114 120 144 152 180 192 512
   do
     convert "$filename" -resize "${SIZE}x${SIZE}" "appicon/${basename}_${SIZE}.${extension}"
   done
