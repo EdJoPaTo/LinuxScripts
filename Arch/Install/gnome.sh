@@ -15,6 +15,10 @@ sudo pacman $param --asdeps gvfs-afc gvfs-smb gvfs-gphoto2 gvfs-mtp gvfs-goa gvf
 # Gnome maps (contains evolution and zeitgeist)
 # sudo pacman $param gnome-maps
 
+# Gnome Keyring
+sudo pacman $param gnome-keyring
+sudo pacman $param --asdeps libgnome-keyring
+
 # Disk Usage Analyzer
 sudo pacman $param baobab
 
