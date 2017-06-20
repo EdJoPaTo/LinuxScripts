@@ -17,7 +17,7 @@ do
     dot -Tpdf "$filename" -o "$target"
   elif [ "$extension" = "svg" ]
   then
-    inkscape -D -z --file="$filename" --export-pdf="$target"
+    inkscape -z --file="$filename" --export-pdf="$target"
   else
     libreoffice --invisible --convert-to pdf $file
   fi
