@@ -10,7 +10,7 @@ sudo pacman $param --asdeps qt4
 # Picture Tools
 sudo pacman $param gimp inkscape
 ## save optimized svg
-sudo pacman $param --asdeps python2-lxml
+sudo pacman $param --asdeps python2-lxml python2-scour
 
 # Presentation Tool
 sudo pacman $param pdfpc
