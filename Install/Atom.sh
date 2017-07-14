@@ -4,14 +4,14 @@
 # See Timecop (Ctrl + Shift + P, then type Timecop)
 
 ### general
-apm install editorconfig
+apm install editorconfig night-day-theming
 
 ### minimap
 apm install minimap minimap-git-diff minimap-find-and-replace minimap-selection
 
 ### file icons
 apm install file-icons
-# setting file-icons: only colour when changed
+# setting file-icons: not colored
 
 ### formating
 apm install atom-beautify sort-lines
@@ -20,7 +20,7 @@ apm install atom-beautify sort-lines
 apm install linter linter-mixed-indent minimap-linter
 
 ### languages
-apm install language-lua language-vhdl language-svg
+apm install language-svg
 
 ### c
 apm install switch-header-source
@@ -29,8 +29,7 @@ apm install linter-gcc
 ### webdev
 apm install autoclose-html
 apm install linter-tslint language-typescript-grammars-only
-apm install linter-jshint linter-jsonlint linter-sass-lint
-apm install linter-package-json-validator # npm package.json
+apm install linter-jshint linter-jsonlint
 
 ### latex
 apm install language-latex latex
@@ -40,15 +39,11 @@ apm install linter-chktex
 ### graphviz / dot
 apm install language-dot graphviz-preview-plus
 
+### markdown mindmap
+apm install markdown-mindmap
+
 ### highlight selected
 apm install highlight-selected minimap-highlight-selected
 
-### git blame
-apm install git-blame
-
 ### split diff / git time machine
 apm install git-time-machine split-diff minimap-split-diff
-
-### color viewer
-# apm install pigments
-# apm install color-picker
