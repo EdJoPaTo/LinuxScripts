@@ -1,6 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=xflux
-Exec=xflux -l 53.5 -g 10.0
-Terminal=false
-
