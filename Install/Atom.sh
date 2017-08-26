@@ -29,12 +29,11 @@ apm install linter-gcc
 ### webdev
 apm install autoclose-html
 apm install linter-tslint language-typescript-grammars-only
-apm install linter-jshint linter-jsonlint
+apm install linter-eslint linter-jsonlint
 
 ### latex
 apm install language-latex latex
 apm install pdf-view
-apm install linter-chktex
 
 ### graphviz / dot
 apm install language-dot graphviz-preview-plus
