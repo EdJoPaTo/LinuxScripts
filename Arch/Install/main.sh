@@ -8,7 +8,7 @@ sudo pacman $param base-devel
 sudo pacman $param --asdeps bash-completion
 
 # console
-sudo pacman $param git htop openssh wget rsync screen tree acpi apg
+sudo pacman $param git htop openssh wget rsync screen tree acpi
 
 # console network tools
 sudo pacman $param nmap traceroute mtr whois
