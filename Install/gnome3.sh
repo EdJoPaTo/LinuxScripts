@@ -30,6 +30,8 @@ dconf write /org/gnome/shell/extensions/system-monitor/disk-usage-style "'bar'"
 dconf write /org/gnome/shell/extensions/system-monitor/icon-display false
 
 echo "folders…"
+mkdir -p ~/bin
+mkdir -p ~/Documents/git/gist
 mkdir -p ~/Documents/git/haw
 mkdir -p ~/Documents/git/home
 mkdir -p ~/Documents/git/other
