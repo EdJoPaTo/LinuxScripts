@@ -8,7 +8,7 @@ sudo pacman $param base-devel
 sudo pacman $param --asdeps bash-completion
 
 # console
-sudo pacman $param git htop openssh wget rsync screen tree acpi
+sudo pacman $param git htop openssh wget rsync screen tree acpi hwinfo
 
 # console network tools
 sudo pacman $param nmap traceroute mtr whois
@@ -21,6 +21,9 @@ sudo pacman $param imagemagick graphviz gnuplot
 
 # lol
 # sudo pacman $param sl lolcat
+
+# docker
+sudo pacman $param docker
 
 # sensors
 sudo pacman $param lm_sensors
