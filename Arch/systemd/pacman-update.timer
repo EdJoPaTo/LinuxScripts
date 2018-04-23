@@ -1,0 +1,10 @@
+[Unit]
+Description=Pacman predownload packages every 3h
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=3h
+RandomizedDelaySec=1min
+
+[Install]
+WantedBy=timers.target

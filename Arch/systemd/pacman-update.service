@@ -1,0 +1,11 @@
+[Unit]
+Description=Pacman predownload packages
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/pacman -Syuw --noconfirm --noprogressbar
+
+[Install]
+RequiredBy=multi-user.target
