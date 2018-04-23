@@ -1,6 +1,6 @@
 #!/bin/bash
 
-helper="yaourt"
+helper="yay"
 param="--noconfirm --needed -Sy"
 
 $helper $param "$@"
