@@ -1,0 +1,10 @@
+[Unit]
+Description=Update Pacman Filedatabase every 20h
+
+[Timer]
+OnBootSec=30min
+OnUnitActiveSec=20h
+RandomizedDelaySec=1min
+
+[Install]
+WantedBy=timers.target
