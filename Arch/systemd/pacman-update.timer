@@ -1,9 +1,9 @@
 [Unit]
-Description=Pacman predownload packages every 3h
+Description=Pacman predownload packages every 1h
 
 [Timer]
 OnBootSec=1min
-OnUnitActiveSec=3h
+OnUnitActiveSec=1h
 RandomizedDelaySec=1min
 
 [Install]
