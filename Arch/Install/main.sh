@@ -4,7 +4,7 @@ sudo pacman -Sy
 param="--noconfirm --needed -S"
 
 # arch
-sudo pacman $param base-devel
+sudo pacman $param base-devel pacman-contrib
 sudo pacman $param --asdeps bash-completion
 
 # console
