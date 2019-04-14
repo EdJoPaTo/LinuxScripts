@@ -29,7 +29,7 @@ sudo pacman $param hyphen-de hyphen-en hunspell-de hunspell-en mythes-de mythes-
 sudo pacman $param --asdeps libmythes
 
 # wireshark
-sudo pacman $param wireshark-gtk
+sudo pacman $param wireshark-qt
 sudo usermod -aG wireshark "$USER"
 
 # hex editor
