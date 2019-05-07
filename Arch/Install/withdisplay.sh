@@ -16,7 +16,7 @@ sudo pacman $param --asdeps python2-lxml python2-scour
 sudo pacman $param pdfpc
 
 # Teamspeak
-sudo pacman $param teamspeak3
+sudo pacman $param teamspeak3 mumble
 
 # Browser
 sudo pacman $param chromium firefox
