@@ -5,7 +5,6 @@ param="--noconfirm --needed -S"
 
 # VLC
 sudo pacman $param vlc
-sudo pacman $param --asdeps qt4
 
 # Picture Tools
 sudo pacman $param gimp inkscape
@@ -25,7 +24,7 @@ sudo pacman $param chromium firefox
 sudo pacman $param libreoffice-fresh libreoffice-extension-texmaths
 
 # Languages
-sudo pacman $param hyphen-de hyphen-en hunspell-de hunspell-en mythes-de mythes-en
+sudo pacman $param hyphen-de hyphen-en hunspell-de hunspell-en_GB hunspell-en_US mythes-de mythes-en
 sudo pacman $param --asdeps libmythes
 
 # wireshark
