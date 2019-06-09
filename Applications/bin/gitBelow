@@ -1,0 +1,3 @@
+#!/bin/sh
+# example usage: `gitBelow fetch`
+find . -name ".git" -type d -print -exec git -C {}/../ $@ \;
