@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Console tools
-brew install exa ffmpeg hugo  zsh
+brew install exa ffmpeg hugo zsh
 
 # Image stuff
 brew install imagemagick
@@ -19,7 +19,7 @@ brew cask install telegram telegram-desktop teamspeak-client mumble discord slac
 
 # Development Tools
 brew install bat cloc mtr nmap node
-brew cask install dash atom visual-studio-code wireshark
+brew cask install atom visual-studio-code wireshark
 
 # gpg stuff
 brew install pinentry pinentry-mac
