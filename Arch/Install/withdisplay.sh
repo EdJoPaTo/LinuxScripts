@@ -17,6 +17,9 @@ sudo pacman $param pdfpc
 # Teamspeak
 sudo pacman $param teamspeak3 mumble
 
+# Chat
+sudo pacman $param telegram-desktop
+
 # Browser
 sudo pacman $param chromium firefox
 
