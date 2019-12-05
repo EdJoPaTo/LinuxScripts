@@ -8,5 +8,5 @@ do
 
   target="${basename}_compressed.jpg"
 
-  convert "$filename" -sampling-factor 4:2:0 -strip -resize '2000x1000>' -quality 85 "$target"
+  convert "$filename" -background black -alpha remove -sampling-factor 4:2:0 -strip -resize '2000x1000>' -quality 85 "$target"
 done
