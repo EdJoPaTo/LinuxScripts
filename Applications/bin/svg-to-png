@@ -1,0 +1,3 @@
+#!/bin/sh
+
+inkscape -z --export-type=png $@
