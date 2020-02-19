@@ -1,2 +1,0 @@
-#!/bin/bash
-ffmpeg -v error -stats -an out.mp4 -i $@
