@@ -1,0 +1,3 @@
+#!/bin/sh
+rm -rf node_modules package-lock.json
+nice npm i && npm outdated
