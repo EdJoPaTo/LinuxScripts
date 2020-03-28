@@ -1,4 +1,4 @@
 #!/bin/bash
 mkdir -p ~/bin
-cp bin/* ~/bin
+cp -v --update bin/* ~/bin
 echo make sure the ~/bin folder is added to your path
