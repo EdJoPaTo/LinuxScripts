@@ -8,8 +8,6 @@ gsettings set org.gnome.gedit.preferences.editor display-line-numbers true
 gsettings set org.gnome.gedit.preferences.editor syntax-highlighting true
 echo "         calculator…"
 gsettings set org.gnome.calculator button-mode 'programming'
-echo "         nautilus…"
-# dconf write /org/gnome/nautilus/preferences/executable-text-activation "'ask'"
 echo "         natural scrolling…"
 dconf write /org/gnome/settings-daemon/peripherals/touchpad/natural-scroll true
 dconf write /org/gnome/desktop/peripherals/touchpad/natural-scroll true
@@ -31,7 +29,8 @@ dconf write /org/gnome/shell/extensions/system-monitor/icon-display false
 
 echo "folders…"
 mkdir -p ~/bin
-mkdir -p ~/Documents/git/gist
-mkdir -p ~/Documents/git/haw
-mkdir -p ~/Documents/git/home
-mkdir -p ~/Documents/git/other
+mkdir -p ~/git/gist
+mkdir -p ~/git/haw
+mkdir -p ~/git/other
+mkdir -p ~/git/personal
+mkdir -p ~/git/smarthome

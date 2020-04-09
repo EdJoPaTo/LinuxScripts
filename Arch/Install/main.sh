@@ -4,11 +4,11 @@ sudo pacman -Sy
 param="--noconfirm --needed -S"
 
 # arch
-sudo pacman $param base-devel pacman-contrib
+sudo pacman $param base base-devel pacman-contrib
 sudo pacman $param --asdeps bash-completion
 
 # console
-sudo pacman $param git htop openssh wget rsync screen tree acpi hwinfo
+sudo pacman $param git htop openssh wget rsync screen tmux tree acpi hwinfo
 
 # console network tools
 sudo pacman $param nmap traceroute mtr whois
@@ -21,6 +21,10 @@ sudo pacman $param imagemagick graphviz gnuplot
 
 # lol
 # sudo pacman $param sl lolcat
+
+# nodejs
+sudo pacman $param nodejs
+sudo pacman $param --asdeps npm
 
 # docker
 sudo pacman $param docker

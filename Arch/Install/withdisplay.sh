@@ -23,6 +23,10 @@ sudo pacman $param telegram-desktop
 # Browser
 sudo pacman $param chromium firefox
 
+# Editor
+sudo pacman $param atom code
+sudo pacman $param --asdeps trash-cli
+
 # LibreOffice
 sudo pacman $param libreoffice-fresh libreoffice-extension-texmaths
 
