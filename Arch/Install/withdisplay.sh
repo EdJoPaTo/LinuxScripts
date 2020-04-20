@@ -21,7 +21,9 @@ sudo pacman $param teamspeak3 mumble
 sudo pacman $param telegram-desktop
 
 # Browser
-sudo pacman $param chromium firefox
+sudo pacman $param chromium
+sudo pacman $param firefox firefox-ublock-origin
+## dont install firefox-umatrix: 1. not all users might want it; 2. it seems to forget its rules on each restart
 
 # Editor
 sudo pacman $param atom code
