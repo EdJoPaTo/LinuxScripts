@@ -17,3 +17,6 @@ bindkey '^[OF' end-of-line
 # Control Left/Right
 bindkey '^[[1;5D' backward-word
 bindkey '^[[1;5C' forward-word
+
+# Delete/Entf
+bindkey '^[[3~' delete-char
