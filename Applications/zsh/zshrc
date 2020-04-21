@@ -14,6 +14,8 @@ prompt pure
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.cache/zsh_history
+# Share history between all the sessions
+setopt SHARE_HISTORY
 
 # Basic auto/tab complete:
 autoload -U compinit
