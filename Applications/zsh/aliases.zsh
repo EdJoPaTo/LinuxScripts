@@ -4,6 +4,10 @@ export VISUAL=nano
 
 export PATH=$HOME/bin:$PATH
 
+# Pager
+export PAGER="less"
+export LESS="--RAW-CONTROL-CHARS"
+
 alias grep='grep --color'
 alias ls="exa"
 
