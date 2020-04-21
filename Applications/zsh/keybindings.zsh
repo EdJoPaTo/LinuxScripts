@@ -1,3 +1,4 @@
+# Keybindings
 # cat -v to find the key
 # zle -la to find Zsh Line Editor commands
 

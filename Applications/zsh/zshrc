@@ -1,3 +1,4 @@
+# Created by https://github.com/EdJoPaTo/LinuxScripts/tree/master/Applications/zsh
 # Heavily inspired by https://github.com/ChrisTitusTech/zsh
 
 # Enable colors and change prompt:
@@ -22,9 +23,6 @@ compinit
 _comp_options+=(globdots)               # Include hidden files.
 
 # Load stuff
-source "$HOME/.zsh/aliases.zsh"
-source "$HOME/.zsh/keybindings.zsh"
-
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
