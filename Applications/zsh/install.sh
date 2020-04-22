@@ -7,5 +7,6 @@ lnoptions="-vrsf"
 
 ln $lnoptions zshrc "$HOME/.zshrc"
 ln $lnoptions *.zsh "$HOME/.zsh"
+# cp -v *.zsh "$HOME/.zsh"
 
 git clone --depth=1 https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
