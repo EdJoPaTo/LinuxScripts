@@ -1,6 +1,13 @@
 # Created by https://github.com/EdJoPaTo/LinuxScripts/tree/master/Applications/zsh
 # Heavily inspired by https://github.com/ChrisTitusTech/zsh
 
+## enable when on Arch Linux
+ZSH_PLUGINS=/usr/share/zsh/plugins
+
+## enable when on macOS
+#ZSH_PLUGINS=/usr/local/share
+#fpath+=/usr/local/share/zsh-completions
+
 # Enable colors and change prompt:
 autoload -U colors && colors
 
@@ -28,10 +35,6 @@ _comp_options+=(globdots)               # Include hidden files.
 for config_file ($HOME/.zsh/*.zsh); do
     source $config_file
 done
-
-## First Arch Linux then macOS brew location
-ZSH_PLUGINS=/usr/share/zsh/plugins
-#ZSH_PLUGINS=/usr/local/share
 
 source "$ZSH_PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" 2>/dev/null
 
