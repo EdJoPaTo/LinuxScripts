@@ -25,10 +25,14 @@ compinit
 _comp_options+=(globdots)               # Include hidden files.
 
 # Load stuff
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+## First Arch Linux then macOS brew location
+ZSH_PLUGINS=/usr/share/zsh/plugins
+#ZSH_PLUGINS=/usr/local/share
 
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh 2>/dev/null
+source "$ZSH_PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" 2>/dev/null
+
+source "$ZSH_PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh" 2>/dev/null
+source "$ZSH_PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh" 2>/dev/null
 
 #source /usr/share/nvm/init-nvm.sh
 
