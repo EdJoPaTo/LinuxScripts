@@ -8,7 +8,7 @@ sudo pacman $param base base-devel pacman-contrib
 sudo pacman $param --asdeps bash-completion
 
 # zsh
-sudo pacman $param zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting
+sudo pacman $param zsh zsh-completions zsh-history-substring-search zsh-syntax-highlighting
 
 # console
 sudo pacman $param git htop openssh wget rsync screen tmux tree acpi hwinfo
