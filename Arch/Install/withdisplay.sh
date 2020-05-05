@@ -12,6 +12,7 @@ sudo pacman $param vlc
 sudo pacman $param gimp inkscape
 ## save optimized svg
 sudo pacman $param --asdeps python2-lxml python2-scour
+sudo pacman $param --asdeps python-numpy python-lxml
 
 # Presentation Tool
 sudo pacman $param pdfpc
