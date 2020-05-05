@@ -48,6 +48,4 @@ source "$ZSH_PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" 2>/dev
 
 source "$ZSH_PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh" 2>/dev/null
 
-#source /usr/share/nvm/init-nvm.sh
-
 uptime
