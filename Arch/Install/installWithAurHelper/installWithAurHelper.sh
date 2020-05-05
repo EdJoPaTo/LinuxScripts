@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/sh
+set -e
 
 helper="yay"
 param="--noconfirm --needed -Sy"

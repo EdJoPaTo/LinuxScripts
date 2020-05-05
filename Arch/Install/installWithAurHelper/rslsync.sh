@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/sh
+set -e
 
 ./installWithAurHelper.sh rslsync
 

@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/sh
+set -e
 
 mkdir -p ~/.aurinstall
 
@@ -15,4 +16,3 @@ for var in "$@"
 do
   dothestuff "$var"
 done
-
