@@ -18,6 +18,9 @@ sudo pacman $param git htop openssh wget rsync screen tmux tree acpi hwinfo
 # console network tools
 sudo pacman $param nmap traceroute mtr whois
 
+# Print related
+sudo pacman $param cups cups-pdf
+
 # programming
 sudo pacman $param cmake cloc
 

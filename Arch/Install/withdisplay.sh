@@ -32,6 +32,9 @@ sudo pacman $param firefox firefox-ublock-origin
 sudo pacman $param atom code
 sudo pacman $param --asdeps trash-cli
 
+# Scanner tools
+sudo pacman $param simple-scan
+
 # LibreOffice
 sudo pacman $param libreoffice-fresh libreoffice-extension-texmaths
 
