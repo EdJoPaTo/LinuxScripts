@@ -1,2 +1,0 @@
-#!/bin/sh
-nice youtube-dl --write-all-thumbnails --add-metadata --embed-thumbnail -k -x --audio-format mp3 $@
