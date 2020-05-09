@@ -15,6 +15,9 @@ sudo pacman $param zsh zsh-completions zsh-history-substring-search zsh-syntax-h
 # console
 sudo pacman $param git htop openssh wget rsync screen tmux tree acpi hwinfo
 
+# find in file via `ag`
+sudo pacman $param the_silver_searcher
+
 # console network tools
 sudo pacman $param nmap traceroute mtr whois
 
