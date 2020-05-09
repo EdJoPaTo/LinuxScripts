@@ -39,7 +39,6 @@ zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'l:|=* r:|=* m:{a-z}={A-Z
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
-_comp_options+=(globdots)               # Include hidden files.
 
 # Load stuff
 for config_file ($HOME/.zsh/*.zsh); do
