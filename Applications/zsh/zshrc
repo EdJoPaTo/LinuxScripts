@@ -34,6 +34,8 @@ setopt SHARE_HISTORY             # Share history between all sessions.
 
 # Completion
 autoload -U compinit
+# Matching: first exact match, then uppercase from lowercase, then match on the left side (bar -> foobar)
+zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'l:|=* r:|=* m:{a-z}={A-Z}'
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
