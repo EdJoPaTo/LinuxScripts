@@ -8,7 +8,7 @@ ZSH_PLUGINS=/usr/share/zsh/plugins
 #ZSH_PLUGINS=/usr/local/share
 #fpath+=/usr/local/share/zsh-completions
 
-# Enable colors and change prompt:
+# Enable colors
 autoload -U colors && colors
 
 # Prompt
@@ -17,7 +17,7 @@ fpath+=$HOME/.zsh/pure
 autoload -U promptinit; promptinit
 prompt pure
 
-# History in cache directory:
+# History
 HISTSIZE=10000
 SAVEHIST=$HISTSIZE
 HISTFILE=~/.cache/zsh_history
@@ -32,7 +32,7 @@ setopt HIST_VERIFY               # Don't execute immediately upon history expans
 setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
 setopt SHARE_HISTORY             # Share history between all sessions.
 
-# Basic auto/tab complete:
+# Completion
 autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
