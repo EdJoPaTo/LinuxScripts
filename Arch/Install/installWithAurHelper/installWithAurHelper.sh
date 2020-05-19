@@ -1,7 +1,4 @@
 #!/usr/bin/sh
 set -e
 
-helper="yay"
-param="--noconfirm --needed -Sy"
-
-$helper $param "$@"
+nice yay --noconfirm --needed --nodiffmenu --nocleanmenu -Sy "$@"
