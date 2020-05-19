@@ -1,12 +1,18 @@
 # Created by https://github.com/EdJoPaTo/LinuxScripts/tree/master/Applications/zsh
 # Heavily inspired by https://github.com/ChrisTitusTech/zsh
 
-## enable when on Arch Linux
-ZSH_PLUGINS=/usr/share/zsh/plugins
+# Comment out your OS
+#OS=archlinux
+#OS=macos
 
-## enable when on macOS
-#ZSH_PLUGINS=/usr/local/share
-#fpath+=/usr/local/share/zsh-completions
+if [[ "$OS" == "archlinux" ]]; then
+    ZSH_PLUGINS=/usr/share/zsh/plugins
+elif [[ "$OS" == "macos" ]]; then
+    ZSH_PLUGINS=/usr/local/share
+    fpath+=/usr/local/share/zsh-completions
+else
+    echo "unknown OS. Set in ~/.zshrc"
+fi
 
 # Enable colors
 autoload -U colors && colors
