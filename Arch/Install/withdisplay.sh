@@ -16,6 +16,9 @@ sudo pacman $param --asdeps python-numpy python-lxml scour
 # Presentation Tool
 sudo pacman $param pdfpc
 
+# Terminal emulator
+sudo pacman $param alacritty
+
 # Teamspeak
 sudo pacman $param teamspeak3 mumble
 
@@ -51,3 +54,6 @@ sudo pacman $param ghex
 # remmina remote desktop
 sudo pacman $param remmina
 sudo pacman $param --asdeps freerdp libvncserver
+
+# emoji support (in terminal, notifications, ...)
+sudo pacman $param noto-fonts-emoji

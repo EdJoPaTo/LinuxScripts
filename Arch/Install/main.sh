@@ -9,6 +9,10 @@ param="--noconfirm --needed -S"
 sudo pacman $param base base-devel pacman-contrib
 sudo pacman $param --asdeps bash-completion
 
+# report package usage
+sudo pacman $param pkgstats
+sudo systemctl start pkgstats.timer
+
 # zsh
 sudo pacman $param zsh zsh-completions zsh-history-substring-search zsh-syntax-highlighting
 
