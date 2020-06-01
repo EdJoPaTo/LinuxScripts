@@ -5,13 +5,19 @@ sudo pacman -Sy
 
 param="--noconfirm --needed -S"
 
-# VLC
-sudo pacman $param vlc
+# Audio
+sudo pacman $param mpd mpc
+
+# Video
+sudo pacman $param vlc mpv
 
 # Picture Tools
 sudo pacman $param gimp inkscape
 ## save optimized svg
 sudo pacman $param --asdeps python-numpy python-lxml scour
+
+# Preview in Filemanager
+sudo pacman $param totem ffmpegthumbnailer
 
 # Presentation Tool
 sudo pacman $param pdfpc
