@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 set -e
 
-./installWithAurHelper.sh ckb-next
+./installWithAurHelper.sh ckb-next-git
 
-sudo systemctl enable ckb-daemon
-sudo systemctl start ckb-daemon
+sudo systemctl enable ckb-next-daemon
+sudo systemctl start ckb-next-daemon
