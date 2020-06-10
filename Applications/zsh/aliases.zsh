@@ -19,6 +19,9 @@ alias ls="exa"
 alias fd='find . -type d -name'
 alias ff='find . -type f -name'
 
+alias mpc-clearadd='mpc clear && mpc add'
+
+alias eyeD3='eyeD3 --preserve-file-times'
 alias youtube-dl-mp3='nice youtube-dl --write-all-thumbnails --add-metadata --embed-thumbnail -k -x --audio-format mp3'
 
 alias init-nvm='source /usr/share/nvm/init-nvm.sh'

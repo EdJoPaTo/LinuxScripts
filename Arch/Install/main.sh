@@ -17,7 +17,7 @@ sudo systemctl start pkgstats.timer
 sudo pacman $param zsh zsh-completions zsh-history-substring-search zsh-syntax-highlighting
 
 # console unsorted
-sudo pacman $param exa tree ffmpeg
+sudo pacman $param exa tree
 
 # console status
 sudo pacman $param htop bashtop
@@ -42,6 +42,9 @@ sudo pacman $param cmake cloc clang
 
 # Picture Tools
 sudo pacman $param imagemagick graphviz gnuplot
+
+# Audio / Video Tools
+sudo pacman $param ffmpeg python-eyed3
 
 # lol
 # sudo pacman $param sl lolcat
