@@ -19,6 +19,10 @@ alias ls="exa"
 alias fd='find . -type d -name'
 alias ff='find . -type f -name'
 
+# https://github.com/chubin/wttr.in
+alias wttr='curl wttr.in && curl v2.wttr.in'
+alias wttr-short='curl "wttr.in/?format=%l:+%c+%t,+%w+%m"'
+
 alias mpc-clearadd='mpc clear && mpc add'
 
 alias eyeD3='eyeD3 --preserve-file-times'
