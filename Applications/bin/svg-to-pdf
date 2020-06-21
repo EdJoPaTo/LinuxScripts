@@ -1,3 +1,0 @@
-#!/bin/sh
-
-inkscape -z --export-type=pdf $@

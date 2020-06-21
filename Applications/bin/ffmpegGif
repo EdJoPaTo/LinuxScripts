@@ -1,4 +1,0 @@
-#!/bin/sh
-# Gif as Video without sound
-# example usage: `ffmpegGif -i url out.mp4`
-nice ffmpeg -v error -stats -an $@

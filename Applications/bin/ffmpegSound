@@ -1,3 +1,0 @@
-#!/bin/sh
-# example usage: `ffmpegGif -i url out.mp3`
-nice ffmpeg -v error -stats -vn $@

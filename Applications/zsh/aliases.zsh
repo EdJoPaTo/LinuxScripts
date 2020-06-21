@@ -19,11 +19,18 @@ alias ls="exa"
 alias fd='find . -type d -name'
 alias ff='find . -type f -name'
 
+alias svg2png='inkscape --export-type=png'
+alias svg2pdf='inkscape --export-type=pdf'
+
 # https://github.com/chubin/wttr.in
 alias wttr='curl wttr.in && curl v2.wttr.in'
 alias wttr-short='curl "wttr.in/?format=%l:+%c+%t,+%w+%m"'
 
 alias mpc-clearadd='mpc clear && mpc add'
+
+alias ffmpegGif='nice ffmpeg -v error -stats -an'
+alias ffmpegSound='nice ffmpeg -v error -stats -vn'
+alias ffmpegVideo='nice ffmpeg -v error -stats'
 
 alias eyeD3='eyeD3 --preserve-file-times'
 alias youtube-dl-mp3='nice youtube-dl --write-all-thumbnails --add-metadata --embed-thumbnail -k -x --audio-format mp3'
