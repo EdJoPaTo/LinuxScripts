@@ -19,7 +19,6 @@ sudo pacman $param --asdeps gvfs-afc gvfs-smb gvfs-gphoto2 gvfs-mtp gvfs-goa gvf
 
 # Gnome Keyring
 sudo pacman $param gnome-keyring
-sudo pacman $param --asdeps libgnome-keyring
 
 # Disk Usage Analyzer
 sudo pacman $param baobab
@@ -29,7 +28,7 @@ sudo pacman $param gnome-power-manager
 
 # tools for ntfs, fat
 sudo pacman $param gparted
-sudo pacman $param --asdeps ntfs-3g dosfstools mtools
+sudo pacman $param --asdeps ntfs-3g dosfstools mtools gpart
 sudo ln -s /usr/bin/ntfsfix /usr/sbin/fsck.ntfs
 sudo ln -s /usr/bin/ntfsfix /usr/sbin/fsck.ntfs-3g
 

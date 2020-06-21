@@ -9,4 +9,4 @@ param="--noconfirm --needed -S"
 sudo pacman $param mono
 
 # wine
-sudo pacman $param wine winetricks wine_gecko wine-mono
+sudo pacman $param wine winetricks wine-gecko wine-mono
