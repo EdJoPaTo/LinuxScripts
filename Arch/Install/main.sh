@@ -29,7 +29,7 @@ sudo pacman $param tmux screen
 sudo pacman $param git openssh rsync wget curl
 
 # console network analysis
-sudo pacman $param nmap traceroute mtr whois nload
+sudo pacman $param net-tools nmap traceroute mtr whois nload
 
 # find in file via `ag`
 sudo pacman $param the_silver_searcher
