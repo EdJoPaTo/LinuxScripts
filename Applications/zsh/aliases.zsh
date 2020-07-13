@@ -19,6 +19,11 @@ alias ls="exa"
 alias fd='find . -type d -name'
 alias ff='find . -type f -name'
 
+# example usage: `gitBelow fetch`
+gitBelow() {
+	find . -name ".git" -type d -print -exec git -C {}/../ $@ \;
+}
+
 alias svg2png='inkscape --export-type=png'
 alias svg2pdf='inkscape --export-type=pdf'
 
