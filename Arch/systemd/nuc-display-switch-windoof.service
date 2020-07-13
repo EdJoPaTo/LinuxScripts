@@ -1,0 +1,15 @@
+[Unit]
+Description=Changes the monitor to NUC on start and to Windoof on shutdown
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+# DisplayPort
+ExecStart=/usr/bin/ddcutil setvcp 60 0x0f
+# DVI-D1
+ExecStop=/usr/bin/ddcutil setvcp 60 0x03
+
+[Install]
+RequiredBy=multi-user.target
