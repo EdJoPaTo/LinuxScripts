@@ -31,6 +31,9 @@ sudo pacman $param git openssh rsync wget curl
 # console network analysis
 sudo pacman $param net-tools nmap traceroute mtr whois nload
 
+# mqtt cli tools (TODO: maybe only a client cli thingy instead of a mainly broker package?)
+sudo pacman $param mosquitto
+
 # find in file via `ag`
 sudo pacman $param the_silver_searcher
 

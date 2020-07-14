@@ -5,6 +5,9 @@ sudo pacman -Sy
 
 param="--noconfirm --needed -S"
 
+# Control displays via command line
+sudo pacman $param ddcutil
+
 # Audio
 sudo pacman $param mpd mpc
 
