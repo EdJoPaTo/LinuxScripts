@@ -64,5 +64,8 @@ sudo pacman $param ghex
 sudo pacman $param remmina
 sudo pacman $param --asdeps freerdp libvncserver
 
+# fonts
+sudo pacman $param ttf-dejavu ttf-opensans
+
 # emoji support (in terminal, notifications, ...)
 sudo pacman $param noto-fonts-emoji
