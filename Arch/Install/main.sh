@@ -47,7 +47,7 @@ sudo pacman $param cmake cloc clang
 sudo pacman $param imagemagick graphviz gnuplot
 
 # Audio / Video Tools
-sudo pacman $param ffmpeg python-eyed3
+sudo pacman $param ffmpeg python-eyed3 youtube-dl
 
 # lol
 # sudo pacman $param sl lolcat
