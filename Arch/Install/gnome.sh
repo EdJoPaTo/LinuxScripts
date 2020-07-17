@@ -38,5 +38,3 @@ sudo pacman $param xdg-user-dirs
 # gnome fileroller
 sudo pacman $param file-roller
 sudo pacman $param --asdeps p7zip unrar lrzip unace
-
-../../Install/gnome3.sh
