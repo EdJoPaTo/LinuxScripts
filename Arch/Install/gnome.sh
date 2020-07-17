@@ -29,8 +29,8 @@ sudo pacman $param gnome-power-manager
 # tools for ntfs, fat
 sudo pacman $param gparted
 sudo pacman $param --asdeps ntfs-3g dosfstools mtools gpart
-sudo ln -s /usr/bin/ntfsfix /usr/sbin/fsck.ntfs
-sudo ln -s /usr/bin/ntfsfix /usr/sbin/fsck.ntfs-3g
+sudo ln -sf /usr/bin/ntfsfix /usr/sbin/fsck.ntfs
+sudo ln -sf /usr/bin/ntfsfix /usr/sbin/fsck.ntfs-3g
 
 # user dirs
 sudo pacman $param xdg-user-dirs
