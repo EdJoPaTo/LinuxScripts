@@ -47,7 +47,7 @@ sudo pacman $param --asdeps trash-cli
 sudo pacman $param simple-scan
 
 # LibreOffice
-sudo pacman $param libreoffice-fresh libreoffice-extension-texmaths
+sudo pacman $param libreoffice-fresh
 
 # Languages
 sudo pacman $param hyphen-de hyphen-en hunspell-de hunspell-en_GB hunspell-en_US mythes-de mythes-en
