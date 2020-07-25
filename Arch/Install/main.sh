@@ -17,7 +17,7 @@ sudo systemctl start pkgstats.timer
 sudo pacman $param zsh zsh-completions zsh-history-substring-search zsh-syntax-highlighting
 
 # console unsorted
-sudo pacman $param exa tree
+sudo pacman $param exa tree lshw
 
 # console status
 sudo pacman $param htop bashtop
