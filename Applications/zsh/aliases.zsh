@@ -42,7 +42,7 @@ alias youtube-dl-mp3='nice youtube-dl --write-all-thumbnails --add-metadata --em
 
 alias init-nvm='source /usr/share/nvm/init-nvm.sh'
 alias npm-reinstall='rm -rf node_modules package-lock.json && nice npm i && npm outdated'
-alias typescript-watch='rm -rf dist && npx tsc --sourceMap --pretty -w'
+alias typescript-watch='rm -rf dist && nice npx tsc --sourceMap --pretty --watch'
 
 mqtt-home() {
 	# TODO: detect if $2 is unset and subscribe then instead
