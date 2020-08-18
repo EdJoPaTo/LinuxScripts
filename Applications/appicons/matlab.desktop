@@ -1,6 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=MATLAB
-Icon=matlab
-Exec=matlab -desktop -nosplash
-Terminal=false
