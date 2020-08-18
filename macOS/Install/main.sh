@@ -1,8 +1,11 @@
-#!/bin/bash
+#!/bin/sh
 set -e
 
 # Console tools
-brew install exa ffmpeg hugo zsh
+brew install exa ffmpeg hugo
+
+# zsh plugins
+brew install zsh-history-substring-search zsh-syntax-highlighting
 
 # Image stuff
 brew install imagemagick
@@ -11,12 +14,15 @@ brew cask install gimp inkscape
 # Media
 brew cask install iina vlc
 
+# Browser
+brew cask install firefox chromium google-chrome
+
 # Data
 brew install rsync
 brew cask install resilio-sync
 
 # Communication
-brew cask install telegram telegram-desktop teamspeak-client mumble discord slack
+brew cask install telegram telegram-desktop teamspeak-client mumble
 
 # Development Tools
 brew install bat cloc mtr nmap node
@@ -29,7 +35,7 @@ brew install pinentry pinentry-mac
 brew cask install docker virtualbox
 
 # Development Boards
-brew cask install etcher ftdi-vcp-driver silicon-labs-vcp-driver wch-ch34x-usb-serial-driver
+brew cask install balenaetcher arduino mqtt-explorer
 
 # Small tools
 brew cask install keepingyouawake quitter veracrypt
