@@ -1,4 +1,6 @@
 #!/bin/zsh
+set -e
+
 mkdir -p "$HOME/.zsh"
 mkdir -p "$HOME/.cache"
 

@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # Console tools
 brew install exa ffmpeg hugo zsh
