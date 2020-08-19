@@ -2,7 +2,7 @@
 set -e
 
 # Console tools
-brew install exa ffmpeg hugo
+brew install exa ffmpeg hugo the_silver_searcher
 
 # zsh plugins
 brew install zsh-history-substring-search zsh-syntax-highlighting
