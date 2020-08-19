@@ -7,6 +7,9 @@ brew install exa ffmpeg hugo
 # zsh plugins
 brew install zsh-history-substring-search zsh-syntax-highlighting
 
+# Ansible
+brew install ansible ansible-lint
+
 # Image stuff
 brew install imagemagick
 brew cask install gimp inkscape

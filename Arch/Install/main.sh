@@ -59,6 +59,10 @@ sudo pacman $param --asdeps npm
 # docker
 sudo pacman $param docker
 
+# ansible
+sudo pacman $param ansible ansible-lint
+sudo pacman $param --asdeps sshpass
+
 # sensors
 sudo pacman $param lm_sensors acpi
 sudo sensors-detect --auto
