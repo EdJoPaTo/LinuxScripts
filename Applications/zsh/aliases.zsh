@@ -40,7 +40,7 @@ alias ffmpegVideo='nice ffmpeg -v error -stats'
 alias eyeD3='eyeD3 --preserve-file-times'
 alias youtube-dl-mp3='nice youtube-dl --write-all-thumbnails --add-metadata --embed-thumbnail -k -x --audio-format mp3'
 
-alias cargo-buildcheck='nice cargo build && nice cargo clippy && nice cargo fmt -- --check'
+alias cargo-buildcheck='nice cargo build && nice cargo clippy && nice cargo test -q && nice cargo fmt -- --check'
 
 alias init-nvm='source /usr/share/nvm/init-nvm.sh'
 alias npm-reinstall='rm -rf node_modules package-lock.json && nice npm i && npm outdated'
