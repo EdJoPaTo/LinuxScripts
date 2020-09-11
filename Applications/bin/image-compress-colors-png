@@ -1,0 +1,23 @@
+#!/bin/bash
+set -e
+params="-strip -quantize transparent +dither"
+
+for file in "$@"
+do
+	filename=$(basename "$file")
+	extension="${filename##*.}"
+	basename="${filename%.*}"
+
+	target="${basename}_compressed.png"
+
+	# Do the first, aborts when errors, then do the rest in parallel
+	convert "$filename" $params -colors 256 "${basename}_colors256.png"
+	convert "$filename" $params -colors 128 "${basename}_colors128.png" &
+	convert "$filename" $params -colors 64 "${basename}_colors64.png" &
+	convert "$filename" $params -colors 32 "${basename}_colors32.png" &
+	convert "$filename" $params -colors 16 "${basename}_colors16.png" &
+	convert "$filename" $params -colors 8 "${basename}_colors8.png" &
+	convert "$filename" $params -colors 4 "${basename}_colors4.png" &
+	convert "$filename" $params -colors 2 "${basename}_colors2.png" &
+	wait
+done
