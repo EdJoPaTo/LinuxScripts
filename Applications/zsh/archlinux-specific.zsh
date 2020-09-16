@@ -7,7 +7,3 @@ alias open='xdg-open'
 export MAKEFLAGS="-j$(nproc)"
 
 alias yay='nice yay'
-
-alias setup-ros-melodic='source /opt/ros/melodic/setup.zsh'
-alias setup-ros-noetic='source /opt/ros/noetic/setup.zsh'
-alias setup-ros='setup-ros-melodic'
