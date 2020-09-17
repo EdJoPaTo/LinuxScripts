@@ -55,3 +55,16 @@ alias mqtt-home-plug-nuc-on='mqtt-home espPowerstrip-et/set/plug4/on 1'
 alias mqtt-home-plug-windoof-on='mqtt-home espPowerstrip-et/set/plug2/on 1'
 
 alias rsynca='rsync --archive --verbose --checksum --delete-delay'
+
+remotedebug() {
+	# usage: remotedebug server command which should be executed
+	# usage: remotedebug my.server.tld cargo build
+	server=$1
+	shift 1
+
+	folder=${PWD##*/}
+	remotefolder="tmp/remotedebug/$folder/"
+
+	rsync --archive --cvs-exclude --exclude-from=.gitignore --verbose --checksum --rsync-path="mkdir -p $remotefolder && rsync" --delete-delay . $server:$remotefolder
+	ssh -tt $server "cd $remotefolder && bash -cl '$@'"
+}
