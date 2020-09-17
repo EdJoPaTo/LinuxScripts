@@ -5,7 +5,7 @@ set -e
 brew install exa ffmpeg hugo the_silver_searcher
 
 # zsh plugins
-brew install zsh-history-substring-search zsh-syntax-highlighting
+brew install zsh zsh-history-substring-search zsh-syntax-highlighting romkatv/powerlevel10k/powerlevel10k
 
 # Ansible
 brew install ansible ansible-lint

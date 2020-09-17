@@ -9,21 +9,16 @@ uptime
 
 if [[ "$OS" == "archlinux" ]]; then
     ZSH_PLUGINS=/usr/share/zsh/plugins
+
+    source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 elif [[ "$OS" == "macos" ]]; then
     ZSH_PLUGINS=/usr/local/share
     fpath+=/usr/local/share/zsh-completions
+
+    source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 else
     echo "unknown OS. Set in ~/.zshrc"
 fi
-
-# Enable colors
-autoload -U colors && colors
-
-# Prompt
-# TODO Check theme https://github.com/romkatv/powerlevel10k
-fpath+=$HOME/.zsh/pure
-autoload -U promptinit; promptinit
-prompt pure
 
 # History
 HISTSIZE=10000

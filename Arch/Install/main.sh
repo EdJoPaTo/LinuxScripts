@@ -14,7 +14,7 @@ sudo pacman $param pkgstats
 sudo systemctl start pkgstats.timer
 
 # zsh
-sudo pacman $param zsh zsh-completions zsh-history-substring-search zsh-syntax-highlighting
+sudo pacman $param zsh zsh-completions zsh-history-substring-search zsh-syntax-highlighting zsh-theme-powerlevel10k
 
 # console unsorted
 sudo pacman $param exa tree lshw
