@@ -7,3 +7,5 @@ alias open='xdg-open'
 export MAKEFLAGS="-j$(nproc)"
 
 alias yay='nice yay'
+
+alias uff-cleanup-zoom='killall -9 zoom; rm -rf ~/.cache/zoom ~/.config/zoomus.conf ~/.zoom'
