@@ -21,7 +21,7 @@ alias ff='find . -type f -name'
 
 # example usage: `gitBelow fetch`
 gitBelow() {
-	find . -name ".git" -type d -print -exec git -C {}/../ $@ \;
+	find . -name ".git" -type d -print -execdir git $@ \;
 }
 
 alias svg2png='inkscape --export-type=png'
