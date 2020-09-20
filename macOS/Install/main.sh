@@ -6,7 +6,7 @@ brew update
 brew upgrade --greedy
 
 # Console tools
-brew install exa ffmpeg hugo the_silver_searcher
+brew install exa hugo the_silver_searcher
 
 # zsh plugins
 brew install zsh zsh-history-substring-search zsh-syntax-highlighting romkatv/powerlevel10k/powerlevel10k
@@ -17,6 +17,9 @@ brew install ansible ansible-lint
 # Image stuff
 brew install imagemagick gnuplot
 brew cask install gimp inkscape
+
+# Media stuff
+brew install ffmpeg youtube-dl
 
 # Media
 brew cask install iina vlc
