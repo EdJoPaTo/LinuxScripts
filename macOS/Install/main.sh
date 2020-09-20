@@ -1,6 +1,10 @@
 #!/bin/sh
 set -e
 
+# Ensure everything is up to date or else brew fails (which is dumb as same version is a warning)
+brew update
+brew upgrade --greedy
+
 # Console tools
 brew install exa ffmpeg hugo the_silver_searcher
 
