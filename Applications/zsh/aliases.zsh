@@ -37,10 +37,16 @@ alias ffmpegVideo='nice ffmpeg -v error -stats'
 alias eyeD3='eyeD3 --preserve-file-times'
 alias youtube-dl-mp3='nice youtube-dl --write-all-thumbnails --add-metadata --embed-thumbnail -k -x --audio-format mp3'
 
+alias docker-prune='docker container prune -f && docker volume prune -f && docker image prune -f'
+
 alias cargo-buildcheck='nice cargo build && nice cargo clippy && nice cargo test -q && nice cargo fmt -- --check'
+cargoBelow() {
+	find . -name "Cargo.toml" -type f -print -execdir nice cargo $@ \;
+}
 
 alias init-nvm='source /usr/share/nvm/init-nvm.sh'
 alias npm-reinstall='rm -rf node_modules package-lock.json && nice npm i && npm outdated'
+alias npmBelow-clean='fd --type f package.json --threads 1 --exec rm -rf {//}/node_modules'
 alias typescript-watch='rm -rf dist && nice npx tsc --sourceMap --pretty --watch'
 
 alias pio-upload-monitor='pio run --target upload && pio device monitor'
