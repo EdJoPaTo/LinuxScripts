@@ -14,7 +14,7 @@ alias -g .....='../../../..'
 alias -g ......='../../../../..'
 
 alias grep='grep --color'
-alias ls="exa"
+alias ls="exa --git"
 
 alias fd='find . -type d -name'
 alias ff='find . -type f -name'
