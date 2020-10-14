@@ -25,6 +25,9 @@ sudo pacman $param htop bashtop
 # console multiplexer
 sudo pacman $param tmux screen
 
+# console benchmarking
+sudo pacman $param hyperfine
+
 # network communication
 sudo pacman $param git openssh rsync wget curl
 
@@ -44,7 +47,10 @@ sudo pacman $param ripgrep
 sudo pacman $param cups cups-pdf
 
 # programming
-sudo pacman $param cmake cloc clang
+sudo pacman $param cmake clang
+
+# count lines of code
+sudo pacman $param cloc tokei
 
 # Picture Tools
 sudo pacman $param imagemagick graphviz gnuplot
