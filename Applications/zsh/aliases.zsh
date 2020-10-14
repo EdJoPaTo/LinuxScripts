@@ -16,9 +16,6 @@ alias -g ......='../../../../..'
 alias grep='grep --color'
 alias ls="exa --git"
 
-alias fd='find . -type d -name'
-alias ff='find . -type f -name'
-
 # example usage: `gitBelow fetch`
 gitBelow() {
 	find . -name ".git" -type d -print -execdir git $@ \;

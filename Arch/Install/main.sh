@@ -17,7 +17,7 @@ sudo systemctl start pkgstats.timer
 sudo pacman $param zsh zsh-completions zsh-history-substring-search zsh-syntax-highlighting zsh-theme-powerlevel10k
 
 # console unsorted
-sudo pacman $param exa tree lshw
+sudo pacman $param lshw
 
 # console status
 sudo pacman $param htop bashtop
@@ -34,8 +34,11 @@ sudo pacman $param net-tools nmap traceroute mtr whois nload
 # mqtt cli tools (TODO: maybe only a client cli thingy instead of a mainly broker package?)
 sudo pacman $param mosquitto
 
-# find in file via `ag`
-sudo pacman $param the_silver_searcher
+# view and find files
+sudo pacman $param exa fd tree
+
+# find in file via `rg`
+sudo pacman $param ripgrep
 
 # printer
 sudo pacman $param cups cups-pdf
