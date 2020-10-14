@@ -46,6 +46,8 @@ alias init-nvm='source /usr/share/nvm/init-nvm.sh'
 alias npm-reinstall='rm -rf node_modules package-lock.json && nice npm i && npm outdated'
 alias typescript-watch='rm -rf dist && nice npx tsc --sourceMap --pretty --watch'
 
+alias pio-upload-monitor='pio run --target upload && pio device monitor'
+
 mqtt-home() {
 	# TODO: detect if $2 is unset and subscribe then instead
 	mosquitto_pub -h etoPiHome1 -t "$1" -m "$2"
