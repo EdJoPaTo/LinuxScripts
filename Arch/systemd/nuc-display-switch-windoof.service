@@ -4,6 +4,8 @@ Description=Changes the monitor to NUC on start and to Windoof on shutdown
 [Service]
 Type=oneshot
 RemainAfterExit=true
+Restart=on-failure
+RestartSec=2s
 # DisplayPort
 ExecStart=/usr/bin/ddcutil setvcp 60 0x0f
 # DVI-D1
