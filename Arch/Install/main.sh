@@ -28,6 +28,9 @@ sudo pacman $param tmux screen
 # console benchmarking
 sudo pacman $param hyperfine
 
+# console Disk Usage Analyzer
+sudo pacman $param dua-cli
+
 # network communication
 sudo pacman $param git openssh rsync wget curl
 
