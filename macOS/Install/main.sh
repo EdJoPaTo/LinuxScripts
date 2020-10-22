@@ -6,7 +6,7 @@ brew update
 brew upgrade --greedy
 
 # Console tools
-brew install exa hugo the_silver_searcher
+brew install exa hugo ripgrep fd hyperfine
 
 # zsh plugins
 brew install zsh zsh-history-substring-search zsh-syntax-highlighting romkatv/powerlevel10k/powerlevel10k
@@ -35,7 +35,7 @@ brew cask install resilio-sync
 brew cask install telegram telegram-desktop teamspeak-client mumble
 
 # Development Tools
-brew install bat cloc mtr nmap node
+brew install bat tokei mtr nmap node
 brew cask install atom visual-studio-code wireshark
 
 # gpg stuff
