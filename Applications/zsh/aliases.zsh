@@ -13,8 +13,10 @@ alias -g ....='../../..'
 alias -g .....='../../../..'
 alias -g ......='../../../../..'
 
+# Add arguments to commands (like default arguments)
 alias grep='grep --color'
 alias ls="exa --git"
+alias tokei='tokei --sort code'
 
 # example usage: `gitBelow fetch`
 gitBelow() {
