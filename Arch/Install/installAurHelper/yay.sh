@@ -7,4 +7,6 @@ param="--noconfirm --needed -S"
 
 ./installaurpackage.sh yay-bin
 
+yay --gendb
+
 yay --save --batchinstall --combinedupgrade --noremovemake --nodiffmenu --sudoloop
