@@ -42,6 +42,11 @@ zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
 
+function set_window_title(){
+    echo -ne "\033]0; $USER@$(hostname) $PWD \007"
+}
+precmd_functions+=(set_window_title)
+
 # Load stuff
 for config_file ($HOME/.zsh/*.zsh); do
     source $config_file
