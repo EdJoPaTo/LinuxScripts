@@ -1,7 +1,7 @@
 #!/bin/zsh
 set -e
 
-mkdir -p "$HOME/.zsh"
+mkdir -p "$HOME/.config/zsh"
 mkdir -p "$HOME/.cache"
 
 # verbose relative symbolic force
@@ -11,5 +11,5 @@ lnoptions="-vrsf"
 ln $lnoptions "$(pwd)/zshrc" "$HOME/.zshrc"
 
 for config_file ($(pwd)/*.zsh); do
-    ln $lnoptions $config_file "$HOME/.zsh"
+    ln $lnoptions $config_file "$HOME/.config/zsh"
 done
