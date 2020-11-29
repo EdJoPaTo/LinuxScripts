@@ -9,13 +9,9 @@ uptime
 
 if [[ "$OS" == "archlinux" ]]; then
     ZSH_PLUGINS=/usr/share/zsh/plugins
-
-    source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 elif [[ "$OS" == "macos" ]]; then
     ZSH_PLUGINS=/usr/local/share
     fpath+=/usr/local/share/zsh-completions
-
-    source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 else
     echo "unknown OS. Set in ~/.zshrc"
 fi
@@ -55,3 +51,5 @@ done
 source "$ZSH_PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" 2>/dev/null
 
 source "$ZSH_PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh" 2>/dev/null
+
+eval "$(starship init zsh)"
