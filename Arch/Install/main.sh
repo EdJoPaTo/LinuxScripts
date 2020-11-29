@@ -32,7 +32,7 @@ sudo pacman $param hyperfine
 sudo pacman $param dua-cli
 
 # network communication
-sudo pacman $param git openssh rsync wget curl
+sudo pacman $param git openssh rsync wget curl inetutils
 
 # console network analysis
 sudo pacman $param net-tools nmap traceroute mtr whois nload
