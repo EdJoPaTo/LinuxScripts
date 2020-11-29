@@ -54,13 +54,9 @@ alias typescript-watch='rm -rf dist && nice npx tsc --sourceMap --pretty --watch
 
 alias pio-upload-monitor='pio run --target upload && pio device monitor'
 
-mqtt-home() {
-	# TODO: detect if $2 is unset and subscribe then instead
-	mosquitto_pub -h etoPiHome1 -t "$1" -m "$2"
-}
-
-alias mqtt-home-plug-nuc-on='mqtt-home espPowerstrip-et/set/plug4/on 1'
-alias mqtt-home-plug-windoof-on='mqtt-home espPowerstrip-et/set/plug2/on 1'
+alias mqttui-home='mqttui -h etoPiHome1'
+alias mqtt-home-plug-nuc-on='mqttui-home espPowerstrip-et/set/plug4/on 1'
+alias mqtt-home-plug-windoof-on='mqttui-home espPowerstrip-et/set/plug2/on 1'
 
 alias rsynca='rsync --archive --verbose --checksum --delete-delay'
 
