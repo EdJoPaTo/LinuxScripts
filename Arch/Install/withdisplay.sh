@@ -64,6 +64,10 @@ sudo pacman $param ghex
 sudo pacman $param remmina
 sudo pacman $param --asdeps freerdp libvncserver
 
+# virtualisation
+sudo pacman $param --asdeps virtualbox-host-dkms virtualbox-guest-iso virtualbox-ext-vnc
+sudo pacman $param virtualbox
+
 # fonts
 sudo pacman $param ttf-dejavu ttf-opensans
 
