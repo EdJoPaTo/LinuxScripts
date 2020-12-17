@@ -35,7 +35,7 @@ sudo pacman $param dua-cli
 sudo pacman $param git openssh rsync wget curl inetutils
 
 # console network analysis
-sudo pacman $param net-tools nmap traceroute mtr whois nload
+sudo pacman $param net-tools nmap traceroute mtr whois nload iftop
 
 # mqtt cli tools (TODO: maybe only a client cli thingy instead of a mainly broker package?)
 sudo pacman $param mosquitto
