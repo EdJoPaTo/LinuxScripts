@@ -20,7 +20,7 @@ sudo pacman $param zsh zsh-completions zsh-history-substring-search zsh-syntax-h
 sudo pacman $param lshw
 
 # console status
-sudo pacman $param htop bashtop
+sudo pacman $param htop bashtop bpytop
 
 # console multiplexer
 sudo pacman $param tmux screen
@@ -46,9 +46,6 @@ sudo pacman $param exa fd tree
 # find in file via `rg`
 sudo pacman $param ripgrep
 
-# printer
-sudo pacman $param cups cups-pdf
-
 # programming
 sudo pacman $param cmake clang
 
@@ -60,9 +57,6 @@ sudo pacman $param imagemagick graphviz gnuplot
 
 # Audio / Video Tools
 sudo pacman $param ffmpeg python-eyed3 youtube-dl
-
-# lol
-# sudo pacman $param sl lolcat
 
 # nodejs
 sudo pacman $param nodejs

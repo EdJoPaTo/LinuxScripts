@@ -28,23 +28,28 @@ sudo pacman $param pdfpc
 # Terminal emulator
 sudo pacman $param alacritty
 
-# Teamspeak
-sudo pacman $param teamspeak3 mumble
-
-# Chat
-sudo pacman $param telegram-desktop
+# Communication
+sudo pacman $param teamspeak3 mumble telegram-desktop dino
 
 # Browser
 sudo pacman $param chromium
-sudo pacman $param firefox firefox-ublock-origin
+sudo pacman $param firefox firefox-ublock-origin firefox-decentraleyes
 ## dont install firefox-umatrix: 1. not all users might want it; 2. it seems to forget its rules on each restart
 
 # Editor
-sudo pacman $param atom code
+sudo pacman $param code
 sudo pacman $param --asdeps trash-cli
+
+# Arduino
+sudo pacman $param arduino
+sudo pacman $param --asdeps arduino-avr-core
+sudo usermod -aG uucp,lock "$USER"
 
 # Scanner tools
 sudo pacman $param simple-scan
+
+# Printer
+sudo pacman $param cups cups-pdf
 
 # LibreOffice
 sudo pacman $param libreoffice-fresh
