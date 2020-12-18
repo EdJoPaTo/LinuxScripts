@@ -1,5 +1,6 @@
 [Unit]
 Description=Pacman predownload packages
+ConditionACPower=true
 Wants=network-online.target
 After=network-online.target
 
