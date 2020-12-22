@@ -2,7 +2,7 @@
 export EDITOR=nano
 export VISUAL=nano
 
-export PATH=$PATH:$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin
+export PATH=$PATH:$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin:./node_modules/.bin
 
 # Pager
 export PAGER="less"
@@ -50,7 +50,7 @@ cargoBelow() {
 alias init-nvm='source /usr/share/nvm/init-nvm.sh'
 alias npm-reinstall='rm -rf node_modules package-lock.json && nice npm i && npm outdated'
 alias npmBelow-clean='fd --type f package.json --threads 1 --exec rm -rf {//}/node_modules'
-alias typescript-watch='rm -rf dist && nice npx tsc --sourceMap --pretty --watch'
+alias typescript-watch='rm -rf dist && nice ./node_modules/.bin/tsc --sourceMap --pretty --watch'
 
 alias pio-upload-monitor='pio run --target upload && pio device monitor'
 
