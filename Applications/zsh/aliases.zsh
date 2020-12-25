@@ -64,8 +64,8 @@ alias pio-upload-monitor='pio run --target upload && pio device monitor'
 alias led-matrix-remote-et-decke='led-matrix-remote mqtt -s etoPiHome1 -b espMatrixEtDecke'
 
 alias mqttui-home='mqttui -h etoPiHome1'
-alias mqtt-home-plug-nuc-on='mqttui-home espPowerstrip-et/set/plug4/on 1'
-alias mqtt-home-plug-windoof-on='mqttui-home espPowerstrip-et/set/plug2/on 1'
+alias mqtt-home-plug-nuc-on='mqttui-home publish espPowerstrip-et/set/plug4/on 1'
+alias mqtt-home-plug-windoof-on='mqttui-home publish espPowerstrip-et/set/plug2/on 1'
 
 alias rsynca='rsync --archive --verbose --checksum --delete-delay'
 
