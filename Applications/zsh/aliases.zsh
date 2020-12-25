@@ -2,7 +2,7 @@
 export EDITOR=nano
 export VISUAL=nano
 
-export PATH=$PATH:$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin:./node_modules/.bin
+export PATH=$PATH:$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin
 
 # Pager
 export PAGER="less"
@@ -45,6 +45,13 @@ alias cargo-dev='nice cargo watch --clear --exec clippy --exec "fmt -- --check |
 alias cargo-pedantic='touch src/*.rs && nice cargo clippy --all-targets -- -W clippy::pedantic && nice cargo build --all-targets && nice cargo test -q && nice cargo fmt -- --check'
 cargoBelow() {
 	find . -name "Cargo.toml" -type f -print -execdir nice cargo $@ \;
+}
+
+function npx() {
+	echo edjopato fixed npx
+	seek=$1
+	shift 1
+	eval "./node_modules/.bin/$seek $@"
 }
 
 alias init-nvm='source /usr/share/nvm/init-nvm.sh'
