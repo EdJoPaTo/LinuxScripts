@@ -53,7 +53,7 @@ sudo pacman $param cmake clang
 sudo pacman $param cloc tokei
 
 # Picture Tools
-sudo pacman $param imagemagick graphviz gnuplot
+sudo pacman $param imagemagick graphviz gnuplot oxipng
 
 # Audio / Video Tools
 sudo pacman $param ffmpeg python-eyed3 youtube-dl

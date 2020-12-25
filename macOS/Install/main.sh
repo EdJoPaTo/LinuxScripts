@@ -15,7 +15,7 @@ brew install zsh zsh-history-substring-search zsh-syntax-highlighting starship
 brew install ansible ansible-lint
 
 # Image stuff
-brew install imagemagick gnuplot
+brew install imagemagick gnuplot oxipng
 brew cask install gimp inkscape
 
 # Media stuff
