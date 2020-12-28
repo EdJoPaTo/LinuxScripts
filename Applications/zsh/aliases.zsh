@@ -61,7 +61,7 @@ alias typescript-watch='rm -rf dist && nice ./node_modules/.bin/tsc --sourceMap 
 
 alias pio-upload-monitor='pio run --target upload && pio device monitor'
 
-alias led-matrix-remote-et-decke='led-matrix-remote mqtt -s etoPiHome1 -b espMatrixEtDecke'
+alias led-matrix-remote-et-decke='led-matrix-remote mqtt -h etoPiHome1 -t espMatrixEtDecke'
 
 alias mqttui-home='mqttui -h etoPiHome1'
 alias mqtt-home-plug-nuc-on='mqttui-home publish espPowerstrip-et/set/plug4/on 1'
