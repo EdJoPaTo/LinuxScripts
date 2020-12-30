@@ -42,7 +42,7 @@ alias youtube-dl-mp3='nice youtube-dl --write-all-thumbnails --add-metadata --em
 alias docker-prune='docker container prune -f && docker volume prune -f && docker image prune -f'
 
 alias cargo-dev='nice cargo watch --clear --exec clippy --exec "fmt -- --check || true" --exec "test -q"'
-alias cargo-pedantic='touch src/*.rs && nice cargo clippy --all-targets -- -W clippy::pedantic && nice cargo build --all-targets && nice cargo test -q && nice cargo fmt -- --check'
+alias cargo-pedantic='touch **/src/*.rs && nice cargo clippy --all-targets -- -W clippy::pedantic && nice cargo build --all-targets && nice cargo test -q && nice cargo fmt -- --check'
 cargoBelow() {
 	find . -name "Cargo.toml" -type f -print -execdir nice cargo $@ \;
 }
