@@ -9,7 +9,7 @@ brew upgrade --greedy
 brew install exa hugo ripgrep fd hyperfine
 
 # zsh plugins
-brew install zsh zsh-history-substring-search zsh-syntax-highlighting starship
+brew install zsh zsh-completions zsh-history-substring-search zsh-syntax-highlighting starship
 
 # Ansible
 brew install ansible ansible-lint
