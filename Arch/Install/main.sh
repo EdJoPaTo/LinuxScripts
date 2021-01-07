@@ -49,6 +49,10 @@ sudo pacman $param ripgrep
 # programming
 sudo pacman $param cmake clang
 
+# programming rust
+sudo pacman $param rustup rust-analyzer cargo-audit cargo-edit cargo-outdated cargo-tarpaulin cargo-watch
+../../Install/rust.sh
+
 # count lines of code
 sudo pacman $param cloc tokei
 

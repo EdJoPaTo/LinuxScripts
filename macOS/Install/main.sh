@@ -38,6 +38,10 @@ brew cask install telegram telegram-desktop teamspeak-client mumble
 brew install bat tokei mtr nmap node
 brew cask install atom visual-studio-code wireshark
 
+# Rust
+brew install rustup-init cargo-audit cargo-edit cargo-watch
+../../Install/rust.sh
+
 # gpg stuff
 brew install pinentry pinentry-mac
 
