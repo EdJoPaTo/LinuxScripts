@@ -16,27 +16,27 @@ brew install ansible ansible-lint
 
 # Image stuff
 brew install imagemagick gnuplot oxipng
-brew cask install gimp inkscape
+brew install --cask gimp inkscape
 
 # Media stuff
 brew install ffmpeg youtube-dl
 
 # Media
-brew cask install iina vlc
+brew install --cask iina vlc
 
 # Browser
-brew cask install firefox chromium google-chrome
+brew install --cask firefox chromium google-chrome
 
 # Data
 brew install rsync
-brew cask install resilio-sync
+brew install --cask resilio-sync
 
 # Communication
-brew cask install telegram telegram-desktop teamspeak-client mumble
+brew install --cask telegram telegram-desktop teamspeak-client mumble
 
 # Development Tools
 brew install bat tokei mtr nmap node
-brew cask install atom visual-studio-code wireshark
+brew install --cask atom visual-studio-code wireshark
 
 # Rust
 brew install rustup-init cargo-audit cargo-edit cargo-watch
@@ -46,13 +46,13 @@ brew install rustup-init cargo-audit cargo-edit cargo-watch
 brew install pinentry pinentry-mac
 
 # Development Virtualisation
-brew cask install docker virtualbox
+brew install --cask docker virtualbox
 
 # Development Boards
-brew cask install balenaetcher arduino mqtt-explorer
+brew install --cask balenaetcher arduino mqtt-explorer
 
 # Small tools
-brew cask install keepingyouawake quitter veracrypt
+brew install --cask keepingyouawake quitter veracrypt
 
 # Office
-brew cask install mactex libreoffice
+brew install --cask mactex libreoffice
