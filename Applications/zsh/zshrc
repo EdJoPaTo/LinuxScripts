@@ -3,17 +3,17 @@
 
 uptime
 
-# Comment out your OS
-#OS=archlinux
-#OS=macos
-
-if [[ "$OS" == "archlinux" ]]; then
+if [[ -d "/usr/share/zsh/plugins" ]]; then
+    # probably Arch Linux
     ZSH_PLUGINS=/usr/share/zsh/plugins
-elif [[ "$OS" == "macos" ]]; then
-    ZSH_PLUGINS=/usr/local/share
-    fpath+=/usr/local/share/zsh-completions
 else
-    echo "unknown OS. Set in ~/.zshrc"
+    # probably macOS
+    ZSH_PLUGINS=/usr/local/share
+fi
+
+if [[ -d "/usr/local/share/zsh-completions" ]]; then
+    # macOS
+    fpath+=/usr/local/share/zsh-completions
 fi
 
 # History
