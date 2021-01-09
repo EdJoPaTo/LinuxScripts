@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 
 # copy stuff
-sudo cp -uv *.service *.timer /etc/systemd/system
+sudo cp -ruv system user /etc/systemd
 
 # reload systemd
 sudo systemctl daemon-reload

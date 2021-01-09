@@ -1,0 +1,10 @@
+[Unit]
+Description=Fetch git folders in ~/git every 100min
+
+[Timer]
+OnBootSec=30min
+OnUnitActiveSec=100min
+RandomizedDelaySec=1min
+
+[Install]
+WantedBy=timers.target

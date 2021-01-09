@@ -1,0 +1,13 @@
+[Unit]
+Description=Fetch git folders in ~/git
+ConditionACPower=true
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/find . -name ".git" -type d -print -execdir git fetch --all \;
+WorkingDirectory=/home/%u/git
+
+[Install]
+WantedBy=default.target
