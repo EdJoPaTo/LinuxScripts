@@ -68,7 +68,7 @@ alias mqttui-home='mqttui -h etoPiHome1'
 alias mqtt-home-plug-nuc-on='mqttui-home publish espPowerstrip-et/set/plug4/on 1'
 alias mqtt-home-plug-windoof-on='mqttui-home publish espPowerstrip-et/set/plug2/on 1'
 
-alias rsynca='rsync --archive --verbose --checksum --delete-delay'
+alias rsynca='rsync --archive --compress --verbose --checksum --delete-delay'
 
 remotedebug() {
 	# usage: remotedebug server command which should be executed
@@ -79,6 +79,6 @@ remotedebug() {
 	folder=${PWD##*/}
 	remotefolder="tmp/remotedebug/$folder/"
 
-	rsync --archive --cvs-exclude --exclude-from=.gitignore --verbose --checksum --rsync-path="mkdir -p $remotefolder && rsync" --delete-delay . $server:$remotefolder
+	rsync --archive --compress --verbose --checksum --delete-delay --cvs-exclude --exclude-from=.gitignore --rsync-path="mkdir -p $remotefolder && rsync" . $server:$remotefolder
 	ssh -tt $server "cd $remotefolder && bash -cl '$@'"
 }
