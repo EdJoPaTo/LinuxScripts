@@ -49,7 +49,8 @@ sudo usermod -aG uucp,lock "$USER"
 sudo pacman $param simple-scan
 
 # Printer
-sudo pacman $param cups cups-pdf system-config-printer
+sudo pacman $param cups cups-pdf
+sudo pacman $param --asdeps system-config-printer
 
 # LibreOffice
 sudo pacman $param libreoffice-fresh
