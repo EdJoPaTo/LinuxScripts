@@ -1,78 +1,114 @@
 #!/usr/bin/sh
 set -e
 
+EXPLICIT=(
+    ansible
+    ansible-lint
+    clang
+    cmake
+    curl
+    docker
+    git
+    lshw
+    nodejs
+    openssh
+    rsync
+    tmux
+    wget
+    xdg-user-dirs
+    zsh
+    zsh-completions
+    zsh-history-substring-search
+    zsh-syntax-highlighting
+
+    # arch base
+    base
+    base-devel
+    pacman-contrib
+
+    # report package usage
+    pkgstats
+
+    # console system status
+    htop
+    bashtop
+    bpytop
+
+    # console benchmarking
+    hyperfine
+
+    # console Disk Usage Analyzer
+    dua-cli
+
+    # network communication
+    inetutils
+
+    # console network analysis
+    bandwhich
+    dog
+    iftop
+    mtr
+    net-tools
+    nload
+    nmap
+    traceroute
+    whois
+
+    # view and find files
+    exa
+    fd
+    tree
+
+    # find in file via `rg`
+    ripgrep
+
+    # Picture Tools
+    gnuplot
+    graphviz
+    imagemagick
+    oxipng
+
+    # Audio / Video Tools
+    ffmpeg
+    python-eyed3
+    youtube-dl
+
+    # sensors
+    acpi
+    lm_sensors
+
+    # count lines of code
+    cloc
+    tokei
+
+    # programming rust
+    rustup
+    rust-analyzer
+    cargo-audit
+    cargo-edit
+    cargo-outdated
+    cargo-tarpaulin
+    cargo-watch
+)
+
+DEPS=(
+    bash-completion
+    npm
+
+    # ansible
+    sshpass
+)
+
 sudo pacman -Sy
 
-param="--noconfirm --needed -S"
-
-# arch
-sudo pacman $param base base-devel pacman-contrib
-sudo pacman $param --asdeps bash-completion
+sudo pacman --noconfirm --needed -S --asdeps "${DEPS[@]}"
+sudo pacman --noconfirm --needed -S "${EXPLICIT[@]}"
 
 # report package usage
-sudo pacman $param pkgstats
 sudo systemctl start pkgstats.timer
 
-# zsh
-sudo pacman $param zsh zsh-completions zsh-history-substring-search zsh-syntax-highlighting
-
-# console unsorted
-sudo pacman $param lshw
-
-# console status
-sudo pacman $param htop bashtop bpytop
-
-# console multiplexer
-sudo pacman $param tmux screen
-
-# console benchmarking
-sudo pacman $param hyperfine
-
-# console Disk Usage Analyzer
-sudo pacman $param dua-cli
-
-# network communication
-sudo pacman $param git openssh rsync wget curl inetutils
-
-# console network analysis
-sudo pacman $param net-tools nmap traceroute mtr whois nload iftop
-
-# mqtt cli tools (TODO: maybe only a client cli thingy instead of a mainly broker package?)
-sudo pacman $param mosquitto
-
-# view and find files
-sudo pacman $param exa fd tree
-
-# find in file via `rg`
-sudo pacman $param ripgrep
-
-# programming
-sudo pacman $param cmake clang
-
 # programming rust
-sudo pacman $param rustup rust-analyzer cargo-audit cargo-edit cargo-outdated cargo-tarpaulin cargo-watch
 ../../Install/rust.sh
 
-# count lines of code
-sudo pacman $param cloc tokei
-
-# Picture Tools
-sudo pacman $param imagemagick graphviz gnuplot oxipng
-
-# Audio / Video Tools
-sudo pacman $param ffmpeg python-eyed3 youtube-dl
-
-# nodejs
-sudo pacman $param nodejs
-sudo pacman $param --asdeps npm
-
-# docker
-sudo pacman $param docker
-
-# ansible
-sudo pacman $param ansible ansible-lint
-sudo pacman $param --asdeps sshpass
-
 # sensors
-sudo pacman $param lm_sensors acpi
 sudo sensors-detect --auto

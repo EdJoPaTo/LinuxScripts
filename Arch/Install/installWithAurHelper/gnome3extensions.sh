@@ -1,10 +1,12 @@
 #!/usr/bin/sh
 set -e
 
-# Backend to be used from firefox or chrome
-./installWithAurHelper.sh chrome-gnome-shell
+EXPLICIT=(
+    gnome-shell-extension-sound-output-device-chooser
+    gnome-shell-extension-system-monitor-git
+)
 
-./installWithAurHelper.sh gnome-shell-extension-system-monitor-git
+./installWithAurHelper.sh "${EXPLICIT[@]}"
 
 echo
 echo "manually:"

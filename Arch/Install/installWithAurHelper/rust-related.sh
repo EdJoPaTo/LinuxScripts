@@ -1,8 +1,15 @@
 #!/usr/bin/sh
 set -e
 
-# minimal cargo packages
-./installWithAurHelper.sh cargo-diet
+EXPLICIT=(
+    cargo-flamegraph
 
-# analyze dependencies
-./installWithAurHelper.sh cargo-geiger cargo-license
+    # minimal cargo packages
+    cargo-diet
+
+    # analyze dependencies
+    cargo-geiger
+    cargo-license
+)
+
+./installWithAurHelper.sh "${EXPLICIT[@]}"
