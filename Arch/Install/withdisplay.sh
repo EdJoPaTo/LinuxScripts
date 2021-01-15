@@ -40,8 +40,9 @@ EXPLICIT=(
     # Browser
     chromium
     firefox
-    firefox-ublock-origin
+    firefox-dark-reader
     firefox-decentraleyes
+    firefox-ublock-origin
     ## dont install firefox-umatrix: 1. not all users might want it; 2. it seems to forget its rules on each restart
 
     # Editor
