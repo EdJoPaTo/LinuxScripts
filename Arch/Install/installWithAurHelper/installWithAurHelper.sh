@@ -1,4 +1,4 @@
 #!/usr/bin/sh
 set -e
 
-nice yay --noconfirm --needed --nocleanmenu -Sy "$@"
+nice paru --batchinstall --sudoloop --noconfirm --needed -Sy "$@"
