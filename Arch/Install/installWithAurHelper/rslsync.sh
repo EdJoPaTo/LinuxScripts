@@ -1,6 +1,8 @@
 #!/usr/bin/sh
 set -e
 
+sudo pacman -Sy
+
 ./installWithAurHelper.sh rslsync
 
 mkdir -p ~/.config/rslsync

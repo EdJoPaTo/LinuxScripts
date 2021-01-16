@@ -2,6 +2,7 @@
 set -e
 
 EXPLICIT=(
+    arc-gtk-theme
     arduino
     dino
     gimp
@@ -11,9 +12,12 @@ EXPLICIT=(
     mumble
     remmina
     simple-scan
+    steam
     teamspeak3
     telegram-desktop
     texlive-most
+    torbrowser-launcher
+    veracrypt
     virtualbox
     vlc
     wireshark-qt

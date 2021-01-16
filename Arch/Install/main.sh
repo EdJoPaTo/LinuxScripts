@@ -9,11 +9,15 @@ EXPLICIT=(
     curl
     docker
     git
+    hugo
     lshw
-    nodejs
+    nano
     openssh
+    progress
     rsync
+    speedtest-cli
     tmux
+    vi
     wget
     xdg-user-dirs
     zsh
@@ -24,6 +28,8 @@ EXPLICIT=(
     # arch base
     base
     base-devel
+    man-db
+    man-pages
     pacman-contrib
 
     # report package usage
@@ -42,6 +48,8 @@ EXPLICIT=(
 
     # network communication
     inetutils
+    networkmanager
+    networkmanager-openvpn
 
     # console network analysis
     bandwhich
@@ -81,6 +89,10 @@ EXPLICIT=(
     cloc
     tokei
 
+    # programming nodejs
+    nodejs
+    nvm
+
     # programming rust
     rustup
     rust-analyzer
@@ -97,6 +109,9 @@ DEPS=(
 
     # ansible
     sshpass
+
+    # hugo: syntax-highlight code snippets
+    python-pygments
 )
 
 sudo pacman -Sy
