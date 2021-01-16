@@ -84,5 +84,5 @@ remotedebug() {
 	remotefolder="tmp/remotedebug/$folder/"
 
 	rsync --archive --compress --verbose --checksum --delete-delay --exclude=.git --exclude-from=.gitignore --rsync-path="mkdir -p $remotefolder && rsync" . $server:$remotefolder
-	ssh -tt $server "cd $remotefolder && bash -cl '$@'"
+	ssh -tt $server "uptime && cd $remotefolder && bash -cl '$@' && uptime"
 }
