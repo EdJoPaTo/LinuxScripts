@@ -18,6 +18,10 @@ alias grep='grep --color'
 alias ls="exa --git"
 alias tokei='tokei --sort code'
 
+function netstat() {
+	echo use ss
+}
+
 # example usage: `gitBelow fetch`
 gitBelow() {
 	find . -name ".git" -type d -print -execdir git $@ \;

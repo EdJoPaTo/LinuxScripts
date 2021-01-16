@@ -56,7 +56,6 @@ EXPLICIT=(
     dog
     iftop
     mtr
-    net-tools
     nload
     nmap
     traceroute
