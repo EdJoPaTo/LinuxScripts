@@ -12,6 +12,7 @@ EXPLICIT=(
     hugo
     lshw
     nano
+    opendoas
     openssh
     progress
     reflector
