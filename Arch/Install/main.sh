@@ -14,6 +14,7 @@ EXPLICIT=(
     nano
     openssh
     progress
+    reflector
     rsync
     speedtest-cli
     tmux
