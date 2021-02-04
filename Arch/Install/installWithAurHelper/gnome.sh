@@ -2,6 +2,7 @@
 set -e
 
 EXPLICIT=(
+    gnome-shell-extension-caffeine-git
     gnome-shell-extension-sound-output-device-chooser
     gnome-shell-extension-system-monitor-git
     nautilus-open-any-terminal
@@ -19,4 +20,3 @@ echo
 echo "install extensions manually:"
 echo https://extensions.gnome.org/extension/600/launch-new-instance/
 echo https://extensions.gnome.org/extension/7/removable-drive-menu/
-echo https://extensions.gnome.org/extension/517/caffeine/
