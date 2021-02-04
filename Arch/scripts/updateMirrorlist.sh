@@ -1,4 +1,5 @@
-#!/bin/sh -e
+#!/bin/sh
+set -e
 
 echo "Download Mirrorlist and rank them..."
 reflector --latest 100 --protocol https --ipv4 --ipv6 --country de,be,fr,nl --connection-timeout 1 --sort rate > /tmp/mirrorlist
