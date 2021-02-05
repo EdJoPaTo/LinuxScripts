@@ -35,6 +35,9 @@ EXPLICIT=(
     totem
     ffmpegthumbnailer
 
+    # Share mouse/keyboard with other computers
+    barrier
+
     # Presentation Tool
     pdfpc
 
