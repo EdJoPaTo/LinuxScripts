@@ -1,4 +1,6 @@
-#!/bin/zsh
+#!/bin/bash
+set -e
+
 mkdir -p "$HOME/.config/mpd"
 mkdir -p "$HOME/.cache/mpd"
 # Assume the default english xdg music folder (https://wiki.archlinux.org/index.php/XDG_user_directories)
