@@ -17,7 +17,7 @@ alias -g ......='../../../../..'
 alias grep='grep --color'
 alias ls="exa --git"
 alias tokei='tokei --sort code'
-alias sudo='echo consider doas && sudo'
+alias sudo=' echo use doas && false &&'
 
 function netstat() {
 	echo use ss
