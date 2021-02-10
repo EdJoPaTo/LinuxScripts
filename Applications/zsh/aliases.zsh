@@ -36,6 +36,7 @@ alias wttr='curl wttr.in && curl v2.wttr.in'
 alias wttr-short='curl "wttr.in/?format=%l:+%c+%t,+%w+%m"'
 
 alias mpc-clearadd='mpc clear -q && mpc add'
+alias amp='mpc --host etoPiAmp'
 
 alias ffmpegGif='nice ffmpeg -v error -stats -an'
 alias ffmpegSound='nice ffmpeg -v error -stats -vn'
