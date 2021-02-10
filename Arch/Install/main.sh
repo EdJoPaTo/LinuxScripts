@@ -14,6 +14,8 @@ EXPLICIT=(
     nano
     opendoas
     openssh
+    podman
+    podman-compose
     progress
     reflector
     rsync
@@ -113,6 +115,9 @@ DEPS=(
 
     # hugo: syntax-highlight code snippets
     python-pygments
+
+    # podman
+    catatonit # --init
 )
 
 sudo pacman -Sy
