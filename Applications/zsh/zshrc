@@ -18,7 +18,7 @@ fi
 
 # History
 HISTSIZE=10000
-SAVEHIST=8000
+SAVEHIST=4000
 HISTFILE=~/.cache/zsh_history
 # History options: man zshoptions
 setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
