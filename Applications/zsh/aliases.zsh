@@ -25,7 +25,7 @@ function netstat() {
 
 # example usage: `gitBelow fetch`
 gitBelow() {
-	find . -name ".git" -type d -print -execdir git $@ \;
+	find . -name ".git" -type d -print -execdir git --no-pager $@ \;
 }
 
 alias svg2png='inkscape --export-type=png'
