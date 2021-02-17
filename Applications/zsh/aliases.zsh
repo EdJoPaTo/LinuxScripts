@@ -45,8 +45,8 @@ alias ffmpegVideo='nice ffmpeg -v error -stats'
 alias eyeD3='eyeD3 --preserve-file-times'
 alias youtube-dl-mp3='nice youtube-dl --write-all-thumbnails --add-metadata --embed-thumbnail -k -x --audio-format mp3'
 
-alias docker-prune='docker container prune -f && docker volume prune -f && docker image prune -f'
-alias podman-prune='podman container prune -f && podman volume prune -f && podman image prune -f'
+alias docker-prune=' echo use docker system prune --volumes -f'
+alias podman-prune=' echo use podman system prune --volumes -f'
 
 alias cargo-dev='nice cargo watch --clear --exec clippy --exec "fmt -- --check || true" --exec "test -q"'
 alias cargo-pedantic='touch **/src/*.rs && nice cargo clippy --all-targets -- -W clippy::pedantic && nice cargo build --all-targets && nice cargo test -q && nice cargo fmt -- --check'
