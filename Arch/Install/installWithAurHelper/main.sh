@@ -4,6 +4,7 @@ set -e
 EXPLICIT=(
     bottom-bin
     dive
+    nvm
     resvg
     starship-bin
 

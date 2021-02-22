@@ -12,6 +12,7 @@ EXPLICIT=(
     hugo
     lshw
     nano
+    nodejs
     opendoas
     openssh
     podman
@@ -91,10 +92,6 @@ EXPLICIT=(
     # count lines of code
     cloc
     tokei
-
-    # programming nodejs
-    nodejs
-    nvm
 
     # programming rust
     rustup
