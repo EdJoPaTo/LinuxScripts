@@ -10,6 +10,7 @@ EXPLICIT=(
     docker
     git
     hugo
+    lostfiles
     lshw
     nano
     nodejs
