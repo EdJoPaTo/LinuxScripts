@@ -36,7 +36,7 @@ brew install --cask telegram telegram-desktop teamspeak-client mumble
 
 # Development Tools
 brew install bat tokei mtr nmap node
-brew install --cask atom visual-studio-code wireshark
+brew install --cask visual-studio-code wireshark
 
 # Rust
 brew install rustup-init cargo-audit cargo-edit cargo-watch
