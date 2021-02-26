@@ -1,10 +1,10 @@
 #!/usr/bin/sh
 set -e
 
-mkdir -p ~/.aurinstall
+mkdir -p ~/.cache/eto-aurinstall
 
 function dothestuff {
-  cd ~/.aurinstall
+  cd ~/.cache/eto-aurinstall
 
   git clone https://aur.archlinux.org/$1.git
   cd $1
