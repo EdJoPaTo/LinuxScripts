@@ -1,4 +1,4 @@
 #!/usr/bin/sh
 set -e
 
-nice paru --batchinstall --sudoloop --noconfirm --needed -S "$@"
+nice paru --sudo sudo --sudoloop --skipreview --noconfirm --needed -S "$@"
