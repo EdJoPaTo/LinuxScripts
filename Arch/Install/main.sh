@@ -22,6 +22,7 @@ EXPLICIT=(
     reflector
     rsync
     speedtest-cli
+    starship
     tmux
     vi
     wget

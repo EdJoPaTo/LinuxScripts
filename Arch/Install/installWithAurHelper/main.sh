@@ -7,7 +7,6 @@ EXPLICIT=(
     heliocron-bin
     nvm
     resvg
-    starship-bin
 
     # Rust
     cargo-flamegraph
