@@ -7,6 +7,7 @@ mkdir -p ~/.config/paru
 cat > ~/.config/paru/paru.conf << EOF
 [options]
 BatchInstall
+BottomUp
 CombinedUpgrade
 Devel
 UpgradeMenu
