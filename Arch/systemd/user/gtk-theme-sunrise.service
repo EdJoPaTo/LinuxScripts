@@ -1,0 +1,12 @@
+[Unit]
+Description=Set a gtk theme on sunrise
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=30min
+ExecStart=/usr/bin/bash -c "heliocron wait --event sunrise --offset -0:30 && gsettings set org.gnome.desktop.interface gtk-theme Adwaita"
+
+[Install]
+WantedBy=default.target
