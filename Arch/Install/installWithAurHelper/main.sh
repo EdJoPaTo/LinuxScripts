@@ -4,7 +4,7 @@ set -e
 EXPLICIT=(
     bottom-bin
     dive
-    heliocron
+    heliocron-bin
     nvm
     resvg
     starship-bin
