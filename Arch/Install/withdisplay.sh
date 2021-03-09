@@ -78,9 +78,9 @@ EXPLICIT=(
 
 DEPS=(
     arduino-avr-core
-    pulseaudio-alsa
-    pulseaudio-bluetooth
-    pulseaudio-zeroconf
+    pipewire
+    pipewire-alsa
+    pipewire-pulse
     trash-cli
     virtualbox-ext-vnc
     virtualbox-guest-iso
