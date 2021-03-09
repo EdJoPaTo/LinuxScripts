@@ -5,7 +5,7 @@ EXPLICIT=(
     gnome-shell-extension-caffeine-git
     gnome-shell-extension-sound-output-device-chooser
     gnome-shell-extension-system-monitor-git
-    gnome-shell-extensions # drive-menu and launch-new-instance
+    gnome-shell-extensions # drive-menu
     nautilus-open-any-terminal
 )
 
@@ -19,7 +19,6 @@ gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal alacri
 EXTENSIONS=(
     caffeine@patapon.info
     drive-menu@gnome-shell-extensions.gcampax.github.com
-    launch-new-instance@gnome-shell-extensions.gcampax.github.com
     sound-output-device-chooser@kgshank.net
     system-monitor@paradoxxx.zero.gmail.com
 )
