@@ -7,7 +7,7 @@ After=network-online.target
 [Service]
 Type=oneshot
 ExecStart=/usr/bin/find . -name ".git" -type d -print -execdir git fetch --all \;
-WorkingDirectory=/home/%u/git
+WorkingDirectory=%h/git
 
 [Install]
 WantedBy=default.target
