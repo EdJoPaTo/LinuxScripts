@@ -4,6 +4,7 @@ set -e
 EXPLICIT=(
     ansible
     ansible-lint
+    bat
     clang
     cmake
     curl
