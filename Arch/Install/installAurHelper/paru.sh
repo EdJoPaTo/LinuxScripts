@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/usr/bin/env bash
 set -e
 
 ./installaurpackage.sh paru-bin

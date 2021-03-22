@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 
 # See https://github.com/sindresorhus/quick-look-plugins

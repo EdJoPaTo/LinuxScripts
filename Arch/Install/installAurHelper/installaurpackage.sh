@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/usr/bin/env bash
 set -e
 
 mkdir -p ~/.cache/eto-aurinstall

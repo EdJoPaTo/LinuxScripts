@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 
 # Before running run barrier once as a server. This creates the crypto keys needed ot run.

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 set -e
 
 # Ensure everything is up to date or else brew fails (which is dumb as same version is a warning)

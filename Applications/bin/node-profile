@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 rm isolate-0x*-v8.log 2> /dev/zero
 
 time node --prof $@

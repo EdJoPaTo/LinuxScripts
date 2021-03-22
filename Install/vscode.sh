@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -e
 
 # Find out installed ones: `code --list-extensions`
 

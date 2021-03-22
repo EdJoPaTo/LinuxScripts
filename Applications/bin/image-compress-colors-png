@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 params="-strip -quantize transparent -resize 2000x1000> +dither"
 

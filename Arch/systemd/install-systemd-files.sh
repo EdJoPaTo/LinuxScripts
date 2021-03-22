@@ -1,4 +1,5 @@
-#!/usr/bin/sh
+#!/usr/bin/env bash
+set -e
 
 # copy stuff
 sudo cp -ruv system user /etc/systemd
