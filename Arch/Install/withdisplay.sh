@@ -2,14 +2,18 @@
 set -e
 
 EXPLICIT=(
+    alacritty
     arc-gtk-theme
     arduino
+    code
+    ddcutil
     dino
     gimp
     inkscape
     libreoffice-fresh
     mpv
     mumble
+    pdfpc
     remmina
     simple-scan
     steam
@@ -21,9 +25,6 @@ EXPLICIT=(
     virtualbox
     vlc
     wireshark-qt
-
-    # Control displays via command line
-    ddcutil
 
     # Audio
     mpd
@@ -38,12 +39,6 @@ EXPLICIT=(
     # Share mouse/keyboard with other computers
     barrier
 
-    # Presentation Tool
-    pdfpc
-
-    # Terminal emulator
-    alacritty
-
     # Browser
     chromium
     firefox
@@ -54,9 +49,6 @@ EXPLICIT=(
     ## dont install firefox-umatrix: 1. not all users might want it; 2. it seems to forget its rules on each restart
     ## https://addons.mozilla.org/firefox/addon/single-file
     ## https://addons.mozilla.org/firefox/addon/umatrix
-
-    # Editor
-    code
 
     # Languages
     hunspell-de

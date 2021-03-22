@@ -9,18 +9,25 @@ EXPLICIT=(
     cmake
     curl
     docker
+    dua-cli
     git
+    htop
     hugo
+    hyperfine
     lostfiles
     lshw
     nano
+    networkmanager
+    networkmanager-openvpn
     nodejs
     opendoas
     openssh
+    pkgstats
     podman
     podman-compose
     progress
     reflector
+    ripgrep
     rsync
     speedtest-cli
     starship
@@ -40,42 +47,20 @@ EXPLICIT=(
     man-pages
     pacman-contrib
 
-    # report package usage
-    pkgstats
-
-    # console system status
-    htop
-    bashtop
-    bpytop
-
-    # console benchmarking
-    hyperfine
-
-    # console Disk Usage Analyzer
-    dua-cli
-
-    # network communication
-    inetutils
-    networkmanager
-    networkmanager-openvpn
-
     # console network analysis
     bandwhich
     dog
     iftop
+    inetutils
     mtr
     nload
     nmap
-    traceroute
     whois
 
     # view and find files
     exa
     fd
     tree
-
-    # find in file via `rg`
-    ripgrep
 
     # Picture Tools
     gnuplot

@@ -19,8 +19,6 @@ EXPLICIT=(
     ventoy-bin
 
     # uff communication
-    slack-desktop
-    teams
     zoom
 )
 
