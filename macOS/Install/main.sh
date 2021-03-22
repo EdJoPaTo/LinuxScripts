@@ -1,54 +1,57 @@
 #!/usr/bin/env bash
 set -e
 
-PACKAGES=(
-    ansible
-    ansible-lint
+CASKS=(
     arduino
     balenaetcher
-    bat
-    cargo-audit
-    cargo-edit
-    cargo-watch
     chromium
-    dive
     docker
-    exa
-    fd
-    ffmpeg
     firefox
     gimp
-    gnuplot
     google-chrome
-    hugo
-    hyperfine
     iina
-    imagemagick
     inkscape
     keepingyouawake
     libreoffice
     mactex
     mqtt-explorer
-    mtr
     mumble
+    quitter
+    resilio-sync
+    teamspeak-client
+    telegram
+    telegram-desktop
+    veracrypt
+    virtualbox
+    vlc
+    vscodium
+    wireshark
+)
+
+FORMULAS=(
+    ansible
+    ansible-lint
+    bat
+    cargo-audit
+    cargo-edit
+    cargo-watch
+    dive
+    exa
+    fd
+    ffmpeg
+    gnuplot
+    hugo
+    hyperfine
+    imagemagick
+    mtr
     nmap
     node
     oxipng
-    quitter
-    resilio-sync
     ripgrep
     rsync
     rustup-init
     starship
-    teamspeak-client
-    telegram
-    telegram-desktop
     tokei
-    veracrypt
-    virtualbox
-    visual-studio-code
-    vlc
-    wireshark
     youtube-dl
     zsh
     zsh-completions
@@ -64,6 +67,7 @@ PACKAGES=(
 brew update
 brew upgrade --greedy
 
-brew install "${PACKAGES[@]}"
+brew install "${FORMULAS[@]}"
+brew install --cask "${CASKS[@]}"
 
 ../../Install/rust.sh

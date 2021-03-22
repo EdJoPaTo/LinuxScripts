@@ -2,7 +2,7 @@
 set -e
 
 # See https://github.com/sindresorhus/quick-look-plugins
-PACKAGES=(
+PLUGINS=(
     apparency
     qlcolorcode
     qlImageSize
@@ -12,7 +12,7 @@ PACKAGES=(
     quicklook-json
 )
 
-brew reinstall "${PACKAGES[@]}"
+brew install "${PLUGINS[@]}"
 
 # Remove the quarantine flag to allow macOS to run these "untrusted" extensions
 xattr -d -r com.apple.quarantine ~/Library/QuickLook
