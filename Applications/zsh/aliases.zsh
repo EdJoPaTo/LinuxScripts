@@ -6,7 +6,6 @@ export PATH=$PATH:$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin
 
 # Pager
 export LESS="--RAW-CONTROL-CHARS"
-export MANPAGER="sh -c 'col -bx | bat --language man --plain'"
 export PAGER="less"
 
 alias -g ...='../..'
