@@ -69,5 +69,3 @@ brew upgrade --greedy
 
 brew install "${FORMULAS[@]}"
 brew install --cask "${CASKS[@]}"
-
-../../Install/rust.sh

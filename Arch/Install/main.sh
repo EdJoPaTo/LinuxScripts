@@ -118,8 +118,5 @@ sudo touch -a /etc/subuid /etc/subgid
 sudo usermod --add-subuids 165536-231072 --add-subgids 165536-231072 $USER
 podman system migrate
 
-# programming rust
-../../Install/rust.sh
-
 # sensors
 sudo sensors-detect --auto
