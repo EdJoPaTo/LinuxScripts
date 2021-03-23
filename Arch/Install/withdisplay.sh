@@ -73,9 +73,6 @@ EXPLICIT=(
 
 DEPS=(
     arduino-avr-core
-    pipewire
-    pipewire-alsa
-    pipewire-pulse
     trash-cli
     virtualbox-ext-vnc
     virtualbox-guest-iso
