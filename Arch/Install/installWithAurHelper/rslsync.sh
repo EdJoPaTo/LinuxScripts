@@ -6,9 +6,17 @@ sudo pacman -Sy
 ./installWithAurHelper.sh rslsync
 
 mkdir -p ~/.config/rslsync
-rslsync --dump-sample-config > ~/.config/rslsync/rslsync.conf
+mkdir -p ~/.cache/rslsync
 
-nano ~/.config/rslsync/rslsync.conf
+cat > ~/.config/rslsync/rslsync.conf << EOF
+{
+    "device_name": "$HOSTNAME",
+    "storage_path": "~/.cache/rslsync/",
+    "webui": {
+        "listen": "127.0.0.1:8888"
+    }
+}
+EOF
 
 systemctl --user enable rslsync.service
 systemctl --user start rslsync.service
