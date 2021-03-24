@@ -2,6 +2,7 @@
 set -e
 
 EXPLICIT=(
+    alma-git
     bottom-bin
     dive
     heliocron-bin

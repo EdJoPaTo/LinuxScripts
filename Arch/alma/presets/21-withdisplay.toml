@@ -1,0 +1,25 @@
+packages = [
+    # some big packages so running the main script isnt as meh
+    "arduino",
+    "chromium",
+    "code",
+    "firefox",
+    "gimp",
+    "inkscape",
+    "libreoffice-fresh",
+    "teamspeak3",
+    "telegram-desktop",
+    "texlive-most",
+    "vlc",
+    "wireshark-qt"
+]
+aur_packages = []
+shared_directories = ["LinuxScripts"]
+script = """
+set -eux
+cd /shared_dirs/LinuxScripts/Arch/Install
+
+
+export USER=edjopato
+./withdisplay.sh
+"""

@@ -1,0 +1,4 @@
+script = """
+set -eux
+df -h
+"""

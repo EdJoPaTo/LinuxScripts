@@ -1,0 +1,18 @@
+packages = [
+    "base",
+    "base-devel",
+    "nano",
+
+    # some big packages so running the main script isnt as meh
+    "ansible",
+    "podman",
+    "docker"
+]
+aur_packages = ["paru-bin", "wd719x-firmware", "aic94xx-firmware"]
+shared_directories = ["LinuxScripts"]
+script = """
+set -eux
+cd /shared_dirs/LinuxScripts/Arch/Install
+
+./main.sh
+"""

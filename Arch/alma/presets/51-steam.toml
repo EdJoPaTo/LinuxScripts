@@ -1,0 +1,8 @@
+packages = [
+    "steam"
+]
+# starts the Steam GUI but does whats wanted. Initial steam install
+script = """
+set -eux
+su -c - edjopato "steam"
+"""

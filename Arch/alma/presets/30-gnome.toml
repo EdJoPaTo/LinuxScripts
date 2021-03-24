@@ -1,0 +1,17 @@
+packages = [
+    "gdm",
+    "gnome-backgrounds"
+]
+aur_packages = []
+shared_directories = ["LinuxScripts"]
+script = """
+set -eux
+
+cd /shared_dirs/LinuxScripts/Arch/Install
+./gnome.sh
+
+cd /shared_dirs/LinuxScripts/Arch/Install/installWithAurHelper
+su -c - edjopato "./gnome.sh"
+
+systemctl enable gdm.service
+"""

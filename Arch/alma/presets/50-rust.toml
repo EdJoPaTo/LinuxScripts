@@ -1,0 +1,14 @@
+packages = [
+    "rustup",
+    "cargo-audit",
+    "cargo-edit",
+    "cargo-outdated",
+    "cargo-tarpaulin",
+    "cargo-watch"
+]
+shared_directories = ["LinuxScripts"]
+script = """
+set -eux
+cd /shared_dirs/LinuxScripts/Install
+su -c - edjopato "./rust.sh"
+"""

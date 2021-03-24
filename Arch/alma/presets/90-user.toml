@@ -1,0 +1,8 @@
+script = """
+set -eux
+
+chown -R edjopato:wheel /home/edjopato
+su -c - edjopato "paru --gendb"
+
+chsh -s /usr/bin/zsh edjopato
+"""
