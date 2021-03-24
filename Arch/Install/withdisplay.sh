@@ -52,8 +52,8 @@ EXPLICIT=(
 
     # Languages
     hunspell-de
-    hunspell-en_GB
-    hunspell-en_US
+    hunspell-en_gb
+    hunspell-en_us
     hyphen-de
     hyphen-en
     mythes-de
