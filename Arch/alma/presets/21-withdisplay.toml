@@ -2,7 +2,6 @@ packages = [
     # some big packages so running the main script isnt as meh
     "arduino",
     "chromium",
-    "code",
     "firefox",
     "gimp",
     "inkscape",
