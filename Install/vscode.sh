@@ -6,12 +6,16 @@ set -e
 packages=(
     coolbear.systemd-unit-file
     EditorConfig.EditorConfig
+    esbenp.prettier-vscode
+    redhat.vscode-xml
+    redhat.vscode-yaml
 
     matklad.rust-analyzer
     bungcip.better-toml
     serayuzgur.crates
 
-    platformio.platformio-ide
+    # For whatever reason, it does not like to be installed from command line
+    #platformio.platformio-ide
 )
 
 for package in "${packages[@]}"
