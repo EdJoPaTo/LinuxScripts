@@ -10,6 +10,8 @@ BatchInstall
 BottomUp
 CombinedUpgrade
 Devel
+NewsOnUpgrade
+Provides
 UpgradeMenu
 
 [bin]
