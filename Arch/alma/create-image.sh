@@ -3,7 +3,7 @@ set -e
 
 rm -rf alma.img
 
-doas alma create \
+nice doas alma create \
     --encrypted-root \
     --aur-helper yay \
     --presets ./presets/*.toml \
