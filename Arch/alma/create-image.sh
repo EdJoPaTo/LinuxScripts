@@ -7,5 +7,5 @@ nice doas alma create \
     --encrypted-root \
     --aur-helper yay \
     --presets ./presets/*.toml \
-    --image 20GiB alma.img \
+    --image 25GiB alma.img \
     $@
