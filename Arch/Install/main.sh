@@ -117,7 +117,7 @@ sudo systemctl start pkgstats.timer
 
 # podman rootless usage
 sudo touch -a /etc/subuid /etc/subgid
-sudo usermod --add-subuids 165536-231072 --add-subgids 165536-231072 $USER
+sudo usermod --add-subuids 165536-231072 --add-subgids 165536-231072 "$USER"
 
 # sensors
 sudo sensors-detect --auto

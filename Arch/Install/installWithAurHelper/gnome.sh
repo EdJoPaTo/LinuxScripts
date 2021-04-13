@@ -26,5 +26,5 @@ EXTENSIONS=(
 )
 
 for extension in "${EXTENSIONS[@]}"; do
-    gnome-extensions enable $extension
+    gnome-extensions enable "$extension"
 done

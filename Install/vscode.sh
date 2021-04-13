@@ -22,5 +22,5 @@ packages=(
 
 for package in "${packages[@]}"
 do
-	code --force --install-extension $package
+	code --force --install-extension "$package"
 done
