@@ -10,6 +10,7 @@ EXPLICIT=(
     curl
     docker
     dua-cli
+    fail2ban
     git
     htop
     hugo
