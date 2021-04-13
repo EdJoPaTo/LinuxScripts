@@ -10,6 +10,7 @@ packages=(
     esbenp.prettier-vscode
     redhat.vscode-xml
     redhat.vscode-yaml
+    timonwong.shellcheck
 
     matklad.rust-analyzer
     bungcip.better-toml

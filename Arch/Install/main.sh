@@ -29,6 +29,7 @@ EXPLICIT=(
     reflector
     ripgrep
     rsync
+    shellcheck
     speedtest-cli
     starship
     tmux
