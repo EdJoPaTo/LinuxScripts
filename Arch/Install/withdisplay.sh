@@ -10,6 +10,7 @@ EXPLICIT=(
     dino
     gimp
     inkscape
+    languagetool
     libreoffice-fresh
     mpv
     mumble

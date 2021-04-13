@@ -5,6 +5,7 @@ set -e
 
 packages=(
     coolbear.systemd-unit-file
+    davidlday.languagetool-linter
     EditorConfig.EditorConfig
     esbenp.prettier-vscode
     redhat.vscode-xml
