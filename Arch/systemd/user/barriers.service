@@ -10,4 +10,4 @@ Restart=on-failure
 RestartSec=10s
 
 [Install]
-RequiredBy=default.target
+WantedBy=default.target

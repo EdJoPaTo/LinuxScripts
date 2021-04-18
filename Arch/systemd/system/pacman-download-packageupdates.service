@@ -9,4 +9,4 @@ Type=oneshot
 ExecStart=/usr/bin/pacman -Syuw --noconfirm --noprogressbar
 
 [Install]
-RequiredBy=multi-user.target
+WantedBy=multi-user.target
