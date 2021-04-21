@@ -43,6 +43,7 @@ EXPLICIT=(
     # Browser
     chromium
     firefox
+    firefox-clearurls
     firefox-dark-reader
     firefox-decentraleyes
     firefox-temporary-containers
