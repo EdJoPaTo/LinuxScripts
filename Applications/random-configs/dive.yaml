@@ -1,0 +1,4 @@
+container-engine: podman
+diff:
+  hide:
+    - unmodified
