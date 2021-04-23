@@ -8,6 +8,7 @@ EXPLICIT=(
     code
     ddcutil
     dino
+    element-desktop # test fractal when SSO works https://gitlab.gnome.org/GNOME/fractal/-/issues/521
     gimp
     inkscape
     languagetool
@@ -26,6 +27,7 @@ EXPLICIT=(
     virtualbox
     vlc
     wireshark-qt
+    xfmpc
 
     # Audio
     mpd

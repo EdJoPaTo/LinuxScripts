@@ -8,6 +8,7 @@ EXPLICIT=(
     clang
     cmake
     curl
+    deno
     docker
     dua-cli
     fail2ban
@@ -33,6 +34,7 @@ EXPLICIT=(
     shellcheck
     speedtest-cli
     starship
+    syncthing
     tmux
     vi
     wget
