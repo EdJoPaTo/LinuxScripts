@@ -1,3 +1,8 @@
+#!/usr/bin/env bash
+set -e
+
+xdg-user-dirs-update
+
 mkdir -p ~/bin
 mkdir -p ~/git/gist
 mkdir -p ~/git/haw
