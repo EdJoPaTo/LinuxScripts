@@ -6,6 +6,7 @@ CASKS=(
     balenaetcher
     chromium
     docker
+    element
     firefox
     gimp
     google-chrome
@@ -18,6 +19,7 @@ CASKS=(
     mumble
     quitter
     resilio-sync
+    syncthing
     teamspeak-client
     telegram
     telegram-desktop
@@ -35,6 +37,7 @@ FORMULAS=(
     cargo-audit
     cargo-edit
     cargo-watch
+    deno
     dive
     exa
     fd
@@ -43,13 +46,16 @@ FORMULAS=(
     hugo
     hyperfine
     imagemagick
+    languagetool
     mtr
     nmap
     node
     oxipng
+    podman
     ripgrep
     rsync
     rustup-init
+    shellcheck
     starship
     tokei
     youtube-dl
