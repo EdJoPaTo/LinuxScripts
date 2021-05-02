@@ -48,10 +48,12 @@ EXPLICIT=(
     firefox-clearurls
     firefox-dark-reader
     firefox-decentraleyes
+    firefox-extension-privacybadger
     firefox-temporary-containers
     firefox-ublock-origin
-    ## dont install firefox-umatrix: 1. not all users might want it; 2. it seems to forget its rules on each restart
+    ## https://addons.mozilla.org/firefox/addon/privacy-redirect/
     ## https://addons.mozilla.org/firefox/addon/single-file
+    ## https://addons.mozilla.org/firefox/addon/svg-screenshots/
     ## https://addons.mozilla.org/firefox/addon/umatrix
 
     # Languages
