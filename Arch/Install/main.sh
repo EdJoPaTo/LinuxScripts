@@ -26,6 +26,7 @@ EXPLICIT=(
     networkmanager
     networkmanager-openvpn
     nodejs
+    openconnect
     opendoas
     openssh
     pkgstats
