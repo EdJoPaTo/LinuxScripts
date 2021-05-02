@@ -53,7 +53,5 @@ DEPS=(
     unrar
 )
 
-sudo pacman -Sy
-
-sudo pacman --noconfirm --needed -S --asdeps "${DEPS[@]}"
-sudo pacman --noconfirm --needed -S "${EXPLICIT[@]}"
+sudo pacman --noconfirm --needed -Sy --asdeps "${DEPS[@]}" "${EXPLICIT[@]}"
+sudo pacman -D --asexplicit --quiet "${EXPLICIT[@]}"

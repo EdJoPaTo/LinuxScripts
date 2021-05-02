@@ -33,7 +33,5 @@ DEPS=(
     xcompmgr
 )
 
-sudo pacman -Sy
-
-./installWithAurHelper.sh --asdeps "${DEPS[@]}"
-./installWithAurHelper.sh "${EXPLICIT[@]}"
+./installWithAurHelper.sh "${DEPS[@]}" "${EXPLICIT[@]}"
+sudo pacman -D --asexplicit --quiet "${EXPLICIT[@]}"

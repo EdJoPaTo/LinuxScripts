@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -e
 
+EXPLICIT_GROUPS=(
+    texlive-most
+)
+
 EXPLICIT=(
     alacritty
     arc-gtk-theme
@@ -21,7 +25,6 @@ EXPLICIT=(
     steam
     teamspeak3
     telegram-desktop
-    texlive-most
     torbrowser-launcher
     veracrypt
     virtualbox
@@ -97,10 +100,8 @@ DEPS=(
     libvncserver
 )
 
-sudo pacman -Sy
-
-sudo pacman --noconfirm --needed -S --asdeps "${DEPS[@]}"
-sudo pacman --noconfirm --needed -S "${EXPLICIT[@]}"
+sudo pacman --noconfirm --needed -Sy --asdeps "${DEPS[@]}" "${EXPLICIT[@]}" "${EXPLICIT_GROUPS[@]}"
+sudo pacman -D --asexplicit --quiet "${EXPLICIT[@]}" $(pacman -Qgq "${EXPLICIT_GROUPS[@]}")
 
 # Arduino
 sudo usermod -aG uucp,lock "$USER"

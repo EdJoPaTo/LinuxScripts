@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -e
 
+EXPLICIT_GROUPS=(
+    base-devel
+)
+
 EXPLICIT=(
     ansible
     ansible-lint
@@ -46,7 +50,6 @@ EXPLICIT=(
 
     # arch base
     base
-    base-devel
     man-db
     man-pages
     pacman-contrib
@@ -109,10 +112,8 @@ DEPS=(
     catatonit # --init
 )
 
-sudo pacman -Sy
-
-sudo pacman --noconfirm --needed -S --asdeps "${DEPS[@]}"
-sudo pacman --noconfirm --needed -S "${EXPLICIT[@]}"
+sudo pacman --noconfirm --needed -Sy --asdeps "${DEPS[@]}" "${EXPLICIT[@]}" "${EXPLICIT_GROUPS[@]}"
+sudo pacman -D --asexplicit --quiet "${EXPLICIT[@]}" $(pacman -Qgq "${EXPLICIT_GROUPS[@]}")
 
 # report package usage
 sudo systemctl start pkgstats.timer

@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 set -e
 
-sudo pacman -Sy
+EXPLICIT=(
+    rslsync
+)
 
-./installWithAurHelper.sh rslsync
+./installWithAurHelper.sh "${EXPLICIT[@]}"
+sudo pacman -D --asexplicit --quiet "${EXPLICIT[@]}"
 
 mkdir -p ~/.config/rslsync
 mkdir -p ~/.cache/rslsync

@@ -10,9 +10,8 @@ EXPLICIT=(
     nautilus-open-any-terminal
 )
 
-sudo pacman -Sy
-
 ./installWithAurHelper.sh "${EXPLICIT[@]}"
+sudo pacman -D --asexplicit --quiet "${EXPLICIT[@]}"
 
 # nautilus-open-any-terminal
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal alacritty

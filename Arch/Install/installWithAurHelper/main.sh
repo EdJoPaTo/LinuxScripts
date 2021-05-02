@@ -18,6 +18,5 @@ EXPLICIT=(
     cargo-license
 )
 
-sudo pacman -Sy
-
 ./installWithAurHelper.sh "${EXPLICIT[@]}"
+sudo pacman -D --asexplicit --quiet "${EXPLICIT[@]}"
