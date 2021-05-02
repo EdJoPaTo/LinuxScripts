@@ -8,6 +8,7 @@ EXPLICIT=(
     heliocron-bin
     nvm
     resvg
+    webwormhole-git
 
     # Rust
     cargo-flamegraph

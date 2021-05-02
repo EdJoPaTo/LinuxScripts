@@ -9,19 +9,16 @@ EXPLICIT=(
     ansible
     ansible-lint
     bat
-    clang
-    cmake
     curl
     deno
-    docker
     dua-cli
+    exa
     fail2ban
+    fd
     git
     htop
     hugo
     hyperfine
-    lostfiles
-    lshw
     nano
     networkmanager
     networkmanager-openvpn
@@ -29,6 +26,7 @@ EXPLICIT=(
     openconnect
     opendoas
     openssh
+    pandoc
     pkgstats
     podman
     podman-compose
@@ -41,7 +39,7 @@ EXPLICIT=(
     starship
     syncthing
     tmux
-    vi
+    tokei
     wget
     xdg-user-dirs
     zsh
@@ -55,6 +53,11 @@ EXPLICIT=(
     man-pages
     pacman-contrib
 
+    # build environments
+    clang
+    cmake
+    go
+
     # console network analysis
     bandwhich
     dog
@@ -64,11 +67,6 @@ EXPLICIT=(
     nload
     nmap
     whois
-
-    # view and find files
-    exa
-    fd
-    tree
 
     # Picture Tools
     gnuplot
@@ -81,21 +79,21 @@ EXPLICIT=(
     python-eyed3
     youtube-dl
 
-    # sensors
+    # system readout / sensors
     acpi
     lm_sensors
-
-    # count lines of code
-    cloc
-    tokei
+    lostfiles
+    lshw
 
     # programming rust
     rustup
     rust-analyzer
     cargo-audit
+    cargo-bloat
     cargo-edit
     cargo-outdated
     cargo-tarpaulin
+    cargo-udeps
     cargo-watch
 )
 

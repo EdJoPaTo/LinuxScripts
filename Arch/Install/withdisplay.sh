@@ -8,20 +8,20 @@ EXPLICIT_GROUPS=(
 EXPLICIT=(
     alacritty
     arc-gtk-theme
+    archlinux-wallpaper
     arduino
+    cmatrix
     code
     ddcutil
     dino
     element-desktop # test fractal when SSO works https://gitlab.gnome.org/GNOME/fractal/-/issues/521
     gimp
     inkscape
-    languagetool
     libreoffice-fresh
     mpv
     mumble
     pdfpc
     remmina
-    simple-scan
     steam
     teamspeak3
     telegram-desktop
@@ -65,12 +65,9 @@ EXPLICIT=(
     hunspell-en_us
     hyphen-de
     hyphen-en
+    languagetool
     mythes-de
     mythes-en
-
-    # Printer
-    cups
-    cups-pdf
 
     # fonts
     ttf-dejavu
