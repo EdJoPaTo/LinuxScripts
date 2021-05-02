@@ -100,11 +100,11 @@ DEPS=(
     libvncserver
 )
 
-sudo pacman --noconfirm --needed -Sy --asdeps "${DEPS[@]}" "${EXPLICIT[@]}" "${EXPLICIT_GROUPS[@]}"
-sudo pacman -D --asexplicit --quiet "${EXPLICIT[@]}" $(pacman -Qgq "${EXPLICIT_GROUPS[@]}")
+pacman --noconfirm --needed -Sy --asdeps "${DEPS[@]}" "${EXPLICIT[@]}" "${EXPLICIT_GROUPS[@]}"
+pacman -D --asexplicit --quiet "${EXPLICIT[@]}" $(pacman -Qgq "${EXPLICIT_GROUPS[@]}")
 
 # Arduino
-sudo usermod -aG uucp,lock "$USER"
+usermod -aG uucp,lock "$USER"
 
 # wireshark
-sudo usermod -aG wireshark "$USER"
+usermod -aG wireshark "$USER"

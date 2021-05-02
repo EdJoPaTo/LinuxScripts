@@ -112,15 +112,15 @@ DEPS=(
     catatonit # --init
 )
 
-sudo pacman --noconfirm --needed -Sy --asdeps "${DEPS[@]}" "${EXPLICIT[@]}" "${EXPLICIT_GROUPS[@]}"
-sudo pacman -D --asexplicit --quiet "${EXPLICIT[@]}" $(pacman -Qgq "${EXPLICIT_GROUPS[@]}")
+pacman --noconfirm --needed -Sy --asdeps "${DEPS[@]}" "${EXPLICIT[@]}" "${EXPLICIT_GROUPS[@]}"
+pacman -D --asexplicit --quiet "${EXPLICIT[@]}" $(pacman -Qgq "${EXPLICIT_GROUPS[@]}")
 
 # report package usage
-sudo systemctl start pkgstats.timer
+systemctl start pkgstats.timer
 
 # podman rootless usage
-sudo touch -a /etc/subuid /etc/subgid
-sudo usermod --add-subuids 165536-231072 --add-subgids 165536-231072 "$USER"
+touch -a /etc/subuid /etc/subgid
+usermod --add-subuids 165536-231072 --add-subgids 165536-231072 "$USER"
 
 # sensors
-sudo sensors-detect --auto
+sensors-detect --auto
