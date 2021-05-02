@@ -12,3 +12,6 @@ ln $lnoptions "$(pwd)/dive.yaml" "$HOME/.config/dive/"
 
 mkdir -p "$HOME/.config/htop"
 ln $lnoptions "$(pwd)/htoprc" "$HOME/.config/htop/"
+
+mkdir -p "$HOME/.config/paru"
+ln $lnoptions "$(pwd)/paru.conf" "$HOME/.config/paru/"
