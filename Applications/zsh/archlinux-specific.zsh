@@ -12,3 +12,6 @@ alias paru='nice paru'
 alias yay='nice yay'
 
 alias uff-cleanup-zoom='killall -9 zoom; rm -rf ~/.cache/zoom ~/.config/zoomus.conf ~/.zoom'
+
+alias hawvpn='doas openconnect -u abp507 --authgroup="Student*in" --background connect.haw-hamburg.de'
+alias hawvpn-stop='doas killall openconnect'
