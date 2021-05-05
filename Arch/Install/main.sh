@@ -29,7 +29,6 @@ EXPLICIT=(
     pandoc
     pkgstats
     podman
-    podman-compose
     progress
     reflector
     ripgrep
@@ -103,6 +102,11 @@ DEPS=(
 
     # ansible
     sshpass
+
+    # Audio / Video Tools
+    atomicparsley
+    python-pycryptodome
+    rtmpdump
 
     # hugo: syntax-highlight code snippets
     python-pygments

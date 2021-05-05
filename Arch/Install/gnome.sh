@@ -15,7 +15,6 @@ EXPLICIT=(
     eog
     evince
     gnome-weather
-    gnome-maps
     gedit
     gnome-calculator
     gnome-mines
@@ -34,6 +33,7 @@ EXPLICIT=(
 )
 
 DEPS=(
+    eog-plugins
     gnome-control-center
     system-config-printer
 
@@ -49,6 +49,7 @@ DEPS=(
     # file-roller optionals
     lrzip
     p7zip
+    squashfs-tools
     unace
     unrar
 )

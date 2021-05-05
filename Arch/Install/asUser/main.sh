@@ -3,19 +3,15 @@ set -e
 
 EXPLICIT=(
     alma-git
-    bottom-bin
     dive
-    heliocron-bin
     nvm
     resvg
     webwormhole-git
 
     # Rust
+    cargo-diet # minimal cargo packages
     cargo-flamegraph
-    ## minimal cargo packages
-    cargo-diet
-    ## analyze dependencies
-    cargo-geiger
+    cargo-geiger # find unsafe in dependencies
     cargo-license
 )
 

@@ -5,7 +5,6 @@ EXPLICIT=(
     insomnia-bin
     mqtt-explorer-appimage
     newsflash
-    obs-studio # in repos but kinda useless without v4l2sink
     obs-v4l2sink
     platformio
     tootle

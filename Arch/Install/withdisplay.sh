@@ -20,6 +20,7 @@ EXPLICIT=(
     libreoffice-fresh
     mpv
     mumble
+    obs-studio
     pdfpc
     remmina
     steam
