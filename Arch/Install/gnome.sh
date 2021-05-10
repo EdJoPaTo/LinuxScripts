@@ -9,27 +9,22 @@ EXPLICIT=(
     gnome-keyring
     gnome-screenshot
     gnome-shell-extensions
-    gnome-terminal
 
     # gnome tools
+    baobab # Disk Usage Analyzer
     eog
     evince
-    gnome-weather
+    file-roller
     gedit
     gnome-calculator
-    gnome-mines
-    gnome-tweaks
-    gucharmap
-    file-roller
-    nautilus
     gnome-disk-utility
+    gnome-mines
     gnome-power-manager
-
-    # Disk Usage Analyzer
-    baobab
-
-    # Gnome extensions backend to be used from firefox or chrome for extensions.gnome.org
-    chrome-gnome-shell
+    gnome-terminal
+    gnome-tweaks
+    gnome-weather
+    gucharmap
+    nautilus
 )
 
 DEPS=(
