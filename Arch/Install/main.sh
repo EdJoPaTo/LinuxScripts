@@ -55,7 +55,10 @@ EXPLICIT=(
     # build environments
     clang
     cmake
+    desktop-file-utils
     go
+    meson
+    vala
 
     # console network analysis
     bandwhich
