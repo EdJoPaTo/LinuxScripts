@@ -39,6 +39,7 @@ FORMULAS=(
     cargo-watch
     deno
     dive
+    dua-cli
     exa
     fd
     ffmpeg
