@@ -1,12 +1,9 @@
 # Aliases
 export EDITOR=nano
+export PAGER=less
 export VISUAL=nano
 
 export PATH=$PATH:$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin
-
-# Pager
-export LESS="--RAW-CONTROL-CHARS --quit-if-one-screen"
-export PAGER="less"
 
 alias -g ...='../..'
 alias -g ....='../../..'
