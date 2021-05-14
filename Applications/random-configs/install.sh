@@ -1,17 +1,13 @@
 #!/usr/bin/env bash
 set -e
 
-# verbose relative symbolic force
-lnoptions="-vrsf"
+function link() {
+    mkdir -p "$(dirname "$2")"
+    # verbose relative symbolic force
+    ln -vrsf "$1" "$2"
+}
 
-mkdir -p "$HOME/.config/alacritty"
-ln $lnoptions "$(pwd)/alacritty.yml" "$HOME/.config/alacritty/"
-
-mkdir -p "$HOME/.config/dive"
-ln $lnoptions "$(pwd)/dive.yaml" "$HOME/.config/dive/"
-
-mkdir -p "$HOME/.config/htop"
-ln $lnoptions "$(pwd)/htoprc" "$HOME/.config/htop/"
-
-mkdir -p "$HOME/.config/paru"
-ln $lnoptions "$(pwd)/paru.conf" "$HOME/.config/paru/"
+link "$(pwd)/alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"
+link "$(pwd)/dive.yaml" "$HOME/.config/dive/dive.yaml"
+link "$(pwd)/htoprc" "$HOME/.config/htop/htoprc"
+link "$(pwd)/paru.conf" "$HOME/.config/paru/paru.conf"
