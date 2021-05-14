@@ -55,6 +55,7 @@ FORMULAS=(
     podman
     ripgrep
     rsync
+    rust-analyzer
     rustup-init
     shellcheck
     starship
