@@ -27,6 +27,7 @@ EXPLICIT=(
     teamspeak3
     telegram-desktop
     torbrowser-launcher
+    v4l2loopback-dkms # obs virtual cam
     veracrypt
     virtualbox
     vlc
@@ -106,6 +107,9 @@ usermod -aG uucp,lock "$USER"
 
 # communicate with monitors via ddc (ddcutil)
 echo "i2c-dev" > /etc/modules-load.d/ddc.conf
+
+# load v4l2loopback
+echo "v4l2loopback" > /etc/modules-load.d/v4l2.conf
 
 # wireshark
 usermod -aG wireshark "$USER"

@@ -5,7 +5,6 @@ EXPLICIT=(
     insomnia-bin
     mqtt-explorer-appimage
     newsflash
-    obs-v4l2sink
     platformio
     tootle
     ttf-ms-fonts
@@ -24,9 +23,6 @@ EXPLICIT=(
 )
 
 DEPS=(
-    # obs
-    v4l2loopback-dkms
-
     # Zoom optional dependencies - not sure if really needed
     picom
     xcompmgr
