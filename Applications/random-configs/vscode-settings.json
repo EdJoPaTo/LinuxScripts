@@ -23,6 +23,7 @@
     "workbench.editor.limit.perEditorGroup": true,
     "workbench.editor.limit.value": 6,
     "workbench.preferredDarkColorTheme": "Monokai",
+    "workbench.preferredLightColorTheme": "Visual Studio Light",
     "workbench.startupEditor": "none",
     "C_Cpp.default.includePath": [
         "${workspaceFolder}/**",
@@ -41,5 +42,6 @@
         "semver",
         "systemd",
         "vserver"
-    ]
+    ],
+    "diffEditor.ignoreTrimWhitespace": false
 }
