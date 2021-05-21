@@ -14,11 +14,10 @@ alias -g ......='../../../../..'
 alias grep='grep --color'
 alias ls="exa --git"
 alias tokei='tokei --sort code'
-alias sudo=' echo use doas && false &&'
 
-function netstat() {
-	echo use ss
-}
+# Help to migrate to new commands (space at start -> no history entry)
+type doas > /dev/null && alias sudo=' echo use doas && false &&'
+type ss > /dev/null && alias netstat=' echo use ss && false &&'
 
 # example usage: `gitBelow fetch`
 gitBelow() {
