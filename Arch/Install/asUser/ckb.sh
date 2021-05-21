@@ -8,5 +8,4 @@ EXPLICIT=(
 ./installWithAurHelper.sh "${EXPLICIT[@]}"
 sudo pacman -D --asexplicit --quiet "${EXPLICIT[@]}"
 
-sudo systemctl enable ckb-next-daemon
-sudo systemctl start ckb-next-daemon
+sudo systemctl enable --now ckb-next-daemon

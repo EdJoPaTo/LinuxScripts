@@ -11,4 +11,4 @@ lnoptions="-vrsf"
 
 ln $lnoptions "$(pwd)/mpd.conf" "$HOME/.config/mpd/mpd.conf"
 
-systemctl enable --user --now mpd.service
+systemctl --user enable --now mpd.service

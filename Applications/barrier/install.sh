@@ -11,4 +11,4 @@ lnoptions="-vrsf"
 
 ln $lnoptions "$(pwd)/barrier.conf" "$HOME/.local/share/barrier/.barrier.conf"
 
-systemctl enable --user --now barriers.service
+systemctl --user enable --now barriers.service

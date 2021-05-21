@@ -21,5 +21,4 @@ cat > ~/.config/rslsync/rslsync.conf << EOF
 }
 EOF
 
-systemctl --user enable rslsync.service
-systemctl --user start rslsync.service
+systemctl --user enable --now rslsync.service
