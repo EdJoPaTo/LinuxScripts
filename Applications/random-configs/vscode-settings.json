@@ -18,6 +18,8 @@
     "typescript.updateImportsOnFileMove.enabled": "always",
     "window.autoDetectColorScheme": true,
     "window.menuBarVisibility": "toggle",
+    "window.newWindowDimensions": "maximized",
+    "window.restoreWindows": "none",
     "workbench.colorTheme": "Monokai",
     "workbench.editor.limit.enabled": true,
     "workbench.editor.limit.perEditorGroup": true,
