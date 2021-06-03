@@ -52,13 +52,7 @@ cargoBelow() {
 	find . -name "Cargo.toml" -type f -print -execdir nice cargo $@ \;
 }
 
-function npx() {
-	echo edjopato fixed npx
-	seek=$1
-	shift 1
-	eval "./node_modules/.bin/$seek $@"
-}
-
+alias npx='echo edjopato fixed npx again && PATH=$(pwd)/node_modules/.bin:$PATH'
 alias init-nvm='source /usr/share/nvm/init-nvm.sh'
 alias npm-reinstall='rm -rf node_modules package-lock.json && nice npm i && npm outdated'
 alias npmBelow-clean='fd --type f package.json --threads 1 --exec rm -rf {//}/node_modules'
