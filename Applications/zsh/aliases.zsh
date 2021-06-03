@@ -60,12 +60,8 @@ alias typescript-watch='rm -rf dist && nice ./node_modules/.bin/tsc --sourceMap 
 
 alias pio-upload-monitor='pio run --target upload && pio device monitor'
 
-alias candle-home='candle --host etoPiHome1 --retain'
-alias led-matrix-remote-et-decke='led-matrix-remote mqtt --host etoPiHome1 --base-topic espMatrixEtDecke'
-
-alias mqttui-home='mqttui --host etoPiHome1'
-alias mqtt-home-plug-nuc-on='mqttui-home publish espPowerstrip-et/set/plug4/on 1'
-alias mqtt-home-plug-windoof-on='mqttui-home publish espPowerstrip-et/set/plug2/on 1'
+alias led-matrix-remote-et-decke='led-matrix-remote mqtt --broker etoPiHome1 --base-topic espMatrixEtDecke'
+alias mqttui-home='mqttui --broker etoPiHome1'
 
 alias rsynca='rsync --archive --compress --verbose --checksum --delete-delay'
 
