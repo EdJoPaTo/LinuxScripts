@@ -1,35 +1,37 @@
 [alias]
-        release-log = log --color --pretty='format:- %Cred%H%Creset %s %C(yellow)%d%Creset'
         lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --abbrev-commit
         lga = lg --all
         lgr = lg --reflog
+        release-log = log --color --pretty='format:- %Cred%H%Creset %s %C(yellow)%d%Creset'
+
         diffw = diff --color-words
         showw = show --color-words
+
         puff = push -u --force-with-lease --force-if-includes
         s = status --short --branch
-[init]
-        defaultBranch = main
+[apply]
+        whitespace = fix
 [core]
 	excludesFile = ~/.config/git/global.ignore
-[push]
-        default = simple
-        followTags = true
+[diff]
+        renames = copies
 [fetch]
         prune = true
         pruneTags = true
         useForceIfIncludes = true
+[init]
+        defaultBranch = main
 [pull]
         ff = only
+[push]
+        default = simple
+        followTags = true
 [rebase]
         autoSquash = true
         autoStash = true
         missingCommitsCheck = error
-[apply]
-        whitespace = fix
 [status]
         showStash = true
-[diff]
-        renames = copies
 [user]
         name = EdJoPaTo
         email = rfc-conform-git-commit-email@funny-long-domain-label-everyone-hates-as-it-is-too-long.edjopato.de
