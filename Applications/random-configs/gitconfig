@@ -9,6 +9,8 @@
         s = status --short --branch
 [init]
         defaultBranch = main
+[core]
+	excludesFile = ~/.config/git/global.ignore
 [push]
         default = simple
         followTags = true
