@@ -10,7 +10,6 @@
     "javascript.updateImportsOnFileMove.enabled": "always",
     "platformio-ide.activateOnlyOnPlatformIOProject": true,
     "platformio-ide.disablePIOHomeStartup": true,
-    "rust-analyzer.assist.importMergeBehavior": "module",
     "rust-analyzer.serverPath": "rust-analyzer",
     "scm.defaultViewMode": "tree",
     "terminal.external.linuxExec": "alacritty",
