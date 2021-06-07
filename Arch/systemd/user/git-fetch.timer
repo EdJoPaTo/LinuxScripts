@@ -1,5 +1,5 @@
 [Unit]
-Description=Fetch git folders in ~/git every 100min
+Description=Fetch git folders in ~/git every now and then
 
 [Timer]
 OnStartupSec=30sec
