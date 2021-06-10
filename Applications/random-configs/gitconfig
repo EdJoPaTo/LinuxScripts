@@ -1,37 +1,37 @@
 [alias]
-        lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --abbrev-commit
-        lga = lg --all
-        lgr = lg --reflog
-        release-log = log --color --pretty='format:- %s %Cred%H%Creset %C(yellow)%d%Creset'
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lga = lg --all
+	lgr = lg --reflog
+	release-log = log --color --pretty='format:- %s %Cred%H%Creset %C(yellow)%d%Creset'
 
-        diffw = diff --color-words
-        showw = show --color-words
+	diffw = diff --color-words
+	showw = show --color-words
 
-        puff = push -u --force-with-lease --force-if-includes
-        s = status --short --branch
+	puff = push -u --force-with-lease --force-if-includes
+	s = status --short --branch
 [apply]
-        whitespace = fix
+	whitespace = fix
 [core]
 	excludesFile = ~/.config/git/global.ignore
 [diff]
-        renames = copies
+	renames = copies
 [fetch]
-        prune = true
-        pruneTags = true
-        useForceIfIncludes = true
+	prune = true
+	pruneTags = true
+	useForceIfIncludes = true
 [init]
-        defaultBranch = main
+	defaultBranch = main
 [pull]
-        ff = only
+	ff = only
 [push]
-        default = simple
-        followTags = true
+	default = simple
+	followTags = true
 [rebase]
-        autoSquash = true
-        autoStash = true
-        missingCommitsCheck = error
+	autoSquash = true
+	autoStash = true
+	missingCommitsCheck = error
 [status]
-        showStash = true
+	showStash = true
 [user]
-        name = EdJoPaTo
-        email = rfc-conform-git-commit-email@funny-long-domain-label-everyone-hates-as-it-is-too-long.edjopato.de
+	name = EdJoPaTo
+	email = rfc-conform-git-commit-email@funny-long-domain-label-everyone-hates-as-it-is-too-long.edjopato.de

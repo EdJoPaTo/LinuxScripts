@@ -2,7 +2,7 @@
 set -e
 
 EXPLICIT=(
-    ckb-next-git
+	ckb-next-git
 )
 
 ./installWithAurHelper.sh "${EXPLICIT[@]}"

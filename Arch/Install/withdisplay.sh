@@ -2,101 +2,101 @@
 set -e
 
 EXPLICIT_GROUPS=(
-    texlive-most
+	texlive-most
 )
 
 EXPLICIT=(
-    alacritty
-    arc-gtk-theme
-    archlinux-wallpaper
-    arduino
-    cmatrix
-    code
-    ddcutil
-    dino
-    element-desktop # test fractal when SSO works https://gitlab.gnome.org/GNOME/fractal/-/issues/521
-    gimp
-    inkscape
-    libreoffice-fresh
-    mpv
-    mumble
-    obs-studio
-    pdfpc
-    remmina
-    steam
-    teamspeak3
-    telegram-desktop
-    torbrowser-launcher
-    veracrypt
-    virtualbox
-    vlc
-    wireshark-qt
-    xfmpc
+	alacritty
+	arc-gtk-theme
+	archlinux-wallpaper
+	arduino
+	cmatrix
+	code
+	ddcutil
+	dino
+	element-desktop # test fractal when SSO works https://gitlab.gnome.org/GNOME/fractal/-/issues/521
+	gimp
+	inkscape
+	libreoffice-fresh
+	mpv
+	mumble
+	obs-studio
+	pdfpc
+	remmina
+	steam
+	teamspeak3
+	telegram-desktop
+	torbrowser-launcher
+	veracrypt
+	virtualbox
+	vlc
+	wireshark-qt
+	xfmpc
 
-    # Audio
-    mpd
-    mpc
-    paprefs
-    pavucontrol
+	# Audio
+	mpd
+	mpc
+	paprefs
+	pavucontrol
 
-    # Preview in Filemanager
-    totem
-    ffmpegthumbnailer
+	# Preview in Filemanager
+	totem
+	ffmpegthumbnailer
 
-    # Share mouse/keyboard with other computers
-    barrier
+	# Share mouse/keyboard with other computers
+	barrier
 
-    # Browser
-    chromium
-    firefox
-    firefox-clearurls
-    firefox-dark-reader
-    firefox-decentraleyes
-    firefox-extension-privacybadger
-    firefox-temporary-containers
-    firefox-ublock-origin
-    ## https://addons.mozilla.org/firefox/addon/privacy-redirect/
-    ## https://addons.mozilla.org/firefox/addon/single-file
-    ## https://addons.mozilla.org/firefox/addon/svg-screenshots/
-    ## https://addons.mozilla.org/firefox/addon/umatrix
+	# Browser
+	chromium
+	firefox
+	firefox-clearurls
+	firefox-dark-reader
+	firefox-decentraleyes
+	firefox-extension-privacybadger
+	firefox-temporary-containers
+	firefox-ublock-origin
+	## https://addons.mozilla.org/firefox/addon/privacy-redirect/
+	## https://addons.mozilla.org/firefox/addon/single-file
+	## https://addons.mozilla.org/firefox/addon/svg-screenshots/
+	## https://addons.mozilla.org/firefox/addon/umatrix
 
-    # Languages
-    hunspell-de
-    hunspell-en_gb
-    hunspell-en_us
-    hyphen-de
-    hyphen-en
-    languagetool
-    mythes-de
-    mythes-en
+	# Languages
+	hunspell-de
+	hunspell-en_gb
+	hunspell-en_us
+	hyphen-de
+	hyphen-en
+	languagetool
+	mythes-de
+	mythes-en
 
-    # fonts
-    ttf-dejavu
-    ttf-opensans
+	# fonts
+	ttf-dejavu
+	ttf-opensans
 
-    # emoji support (in terminal, notifications, ...)
-    noto-fonts-emoji
+	# emoji support (in terminal, notifications, ...)
+	noto-fonts-emoji
 )
 
 DEPS=(
-    arduino-avr-core
-    trash-cli
-    v4l2loopback-dkms # obs virtual cam
-    virtualbox-ext-vnc
-    virtualbox-guest-iso
-    virtualbox-host-dkms
+	arduino-avr-core
+	trash-cli
+	v4l2loopback-dkms # obs virtual cam
+	virtualbox-ext-vnc
+	virtualbox-guest-iso
+	virtualbox-host-dkms
 
-    # inkscape optimized svg
-    python-numpy
-    python-lxml
-    scour
+	# inkscape optimized svg
+	python-numpy
+	python-lxml
+	scour
 
-    # Languages
-    libmythes
+	# Languages
+	libmythes
 
-    # remmina remote desktop
-    freerdp
-    libvncserver
+	# remmina remote desktop
+	freerdp
+	libvncserver
 )
 
 pacman --noconfirm --needed -Sy --asdeps "${DEPS[@]}" "${EXPLICIT[@]}" "${EXPLICIT_GROUPS[@]}"

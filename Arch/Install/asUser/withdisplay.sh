@@ -2,30 +2,30 @@
 set -e
 
 EXPLICIT=(
-    insomnia-bin
-    mqtt-explorer-appimage
-    newsflash
-    platformio
-    tootle
-    ttf-ms-fonts
+	insomnia-bin
+	mqtt-explorer-appimage
+	newsflash
+	platformio
+	tootle
+	ttf-ms-fonts
 
-    # music
-    mp3diags-unstable
-    mpd-mpris
+	# music
+	mp3diags-unstable
+	mpd-mpris
 
-    # create bootables
-    etcher-bin
-    popsicle
-    ventoy-bin
+	# create bootables
+	etcher-bin
+	popsicle
+	ventoy-bin
 
-    # uff communication
-    zoom
+	# uff communication
+	zoom
 )
 
 DEPS=(
-    # Zoom optional dependencies - not sure if really needed
-    picom
-    xcompmgr
+	# Zoom optional dependencies - not sure if really needed
+	picom
+	xcompmgr
 )
 
 ./installWithAurHelper.sh "${DEPS[@]}" "${EXPLICIT[@]}"

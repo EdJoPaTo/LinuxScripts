@@ -3,13 +3,13 @@ set -e
 
 # See https://github.com/sindresorhus/quick-look-plugins
 PLUGINS=(
-    apparency
-    qlcolorcode
-    qlImageSize
-    qlmarkdown
-    qlstephen
-    qlvideo
-    quicklook-json
+	apparency
+	qlcolorcode
+	qlImageSize
+	qlmarkdown
+	qlstephen
+	qlvideo
+	quicklook-json
 )
 
 brew install "${PLUGINS[@]}"

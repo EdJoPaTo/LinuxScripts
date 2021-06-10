@@ -2,120 +2,120 @@
 set -e
 
 EXPLICIT_GROUPS=(
-    base-devel
+	base-devel
 )
 
 EXPLICIT=(
-    ansible
-    ansible-lint
-    bat
-    curl
-    deno
-    dua-cli
-    exa
-    fail2ban
-    fd
-    git
-    htop
-    hugo
-    hyperfine
-    nano
-    networkmanager
-    networkmanager-openvpn
-    nodejs
-    openconnect
-    opendoas
-    openssh
-    pandoc
-    pkgstats
-    podman
-    progress
-    reflector
-    ripgrep
-    rsync
-    shellcheck
-    speedtest-cli
-    starship
-    syncthing
-    tmux
-    tokei
-    wget
-    xdg-user-dirs
-    zsh
-    zsh-completions
-    zsh-history-substring-search
-    zsh-syntax-highlighting
+	ansible
+	ansible-lint
+	bat
+	curl
+	deno
+	dua-cli
+	exa
+	fail2ban
+	fd
+	git
+	htop
+	hugo
+	hyperfine
+	nano
+	networkmanager
+	networkmanager-openvpn
+	nodejs
+	openconnect
+	opendoas
+	openssh
+	pandoc
+	pkgstats
+	podman
+	progress
+	reflector
+	ripgrep
+	rsync
+	shellcheck
+	speedtest-cli
+	starship
+	syncthing
+	tmux
+	tokei
+	wget
+	xdg-user-dirs
+	zsh
+	zsh-completions
+	zsh-history-substring-search
+	zsh-syntax-highlighting
 
-    # arch base
-    base
-    man-db
-    man-pages
-    pacman-contrib
+	# arch base
+	base
+	man-db
+	man-pages
+	pacman-contrib
 
-    # build environments
-    clang
-    cmake
-    desktop-file-utils
-    go
-    meson
-    vala
+	# build environments
+	clang
+	cmake
+	desktop-file-utils
+	go
+	meson
+	vala
 
-    # console network analysis
-    bandwhich
-    dog
-    iftop
-    inetutils
-    mtr
-    nload
-    nmap
-    whois
+	# console network analysis
+	bandwhich
+	dog
+	iftop
+	inetutils
+	mtr
+	nload
+	nmap
+	whois
 
-    # Picture Tools
-    gnuplot
-    graphviz
-    imagemagick
-    oxipng
+	# Picture Tools
+	gnuplot
+	graphviz
+	imagemagick
+	oxipng
 
-    # Audio / Video Tools
-    ffmpeg
-    python-eyed3
-    youtube-dl
+	# Audio / Video Tools
+	ffmpeg
+	python-eyed3
+	youtube-dl
 
-    # system readout / sensors
-    acpi
-    lm_sensors
-    lostfiles
-    lshw
+	# system readout / sensors
+	acpi
+	lm_sensors
+	lostfiles
+	lshw
 
-    # programming rust
-    rustup
-    rust-analyzer
-    cargo-audit
-    cargo-bloat
-    cargo-edit
-    cargo-outdated
-    cargo-tarpaulin
-    cargo-udeps
-    cargo-watch
+	# programming rust
+	rustup
+	rust-analyzer
+	cargo-audit
+	cargo-bloat
+	cargo-edit
+	cargo-outdated
+	cargo-tarpaulin
+	cargo-udeps
+	cargo-watch
 )
 
 DEPS=(
-    bash-completion
-    npm
+	bash-completion
+	npm
 
-    # ansible
-    sshpass
+	# ansible
+	sshpass
 
-    # Audio / Video Tools
-    atomicparsley
-    python-pycryptodome
-    rtmpdump
+	# Audio / Video Tools
+	atomicparsley
+	python-pycryptodome
+	rtmpdump
 
-    # hugo: syntax-highlight code snippets
-    python-pygments
+	# hugo: syntax-highlight code snippets
+	python-pygments
 
-    # podman
-    catatonit # --init
+	# podman
+	catatonit # --init
 )
 
 pacman --noconfirm --needed -Sy --asdeps "${DEPS[@]}" "${EXPLICIT[@]}" "${EXPLICIT_GROUPS[@]}"

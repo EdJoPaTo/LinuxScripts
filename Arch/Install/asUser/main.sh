@@ -2,17 +2,17 @@
 set -e
 
 EXPLICIT=(
-    alma-git
-    dive
-    nvm
-    resvg
-    webwormhole-git
+	alma-git
+	dive
+	nvm
+	resvg
+	webwormhole-git
 
-    # Rust
-    cargo-diet # minimal cargo packages
-    cargo-flamegraph
-    cargo-geiger # find unsafe in dependencies
-    cargo-license
+	# Rust
+	cargo-diet # minimal cargo packages
+	cargo-flamegraph
+	cargo-geiger # find unsafe in dependencies
+	cargo-license
 )
 
 ./installWithAurHelper.sh "${EXPLICIT[@]}"

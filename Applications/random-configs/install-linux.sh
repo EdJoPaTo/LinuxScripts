@@ -2,9 +2,9 @@
 set -e
 
 function link() {
-    mkdir -p "$(dirname "$2")"
-    # verbose relative symbolic force
-    ln -vrsf "$1" "$2"
+	mkdir -p "$(dirname "$2")"
+	# verbose relative symbolic force
+	ln -vrsf "$1" "$2"
 }
 
 link "$(pwd)/alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"

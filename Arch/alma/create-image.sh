@@ -4,8 +4,8 @@ set -e
 rm -rf alma.img
 
 nice doas alma create \
-    --encrypted-root \
-    --aur-helper yay \
-    --presets ./presets/*.toml \
-    --image 25GiB alma.img \
-    $@
+	--encrypted-root \
+	--aur-helper yay \
+	--presets ./presets/*.toml \
+	--image 25GiB alma.img \
+	"$@"

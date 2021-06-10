@@ -2,9 +2,9 @@
 set -e
 
 function link() {
-    mkdir -p "$(dirname "$2")"
-    # verbose symbolic force
-    ln -vsf "$1" "$2"
+	mkdir -p "$(dirname "$2")"
+	# verbose symbolic force
+	ln -vsf "$1" "$2"
 }
 
 link "$(pwd)/dive.yaml" "$HOME/.config/dive/dive.yaml"

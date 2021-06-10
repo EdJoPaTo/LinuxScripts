@@ -11,5 +11,5 @@ lnoptions="-vrsf"
 ln $lnoptions "$(pwd)/zshrc" "$HOME/.zshrc"
 
 for config_file ($(pwd)/*.zsh); do
-    ln $lnoptions $config_file "$HOME/.config/zsh"
+	ln $lnoptions $config_file "$HOME/.config/zsh"
 done

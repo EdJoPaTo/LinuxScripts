@@ -4,16 +4,16 @@
 uptime
 
 if [[ -d "/usr/share/zsh/plugins" ]]; then
-    # probably Arch Linux
-    ZSH_PLUGINS=/usr/share/zsh/plugins
+	# probably Arch Linux
+	ZSH_PLUGINS=/usr/share/zsh/plugins
 else
-    # probably macOS
-    ZSH_PLUGINS=/usr/local/share
+	# probably macOS
+	ZSH_PLUGINS=/usr/local/share
 fi
 
 if [[ -d "/usr/local/share/zsh-completions" ]]; then
-    # macOS
-    fpath+=/usr/local/share/zsh-completions
+	# macOS
+	fpath+=/usr/local/share/zsh-completions
 fi
 
 # History
@@ -40,13 +40,13 @@ zmodload zsh/complist
 compinit
 
 function set_window_title(){
-    echo -ne "\033]0; $USER@$(hostname) $PWD \007"
+	echo -ne "\033]0; $USER@$(hostname) $PWD \007"
 }
 precmd_functions+=(set_window_title)
 
 # Load stuff
 for config_file ($HOME/.config/zsh/*.zsh); do
-    source $config_file
+	source $config_file
 done
 
 source "$ZSH_PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" 2>/dev/null
