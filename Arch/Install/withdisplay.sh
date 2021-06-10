@@ -27,7 +27,6 @@ EXPLICIT=(
     teamspeak3
     telegram-desktop
     torbrowser-launcher
-    v4l2loopback-dkms # obs virtual cam
     veracrypt
     virtualbox
     vlc
@@ -82,6 +81,7 @@ EXPLICIT=(
 DEPS=(
     arduino-avr-core
     trash-cli
+    v4l2loopback-dkms # obs virtual cam
     virtualbox-ext-vnc
     virtualbox-guest-iso
     virtualbox-host-dkms
