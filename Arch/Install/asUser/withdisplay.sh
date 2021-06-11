@@ -4,7 +4,6 @@ set -e
 EXPLICIT=(
 	insomnia-bin
 	mqtt-explorer-appimage
-	newsflash
 	platformio
 	tootle
 	ttf-ms-fonts

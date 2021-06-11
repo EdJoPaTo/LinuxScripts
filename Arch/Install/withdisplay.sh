@@ -20,6 +20,7 @@ EXPLICIT=(
 	libreoffice-fresh
 	mpv
 	mumble
+	newsflash
 	obs-studio
 	pdfpc
 	remmina
