@@ -10,6 +10,8 @@
     "javascript.updateImportsOnFileMove.enabled": "always",
     "platformio-ide.activateOnlyOnPlatformIOProject": true,
     "platformio-ide.disablePIOHomeStartup": true,
+    "rust-analyzer.assist.importEnforceGranularity": true,
+    "rust-analyzer.checkOnSave.command": "clippy",
     "rust-analyzer.serverPath": "rust-analyzer",
     "scm.defaultViewMode": "tree",
     "terminal.external.linuxExec": "alacritty",
@@ -43,6 +45,11 @@
         "semver",
         "systemd",
         "vserver"
+    ],
+    "rust-analyzer.checkOnSave.extraArgs": [
+        "--",
+        "-W",
+        "clippy::pedantic"
     ],
     "diffEditor.ignoreTrimWhitespace": false
 }
