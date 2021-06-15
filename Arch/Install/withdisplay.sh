@@ -37,7 +37,6 @@ EXPLICIT=(
 	# Audio
 	mpd
 	mpc
-	paprefs
 	pavucontrol
 
 	# Preview in Filemanager
