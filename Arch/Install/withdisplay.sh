@@ -52,7 +52,6 @@ EXPLICIT=(
 	firefox-clearurls
 	firefox-dark-reader
 	firefox-decentraleyes
-	firefox-extension-privacybadger
 	firefox-temporary-containers
 	firefox-ublock-origin
 	## https://addons.mozilla.org/firefox/addon/privacy-redirect/
