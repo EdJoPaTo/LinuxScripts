@@ -19,6 +19,7 @@ EXPLICIT=(
 	htop
 	hugo
 	hyperfine
+	jq
 	nano
 	networkmanager
 	networkmanager-openvpn

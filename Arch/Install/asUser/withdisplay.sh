@@ -3,6 +3,7 @@ set -e
 
 EXPLICIT=(
 	insomnia-bin
+	jitsi-meet-desktop-bin
 	mqtt-explorer-appimage
 	platformio
 	tootle

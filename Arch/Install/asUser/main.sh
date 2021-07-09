@@ -13,6 +13,7 @@ EXPLICIT=(
 	cargo-flamegraph
 	cargo-geiger # find unsafe in dependencies
 	cargo-license
+	cargo-sort
 )
 
 ./installWithAurHelper.sh "${EXPLICIT[@]}"
