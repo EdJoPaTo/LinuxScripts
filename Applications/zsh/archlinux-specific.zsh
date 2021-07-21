@@ -1,4 +1,5 @@
 # Arch Linux Specific
+if [[ $OSTYPE = linux* ]]; then
 
 alias open='xdg-open'
 
@@ -15,3 +16,5 @@ alias uff-cleanup-zoom='killall -9 zoom; rm -rf ~/.cache/zoom ~/.config/zoomus.c
 
 alias hawvpn='doas openconnect -u abp507 --authgroup="Student*in" --background connect.haw-hamburg.de'
 alias hawvpn-stop='doas killall openconnect'
+
+fi
