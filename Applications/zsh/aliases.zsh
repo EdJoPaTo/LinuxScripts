@@ -31,6 +31,9 @@ gitBelow() {
 	find . -name ".git" -type d -print -execdir git --no-pager $@ \;
 }
 
+alias randb='openssl rand -base64 33'
+alias randh='openssl rand -hex 20'
+
 alias svg2png='inkscape --export-type=png'
 alias svg2pdf='inkscape --export-type=pdf'
 
