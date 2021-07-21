@@ -9,6 +9,7 @@ export MAKEFLAGS="-j$(nproc)"
 
 export MANPAGER="bash -c 'col -bx | bat --language man --plain --color=always | less'"
 
+alias makepkg='nice makepkg'
 alias paru='nice paru'
 alias yay='nice yay'
 

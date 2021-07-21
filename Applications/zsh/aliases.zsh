@@ -17,7 +17,9 @@ alias grep='grep --color'
 alias ls="exa --git"
 alias tokei='tokei --sort code'
 
+alias cargo='nice cargo'
 alias ffmpeg='nice ffmpeg'
+alias npm='nice npm'
 alias youtube-dl='nice youtube-dl'
 
 # Help to migrate to new commands (space at start -> no history entry)
