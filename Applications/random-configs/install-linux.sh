@@ -13,6 +13,7 @@ link "$(pwd)/git.ignore" "$HOME/.config/git/global.ignore"
 link "$(pwd)/gitconfig" "$HOME/.gitconfig"
 link "$(pwd)/htoprc" "$HOME/.config/htop/htoprc"
 link "$(pwd)/paru.conf" "$HOME/.config/paru/paru.conf"
+link "$(pwd)/tokeignore" "$HOME/.tokeignore"
 link "$(pwd)/vscode-settings.json" "$HOME/.config/Code - OSS/User/settings.json"
 
 mkdir -p "$HOME/.cache/mpd"
