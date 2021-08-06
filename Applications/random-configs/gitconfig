@@ -7,6 +7,7 @@
 	diffw = diff --color-words
 	showw = show --color-words
 
+	amend = commit --amend --reset-author --no-edit
 	puff = push -u --force-with-lease --force-if-includes
 	s = status --short --branch
 [apply]

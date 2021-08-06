@@ -39,12 +39,14 @@
         "edjopato",
         "epub",
         "foss",
+        "grammy",
         "mastodon",
         "mumble",
         "pinephone",
         "relref",
         "semver",
         "systemd",
+        "telegraf",
         "vserver"
     ],
     "rust-analyzer.checkOnSave.extraArgs": [
