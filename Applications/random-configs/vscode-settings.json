@@ -1,4 +1,5 @@
 {
+    "diffEditor.wordWrap": "on",
     "editor.suggestSelection": "first",
     "explorer.confirmDragAndDrop": false,
     "files.insertFinalNewline": true,
