@@ -35,9 +35,11 @@ EXPLICIT=(
 	xfmpc
 
 	# Audio
-	mpd
+	kid3-qt
 	mpc
+	mpd
 	pavucontrol
+	picard
 
 	# Preview in Filemanager
 	totem
@@ -54,6 +56,7 @@ EXPLICIT=(
 	firefox-decentraleyes
 	firefox-temporary-containers
 	firefox-ublock-origin
+	vivaldi
 	## https://addons.mozilla.org/firefox/addon/privacy-redirect/
 	## https://addons.mozilla.org/firefox/addon/single-file
 	## https://addons.mozilla.org/firefox/addon/svg-screenshots/
@@ -84,6 +87,7 @@ DEPS=(
 	virtualbox-ext-vnc
 	virtualbox-guest-iso
 	virtualbox-host-dkms
+	vivaldi-ffmpeg-codecs
 
 	# inkscape optimized svg
 	python-numpy

@@ -4,28 +4,19 @@ set -e
 EXPLICIT=(
 	insomnia-bin
 	jitsi-meet-desktop-bin
+	mpd-mpris
 	mqtt-explorer-appimage
 	platformio
 	tootle
 	ttf-ms-fonts
 
-	# music
-	mp3diags-unstable
-	mpd-mpris
-
 	# create bootables
 	etcher-bin
 	popsicle
 	ventoy-bin
-
-	# uff communication
-	zoom
 )
 
 DEPS=(
-	# Zoom optional dependencies - not sure if really needed
-	picom
-	xcompmgr
 )
 
 ./installWithAurHelper.sh "${DEPS[@]}" "${EXPLICIT[@]}"

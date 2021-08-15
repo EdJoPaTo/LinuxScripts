@@ -34,6 +34,7 @@ EXPLICIT=(
 	reflector
 	ripgrep
 	rsync
+	screen
 	shellcheck
 	speedtest-cli
 	starship
