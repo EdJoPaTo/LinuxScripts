@@ -1,0 +1,9 @@
+packages = [
+    "steam"
+]
+# starts the Steam GUI but does whats wanted. Initial steam install.
+# Needs manual interaction -> therefore near the end of the presets
+script = """
+set -eux
+su -c - edjopato "steam"
+"""

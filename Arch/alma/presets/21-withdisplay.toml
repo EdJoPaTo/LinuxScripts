@@ -5,10 +5,12 @@ packages = [
     "firefox",
     "gimp",
     "inkscape",
+    "languagetool",
     "libreoffice-fresh",
     "teamspeak3",
     "telegram-desktop",
     "texlive-most",
+    "vivaldi",
     "vlc",
     "wireshark-qt"
 ]

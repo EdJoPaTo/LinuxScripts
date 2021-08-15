@@ -1,0 +1,5 @@
+script = """
+set -eux
+cd /home/edjopato/git/personal/LinuxScripts/Applications/random-configs
+su -c - edjopato "./install-linux.sh"
+"""

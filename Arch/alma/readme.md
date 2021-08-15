@@ -8,7 +8,8 @@ run `./create-image.sh`
 
 ## Put image on a stick
 
-When satisfied use `doas dd if=alma.img of=/dev/sd# bs=4k` to flash the image to the stick.
+When satisfied unmount the partitions on the target stick.
+Then use `doas dd if=alma.img of=/dev/sd# bs=4k` to flash the image to the stick.
 In my case this was `/dev/sdb` or `/dev/sdc`.
 `doas progress -m` is helpful for watching the progress of tools like dd.
 
@@ -25,4 +26,6 @@ doas sgdisk -N 3 /dev/sdc
 doas partprobe /dev/sdc
 
 doas resize2fs /dev/sdc3
+
+doas sync
 ```

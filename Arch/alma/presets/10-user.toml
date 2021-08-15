@@ -6,25 +6,9 @@ packages = [
 script = """
 set -eux
 useradd -m edjopato
-passwd edjopato
 usermod -aG wheel edjopato
 echo "%wheel ALL=(ALL) ALL" > /etc/sudoers.d/wheel
 echo "permit :wheel" > /etc/doas.conf
-
-mkdir -p /home/edjopato/.config/paru
-cat > /home/edjopato/.config/paru/paru.conf << EOF
-[options]
-BatchInstall
-BottomUp
-CombinedUpgrade
-Devel
-NewsOnUpgrade
-Provides
-UpgradeMenu
-
-[bin]
-Sudo = doas
-EOF
 
 chown -R edjopato:wheel /home/edjopato
 """

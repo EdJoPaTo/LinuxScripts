@@ -1,0 +1,6 @@
+packages = ["git"]
+script = """
+set -eux
+mkdir -p /home/edjopato/git/personal
+git clone https://github.com/EdJoPaTo/LinuxScripts.git /home/edjopato/git/personal/LinuxScripts
+"""

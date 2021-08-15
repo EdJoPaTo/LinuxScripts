@@ -5,10 +5,9 @@ packages = [
     "zsh-syntax-highlighting",
     "zsh"
 ]
-shared_directories = ["LinuxScripts"]
 script = """
 set -eux
-cd /shared_dirs/LinuxScripts/Applications/zsh
+cd /home/edjopato/git/personal/LinuxScripts/Applications/zsh
 su -c - edjopato "./install.sh"
 rm /home/edjopato/.config/zsh/macos-specific.zsh
 """
