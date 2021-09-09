@@ -39,7 +39,6 @@ EXPLICIT=(
 	mpc
 	mpd
 	pavucontrol
-	picard
 
 	# Preview in Filemanager
 	totem

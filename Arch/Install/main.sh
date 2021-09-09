@@ -50,6 +50,7 @@ EXPLICIT=(
 
 	# arch base
 	base
+	devtools # build/test AUR packages
 	man-db
 	man-pages
 	pacman-contrib
