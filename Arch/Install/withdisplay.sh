@@ -11,25 +11,18 @@ EXPLICIT=(
 	archlinux-wallpaper
 	arduino
 	cmatrix
-	code
 	ddcutil
 	dino
-	element-desktop # test fractal when SSO works https://gitlab.gnome.org/GNOME/fractal/-/issues/521
 	gimp
 	inkscape
 	libreoffice-fresh
 	mpv
 	mumble
 	newsflash
-	obs-studio
 	pdfpc
 	remmina
-	steam
-	teamspeak3
 	telegram-desktop
 	torbrowser-launcher
-	veracrypt
-	virtualbox
 	vlc
 	wireshark-qt
 	xfmpc
@@ -82,10 +75,6 @@ EXPLICIT=(
 DEPS=(
 	arduino-avr-core
 	trash-cli
-	v4l2loopback-dkms # obs virtual cam
-	virtualbox-ext-vnc
-	virtualbox-guest-iso
-	virtualbox-host-dkms
 	vivaldi-ffmpeg-codecs
 
 	# inkscape optimized svg
@@ -109,9 +98,6 @@ usermod -aG uucp,lock "$USER"
 
 # communicate with monitors via ddc (ddcutil)
 echo "i2c-dev" > /etc/modules-load.d/ddc.conf
-
-# load v4l2loopback
-echo "v4l2loopback" > /etc/modules-load.d/v4l2.conf
 
 # wireshark
 usermod -aG wireshark "$USER"

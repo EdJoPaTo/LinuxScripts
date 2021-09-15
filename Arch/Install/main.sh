@@ -31,7 +31,7 @@ EXPLICIT=(
 	pkgstats
 	podman
 	progress
-	reflector
+	reflector # Update mirrorlist
 	ripgrep
 	rsync
 	screen

@@ -18,14 +18,16 @@ EXPLICIT=(
 	gedit
 	gnome-calculator
 	gnome-disk-utility
-	gnome-mines
 	gnome-power-manager
-	gnome-sudoku
 	gnome-terminal
 	gnome-tweaks
 	gnome-weather
 	gucharmap
 	nautilus
+
+	# casual games
+	gnome-mines
+	gnome-sudoku
 )
 
 DEPS=(
