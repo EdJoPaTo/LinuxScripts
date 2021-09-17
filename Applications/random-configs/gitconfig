@@ -8,7 +8,7 @@
 	showw = show --color-words
 
 	amend = commit --amend --reset-author --no-edit
-	puff = push -u --force-with-lease --force-if-includes
+	puff = push -u --force-with-lease
 	s = status --short --branch
 [apply]
 	whitespace = fix
@@ -19,7 +19,6 @@
 [fetch]
 	prune = true
 	pruneTags = true
-	useForceIfIncludes = true
 [init]
 	defaultBranch = main
 [pull]
