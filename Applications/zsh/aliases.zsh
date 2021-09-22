@@ -49,7 +49,7 @@ alias ffmpegSound='ffmpeg -v error -stats -vn'
 alias ffmpegVideo='ffmpeg -v error -stats'
 
 alias eyeD3='eyeD3 --preserve-file-times'
-alias youtube-dl-mp3='youtube-dl --write-all-thumbnails --add-metadata --embed-thumbnail -k -x --audio-format mp3'
+alias youtube-dl-mp3='youtube-dl --write-all-thumbnails --add-metadata --embed-thumbnail --extract-audio --audio-format mp3'
 
 alias docker-prune=' echo use docker system prune --volumes -f'
 alias podman-prune=' echo use podman system prune --volumes -f'
