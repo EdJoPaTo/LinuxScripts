@@ -13,7 +13,6 @@ EXPLICIT=(
 	deno
 	dua-cli
 	exa
-	fail2ban
 	fd
 	git
 	htop
@@ -34,7 +33,6 @@ EXPLICIT=(
 	reflector # Update mirrorlist
 	ripgrep
 	rsync
-	screen
 	shellcheck
 	speedtest-cli
 	starship
@@ -55,19 +53,15 @@ EXPLICIT=(
 	man-pages
 	pacman-contrib
 
-	# build environments
+	# large build environments often used for AUR packages
 	clang
 	cmake
-	desktop-file-utils
 	go
 	meson
 	vala
 
 	# console network analysis
-	bandwhich
 	dog
-	iftop
-	inetutils
 	mtr
 	nload
 	nmap
@@ -81,7 +75,6 @@ EXPLICIT=(
 
 	# Audio / Video Tools
 	ffmpeg
-	python-eyed3
 	youtube-dl
 
 	# system readout / sensors

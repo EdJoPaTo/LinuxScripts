@@ -21,7 +21,6 @@ EXPLICIT=(
 	gnome-power-manager
 	gnome-terminal
 	gnome-tweaks
-	gnome-weather
 	gucharmap
 	nautilus
 
@@ -33,7 +32,6 @@ EXPLICIT=(
 DEPS=(
 	eog-plugins
 	gnome-control-center
-	system-config-printer
 
 	# remote locations
 	gvfs-afc

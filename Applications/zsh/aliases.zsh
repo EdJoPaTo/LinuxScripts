@@ -24,7 +24,6 @@ alias youtube-dl='nice youtube-dl'
 
 # Help to migrate to new commands (space at start -> no history entry)
 type doas > /dev/null && alias sudo=' echo use doas && false &&'
-type ss > /dev/null && alias netstat=' echo use ss && false &&'
 
 # example usage: `gitBelow fetch`
 gitBelow() {
@@ -48,11 +47,7 @@ alias ffmpegGif='ffmpeg -v error -stats -an'
 alias ffmpegSound='ffmpeg -v error -stats -vn'
 alias ffmpegVideo='ffmpeg -v error -stats'
 
-alias eyeD3='eyeD3 --preserve-file-times'
 alias youtube-dl-mp3='youtube-dl --write-all-thumbnails --add-metadata --embed-thumbnail --extract-audio --audio-format mp3'
-
-alias docker-prune=' echo use docker system prune --volumes -f'
-alias podman-prune=' echo use podman system prune --volumes -f'
 
 alias cargo-dev='nice cargo watch --clear --exec "clippy --all-targets -- -W clippy::pedantic" --exec "fmt -- --check || true"'
 alias cargo-dev-all='cargo-dev --exec "build --all-targets" --exec "test -q"'

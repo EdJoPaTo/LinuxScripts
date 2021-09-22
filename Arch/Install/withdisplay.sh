@@ -7,8 +7,6 @@ EXPLICIT_GROUPS=(
 
 EXPLICIT=(
 	alacritty
-	arc-gtk-theme
-	archlinux-wallpaper
 	arduino
 	cmatrix
 	ddcutil
@@ -22,7 +20,6 @@ EXPLICIT=(
 	pdfpc
 	remmina
 	telegram-desktop
-	torbrowser-launcher
 	vlc
 	wireshark-qt
 	xfmpc
@@ -37,18 +34,12 @@ EXPLICIT=(
 	totem
 	ffmpegthumbnailer
 
-	# Share mouse/keyboard with other computers
-	barrier
-
 	# Browser
-	chromium
 	firefox
 	firefox-clearurls
 	firefox-dark-reader
-	firefox-decentraleyes
 	firefox-temporary-containers
 	firefox-ublock-origin
-	vivaldi
 	## https://addons.mozilla.org/firefox/addon/privacy-redirect/
 	## https://addons.mozilla.org/firefox/addon/single-file
 	## https://addons.mozilla.org/firefox/addon/svg-screenshots/
@@ -75,7 +66,6 @@ EXPLICIT=(
 DEPS=(
 	arduino-avr-core
 	trash-cli
-	vivaldi-ffmpeg-codecs
 
 	# inkscape optimized svg
 	python-numpy

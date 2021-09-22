@@ -4,18 +4,15 @@ set -e
 CASKS=(
 	arduino
 	balenaetcher
-	chromium
 	docker
 	element
 	firefox
 	gimp
-	google-chrome
 	iina
 	inkscape
 	keepingyouawake
 	libreoffice
 	mactex
-	mqtt-explorer
 	mumble
 	quitter
 	resilio-sync

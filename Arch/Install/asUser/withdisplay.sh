@@ -5,7 +5,6 @@ EXPLICIT=(
 	insomnia-bin
 	jitsi-meet-desktop-bin
 	mpd-mpris
-	mqtt-explorer-appimage
 	platformio
 	tootle
 	ttf-ms-fonts

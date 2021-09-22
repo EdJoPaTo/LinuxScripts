@@ -6,7 +6,6 @@ EXPLICIT=(
 	dive
 	nvm
 	resvg
-	webwormhole-git
 
 	# Rust
 	cargo-diet # minimal cargo packages
