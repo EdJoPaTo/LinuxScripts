@@ -19,6 +19,7 @@ EXPLICIT=(
 	hugo
 	hyperfine
 	jq
+	most # as MANPAGER
 	nano
 	networkmanager
 	networkmanager-openvpn

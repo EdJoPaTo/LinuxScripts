@@ -7,7 +7,7 @@ alias open='xdg-open'
 # https://wiki.archlinux.org/index.php/Makepkg#Parallel_compilation
 export MAKEFLAGS="-j$(nproc)"
 
-export MANPAGER="bash -c 'col -bx | bat --language man --plain --color=always | less'"
+export MANPAGER=most
 
 alias makepkg='nice makepkg'
 alias paru='nice paru'
