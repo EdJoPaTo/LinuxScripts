@@ -14,7 +14,7 @@ mkdir -p ~/.cache/rslsync
 cat > ~/.config/rslsync/rslsync.conf << EOF
 {
 	"device_name": "$HOSTNAME",
-	"storage_path": "~/.cache/rslsync/",
+	"storage_path": "$HOME/.cache/rslsync/",
 	"webui": {
 		"listen": "127.0.0.1:8888"
 	}
