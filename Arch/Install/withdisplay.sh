@@ -84,10 +84,10 @@ pacman --noconfirm --needed -Sy --asdeps "${DEPS[@]}" "${EXPLICIT[@]}" "${EXPLIC
 pacman -D --asexplicit --quiet "${EXPLICIT[@]}" $(pacman -Qgq "${EXPLICIT_GROUPS[@]}")
 
 # Arduino
-usermod -aG uucp,lock "$USER"
+usermod -aG uucp,lock "$(logname)"
 
 # communicate with monitors via ddc (ddcutil)
 echo "i2c-dev" > /etc/modules-load.d/ddc.conf
 
 # wireshark
-usermod -aG wireshark "$USER"
+usermod -aG wireshark "$(logname)"
