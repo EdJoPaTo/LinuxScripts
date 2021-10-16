@@ -27,14 +27,11 @@ EXPLICIT=(
 	openconnect
 	opendoas
 	openssh
-	pandoc
 	pkgstats
 	podman
 	progress
-	reflector # Update mirrorlist
 	ripgrep
 	rsync
-	shellcheck
 	speedtest-cli
 	starship
 	syncthing
@@ -90,11 +87,21 @@ EXPLICIT=(
 	cargo-audit
 	cargo-bloat
 	cargo-edit
+	cargo-flamegraph
 	cargo-outdated
-	cargo-tarpaulin
+	cargo-sort
 	cargo-udeps
 	cargo-watch
 )
+
+if [ "$(uname -m)" == "x86_64" ]; then
+EXPLICIT+=(
+	cargo-tarpaulin
+	pandoc
+	reflector # Update mirrorlist
+	shellcheck
+)
+fi
 
 DEPS=(
 	bash-completion

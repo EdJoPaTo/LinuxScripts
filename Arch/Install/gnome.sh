@@ -12,9 +12,9 @@ EXPLICIT=(
 
 	# gnome tools
 	baobab # Disk Usage Analyzer
-	eog
-	evince
-	file-roller
+	eog # image viewer
+	evince # document viewer (PDF, …)
+	file-roller # archives
 	gedit
 	gnome-calculator
 	gnome-disk-utility
@@ -23,10 +23,6 @@ EXPLICIT=(
 	gnome-tweaks
 	gucharmap
 	nautilus
-
-	# casual games
-	gnome-mines
-	gnome-sudoku
 )
 
 DEPS=(

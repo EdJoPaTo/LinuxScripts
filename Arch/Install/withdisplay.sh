@@ -56,11 +56,13 @@ EXPLICIT=(
 	mythes-en
 
 	# fonts
+	noto-fonts-emoji # emoji support (in terminal, notifications, ...)
 	ttf-dejavu
 	ttf-opensans
 
-	# emoji support (in terminal, notifications, ...)
-	noto-fonts-emoji
+	# casual games
+	gnome-mines
+	gnome-sudoku
 )
 
 DEPS=(
