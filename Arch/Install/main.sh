@@ -35,6 +35,7 @@ EXPLICIT=(
 	speedtest-cli
 	starship
 	syncthing
+	tealdeer # tldr
 	tmux
 	tokei
 	wget
@@ -47,6 +48,7 @@ EXPLICIT=(
 	# arch base
 	base
 	devtools # build/test AUR packages
+	efivar
 	man-db
 	man-pages
 	pacman-contrib
@@ -67,6 +69,7 @@ EXPLICIT=(
 
 	# Picture Tools
 	gnuplot
+	python-matplotlib
 	graphviz
 	imagemagick
 	oxipng
@@ -132,6 +135,9 @@ systemctl start pkgstats.timer
 touch -a /etc/subuid /etc/subgid
 usermod --add-subuids 165536-231072 --add-subgids 165536-231072 "$(logname)"
 # in case of problems run as user: podman system migrate
+
+# Update tealdeer cache
+tldr --update
 
 # sensors
 sensors-detect --auto
