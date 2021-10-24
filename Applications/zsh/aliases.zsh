@@ -49,12 +49,20 @@ alias ffmpegVideo='ffmpeg -v error -stats'
 
 alias youtube-dl-mp3='youtube-dl --write-all-thumbnails --add-metadata --embed-thumbnail --extract-audio --audio-format mp3'
 
+alias cargo-open-doc='nice cargo doc --open --all-features'
 alias cargo-dev='nice cargo watch --clear --exec "clippy --all-targets -- -W clippy::pedantic" --exec "fmt -- --check || true"'
-alias cargo-dev-all='cargo-dev --exec "build --all-targets" --exec "test -q"'
+alias cargo-dev-all='cargo-dev --exec "build --all-targets" --exec "test -q" --exec "doc --all-features"'
 alias cargo-dev-build='cargo-dev --exec "build"'
 alias cargo-dev-run='cargo-dev --exec "run"'
 alias cargo-dev-test='cargo-dev --exec "build --tests" --exec "test -q"'
-alias cargo-pedantic='touch **/src/*.rs && nice cargo clippy --all-targets -- -W clippy::pedantic && nice cargo build --all-targets && nice cargo test -q && nice cargo fmt -- --check'
+cargo-pedantic() {
+	touch **/src/*.rs \
+	&& nice cargo clippy --all-targets "$@" -- -W clippy::pedantic -W clippy::nursery \
+	&& nice cargo build --all-targets "$@" \
+	&& nice cargo test -q "$@" \
+	&& nice cargo doc --all-features \
+	&& nice cargo fmt -- --check
+}
 cargoBelow() {
 	find . -name "Cargo.toml" -type f -print -execdir nice cargo $@ \;
 }
