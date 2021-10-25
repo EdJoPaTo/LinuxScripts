@@ -136,8 +136,5 @@ touch -a /etc/subuid /etc/subgid
 usermod --add-subuids 165536-231072 --add-subgids 165536-231072 "$(logname)"
 # in case of problems run as user: podman system migrate
 
-# Update tealdeer cache
-tldr --update
-
 # sensors
 sensors-detect --auto
