@@ -8,6 +8,7 @@
 	showw = show --color-words
 
 	amend = commit --amend --reset-author --no-edit
+	enfore-ignore = !git rm -r --cached --quiet . && git add . && git status --short
 	puff = push -u --force-with-lease
 	s = status --short --branch
 [apply]
