@@ -1,8 +1,8 @@
 [alias]
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lg = log --graph --pretty=format:'%C(auto)%h%d %s %Cgreen(%ar) %C(blue)<%an>%Creset' --abbrev-commit
 	lga = lg --all
 	lgr = lg --reflog
-	release-log = log --color --pretty='format:- %s %Cred%H%Creset %C(yellow)%d%Creset'
+	release-log = log --pretty='format:- %s %Cblue%H%C(auto)%d%Creset'
 
 	diffw = diff --color-words
 	showw = show --color-words
