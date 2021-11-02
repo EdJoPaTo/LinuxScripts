@@ -36,9 +36,13 @@
         "~/.arduino15/packages/**"
     ],
     "languageToolLinter.languageTool.ignoredWordsGlobal": [
+        "arch",
+        "bash",
         "bigbluebutton",
         "chroot",
         "copyleft",
+        "deno",
+        "dependencies",
         "editorconfig",
         "edjopato",
         "epub",
@@ -46,15 +50,18 @@
         "gitignore",
         "grammy",
         "haw",
+        "kvm",
         "mastodon",
         "mqttui",
         "mumble",
+        "netcup",
         "pinephone",
         "relref",
         "semver",
         "systemd",
         "telegraf",
-        "vserver"
+        "vserver",
+        "zulip"
     ],
     "rust-analyzer.checkOnSave.extraArgs": [
         "--",
