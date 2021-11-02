@@ -31,7 +31,7 @@ setopt HIST_VERIFY               # Don't execute immediately upon history expans
 setopt SHARE_HISTORY             # Share history between all sessions.
 
 # Completion
-fpath+=$HOME/.config/zsh_completions
+fpath+=$HOME/.config/completions
 autoload -U compinit
 # Matching: first exact match, then uppercase from lowercase and match on the left side (bar -> foobar)
 zstyle ':completion:*' matcher-list '' 'l:|=* r:|=* m:{a-z}={A-Z}'
