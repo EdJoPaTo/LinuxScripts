@@ -75,7 +75,7 @@ cargoBelow() {
 alias npx='echo edjopato fixed npx again && PATH=$(pwd)/node_modules/.bin:$PATH'
 alias init-nvm='source /usr/share/nvm/init-nvm.sh'
 alias npm-reinstall='rm -rf node_modules package-lock.json && nice npm i && npm outdated'
-alias npmBelow-clean='fd --type f package.json --threads 1 --exec rm -rf {//}/node_modules'
+alias npmBelow-clean='fd --no-ignore --prune "^node_modules$" --exec rm -rf {}'
 alias typescript-watch='rm -rf dist && nice ./node_modules/.bin/tsc --sourceMap --pretty --watch'
 
 alias pio-upload-monitor='pio run --target upload && pio device monitor'
