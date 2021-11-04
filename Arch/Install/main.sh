@@ -76,7 +76,7 @@ EXPLICIT=(
 
 	# Audio / Video Tools
 	ffmpeg
-	youtube-dl
+	yt-dlp
 
 	# system readout / sensors
 	acpi

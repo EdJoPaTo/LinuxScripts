@@ -22,11 +22,12 @@ alias code='nice -n 5 code'
 alias edc='nice edc'
 alias ffmpeg='nice ffmpeg'
 alias npm='nice npm'
-alias youtube-dl='nice youtube-dl'
+alias yt-dlp='nice yt-dlp'
 
 # Help to migrate to new commands (space at start -> no history entry)
 type bat > /dev/null && alias less=' echo use bat && false &&'
 type doas > /dev/null && alias sudo=' echo use doas && false &&'
+alias youtube-dl=' echo use yt-dlp && false &&'
 
 # example usage: `gitBelow fetch`
 gitBelow() {
@@ -50,7 +51,7 @@ alias ffmpegGif='ffmpeg -v error -stats -an'
 alias ffmpegSound='ffmpeg -v error -stats -vn'
 alias ffmpegVideo='ffmpeg -v error -stats'
 
-alias youtube-dl-mp3='youtube-dl --write-all-thumbnails --add-metadata --embed-thumbnail --extract-audio --audio-format mp3'
+alias yt-dlp-mp3='yt-dlp --write-all-thumbnails --add-metadata --embed-thumbnail --extract-audio --audio-format mp3'
 
 alias podman-image-update='podman pull $(podman image ls --filter=dangling=false --noheading --format="{{.Repository}}:{{.Tag}}" | rg -v localhost)'
 
