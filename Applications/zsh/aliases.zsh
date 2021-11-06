@@ -20,14 +20,13 @@ alias tokei='tokei --sort code'
 alias cargo='nice cargo'
 alias code='nice -n 5 code'
 alias edc='nice edc'
-alias ffmpeg='nice ffmpeg'
+alias ffmpeg='nice -n 15 ffmpeg'
 alias npm='nice npm'
-alias yt-dlp='nice yt-dlp'
+alias yt-dlp=' nice -n 15 yt-dlp'
 
 # Help to migrate to new commands (space at start -> no history entry)
 type bat > /dev/null && alias less=' echo use bat && false &&'
 type doas > /dev/null && alias sudo=' echo use doas && false &&'
-alias youtube-dl=' echo use yt-dlp && false &&'
 
 # example usage: `gitBelow fetch`
 gitBelow() {
@@ -62,8 +61,7 @@ alias cargo-dev-build='cargo-dev --exec "build"'
 alias cargo-dev-run='cargo-dev --exec "run"'
 alias cargo-dev-test='cargo-dev --exec "build --tests" --exec "test -q"'
 cargo-pedantic() {
-	touch **/src/*.rs \
-	&& nice cargo clippy --all-targets "$@" -- -W clippy::pedantic -W clippy::nursery \
+	nice cargo clippy --all-targets "$@" -- -W clippy::pedantic -W clippy::nursery \
 	&& nice cargo build --all-targets "$@" \
 	&& nice cargo test -q "$@" \
 	&& nice cargo doc --all-features \
@@ -75,7 +73,7 @@ cargoBelow() {
 
 alias npx='echo edjopato fixed npx again && PATH=$(pwd)/node_modules/.bin:$PATH'
 alias init-nvm='source /usr/share/nvm/init-nvm.sh'
-alias npm-reinstall='rm -rf node_modules package-lock.json && nice npm i && npm outdated'
+alias npm-reinstall='rm -rf node_modules package-lock.json && nice npm install && npm outdated || true'
 alias npmBelow-clean='fd --no-ignore --prune "^node_modules$" --exec rm -rf {}'
 alias typescript-watch='rm -rf dist && nice ./node_modules/.bin/tsc --sourceMap --pretty --watch'
 
@@ -84,8 +82,8 @@ alias pio-upload-monitor='pio run --target upload && pio device monitor'
 alias led-matrix-remote-et-decke='led-matrix-remote mqtt --broker etoPiHome1 --base-topic espMatrixEtDecke'
 alias mqttui-home='mqttui --broker etoPiHome1'
 
-alias rsynca='rsync --verbose --compress --checksum --delay-updates --delete-delay --archive'
-alias rsyncc='rsync --verbose --compress --checksum --delay-updates --recursive --links --times'
+alias rsynca='rsync --verbose --compress --checksum --delete-delay --archive'
+alias rsyncc='rsync --verbose --compress --checksum --recursive --links --times'
 
 remotedebug() {
 	# usage: remotedebug server command which should be executed
