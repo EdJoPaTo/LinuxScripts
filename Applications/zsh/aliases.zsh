@@ -18,15 +18,17 @@ alias ls="exa --git"
 alias tokei='tokei --sort code'
 
 alias cargo='nice cargo'
-alias code='nice -n 5 code'
 alias edc='nice edc'
 alias ffmpeg='nice -n 15 ffmpeg'
 alias npm='nice npm'
+alias pio='nice pio'
+alias platformio='nice platformio'
 alias yt-dlp=' nice -n 15 yt-dlp'
 
 # Help to migrate to new commands (space at start -> no history entry)
-type bat > /dev/null && alias less=' echo use bat && false &&'
-type doas > /dev/null && alias sudo=' echo use doas && false &&'
+type bat > /dev/null && alias less=' echo use bat && false --'
+type doas > /dev/null && alias sudo=' echo use doas && false --'
+type rg > /dev/null && alias grep=' echo use rg && false --'
 
 # example usage: `gitBelow fetch`
 gitBelow() {
@@ -71,13 +73,15 @@ cargoBelow() {
 	find . -name "Cargo.toml" -type f -print -execdir nice cargo $@ \;
 }
 
-alias npx='echo edjopato fixed npx again && PATH=$(pwd)/node_modules/.bin:$PATH'
-alias init-nvm='source /usr/share/nvm/init-nvm.sh'
+alias npx='echo edjopato fixed npx again && PATH=$(pwd)/node_modules/.bin:$PATH nice'
+alias nvm-init='source /usr/share/nvm/init-nvm.sh && unalias nvm-init'
 alias npm-reinstall='rm -rf node_modules package-lock.json && nice npm install && npm outdated || true'
+alias npm-xo-update='npm install --save-dev xo@latest && npm-reinstall && nice ./node_modules/.bin/xo --fix'
 alias npmBelow-clean='fd --no-ignore --prune "^node_modules$" --exec rm -rf {}'
 alias typescript-watch='rm -rf dist && nice ./node_modules/.bin/tsc --sourceMap --pretty --watch'
 
-alias pio-upload-monitor='pio run --target upload && pio device monitor'
+alias pio-upload='pio run --target upload'
+alias pio-monitor='pio device monitor'
 
 alias led-matrix-remote-et-decke='led-matrix-remote mqtt --broker etoPiHome1 --base-topic espMatrixEtDecke'
 alias mqttui-home='mqttui --broker etoPiHome1'

@@ -9,6 +9,7 @@ export MAKEFLAGS="-j$(nproc)"
 
 export MANPAGER=most
 
+alias code='nice -n 5 code'
 alias makepkg='nice makepkg'
 alias paru='nice paru'
 alias yay='nice yay'
