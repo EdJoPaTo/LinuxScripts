@@ -5,7 +5,7 @@ rm -rf alma.img
 
 nice doas alma create \
 	--encrypted-root \
-	--aur-helper yay \
+	--aur-helper paru \
 	--presets ./presets/*.toml \
 	--image 25GiB alma.img \
 	"$@"

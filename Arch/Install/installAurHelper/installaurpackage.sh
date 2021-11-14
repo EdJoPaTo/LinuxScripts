@@ -9,7 +9,7 @@ function dothestuff {
   git clone https://aur.archlinux.org/$1.git
   cd $1
   git pull --recurse
-  makepkg -sric --needed --noconfirm
+  nice makepkg -sric --needed --noconfirm
 }
 
 for var in "$@"

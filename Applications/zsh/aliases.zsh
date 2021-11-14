@@ -19,15 +19,16 @@ alias tokei='tokei --sort code'
 
 alias cargo='nice cargo'
 alias edc='nice edc'
-alias ffmpeg='nice -n 15 ffmpeg'
 alias npm='nice npm'
 alias pio='nice pio'
 alias platformio='nice platformio'
-alias yt-dlp=' nice -n 15 yt-dlp'
 
 # Help to migrate to new commands (space at start -> no history entry)
 type bat > /dev/null && alias less=' echo use bat && false --'
 type doas > /dev/null && alias sudo=' echo use doas && false --'
+type nvim > /dev/null && alias nano=' echo use nvim && false --'
+type nvim > /dev/null && alias vi=' echo use nvim && false --'
+type nvim > /dev/null && alias vim=' echo use nvim && false --'
 type rg > /dev/null && alias grep=' echo use rg && false --'
 
 # example usage: `gitBelow fetch`
@@ -48,11 +49,12 @@ alias wttr-short='curl "wttr.in/?format=%l:+%c+%t,+%w+%m"'
 alias mpc-clearadd='mpc clear -q && mpc add'
 alias amp='mpc --host etoPiAmp'
 
-alias ffmpegGif='ffmpeg -v error -stats -an'
-alias ffmpegSound='ffmpeg -v error -stats -vn'
-alias ffmpegVideo='ffmpeg -v error -stats'
+alias ffmpeg='nice -n 15 ffmpeg -v error -stats'
+alias ffmpegGif='ffmpeg -an'
+alias ffmpegSound='ffmpeg -vn'
 
-alias yt-dlp-mp3='yt-dlp --write-all-thumbnails --add-metadata --embed-thumbnail --extract-audio --audio-format mp3'
+alias yt-dlp='nice -n 15 yt-dlp --prefer-free-formats --embed-subs --embed-thumbnail --embed-metadata'
+alias yt-dlp-mp3='yt-dlp --extract-audio --audio-format mp3'
 
 alias podman-image-update='podman pull $(podman image ls --filter=dangling=false --noheading --format="{{.Repository}}:{{.Tag}}" | rg -v localhost)'
 
@@ -63,14 +65,14 @@ alias cargo-dev-build='cargo-dev --exec "build"'
 alias cargo-dev-run='cargo-dev --exec "run"'
 alias cargo-dev-test='cargo-dev --exec "build --tests" --exec "test -q"'
 cargo-pedantic() {
-	nice cargo clippy --all-targets "$@" -- -W clippy::pedantic -W clippy::nursery \
-	&& nice cargo build --all-targets "$@" \
-	&& nice cargo test -q "$@" \
-	&& nice cargo doc --all-features \
-	&& nice cargo fmt -- --check
+	nice cargo clippy --all-targets "$@" -- -W clippy::pedantic -W clippy::nursery -W clippy::cargo
+	nice cargo build --all-targets "$@" \
+	&& nice cargo test -q "$@"
+	nice cargo doc --all-features
+	nice cargo fmt -- --check
 }
 cargoBelow() {
-	find . -name "Cargo.toml" -type f -print -execdir nice cargo $@ \;
+	find . -name "Cargo.toml" -type f -print -execdir nice -n 19 cargo $@ \;
 }
 
 alias npx='echo edjopato fixed npx again && PATH=$(pwd)/node_modules/.bin:$PATH nice'

@@ -36,6 +36,7 @@
         "~/.arduino15/packages/**"
     ],
     "languageToolLinter.languageTool.ignoredWordsGlobal": [
+        "alpine",
         "arch",
         "bash",
         "bigbluebutton",
@@ -51,6 +52,7 @@
         "grammy",
         "haw",
         "kvm",
+        "loc",
         "mastodon",
         "mqttui",
         "mumble",
@@ -66,7 +68,9 @@
     "rust-analyzer.checkOnSave.extraArgs": [
         "--",
         "-W",
-        "clippy::pedantic"
+        "clippy::pedantic",
+        "-W",
+        "clippy::nursery"
     ],
     "diffEditor.ignoreTrimWhitespace": false
 }

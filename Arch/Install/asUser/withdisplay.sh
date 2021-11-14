@@ -2,7 +2,6 @@
 set -e
 
 EXPLICIT=(
-	mpd-mpris
 	platformio
 	tootle
 	ttf-ms-fonts

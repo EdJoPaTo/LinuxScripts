@@ -36,7 +36,7 @@ FORMULAS=(
 	cargo-watch
 	deno
 	dive
-	dua-cli
+	dust
 	exa
 	fd
 	ffmpeg
@@ -46,6 +46,7 @@ FORMULAS=(
 	imagemagick
 	languagetool
 	mtr
+	neovim
 	nmap
 	node
 	oxipng
@@ -57,7 +58,7 @@ FORMULAS=(
 	shellcheck
 	starship
 	tokei
-	youtube-dl
+	yt-dlp
 	zsh
 	zsh-completions
 	zsh-history-substring-search

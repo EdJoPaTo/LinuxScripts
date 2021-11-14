@@ -11,7 +11,7 @@ EXPLICIT=(
 	bat
 	curl
 	deno
-	dua-cli
+	dust
 	exa
 	fd
 	git
@@ -21,6 +21,7 @@ EXPLICIT=(
 	jq
 	most # as MANPAGER
 	nano
+	neovim
 	networkmanager
 	networkmanager-openvpn
 	nodejs
@@ -120,6 +121,11 @@ DEPS=(
 
 	# hugo: syntax-highlight code snippets
 	python-pygments
+
+	# neovim
+	python-neovim
+	wl-clipboard
+	xclip
 
 	# podman
 	catatonit # --init
