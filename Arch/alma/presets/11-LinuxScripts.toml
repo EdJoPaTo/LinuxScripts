@@ -3,4 +3,5 @@ script = """
 set -eux
 mkdir -p /home/edjopato/git/infra
 git clone https://github.com/EdJoPaTo/LinuxScripts.git /home/edjopato/git/infra/LinuxScripts
+chown -R edjopato:wheel /home/edjopato
 """

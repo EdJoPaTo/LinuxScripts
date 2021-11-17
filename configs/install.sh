@@ -12,7 +12,6 @@ function link() {
 }
 
 # Bin files
-echo make sure the ~/bin folder is added to your path
 for file in "$(pwd)"/bin/*; do
 	filename=$(basename "$file")
 	link "$file" "$HOME/bin/$filename"
