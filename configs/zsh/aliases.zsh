@@ -1,11 +1,12 @@
 # Aliases
-export EDITOR=nano
+export EDITOR=nvim
 export PAGER=less
-export VISUAL=nano
+export VISUAL=nvim
 
 export PATH=$PATH:$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin
 
 export LESS="--RAW-CONTROL-CHARS"
+export FZF_DEFAULT_COMMAND="rg --files"
 
 alias -g ...='../..'
 alias -g ....='../../..'
