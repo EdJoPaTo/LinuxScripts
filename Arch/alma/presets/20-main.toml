@@ -9,7 +9,10 @@ packages = [
     "go",
     "podman",
 ]
-aur_packages = ["paru-bin", "wd719x-firmware", "aic94xx-firmware"]
+aur_packages = [
+    "aic94xx-firmware",
+    "wd719x-firmware",
+]
 shared_directories = ["LinuxScripts"]
 script = """
 set -eux

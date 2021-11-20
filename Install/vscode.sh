@@ -1,23 +1,24 @@
 #!/usr/bin/env bash
-set -e
 
 # Find out installed ones: `code --list-extensions`
 
 packages=(
+	EditorConfig.EditorConfig
+	af4jm.vscode-icalendar
 	coolbear.systemd-unit-file
 	davidlday.languagetool-linter
-	EditorConfig.EditorConfig
+	denoland.vscode-deno
 	esbenp.prettier-vscode
+	ms-vscode.cpptools
+	platformio.platformio-ide
 	redhat.vscode-xml
 	redhat.vscode-yaml
 	timonwong.shellcheck
 
+	# Rust
 	matklad.rust-analyzer
 	bungcip.better-toml
 	serayuzgur.crates
-
-	# For whatever reason, it does not like to be installed from command line
-	#platformio.platformio-ide
 )
 
 for package in "${packages[@]}"

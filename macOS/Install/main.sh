@@ -45,6 +45,7 @@ FORMULAS=(
 	hyperfine
 	imagemagick
 	languagetool
+	mpc
 	mtr
 	neovim
 	nmap
