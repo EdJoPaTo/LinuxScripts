@@ -2,7 +2,6 @@ packages = [
     "rustup",
     "cargo-audit",
     "cargo-edit",
-    "cargo-outdated",
     "cargo-tarpaulin",
     "cargo-watch"
 ]

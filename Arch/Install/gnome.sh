@@ -28,6 +28,8 @@ EXPLICIT=(
 DEPS=(
 	eog-plugins
 	gnome-control-center
+	xdg-desktop-portal
+	xdg-desktop-portal-gnome # desktop / window sharing
 
 	# remote locations
 	gvfs-afc

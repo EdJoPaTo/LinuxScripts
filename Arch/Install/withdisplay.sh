@@ -11,7 +11,11 @@ EXPLICIT=(
 	cmatrix
 	ddcutil
 	dino
+	flatpak
+	fractal
 	gimp
+	gnuradio-companion
+	gnuradio-osmosdr
 	inkscape
 	libreoffice-fresh
 	mpv
@@ -20,6 +24,7 @@ EXPLICIT=(
 	pdfpc
 	remmina
 	telegram-desktop
+	tiled
 	vlc
 	wireshark-qt
 	xfmpc

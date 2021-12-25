@@ -41,6 +41,7 @@ EXPLICIT=(
 	tokei
 	wget
 	xdg-user-dirs
+	yq
 	zsh
 	zsh-completions
 	zsh-history-substring-search
@@ -49,6 +50,7 @@ EXPLICIT=(
 	# arch base
 	base
 	devtools # build/test AUR packages
+	efibootmgr
 	efivar
 	man-db
 	man-pages
@@ -89,10 +91,8 @@ EXPLICIT=(
 	rustup
 	rust-analyzer
 	cargo-audit
-	cargo-bloat
 	cargo-edit
 	cargo-flamegraph
-	cargo-outdated
 	cargo-sort
 	cargo-udeps
 	cargo-watch
@@ -116,7 +116,6 @@ DEPS=(
 
 	# Audio / Video Tools
 	atomicparsley
-	python-pycryptodome
 	rtmpdump
 
 	# hugo: syntax-highlight code snippets

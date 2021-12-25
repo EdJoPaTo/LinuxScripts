@@ -5,10 +5,14 @@ EXPLICIT=(
 	code
 	element-desktop # test fractal when SSO works https://gitlab.gnome.org/GNOME/fractal/-/issues/521
 	obs-studio
+	signal-desktop
 	steam
 	teamspeak3
 	veracrypt
 	virtualbox
+
+	amd-ucode
+	intel-ucode
 )
 
 DEPS=(

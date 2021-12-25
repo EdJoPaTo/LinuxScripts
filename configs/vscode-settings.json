@@ -57,6 +57,7 @@
         "mqttui",
         "mumble",
         "netcup",
+        "nodemcu",
         "pinephone",
         "relref",
         "semver",

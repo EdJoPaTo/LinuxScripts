@@ -50,12 +50,13 @@ alias wttr-short='curl "wttr.in/?format=%l:+%c+%t,+%w+%m"'
 alias mpc-clearadd='mpc clear -q && mpc add'
 alias mpc-cropadd='mpc crop && mpc add'
 alias amp='mpc --host etoPiAmp'
+alias mpvs='mpv --speed=2'
 
 alias ffmpeg='nice -n 15 ffmpeg -v error -stats'
 alias ffmpegGif='ffmpeg -an'
 alias ffmpegSound='ffmpeg -vn'
 
-alias yt-dlp='nice -n 15 yt-dlp --prefer-free-formats --embed-subs --embed-thumbnail --embed-metadata'
+alias yt-dlp='nice -n 15 yt-dlp --prefer-free-formats --embed-subs --sub-langs all --embed-thumbnail --embed-metadata --embed-chapters --video-multistreams --audio-multistreams'
 alias yt-dlp-mp3='yt-dlp --extract-audio --audio-format mp3'
 
 alias podman-image-update='podman pull $(podman image ls --filter=dangling=false --noheading --format="{{.Repository}}:{{.Tag}}" | rg -v localhost)'
@@ -67,7 +68,7 @@ alias cargo-dev-build='cargo-dev --exec "build"'
 alias cargo-dev-run='cargo-dev --exec "run"'
 alias cargo-dev-test='cargo-dev --exec "build --tests" --exec "test -q"'
 cargo-pedantic() {
-	nice cargo clippy --all-targets "$@" -- -W clippy::pedantic -W clippy::nursery -W clippy::cargo
+	nice cargo clippy --all-targets "$@" -- -W clippy::pedantic -W clippy::nursery
 	nice cargo build --all-targets "$@" \
 	&& nice cargo test -q "$@"
 	nice cargo doc --all-features

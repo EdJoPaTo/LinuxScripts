@@ -2,6 +2,7 @@
 set -e
 
 EXPLICIT=(
+	calls
 	chrome-gnome-shell # Generic Browser extension backend for extensions.gnome.org
 	gnome-shell-extension-caffeine-git
 	gnome-shell-extension-nightthemeswitcher-git
