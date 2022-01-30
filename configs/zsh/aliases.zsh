@@ -40,6 +40,8 @@ gitBelow() {
 alias randb='openssl rand -base64 33'
 alias randh='openssl rand -hex 20'
 
+alias tss='ts "%H:%M:%.S"'
+
 alias svg2png='inkscape --export-type=png'
 alias svg2pdf='inkscape --export-type=pdf'
 
@@ -50,9 +52,8 @@ alias wttr-short='curl "wttr.in/?format=%l:+%c+%t,+%w+%m"'
 alias mpc-clearadd='mpc clear -q && mpc add'
 alias mpc-cropadd='mpc crop && mpc add'
 alias amp='mpc --host etoPiAmp'
-alias mpvs='mpv --speed=2'
 
-alias ffmpeg='nice -n 15 ffmpeg -v error -stats'
+alias ffmpeg='nice -n 15 ffmpeg -stats -hide_banner'
 alias ffmpegGif='ffmpeg -an'
 alias ffmpegSound='ffmpeg -vn'
 
@@ -84,9 +85,12 @@ alias npm-reinstall='rm -rf node_modules package-lock.json && nice npm install &
 alias npm-xo-update='npm install --save-dev xo@latest && npm-reinstall && nice ./node_modules/.bin/xo --fix'
 alias npmBelow-clean='fd --no-ignore --prune "^node_modules$" --exec rm -rf {}'
 alias typescript-watch='rm -rf dist && nice ./node_modules/.bin/tsc --sourceMap --pretty --watch'
+# npmBelow doesnt work -> package.json and node_modules also exists in dependencies
 
 alias pio-upload='pio run --target upload'
 alias pio-monitor='pio device monitor'
+alias pioBelow-clean='fd --hidden --no-ignore --prune "^.pio$" --exec rm -rf {}'
+# pioBelow doesnt work -> platformio.ini and .pio also exists in dependencies
 
 alias led-matrix-remote-et-decke='led-matrix-remote mqtt --broker etoPiHome1 --base-topic espMatrixEtDecke'
 alias mqttui-home='mqttui --broker etoPiHome1'

@@ -10,7 +10,6 @@ EXPLICIT=(
 	ansible-lint
 	bat
 	curl
-	deno
 	dust
 	exa
 	fd
@@ -29,6 +28,7 @@ EXPLICIT=(
 	opendoas
 	openssh
 	pkgstats
+	moreutils # /usr/bin/ts
 	podman
 	progress
 	ripgrep
@@ -101,6 +101,7 @@ EXPLICIT=(
 if [ "$(uname -m)" == "x86_64" ]; then
 EXPLICIT+=(
 	cargo-tarpaulin
+	deno
 	pandoc
 	reflector # Update mirrorlist
 	shellcheck
@@ -122,7 +123,7 @@ DEPS=(
 	python-pygments
 
 	# neovim
-	python-neovim
+	python-pynvim
 	wl-clipboard
 	xclip
 
