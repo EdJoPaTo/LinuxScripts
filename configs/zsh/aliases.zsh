@@ -33,9 +33,8 @@ type nvim > /dev/null && alias vim=' echo use nvim && false --'
 type rg > /dev/null && alias grep=' echo use rg && false --'
 
 # example usage: `gitBelow fetch`
-gitBelow() {
-	find . -name ".git" -type d -print -execdir git --no-pager $@ \;
-}
+# see: https://github.com/EdJoPaTo/project-below
+alias gitBelow='project-below --directory=.git git'
 
 alias randb='openssl rand -base64 33'
 alias randh='openssl rand -hex 20'
@@ -61,6 +60,8 @@ alias yt-dlp='nice -n 15 yt-dlp --prefer-free-formats --embed-subs --sub-langs a
 alias yt-dlp-mp3='yt-dlp --extract-audio --audio-format mp3'
 
 alias podman-image-update='podman pull $(podman image ls --filter=dangling=false --noheading --format="{{.Repository}}:{{.Tag}}" | rg -v localhost)'
+alias podmanBelow='project-below --file=Dockerfile podman'
+alias website-stalker-below='project-below --file=website-stalker.yaml website-stalker'
 
 alias cargo-open-doc='nice cargo doc --open --all-features'
 alias cargo-dev='nice cargo watch --clear --exec "clippy --all-targets -- -W clippy::pedantic" --exec "fmt -- --check || true"'
@@ -75,25 +76,23 @@ cargo-pedantic() {
 	nice cargo doc --all-features
 	nice cargo fmt -- --check
 }
-cargoBelow() {
-	find . -name "Cargo.toml" -type f -print -execdir nice -n 19 cargo $@ \;
-}
+alias cargoBelow='project-below --file=Cargo.toml nice -n 19 cargo'
 
 alias npx='echo edjopato fixed npx again && PATH=$(pwd)/node_modules/.bin:$PATH nice'
 alias nvm-init='source /usr/share/nvm/init-nvm.sh && unalias nvm-init'
 alias npm-reinstall='rm -rf node_modules package-lock.json && nice npm install && npm outdated || true'
 alias npm-xo-update='npm install --save-dev xo@latest && npm-reinstall && nice ./node_modules/.bin/xo --fix'
-alias npmBelow-clean='fd --no-ignore --prune "^node_modules$" --exec rm -rf {}'
 alias typescript-watch='rm -rf dist && nice ./node_modules/.bin/tsc --sourceMap --pretty --watch'
-# npmBelow doesnt work -> package.json and node_modules also exists in dependencies
+alias npmBelow='project-below --file=package.json nice -n 19 npm'
+alias npmBelow-clean='project-below --file=package.json --directory=node_modules rm -rf node_modules'
 
 alias pio-upload='pio run --target upload'
 alias pio-monitor='pio device monitor'
-alias pioBelow-clean='fd --hidden --no-ignore --prune "^.pio$" --exec rm -rf {}'
-# pioBelow doesnt work -> platformio.ini and .pio also exists in dependencies
+alias pioBelow='project-below --file=platformio.ini nice -n 19 pio'
+alias pioBelow-clean='project-below --file=platformio.ini --directory=.pio rm -rf .pio'
 
 alias led-matrix-remote-et-decke='led-matrix-remote mqtt --broker etoPiHome1 --base-topic espMatrixEtDecke'
-alias mqttui-home='mqttui --broker etoPiHome1'
+export MQTTUI_BROKER='etoPiHome1'
 
 alias rsynca='rsync --verbose --compress --checksum --delete-delay --archive'
 alias rsyncc='rsync --verbose --compress --checksum --recursive --links --times'
