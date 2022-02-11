@@ -15,9 +15,14 @@ end
 require "paq" {
 	"savq/paq-nvim";
 	"editorconfig/editorconfig-vim";
+	"junegunn/fzf.vim";
 	"neovim/nvim-lspconfig";
 }
 
 vim.opt.mouse = "a"
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+
+-- fzf to switch files quickly
+map('n', '_', '<Cmd>Buffers<CR>')
+map('n', ';', '<Cmd>Files<CR>')
