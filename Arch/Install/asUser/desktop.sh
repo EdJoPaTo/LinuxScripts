@@ -3,6 +3,7 @@ set -e
 
 EXPLICIT=(
 	dive
+	resvg
 
 	# create bootables
 	alma-git
