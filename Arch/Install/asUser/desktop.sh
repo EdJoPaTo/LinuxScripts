@@ -8,6 +8,7 @@ EXPLICIT=(
 	# create bootables
 	alma-git
 	popsicle
+	rpi-imager
 	ventoy-bin
 
 	# Rust

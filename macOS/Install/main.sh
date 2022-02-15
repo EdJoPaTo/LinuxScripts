@@ -15,13 +15,13 @@ CASKS=(
 	mactex
 	mumble
 	quitter
+	raspberry-pi-imager
 	resilio-sync
 	syncthing
 	teamspeak-client
 	telegram
 	telegram-desktop
 	veracrypt
-	virtualbox
 	vlc
 	vscodium
 	wireshark
@@ -40,6 +40,7 @@ FORMULAS=(
 	exa
 	fd
 	ffmpeg
+	fzf
 	gnuplot
 	hugo
 	hyperfine
@@ -51,6 +52,7 @@ FORMULAS=(
 	nmap
 	node
 	oxipng
+	platformio
 	podman
 	ripgrep
 	rsync
