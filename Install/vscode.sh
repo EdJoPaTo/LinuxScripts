@@ -3,21 +3,32 @@
 # Find out installed ones: `code --list-extensions`
 
 packages=(
+	DavidAnson.vscode-markdownlint
 	EditorConfig.EditorConfig
+	esbenp.prettier-vscode
+	timonwong.shellcheck
+	VisualStudioExptTeam.vscodeintellicode
+
+	# Programming Language Support
 	af4jm.vscode-icalendar
 	coolbear.systemd-unit-file
-	davidlday.languagetool-linter
 	denoland.vscode-deno
-	esbenp.prettier-vscode
-	ms-vscode.cpptools
-	platformio.platformio-ide
+	macabeus.vscode-fluent
 	redhat.vscode-xml
 	redhat.vscode-yaml
-	timonwong.shellcheck
+
+	# TeX and natural language
+	davidlday.languagetool-linter
+	James-Yu.latex-workshop
+	valentjn.vscode-ltex
+
+	# Microcontroller
+	ms-vscode.cpptools
+	platformio.platformio-ide
 
 	# Rust
-	matklad.rust-analyzer
 	bungcip.better-toml
+	matklad.rust-analyzer
 	serayuzgur.crates
 )
 

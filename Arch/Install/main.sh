@@ -23,7 +23,7 @@ EXPLICIT=(
 	file-roller # archives
 	flatpak
 	fractal
-	fzf # neovim
+	fzf
 	git
 	gnome-calculator
 	gnome-disk-utility

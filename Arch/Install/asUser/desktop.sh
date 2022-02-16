@@ -3,6 +3,7 @@ set -e
 
 EXPLICIT=(
 	dive
+	gnome-obfuscate
 	resvg
 
 	# create bootables
