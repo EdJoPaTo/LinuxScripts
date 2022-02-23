@@ -16,7 +16,6 @@ CASKS=(
 	mumble
 	quitter
 	raspberry-pi-imager
-	resilio-sync
 	syncthing
 	teamspeak-client
 	telegram
