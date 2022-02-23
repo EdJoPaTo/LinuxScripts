@@ -6,6 +6,7 @@ After=network-online.target
 
 [Service]
 Type=oneshot
+Nice=15
 ExecStart=/usr/bin/pacman -Syuw --noconfirm --noprogressbar
 
 [Install]
