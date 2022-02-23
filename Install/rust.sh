@@ -1,10 +1,17 @@
 #!/usr/bin/env bash
 set -e
 
+COMPONENTS=(
+	clippy
+	rustfmt
+
+	rust-src # rust-analyzer
+)
+
 rustup default stable
+rustup toolchain install nightly
 
-# generally used components
-rustup component add clippy rustfmt
+rustup target add wasm32-unknown-unknown
 
-# needed by rust-analyzer
-rustup component add rust-src
+rustup component add "${COMPONENTS[@]}"
+rustup component add --toolchain nightly "${COMPONENTS[@]}"

@@ -4,7 +4,9 @@
 	lgr = lg --reflog
 	release-log = log --pretty='format:- %s %Cblue%H%C(auto)%d%Creset'
 
+	diffs = diff --ignore-space-change
 	diffw = diff --color-words
+	shows = show --ignore-space-change
 	showw = show --color-words
 
 	amend = commit --amend --reset-author --no-edit

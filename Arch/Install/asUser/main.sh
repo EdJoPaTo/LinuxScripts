@@ -2,6 +2,7 @@
 set -e
 
 EXPLICIT=(
+	esphome
 	nvm
 	platformio
 	rslsync

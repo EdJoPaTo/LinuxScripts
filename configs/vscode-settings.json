@@ -8,6 +8,8 @@
     "git.suggestSmartCommit": false,
     "javascript.preferences.importModuleSpecifierEnding": "js",
     "javascript.updateImportsOnFileMove.enabled": "always",
+    "ltex.additionalRules.motherTongue": "de-DE",
+    "ltex.checkFrequency": "save",
     "platformio-ide.activateOnlyOnPlatformIOProject": true,
     "platformio-ide.disablePIOHomeStartup": true,
     "prettier.useTabs": true,
@@ -20,6 +22,7 @@
     "terminal.external.linuxExec": "alacritty",
     "typescript.preferences.importModuleSpecifierEnding": "js",
     "typescript.updateImportsOnFileMove.enabled": "always",
+    "platformio-ide.useBuiltinPIOCore": false,
     "window.autoDetectColorScheme": true,
     "window.menuBarVisibility": "toggle",
     "window.restoreWindows": "none",
@@ -59,6 +62,8 @@
         "netcup",
         "nodemcu",
         "pinephone",
+        "pkgbuild",
+        "podman",
         "relref",
         "semver",
         "systemd",
@@ -66,6 +71,11 @@
         "vserver",
         "zulip"
     ],
+    "markdownlint.config": {
+        "MD013": false,
+        "MD024": false,
+        "MD025": false
+    },
     "rust-analyzer.checkOnSave.extraArgs": [
         "--",
         "-W",
