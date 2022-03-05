@@ -10,6 +10,7 @@ EXPLICIT=(
 )
 
 DEPS=(
+	python-esphome-dashboard
 )
 
 ./installWithAurHelper.sh "${DEPS[@]}" "${EXPLICIT[@]}"
