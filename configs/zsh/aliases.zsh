@@ -78,7 +78,7 @@ alias cargo-dev-test='cargo-dev --exec "build --tests" --exec "test -q"'
 cargo-pedantic() {
 	nice cargo clippy --all-targets "$@" -- -W clippy::pedantic -W clippy::nursery
 	nice cargo build --all-targets "$@" \
-	&& nice cargo test -q "$@"
+	&& nice cargo test --all-targets --quiet "$@"
 	nice cargo doc --all-features
 	nice cargo fmt -- --check
 }
