@@ -33,6 +33,7 @@ autoload -U compinit
 # Matching: first exact match, then uppercase from lowercase and match on the left side (bar -> foobar)
 zstyle ':completion:*' matcher-list '' 'l:|=* r:|=* m:{a-z}={A-Z}'
 zstyle ':completion:*' menu select
+zstyle ':completion:*' special-dirs ..
 zstyle ':completion:*:warnings' format '%F{red}No matches for:%f %d'
 
 # separate matches into groups
