@@ -21,11 +21,8 @@ done
 mkdir -p ~/git/aur
 mkdir -p ~/git/gist
 mkdir -p ~/git/haw
-mkdir -p ~/git/infra
+mkdir -p ~/git/hub/EdJoPaTo/public
 mkdir -p ~/git/other
-mkdir -p ~/git/personal
-mkdir -p ~/git/smarthome
-mkdir -p ~/git/template
 
 # Music Player Daemon
 mkdir -p "$HOME/.cache/mpd/"
