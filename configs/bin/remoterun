@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -e
+
+# usage: remoterun server command which should be executed
+# usage: remoterun my.server.tld cargo build
+
+server=$1
+shift 1
+
+folder=${PWD##*/}
+remotefolder="tmp/remoterun/$folder/"
+
+rsync --archive --compress --verbose --checksum --delete-delay --exclude=.git --exclude-from=.gitignore --rsync-path="mkdir -p $remotefolder && rsync" . "$server:$remotefolder"
+ssh -tt "$server" "uptime && cd $remotefolder && bash -cl '$@' && uptime"

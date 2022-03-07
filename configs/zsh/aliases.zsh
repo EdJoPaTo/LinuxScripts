@@ -36,6 +36,7 @@ type nvim > /dev/null && alias nano=' echo use nvim && false --'
 type nvim > /dev/null && alias vi=' echo use nvim && false --'
 type nvim > /dev/null && alias vim=' echo use nvim && false --'
 type rg > /dev/null && alias grep=' echo use rg && false --'
+alias remotedebug=' echo use remoterun && false --'
 
 # example usage: `gitBelow fetch`
 # see: https://github.com/EdJoPaTo/project-below
@@ -101,16 +102,3 @@ export MQTTUI_BROKER='etoPiHome1'
 
 alias rsynca='rsync --verbose --compress --checksum --delete-delay --archive'
 alias rsyncc='rsync --verbose --compress --checksum --recursive --links --times'
-
-remotedebug() {
-	# usage: remotedebug server command which should be executed
-	# usage: remotedebug my.server.tld cargo build
-	server=$1
-	shift 1
-
-	folder=${PWD##*/}
-	remotefolder="tmp/remotedebug/$folder/"
-
-	rsync --archive --compress --verbose --checksum --delete-delay --exclude=.git --exclude-from=.gitignore --rsync-path="mkdir -p $remotefolder && rsync" . $server:$remotefolder
-	ssh -tt $server "uptime && cd $remotefolder && bash -cl '$@' && uptime"
-}
