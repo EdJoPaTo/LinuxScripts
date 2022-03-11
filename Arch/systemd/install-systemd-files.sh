@@ -2,7 +2,7 @@
 set -e
 
 # copy stuff
-sudo cp -ruv system user /etc/systemd
+sudo cp -rv system user /etc/systemd
 
 # reload systemd
 sudo systemctl daemon-reload
