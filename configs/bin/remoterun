@@ -8,7 +8,7 @@ server=$1
 shift 1
 
 folder=${PWD##*/}
-remotefolder="tmp/remoterun/$folder/"
+remotefolder=".cache/remoterun/$folder/"
 
 rsync --archive --compress --verbose --checksum --delete-delay --exclude=.git --exclude-from=.gitignore --rsync-path="mkdir -p $remotefolder && rsync" . "$server:$remotefolder"
 ssh -tt "$server" "uptime && cd $remotefolder && bash -cl '$@' && uptime"
