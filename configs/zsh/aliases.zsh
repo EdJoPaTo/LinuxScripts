@@ -25,6 +25,7 @@ alias tokei='tokei --sort code'
 
 alias cargo='nice cargo'
 alias edc='nice edc'
+alias esphome='nice esphome'
 alias npm='nice npm'
 alias pio='nice pio'
 alias platformio='nice platformio'
