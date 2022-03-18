@@ -48,13 +48,12 @@ function set_window_title(){
 }
 precmd_functions+=(set_window_title)
 
+source "$ZSH_PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "$ZSH_PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh"
+
 # Load stuff
 for config_file ($HOME/.config/zsh/*.zsh); do
 	source $config_file
 done
-
-source "$ZSH_PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" 2>/dev/null
-
-source "$ZSH_PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh" 2>/dev/null
 
 eval "$(starship init zsh)"
