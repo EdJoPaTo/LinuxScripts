@@ -3,6 +3,7 @@ if [[ $OSTYPE = darwin* ]]; then
 
 alias androidstudio="open -a /Applications/Android\ Studio.app"
 alias code="codium"
+alias brew="nice brew"
 
 #export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
 export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
