@@ -129,6 +129,7 @@ EXPLICIT=(
 
 	# Audio / Video Tools
 	ffmpeg
+	helvum # pipewire patch bay
 	kid3-qt
 	mpc
 	mpd
@@ -217,6 +218,7 @@ EXPLICIT+=(
 	cargo-tarpaulin
 	code
 	deno
+	discord
 	element-desktop # test fractal when SSO works https://gitlab.gnome.org/GNOME/fractal/-/issues/521
 	obs-studio
 	pandoc
