@@ -2,8 +2,11 @@
 set -e
 
 EXPLICIT=(
+	# Browser extension stuff for extensions.gnome.org
+	chrome-gnome-shell # extension backend
+	firefox-extension-gnome-shell-integration
+
 	calls
-	chrome-gnome-shell # Generic Browser extension backend for extensions.gnome.org
 	gnome-shell-extension-caffeine-git
 	gnome-shell-extension-sound-output-device-chooser
 	gnome-shell-extension-system-monitor-git

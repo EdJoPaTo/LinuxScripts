@@ -156,9 +156,6 @@ EXPLICIT=(
 	firefox-temporary-containers
 	firefox-ublock-origin
 	## https://addons.mozilla.org/firefox/addon/privacy-redirect/
-	## https://addons.mozilla.org/firefox/addon/single-file
-	## https://addons.mozilla.org/firefox/addon/svg-screenshots/
-	## https://addons.mozilla.org/firefox/addon/umatrix
 
 	# casual games
 	gnome-mines

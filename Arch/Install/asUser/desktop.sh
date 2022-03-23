@@ -20,7 +20,6 @@ EXPLICIT=(
 
 if [ "$(uname -m)" == "x86_64" ]; then
 EXPLICIT+=(
-	insomnia-bin
 	jitsi-meet-desktop-bin
 
 	# create bootables
