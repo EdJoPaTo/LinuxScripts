@@ -83,6 +83,7 @@ EXPLICIT=(
 	# large build environments often used for AUR packages
 	clang
 	cmake
+	dotnet-sdk
 	go
 	meson
 	vala

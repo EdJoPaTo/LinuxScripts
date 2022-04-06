@@ -81,6 +81,7 @@
         "MD025": false
     },
     "rust-analyzer.checkOnSave.extraArgs": [
+        "--no-deps",
         "--",
         "-W",
         "clippy::pedantic",

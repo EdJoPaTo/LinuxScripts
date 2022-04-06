@@ -5,8 +5,9 @@ export VISUAL=nvim
 
 export PATH=$PATH:$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin
 
-export LESS="--RAW-CONTROL-CHARS"
+export BAT_THEME=ansi
 export FZF_DEFAULT_COMMAND="rg --files"
+export LESS="--RAW-CONTROL-CHARS"
 
 alias -g ...='../..'
 alias -g ....='../../..'
@@ -77,10 +78,10 @@ alias cargo-dev-build='cargo-dev --exec "build"'
 alias cargo-dev-run='cargo-dev --exec "run"'
 alias cargo-dev-test='cargo-dev --exec "build --tests" --exec "test -q"'
 cargo-pedantic() {
-	nice cargo clippy --all-targets "$@" -- -W clippy::pedantic -W clippy::nursery
+	nice cargo clippy --no-deps --all-targets "$@" -- -W clippy::pedantic -W clippy::nursery
 	nice cargo build --all-targets "$@" \
 	&& nice cargo test --all-targets --quiet "$@"
-	nice cargo doc --all-features
+	nice cargo doc --no-deps --all-features
 	nice cargo fmt -- --check
 }
 alias cargoBelow='project-below --file=Cargo.toml nice -n 19 cargo'
