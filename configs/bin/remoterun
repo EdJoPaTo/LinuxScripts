@@ -4,11 +4,14 @@ set -e
 # usage: remoterun server command which should be executed
 # usage: remoterun my.server.tld cargo build
 
+exclude=${REMOTERUN_EXCLUDE:-"--exclude=.git --exclude-from=.gitignore"}
+
 server=$1
 shift 1
+command=$*
 
 folder=${PWD##*/}
 remotefolder=".cache/remoterun/$folder/"
 
-rsync --archive --compress --verbose --checksum --delete-delay --exclude=.git --exclude-from=.gitignore --rsync-path="mkdir -p $remotefolder && rsync" . "$server:$remotefolder"
-ssh -tt "$server" "uptime && cd $remotefolder && bash -cl '$@' && uptime"
+rsync --archive --compress --verbose --checksum --delete-delay $exclude --rsync-path="mkdir -p $remotefolder && rsync" . "$server:$remotefolder"
+ssh -tt "$server" "uptime && cd $remotefolder && bash -cl '$command' && uptime"
