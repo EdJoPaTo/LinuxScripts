@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eux
+
+sudo ddcutil --async --display=1 $@
+sudo ddcutil --async --display=2 $@
+sudo ddcutil --async --display=3 $@

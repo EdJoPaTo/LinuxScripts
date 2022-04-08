@@ -1,0 +1,2 @@
+#!/bin/sh
+ddc-all setvcp 10 $1
