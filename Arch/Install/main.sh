@@ -169,6 +169,7 @@ DEPS=(
 	bash-completion
 	catatonit # podman run --init
 	eog-plugins
+	gnome-themes-extra
 	libmythes # Languages
 	npm
 	python-pygments # hugo: syntax-highlight code snippets
