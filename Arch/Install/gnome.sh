@@ -14,12 +14,15 @@ EXPLICIT=(
 	evince # document viewer (PDF, …)
 	gedit
 	gnome-power-manager
+	gnome-software
 	gnome-terminal
 	gnome-tweaks
 	nautilus
+	sushi
 )
 
 DEPS=(
+	fwupd
 	gnome-control-center
 )
 

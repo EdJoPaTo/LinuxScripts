@@ -16,6 +16,7 @@ EXPLICIT=(
 	cmatrix
 	curl
 	ddcutil
+	difftastic
 	dust
 	eog # image viewer
 	exa
@@ -26,7 +27,9 @@ EXPLICIT=(
 	fzf
 	git
 	gnome-calculator
+	gnome-characters
 	gnome-disk-utility
+	gnome-weather
 	gnuradio-companion
 	gnuradio-osmosdr
 	gucharmap
@@ -41,7 +44,6 @@ EXPLICIT=(
 	nano
 	neovim
 	networkmanager
-	networkmanager-openvpn
 	newsflash
 	nodejs
 	openconnect
@@ -83,7 +85,6 @@ EXPLICIT=(
 	# large build environments often used for AUR packages
 	clang
 	cmake
-	dotnet-sdk
 	go
 	meson
 	vala
@@ -152,11 +153,11 @@ EXPLICIT=(
 
 	# Browser
 	firefox
-	firefox-clearurls
 	firefox-dark-reader
-	firefox-temporary-containers
 	firefox-ublock-origin
+	## https://addons.mozilla.org/firefox/addon/clearurls/
 	## https://addons.mozilla.org/firefox/addon/privacy-redirect/
+	## https://addons.mozilla.org/firefox/addon/temporary-containers/
 
 	# casual games
 	gnome-mines
@@ -178,6 +179,8 @@ DEPS=(
 
 	# Audio / Video Tools
 	atomicparsley
+	pipewire-jack
+	pipewire-pulse
 	rtmpdump
 
 	# file-roller optionals
@@ -217,6 +220,7 @@ EXPLICIT+=(
 	code
 	deno
 	discord
+	dotnet-sdk
 	element-desktop # test fractal when SSO works https://gitlab.gnome.org/GNOME/fractal/-/issues/521
 	obs-studio
 	pandoc
