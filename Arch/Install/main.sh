@@ -182,6 +182,7 @@ DEPS=(
 	atomicparsley
 	pipewire-jack
 	pipewire-pulse
+	pipewire-v4l2
 	rtmpdump
 
 	# file-roller optionals
@@ -237,6 +238,7 @@ EXPLICIT+=(
 )
 
 DEPS+=(
+	linux-headers # dkms
 	v4l2loopback-dkms # obs virtual cam
 )
 fi
