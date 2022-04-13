@@ -2,7 +2,6 @@
 set -e
 
 EXPLICIT=(
-	calls
 	gnome-console
 	gnome-shell-extension-caffeine-git
 	gnome-shell-extension-sound-output-device-chooser

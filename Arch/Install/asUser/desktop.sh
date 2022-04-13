@@ -4,17 +4,14 @@ set -e
 EXPLICIT=(
 	dive
 	gnome-obfuscate
-	resvg
 
 	# create bootables
 	alma-git
-	popsicle
 	rpi-imager
 	ventoy-bin
 
 	# Rust
 	cargo-diet # minimal cargo packages
-	cargo-geiger # find unsafe in dependencies
 	cargo-license
 )
 

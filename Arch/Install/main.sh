@@ -148,8 +148,6 @@ EXPLICIT=(
 	cargo-edit
 	cargo-flamegraph
 	cargo-sort
-	cargo-udeps
-	cargo-watch
 
 	# Browser
 	firefox
