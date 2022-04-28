@@ -38,7 +38,6 @@ type nvim > /dev/null && alias nano=' echo use nvim && false --'
 type nvim > /dev/null && alias vi=' echo use nvim && false --'
 type nvim > /dev/null && alias vim=' echo use nvim && false --'
 type rg > /dev/null && alias grep=' echo use rg && false --'
-alias remotedebug=' echo use remoterun && false --'
 
 # example usage: `gitBelow fetch`
 # see: https://github.com/EdJoPaTo/project-below
@@ -51,6 +50,9 @@ alias tss='ts "%H:%M:%.S"'
 
 alias svg2png='inkscape --export-type=png'
 alias svg2pdf='inkscape --export-type=pdf'
+
+alias rsynca='rsync --verbose --compress --checksum --delete-delay --archive'
+alias rsyncc='rsync --verbose --compress --checksum --recursive --links --times'
 
 # https://github.com/chubin/wttr.in
 alias wttr='curl wttr.in && curl v2.wttr.in'
@@ -69,11 +71,10 @@ alias yt-dlp-mp3='yt-dlp --extract-audio --audio-format mp3'
 
 alias podman-image-update='podman pull $(podman image ls --filter=dangling=false --noheading --format="{{.Repository}}:{{.Tag}}" | rg -v localhost)'
 alias podmanBelow='project-below --file=Dockerfile podman'
-alias website-stalker-below='project-below --file=website-stalker.yaml website-stalker'
 
 alias cargo-open-doc='nice cargo doc --open --all-features'
-alias cargo-dev='nice cargo watch --clear --exec "clippy --all-targets -- -W clippy::pedantic" --exec "fmt -- --check || true"'
-alias cargo-dev-all='cargo-dev --exec "build --all-targets" --exec "test -q" --exec "doc --all-features"'
+alias cargo-dev='nice cargo watch --clear --exec "clippy --all-targets -- -W clippy::pedantic"'
+alias cargo-dev-all='cargo-dev --exec "build --all-targets" --exec "test -q" --exec "doc --no-deps --all-features"'
 alias cargo-dev-build='cargo-dev --exec "build"'
 alias cargo-dev-run='cargo-dev --exec "run"'
 alias cargo-dev-test='cargo-dev --exec "build --tests" --exec "test -q"'
@@ -101,6 +102,3 @@ alias pioBelow-clean='project-below --file=platformio.ini --directory=.pio rm -r
 
 alias led-matrix-remote-et-decke='led-matrix-remote mqtt --broker etoPiHome1 --base-topic espMatrixEtDecke'
 export MQTTUI_BROKER='etoPiHome1'
-
-alias rsynca='rsync --verbose --compress --checksum --delete-delay --archive'
-alias rsyncc='rsync --verbose --compress --checksum --recursive --links --times'
