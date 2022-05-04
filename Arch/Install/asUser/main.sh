@@ -3,7 +3,6 @@ set -e
 
 EXPLICIT=(
 	esphome
-	firefox-extension-localcdn
 	nvm
 	platformio
 	tootle

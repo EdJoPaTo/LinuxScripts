@@ -81,7 +81,8 @@ alias cargo-dev-test='cargo-dev --exec "build --tests" --exec "test -q"'
 cargo-pedantic() {
 	nice cargo clippy --no-deps --all-targets "$@" -- -W clippy::pedantic -W clippy::nursery
 	nice cargo build --all-targets "$@" \
-	&& nice cargo test --all-targets --quiet "$@"
+	&& nice cargo test --all-targets --quiet "$@" \
+	&& nice cargo test --doc --quiet "$@"
 	nice cargo doc --no-deps --all-features
 	nice cargo fmt -- --check
 }
@@ -100,5 +101,5 @@ alias pio-monitor='pio device monitor'
 alias pioBelow='project-below --file=platformio.ini nice -n 19 pio'
 alias pioBelow-clean='project-below --file=platformio.ini --directory=.pio rm -rf .pio'
 
-alias led-matrix-remote-et-decke='led-matrix-remote mqtt --broker etoPiHome1 --base-topic espMatrixEtDecke'
 export MQTTUI_BROKER='etoPiHome1'
+export MEETING_PIXELMATRIX='espMatrix-etHorizontal:1337'
