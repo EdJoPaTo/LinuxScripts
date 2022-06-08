@@ -28,6 +28,10 @@ mkdir -p ~/git/other
 mkdir -p "$HOME/.cache/mpd/"
 link "$(pwd)/mpd.conf" "$HOME/.config/mpd/mpd.conf"
 
+# Neovim
+link "$(pwd)/neovim/init.lua" "$HOME/.config/nvim/init.lua"
+link "$(pwd)/neovim/lua" "$HOME/.config/nvim/lua"
+
 # Zsh
 mkdir -p "$HOME/.cache/"
 link "$(pwd)/zsh/zshrc" "$HOME/.zshrc"
@@ -41,7 +45,6 @@ link "$(pwd)/dive.yaml" "$HOME/.config/dive/dive.yaml"
 link "$(pwd)/git.ignore" "$HOME/.config/git/global.ignore"
 link "$(pwd)/gitconfig" "$HOME/.gitconfig"
 link "$(pwd)/htoprc" "$HOME/.config/htop/htoprc"
-link "$(pwd)/neovim.lua" "$HOME/.config/nvim/init.lua"
 link "$(pwd)/paru.conf" "$HOME/.config/paru/paru.conf"
 link "$(pwd)/tokeignore" "$HOME/.tokeignore"
 
