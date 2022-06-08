@@ -89,7 +89,7 @@ cargo-pedantic() {
 alias cargoBelow='project-below --file=Cargo.toml nice -n 19 cargo'
 
 alias npx='echo edjopato fixed npx again && PATH=$(pwd)/node_modules/.bin:$PATH nice'
-alias nvm-init='source /usr/share/nvm/init-nvm.sh && unalias nvm-init'
+alias nvm='unalias nvm && source /usr/share/nvm/init-nvm.sh && nvm'
 alias npm-reinstall='rm -rf node_modules package-lock.json && nice npm install && npm outdated || true'
 alias npm-xo-update='npm install --save-dev xo@latest && npm-reinstall && nice ./node_modules/.bin/xo --fix'
 alias typescript-watch='rm -rf dist && nice ./node_modules/.bin/tsc --sourceMap --pretty --watch'
