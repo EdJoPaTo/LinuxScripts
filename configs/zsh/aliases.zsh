@@ -14,11 +14,8 @@ alias -g ....='../../..'
 alias -g .....='../../../..'
 alias -g ......='../../../../..'
 
-alias cdf='cd "$(fd --type=directory | fzf --preview="exa -a1 {}")"'
-alias cdg='cd ~/git && cd "$(project-below --directory=.git --list | fzf --preview="exa -a1 {}")"'
-alias cdc='cd ~/git && cd "$(project-below --file=Cargo.toml --list | fzf --preview="exa -a1 {}")"'
-alias cdn='cd ~/git && cd "$(project-below --file=package.json --list | fzf --preview="exa -a1 {}")"'
-alias cdp='cd ~/git && cd "$(project-below --file=platformio.ini --list | fzf --preview="exa -a1 {}")"'
+alias cdf='cd "$(fd --type=directory | fzf)"'
+alias cdg='cd ~/git && cd "$(project-below --directory=.git --list | fzf)"'
 
 # Add arguments to commands (like default arguments)
 alias ls="exa --git"
