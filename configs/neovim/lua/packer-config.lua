@@ -22,13 +22,19 @@ return require("packer").startup(function()
     }
     use {
         "lewis6991/spellsitter.nvim",
-        config = function() require('spellsitter').setup() end
+        config = function() require("spellsitter").setup() end
     }
     use {"romgrk/barbar.nvim", requires = {"kyazdani42/nvim-web-devicons"}} -- Tabs
 
     -- Rust
-    use {"saecki/crates.nvim", config = require("crates").setup()}
-    use {"simrat39/rust-tools.nvim", config = require("rust-tools").setup({})}
+    use {
+        "saecki/crates.nvim",
+        requires = { "nvim-lua/plenary.nvim" },
+        config = function()
+            require("crates").setup()
+        end,
+    }
+    use {"simrat39/rust-tools.nvim", config = function() require("rust-tools").setup({}) end}
 
     -- treesitter
     use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
@@ -44,7 +50,7 @@ return require("packer").startup(function()
     use {"hrsh7th/nvim-cmp"} -- Autocompletion plugin
     use {"hrsh7th/cmp-nvim-lsp"} -- LSP source for nvim-cmp
     use {"saadparwaiz1/cmp_luasnip"} -- Snippets source for nvim-cmp
-    use {'L3MON4D3/LuaSnip'} -- Snippets plugin
+    use {"L3MON4D3/LuaSnip"} -- Snippets plugin
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
