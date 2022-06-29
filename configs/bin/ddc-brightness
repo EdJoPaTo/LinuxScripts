@@ -1,2 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
+set -eux
+
 ddc-all setvcp 10 $1

@@ -7,7 +7,7 @@ After=network-online.target
 [Service]
 Type=oneshot
 Nice=15
-ExecStart=/usr/bin/pacman -Syuw --noconfirm --noprogressbar
+ExecStart=/usr/bin/checkupdates --download
 
 [Install]
 WantedBy=multi-user.target

@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
+set -ux
+
 rm isolate-0x*-v8.log 2> /dev/zero
 
 time node --prof $@
 
 echo "Exit Code: $?"
 
-node --prof-process *.log > analysis.txt
+node --prof-process ./*.log > analysis.txt
 rm isolate-0x*-v8.log 2> /dev/zero

@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-set -e
+set -eu
 
 nice paru --sudo sudo --sudoloop --skipreview --noconfirm --needed -Sy --asdeps "$@"

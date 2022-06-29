@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -eu
 
 # usage: remoterun server command which should be executed
 # usage: remoterun my.server.tld cargo build
@@ -14,10 +14,10 @@ folder=${PWD##*/}
 remotefolder=".cache/remoterun/$folder/"
 
 rsync \
-    --recursive --links --perms --times \
-    --compress --verbose --checksum \
-    --delete-delay \
-    $exclude \
-    --rsync-path="mkdir -p $remotefolder && rsync" \
-    . "$server:$remotefolder"
+	--recursive --links --perms --times \
+	--compress --verbose --checksum \
+	--delete-delay \
+	$exclude \
+	--rsync-path="mkdir -p $remotefolder && rsync" \
+	. "$server:$remotefolder"
 ssh -tt "$server" "uptime && cd $remotefolder && bash -cl '$command' && uptime"

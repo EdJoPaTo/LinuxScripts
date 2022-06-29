@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -eu
 
 mkdir -p ~/.platformio/lib
 mkdir -p ~/Arduino/libraries/Credentials
@@ -7,7 +7,7 @@ mkdir -p ~/Arduino/libraries/Credentials
 file="$HOME/Arduino/libraries/Credentials/credentials.h"
 
 insert() {
-    rg -q "$1" "$file" 2> /dev/null || echo "$1$2" >> "$file"
+	rg -q "$1" "$file" 2> /dev/null || echo "$1$2" >> "$file"
 }
 
 insert "#pragma once"

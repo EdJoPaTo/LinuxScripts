@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -eu
 
 EXPLICIT=(
 	ckb-next-git
@@ -8,4 +8,4 @@ EXPLICIT=(
 ./installWithAurHelper.sh "${EXPLICIT[@]}"
 sudo pacman -D --asexplicit --quiet "${EXPLICIT[@]}"
 
-sudo systemctl enable --now ckb-next-daemon
+sudo systemctl enable --now ckb-next-daemon.service

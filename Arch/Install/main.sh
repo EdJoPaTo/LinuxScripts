@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -eu
 
 EXPLICIT_GROUPS=(
 	base-devel
@@ -23,7 +23,6 @@ EXPLICIT=(
 	fd
 	file-roller # archives
 	flatpak
-	fractal
 	fzf
 	git
 	gnome-calculator
@@ -147,6 +146,7 @@ EXPLICIT=(
 	cargo-audit
 	cargo-edit
 	cargo-flamegraph
+	cargo-msrv
 	cargo-sort
 
 	# Browser

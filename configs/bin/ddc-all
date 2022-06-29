@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 set -eux
 
 sudo ddcutil --async --display=1 $@

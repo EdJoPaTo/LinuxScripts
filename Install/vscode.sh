@@ -28,7 +28,7 @@ packages=(
 
 	# Rust
 	bungcip.better-toml
-	matklad.rust-analyzer
+	rust-lang.rust-analyzer
 	serayuzgur.crates
 )
 

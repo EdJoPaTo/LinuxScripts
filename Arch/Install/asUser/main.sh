@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
-set -e
+set -eu
 
 EXPLICIT=(
 	esphome
 	nvm
+	paru-bin
 	platformio
 	tootle
 	ttf-ms-fonts

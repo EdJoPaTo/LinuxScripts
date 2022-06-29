@@ -6,6 +6,7 @@ The basic idea is to install everything as a dependency and then mark some as ex
 This way dependency / explicitly relations are handled well.
 
 This also simplifies finding randomly installed stuff not by this script:
+
 - Mark everything as installed by dependency:
     `doas pacman -D --asdeps $(pacman -Qqe)`.
 - Run the given scripts

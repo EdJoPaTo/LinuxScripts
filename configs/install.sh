@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -eu
 
 function link() {
 	mkdir -p "$(dirname "$2")"
@@ -30,6 +30,7 @@ link "$(pwd)/mpd.conf" "$HOME/.config/mpd/mpd.conf"
 
 # Neovim
 link "$(pwd)/neovim/init.lua" "$HOME/.config/nvim/init.lua"
+rm -f "$HOME/.config/nvim/lua"
 link "$(pwd)/neovim/lua" "$HOME/.config/nvim/lua"
 
 # Zsh

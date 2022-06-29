@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -eu
 
 # See https://github.com/sindresorhus/quick-look-plugins
 PLUGINS=(
