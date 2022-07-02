@@ -14,7 +14,7 @@ folder=${PWD##*/}
 remotefolder=".cache/remoterun/$folder/"
 
 rsync \
-	--recursive --links --perms --times \
+	--recursive --links --perms --times --omit-dir-times \
 	--compress --verbose --checksum \
 	--delete-delay \
 	$exclude \

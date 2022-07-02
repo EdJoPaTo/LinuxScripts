@@ -852,7 +852,7 @@ key_bindings:
   #- { key: B,              mods: Command, mode: ~Search,     action: SearchBackward        }
 
 
-  - { key: Return,   mods: Control,       action: CreateNewWindow }
+  - { key: Return,   mods: Control,       action: SpawnNewInstance }
   - { key: V,        mods: Alt, action: Paste            }
   - { key: C,        mods: Alt, action: Copy             }
 

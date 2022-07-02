@@ -144,7 +144,6 @@ EXPLICIT=(
 	rustup
 	rust-analyzer
 	cargo-audit
-	cargo-edit
 	cargo-flamegraph
 	cargo-msrv
 	cargo-sort
