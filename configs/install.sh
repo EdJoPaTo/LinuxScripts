@@ -47,6 +47,7 @@ link "$(pwd)/git.ignore" "$HOME/.config/git/global.ignore"
 link "$(pwd)/gitconfig" "$HOME/.gitconfig"
 link "$(pwd)/htoprc" "$HOME/.config/htop/htoprc"
 link "$(pwd)/paru.conf" "$HOME/.config/paru/paru.conf"
+link "$(pwd)/tmux.conf" "$HOME/.config/tmux/tmux.conf"
 link "$(pwd)/tokeignore" "$HOME/.tokeignore"
 
 if [[ $OSTYPE = darwin* ]]; then
