@@ -9,4 +9,5 @@ echo "Set new mirrorlist"
 sudo mv /tmp/mirrorlist /etc/pacman.d/mirrorlist
 
 echo "Download Updates with new Mirrorlist"
-sudo pacman -Syyuw --noconfirm
+sudo pacman -Syy --asdeps --needed --noconfirm archlinux-keyring
+sudo pacman -Syuw --noconfirm
