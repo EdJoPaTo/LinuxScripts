@@ -39,6 +39,7 @@ type rg > /dev/null && alias grep=' echo use rg && false --'
 # example usage: `gitBelow fetch`
 # see: https://github.com/EdJoPaTo/project-below
 alias gitBelow='project-below --directory=.git git'
+alias gitSubmoduleBelow='project-below --file=.git git'
 
 alias randb='openssl rand -base64 33'
 alias randh='openssl rand -hex 20'
@@ -67,7 +68,7 @@ alias yt-dlp='nice -n 15 yt-dlp --prefer-free-formats --embed-subs --sub-langs a
 alias yt-dlp-mp3='yt-dlp --extract-audio --audio-format mp3'
 
 alias podman-image-update='podman pull $(podman image ls --filter=dangling=false --noheading --format="{{.Repository}}:{{.Tag}}" | rg -v localhost)'
-alias podmanBelow='project-below --file=Dockerfile podman'
+alias podmanBelow='project-below --file=Dockerfile nice -n 19 podman'
 
 alias cargo-open-doc='nice cargo doc --open --all-features'
 alias cargo-dev='nice cargo watch --clear --exec "clippy --all-targets -- -W clippy::pedantic"'

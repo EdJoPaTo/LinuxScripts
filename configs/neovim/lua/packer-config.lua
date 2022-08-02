@@ -25,6 +25,7 @@ return require("packer").startup(function()
         config = function() require("spellsitter").setup() end
     }
     use {"romgrk/barbar.nvim", requires = {"kyazdani42/nvim-web-devicons"}} -- Tabs
+    use {"airblade/vim-gitgutter"} -- Git diff in sign column
 
     -- Rust
     use {

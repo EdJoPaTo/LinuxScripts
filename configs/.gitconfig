@@ -16,7 +16,7 @@
 [apply]
 	whitespace = fix
 [core]
-	excludesFile = ~/.config/git/global.ignore
+	excludesFile = ~/.config/git/global.gitignore
 [diff]
 	renames = copies
 [fetch]

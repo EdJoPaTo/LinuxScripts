@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -eu
+
+# usage: remotedpkg server bla.deb
+
+server=$1
+package=$2
+
+remotefolder="/tmp/remotedpkg/"
+
+rsync \
+	--copy-links --times \
+	--compress --checksum \
+	--info=progress2 \
+	--rsync-path="mkdir -p $remotefolder && rsync" \
+	"$package" "$server:$remotefolder"
+ssh -tt "$server" "uptime && sudo dpkg -i $remotefolder$package && rm -rf $remotefolder && uptime"
