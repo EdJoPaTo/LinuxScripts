@@ -10,7 +10,7 @@ insert() {
 	rg -q "$1" "$file" 2> /dev/null || echo "$1$2" >> "$file"
 }
 
-insert "#pragma once"
+insert "#pragma once" ''
 
 insert "#define WIFI_SSID " '""'
 insert "#define WIFI_PASSWORD " '""'
