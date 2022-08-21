@@ -35,6 +35,8 @@
 	missingCommitsCheck = error
 [status]
 	showStash = true
+[pager]
+	branch = cat
 [user]
 	name = EdJoPaTo
 	email = rfc-conform-git-commit-email@funny-long-domain-label-everyone-hates-as-it-is-too-long.edjopato.de

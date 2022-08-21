@@ -23,6 +23,7 @@ EXPLICIT=(
 	fd
 	file-roller # archives
 	flatpak
+	fx # Terminal JSON viewer
 	fzf
 	git
 	gnome-calculator
@@ -37,7 +38,7 @@ EXPLICIT=(
 	hyperfine
 	jq
 	libreoffice-fresh
-	moreutils # /usr/bin/ts
+	moreutils # sponge, ts
 	most # as MANPAGER
 	mumble
 	nano
@@ -153,6 +154,8 @@ EXPLICIT=(
 	firefox-dark-reader
 	firefox-ublock-origin
 	## https://addons.mozilla.org/firefox/addon/clearurls/
+	## https://addons.mozilla.org/firefox/addon/firefox-translations/
+	## https://addons.mozilla.org/firefox/addon/gnome-shell-integration/
 	## https://addons.mozilla.org/firefox/addon/localcdn-fork-of-decentraleyes/
 	## https://addons.mozilla.org/firefox/addon/privacy-redirect/
 	## https://addons.mozilla.org/firefox/addon/temporary-containers/
@@ -173,6 +176,7 @@ DEPS=(
 	python-pygments # hugo: syntax-highlight code snippets
 	sshpass # ansible
 	trash-cli
+	webp-pixbuf-loader # webp support for image viewers
 	xdg-desktop-portal
 	xdg-desktop-portal-gnome # desktop / window sharing
 

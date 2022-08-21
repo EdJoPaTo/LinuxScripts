@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -eu
+
+for var in "$@"; do
+	echo "prettify $var"
+	jq . "$var" --sort-keys --tab | sponge "$var"
+done

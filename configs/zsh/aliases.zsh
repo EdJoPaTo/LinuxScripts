@@ -1,13 +1,12 @@
 # Aliases
 export EDITOR=nvim
-export PAGER=less
 export VISUAL=nvim
 
 export PATH=$PATH:$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin
 
 export BAT_THEME=ansi
 export FZF_DEFAULT_COMMAND="rg --files"
-export LESS="--RAW-CONTROL-CHARS"
+export LESS="--RAW-CONTROL-CHARS --quit-if-one-screen --ignore-case"
 
 alias -g ...='../..'
 alias -g ....='../../..'
@@ -50,7 +49,7 @@ alias svg2png='inkscape --export-type=png'
 alias svg2pdf='inkscape --export-type=pdf'
 
 alias rsynca='rsync --verbose --compress --checksum --delete-delay --archive'
-alias rsyncc='rsync --verbose --compress --checksum --recursive --links --times'
+alias rsyncc='rsync --verbose --compress --recursive --links --times'
 
 # https://github.com/chubin/wttr.in
 alias wttr='curl wttr.in && curl v2.wttr.in'
@@ -99,5 +98,5 @@ alias pio-monitor='pio device monitor'
 alias pioBelow='project-below --file=platformio.ini nice -n 19 pio'
 alias pioBelow-clean='project-below --file=platformio.ini --directory=.pio rm -rf .pio'
 
-export MQTTUI_BROKER='etoPiHome1'
+export MQTTUI_BROKER='mqtt://etoPiHome1'
 export MEETING_PIXELMATRIX='espMatrix-etHorizontal:1337'

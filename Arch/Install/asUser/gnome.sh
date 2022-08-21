@@ -2,6 +2,7 @@
 set -eu
 
 EXPLICIT=(
+	gnome-browser-connector
 	gnome-console
 	gnome-shell-extension-caffeine-git
 	gnome-shell-extension-sound-output-device-chooser
@@ -9,10 +10,6 @@ EXPLICIT=(
 	gnome-shell-extensions # drive-menu
 	gnome-text-editor
 	nautilus-open-any-terminal
-
-	# Browser extension stuff for extensions.gnome.org
-	chrome-gnome-shell # extension backend
-	firefox-extension-gnome-shell-integration
 )
 
 ./installWithAurHelper.sh "${EXPLICIT[@]}"
@@ -20,6 +17,9 @@ sudo pacman -D --asexplicit --quiet "${EXPLICIT[@]}"
 
 # nautilus-open-any-terminal
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal alacritty
+
+gsettings set org.gnome.desktop.interface clock-show-date true
+gsettings set org.gnome.desktop.calendar show-weekdate true
 
 EXTENSIONS=(
 	caffeine@patapon.info
