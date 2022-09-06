@@ -33,6 +33,7 @@ EXPLICIT=(
 	gnuradio-companion
 	gnuradio-osmosdr
 	gucharmap
+	helix # cli text editor
 	htop
 	hugo
 	hyperfine
@@ -143,11 +144,24 @@ EXPLICIT=(
 
 	# programming rust
 	rustup
-	rust-analyzer
 	cargo-audit
 	cargo-flamegraph
 	cargo-msrv
 	cargo-sort
+
+	# programming language server
+	bash-language-server
+	gopls
+	lua-language-server
+	python-lsp-server
+	rust-analyzer
+	shfmt
+	texlab
+	typescript-language-server
+	vscode-css-languageserver
+	vscode-html-languageserver
+	vscode-json-languageserver
+	yaml-language-server
 
 	# Browser
 	firefox
@@ -173,6 +187,7 @@ DEPS=(
 	gnome-themes-extra
 	libmythes # Languages
 	npm
+	podman-compose
 	python-pygments # hugo: syntax-highlight code snippets
 	sshpass # ansible
 	trash-cli
@@ -249,15 +264,14 @@ pacman --noconfirm --needed -Sy --asdeps "${DEPS[@]}" "${EXPLICIT[@]}" "${EXPLIC
 pacman -D --asexplicit --quiet "${EXPLICIT[@]}" $(pacman -Qgq "${EXPLICIT_GROUPS[@]}")
 
 if [ "$(uname -m)" == "x86_64" ]; then
-# load v4l2loopback
-echo "v4l2loopback" > /etc/modules-load.d/v4l2.conf
+	echo "v4l2loopback" >/etc/modules-load.d/v4l2.conf
 fi
 
 # report package usage
 systemctl start pkgstats.timer
 
 # communicate with monitors via ddc (ddcutil)
-echo "i2c-dev" > /etc/modules-load.d/ddc.conf
+echo "i2c-dev" >/etc/modules-load.d/ddc.conf
 
 # podman rootless usage
 touch -a /etc/subuid /etc/subgid

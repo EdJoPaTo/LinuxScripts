@@ -1,0 +1,11 @@
+[editor]
+cursorline = true
+
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
+render = true
+
+[editor.whitespace]
+render = "all"

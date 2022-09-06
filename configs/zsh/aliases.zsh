@@ -28,12 +28,12 @@ alias pio='nice pio'
 alias platformio='nice platformio'
 
 # Help to migrate to new commands (space at start -> no history entry)
-type bat > /dev/null && alias less=' echo use bat && false --'
-type doas > /dev/null && alias sudo=' echo use doas && false --'
-type nvim > /dev/null && alias nano=' echo use nvim && false --'
-type nvim > /dev/null && alias vi=' echo use nvim && false --'
-type nvim > /dev/null && alias vim=' echo use nvim && false --'
-type rg > /dev/null && alias grep=' echo use rg && false --'
+type bat >/dev/null && alias less=' echo use bat && false --'
+type doas >/dev/null && alias sudo=' echo use doas && false --'
+type nvim >/dev/null && alias vi=' echo use helix or neovim && false --'
+type nvim >/dev/null && alias vim=' echo use helix or neovim && false --'
+type rg >/dev/null && alias grep=' echo use rg && false --'
+type fx >/dev/null && alias jq='echo consider fx for jq && jq'
 
 # example usage: `gitBelow fetch`
 # see: https://github.com/EdJoPaTo/project-below
