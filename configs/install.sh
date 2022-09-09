@@ -42,15 +42,17 @@ for file in "$(pwd)"/zsh/*.zsh; do
 done
 
 link "$(pwd)/.editorconfig" "$HOME/.editorconfig"
-link "$(pwd)/.gitconfig" "$HOME/.gitconfig"
 link "$(pwd)/.tokeignore" "$HOME/.tokeignore"
 link "$(pwd)/alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"
 link "$(pwd)/dive.yaml" "$HOME/.config/dive/dive.yaml"
+link "$(pwd)/gitconfig" "$HOME/.config/git/config"
 link "$(pwd)/global.gitignore" "$HOME/.config/git/global.gitignore"
 link "$(pwd)/helix" "$HOME/.config/helix"
 link "$(pwd)/htoprc" "$HOME/.config/htop/htoprc"
 link "$(pwd)/paru.conf" "$HOME/.config/paru/paru.conf"
 link "$(pwd)/tmux.conf" "$HOME/.config/tmux/tmux.conf"
+
+rm "$HOME/.gitconfig"
 
 if [[ $OSTYPE = darwin* ]]; then
 	link "$(pwd)/vscode-settings.json" "$HOME/Library/Application Support/VSCodium/User/settings.json"
