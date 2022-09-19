@@ -3,6 +3,7 @@ set -eu
 
 function link() {
 	mkdir -p "$(dirname "$2")"
+	rm -rf "$2"
 	if [[ $OSTYPE = darwin* ]]; then
 		# verbose symbolic force
 		ln -vsf "$1" "$2"
@@ -30,7 +31,6 @@ link "$(pwd)/mpd.conf" "$HOME/.config/mpd/mpd.conf"
 
 # Neovim
 link "$(pwd)/neovim/init.lua" "$HOME/.config/nvim/init.lua"
-rm -f "$HOME/.config/nvim/lua"
 link "$(pwd)/neovim/lua" "$HOME/.config/nvim/lua"
 
 # Zsh
@@ -52,7 +52,7 @@ link "$(pwd)/htoprc" "$HOME/.config/htop/htoprc"
 link "$(pwd)/paru.conf" "$HOME/.config/paru/paru.conf"
 link "$(pwd)/tmux.conf" "$HOME/.config/tmux/tmux.conf"
 
-rm "$HOME/.gitconfig"
+rm -f "$HOME/.gitconfig"
 
 if [[ $OSTYPE = darwin* ]]; then
 	link "$(pwd)/vscode-settings.json" "$HOME/Library/Application Support/VSCodium/User/settings.json"
