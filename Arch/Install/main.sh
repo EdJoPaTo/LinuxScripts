@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -eu
 
+user="${DOAS_USER:-$SUDO_USER}"
+
 EXPLICIT_GROUPS=(
 	base-devel
 	texlive-most
@@ -275,13 +277,13 @@ echo "i2c-dev" >/etc/modules-load.d/ddc.conf
 
 # podman rootless usage
 touch -a /etc/subuid /etc/subgid
-usermod --add-subuids 165536-231072 --add-subgids 165536-231072 "$(logname)"
+usermod --add-subuids 165536-231072 --add-subgids 165536-231072 "$user"
 # in case of problems run as user: podman system migrate
 
 # Arduino
-usermod -aG uucp,lock "$(logname)"
+usermod -aG uucp,lock "$user"
 
-usermod -aG wireshark "$(logname)"
+usermod -aG wireshark "$user"
 
 # sensors
 sensors-detect --auto
