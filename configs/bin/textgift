@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -eu
+
+textgift=(
+	'auch mal'
+	'durchaus'
+	'echt'
+	'einfach'
+	'halt'
+	'irgendwann'
+	'irgendwie'
+	'irgendwo'
+	'man'
+	'natürlich'
+	'nun'
+	'nämlich'
+	'wohl'
+	'ziemlich'
+)
+
+args=()
+for arg in "${textgift[@]}"; do
+	args+=('-e' "$arg")
+done
+
+rg --word-regexp --ignore-case --sort path --stats \
+	--type markdown \
+	--type tex \
+	--type txt \
+	--type-add 'fluentde:de.ftl' --type fluentde \
+	"${args[@]}"
