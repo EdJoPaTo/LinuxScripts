@@ -19,7 +19,7 @@ alias uff-install='paru -S --needed --asdeps --noconfirm'
 alias uff-cleanup-chromium='killall -9 chromium; rm -rf ~/.cache/chromium; rm -rf ~/.config/*chromium*; doas pacman -R --noconfirm chromium; true'
 alias uff-cleanup-zoom='killall -9 zoom; rm -rf ~/.cache/zoom ~/.config/zoomus.conf ~/.zoom; doas pacman -R --noconfirm zoom; true'
 
-alias hawvpn='doas openconnect -u abp507 --authgroup="Student*in" --background connect.haw-hamburg.de'
+alias hawvpn='doas openconnect -u abp507 --authgroup="Student*in" --background vpn.haw-hamburg.de/Studenten'
 alias hawvpn-stop='doas killall openconnect'
 
 fi
