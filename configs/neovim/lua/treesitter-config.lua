@@ -1,6 +1,30 @@
 require'nvim-treesitter.configs'.setup {
     -- A list of parser names, or "all"
-    ensure_installed = "all",
+    ensure_installed = {
+        "bash",
+        "bibtex",
+        "c",
+        "cpp",
+        "css",
+        "dockerfile",
+        "dot",
+        "html",
+        "javascript",
+        "jsdoc",
+        "json",
+        "json5",
+        "jsonc",
+        "latex",
+        "lua",
+        "markdown",
+        "python",
+        "regex",
+        "rust",
+        "scss",
+        "toml",
+        "typescript",
+        "yaml"
+    },
 
     -- syntax highlighting
     highlight = {
