@@ -1,9 +1,5 @@
 packages = [
-    "rustup",
-    "cargo-audit",
-    "cargo-edit",
-    "cargo-tarpaulin",
-    "cargo-watch"
+    "rustup"
 ]
 shared_directories = ["LinuxScripts"]
 script = """

@@ -7,7 +7,6 @@ EXPLICIT=(
 	# gnome basis
 	gnome-backgrounds
 	gnome-info-collect
-	gnome-keyring
 	gnome-screenshot
 	gnome-shell-extensions
 

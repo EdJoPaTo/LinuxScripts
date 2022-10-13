@@ -2,11 +2,13 @@
 set -eu
 
 EXPLICIT=(
+	code-marketplace
+	dockerfile-language-server
 	esphome
+	mpd-mpris
 	nvm
 	paru-bin
 	platformio
-	tootle
 	ttf-ms-fonts
 )
 

@@ -15,7 +15,6 @@ EXPLICIT=(
 	arduino
 	baobab # Disk Usage Analyzer
 	bat
-	cmatrix
 	curl
 	ddcutil
 	difftastic
@@ -31,7 +30,6 @@ EXPLICIT=(
 	gnome-calculator
 	gnome-characters
 	gnome-disk-utility
-	gnome-weather
 	gnuradio-companion
 	gnuradio-osmosdr
 	gucharmap
@@ -56,7 +54,6 @@ EXPLICIT=(
 	pkgstats
 	podman
 	progress
-	remmina
 	ripgrep
 	rsync
 	speedtest-cli
@@ -64,12 +61,9 @@ EXPLICIT=(
 	syncthing
 	tealdeer # tldr
 	telegram-desktop
-	tiled
 	tmux
 	tokei
 	wget
-	wireshark-qt
-	xdg-user-dirs
 	yq
 	zsh
 	zsh-completions
@@ -89,8 +83,6 @@ EXPLICIT=(
 	clang
 	cmake
 	go
-	meson
-	vala
 
 	# console network analysis
 	dog
@@ -141,7 +133,6 @@ EXPLICIT=(
 	mpv
 	pavucontrol
 	vlc
-	xfmpc
 	yt-dlp
 
 	# programming rust
@@ -153,7 +144,6 @@ EXPLICIT=(
 
 	# programming language server
 	bash-language-server
-	gopls
 	lua-language-server
 	python-lsp-server
 	rust-analyzer
@@ -182,20 +172,20 @@ EXPLICIT=(
 )
 
 DEPS=(
-	arduino-avr-core
 	bash-completion
-	catatonit # podman run --init
 	eog-plugins
-	gnome-themes-extra
+	gnome-themes-extra # Adwaita-dark
 	libmythes # Languages
 	npm
 	podman-compose
 	python-pygments # hugo: syntax-highlight code snippets
+	scour # inkscape optimized svg
 	sshpass # ansible
 	trash-cli
 	webp-pixbuf-loader # webp support for image viewers
 	xdg-desktop-portal
 	xdg-desktop-portal-gnome # desktop / window sharing
+	xdg-utils
 
 	# Audio / Video Tools
 	atomicparsley
@@ -211,19 +201,9 @@ DEPS=(
 	unace
 	unrar
 
-	# inkscape optimized svg
-	python-numpy
-	python-lxml
-	scour
-
 	# neovim
 	python-pynvim
 	wl-clipboard
-	xclip
-
-	# remmina remote desktop
-	freerdp
-	libvncserver
 
 	# remote locations
 	gvfs-afc
@@ -240,8 +220,6 @@ EXPLICIT+=(
 	cargo-tarpaulin
 	code
 	deno
-	discord
-	dotnet-sdk
 	element-desktop # test fractal when SSO works https://gitlab.gnome.org/GNOME/fractal/-/issues/521
 	obs-studio
 	pandoc
@@ -250,7 +228,6 @@ EXPLICIT+=(
 	signal-desktop
 	steam
 	teamspeak3
-	veracrypt
 
 	amd-ucode
 	intel-ucode
