@@ -1,31 +1,37 @@
-local fn = vim.fn
-local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
-if fn.empty(fn.glob(install_path)) > 0 then
-    packer_bootstrap = fn.system({
-        "git", "clone", "--depth", "1",
-        "https://github.com/wbthomason/packer.nvim", install_path
-    })
+-- clean install with
+-- rm -rf ~/.cache/nvim ~/.local/share/nvim ~/.local/state/nvim ~/.config/nvim/plugin
+
+local ensure_packer = function()
+    local fn = vim.fn
+    local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+    if fn.empty(fn.glob(install_path)) > 0 then
+        fn.system({
+            "git", "clone", "--depth", "1",
+            "https://github.com/wbthomason/packer.nvim", install_path
+        })
+        vim.cmd [[packadd packer.nvim]]
+        return true
+    end
+    return false
 end
 
-return require("packer").startup(function()
+local packer_bootstrap = ensure_packer()
+
+return require("packer").startup(function(use)
     use {"wbthomason/packer.nvim"}
 
     use {
         "nvim-lualine/lualine.nvim",
         config = function() require("lualine").setup() end
     } -- Status Line
-    use {"editorconfig/editorconfig-vim"}
-    use {"junegunn/fzf.vim"}
     use {
         "kyazdani42/nvim-tree.lua",
         config = function() require("nvim-tree").setup() end
     }
-    use {
-        "lewis6991/spellsitter.nvim",
-        config = function() require("spellsitter").setup() end
-    }
-    use {"romgrk/barbar.nvim", requires = {"kyazdani42/nvim-web-devicons"}} -- Tabs
     use {"airblade/vim-gitgutter"} -- Git diff in sign column
+    use {"editorconfig/editorconfig-vim"}
+    use {"junegunn/fzf.vim"}
+    use {"romgrk/barbar.nvim", requires = {"kyazdani42/nvim-web-devicons"}} -- Tabs
 
     -- Rust
     use {
