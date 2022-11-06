@@ -2,9 +2,7 @@
 set -eu
 
 CASKS=(
-	arduino
 	balenaetcher
-	docker
 	element
 	firefox
 	gimp
@@ -16,14 +14,12 @@ CASKS=(
 	mumble
 	quitter
 	raspberry-pi-imager
+	signal
 	syncthing
 	teamspeak-client
 	telegram
 	telegram-desktop
-	veracrypt
-	vlc
 	vscodium
-	wireshark
 )
 
 FORMULAS=(
@@ -41,15 +37,20 @@ FORMULAS=(
 	ffmpeg
 	fzf
 	gnuplot
+	htop
 	hugo
 	hyperfine
 	imagemagick
+	jq
 	languagetool
+	moreutils
 	mpc
+	mpd
 	mtr
 	neovim
 	nmap
 	node
+	nvm
 	oxipng
 	platformio
 	podman
@@ -60,6 +61,7 @@ FORMULAS=(
 	shellcheck
 	starship
 	tokei
+	yq
 	yt-dlp
 	zsh
 	zsh-completions
@@ -73,7 +75,7 @@ FORMULAS=(
 
 # Ensure everything is up to date or else brew fails (which is dumb as same version is a warning)
 brew update
-brew upgrade --greedy
+brew upgrade --greedy --no-quarantine
 
-brew install "${FORMULAS[@]}"
-brew install --cask "${CASKS[@]}"
+brew install --no-quarantine "${FORMULAS[@]}"
+brew install --cask --no-quarantine "${CASKS[@]}"

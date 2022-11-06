@@ -16,7 +16,6 @@ packages=(
 	serayuzgur.crates
 	timonwong.shellcheck
 	valentjn.vscode-ltex
-	VisualStudioExptTeam.vscodeintellicode
 )
 
 for package in "${packages[@]}"

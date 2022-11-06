@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -eu
 
-user="${DOAS_USER:-$SUDO_USER}"
-
 EXPLICIT_GROUPS=(
 	base-devel
 	texlive-most
@@ -12,7 +10,6 @@ EXPLICIT=(
 	alacritty
 	ansible
 	ansible-lint
-	arduino
 	baobab # Disk Usage Analyzer
 	bat
 	curl
@@ -20,32 +17,42 @@ EXPLICIT=(
 	difftastic
 	dust
 	eog # image viewer
+	evince # document viewer (PDF, …)
 	exa
 	fd
 	file-roller # archives
 	flatpak
 	fx # Terminal JSON viewer
 	fzf
+	gdm
 	git
+	gnome-backgrounds
 	gnome-calculator
-	gnome-characters
-	gnome-disk-utility
+	gnome-console
+	gnome-power-manager
+	gnome-screenshot
+	gnome-software
+	gnome-sudoku
+	gnome-text-editor
+	gnome-tweaks
 	gnuradio-companion
 	gnuradio-osmosdr
-	gucharmap
 	helix # cli text editor
 	htop
 	hugo
 	hyperfine
 	jq
 	libreoffice-fresh
+	lshw
 	moreutils # sponge, ts
 	most # as MANPAGER
 	mumble
 	nano
+	nautilus
 	neovim
 	networkmanager
 	newsflash
+	nmap
 	nodejs
 	openconnect
 	opendoas
@@ -53,7 +60,6 @@ EXPLICIT=(
 	pdfpc
 	pkgstats
 	podman
-	progress
 	ripgrep
 	rsync
 	speedtest-cli
@@ -72,29 +78,16 @@ EXPLICIT=(
 
 	# arch base
 	base
-	devtools # build/test AUR packages
 	efibootmgr
 	efivar
 	man-db
 	man-pages
 	pacman-contrib
 
-	# large build environments often used for AUR packages
-	clang
-	cmake
-	go
-
-	# console network analysis
-	dog
-	mtr
-	nmap
-	whois
-
 	# system readout / sensors
 	acpi
 	lm_sensors
 	lostfiles
-	lshw
 
 	# Languages
 	hunspell-de
@@ -118,11 +111,9 @@ EXPLICIT=(
 	# Picture Tools
 	gimp
 	gnuplot
-	graphviz
 	imagemagick
 	inkscape
 	oxipng
-	python-matplotlib
 
 	# Audio / Video Tools
 	ffmpeg
@@ -132,7 +123,6 @@ EXPLICIT=(
 	mpd
 	mpv
 	pavucontrol
-	vlc
 	yt-dlp
 
 	# programming rust
@@ -165,19 +155,15 @@ EXPLICIT=(
 	## https://addons.mozilla.org/firefox/addon/localcdn-fork-of-decentraleyes/
 	## https://addons.mozilla.org/firefox/addon/privacy-redirect/
 	## https://addons.mozilla.org/firefox/addon/temporary-containers/
-
-	# casual games
-	gnome-mines
-	gnome-sudoku
 )
 
 DEPS=(
 	bash-completion
 	eog-plugins
+	gnome-control-center
 	gnome-themes-extra # Adwaita-dark
 	libmythes # Languages
 	npm
-	podman-compose
 	python-pygments # hugo: syntax-highlight code snippets
 	scour # inkscape optimized svg
 	sshpass # ansible
@@ -185,7 +171,7 @@ DEPS=(
 	webp-pixbuf-loader # webp support for image viewers
 	xdg-desktop-portal
 	xdg-desktop-portal-gnome # desktop / window sharing
-	xdg-utils
+	xdg-utils # xdg-open
 
 	# Audio / Video Tools
 	atomicparsley
@@ -195,48 +181,42 @@ DEPS=(
 	rtmpdump
 
 	# file-roller optionals
-	lrzip
+	# lrzip
 	p7zip
-	squashfs-tools
-	unace
-	unrar
-
-	# neovim
-	python-pynvim
-	wl-clipboard
+	# squashfs-tools
+	# unace
+	# unrar
 
 	# remote locations
 	gvfs-afc
 	gvfs-smb
 	gvfs-gphoto2
-	gvfs-mtp
 	gvfs-goa
-	gvfs-nfs
-	gvfs-google
 )
 
 if [ "$(uname -m)" == "x86_64" ]; then
-EXPLICIT+=(
-	cargo-tarpaulin
-	code
-	deno
-	element-desktop # test fractal when SSO works https://gitlab.gnome.org/GNOME/fractal/-/issues/521
-	obs-studio
-	pandoc
-	reflector # Update mirrorlist
-	shellcheck
-	signal-desktop
-	steam
-	teamspeak3
+	EXPLICIT+=(
+		cargo-tarpaulin
+		code
+		deno
+		obs-studio
+		reflector # Update mirrorlist
+		shellcheck
+		signal-desktop
+		teamspeak3
 
-	amd-ucode
-	intel-ucode
-)
+		# Intel NUC
+		intel-media-sdk
+		intel-ucode
+		libva-intel-driver
+		linux
+		vulkan-intel
+	)
 
-DEPS+=(
-	linux-headers # dkms
-	v4l2loopback-dkms # obs virtual cam
-)
+	DEPS+=(
+		linux-headers # dkms
+		v4l2loopback-dkms # obs virtual cam
+	)
 fi
 
 pacman --noconfirm --needed -Sy --asdeps "${DEPS[@]}" "${EXPLICIT[@]}" "${EXPLICIT_GROUPS[@]}"
@@ -251,16 +231,6 @@ systemctl start pkgstats.timer
 
 # communicate with monitors via ddc (ddcutil)
 echo "i2c-dev" >/etc/modules-load.d/ddc.conf
-
-# podman rootless usage
-touch -a /etc/subuid /etc/subgid
-usermod --add-subuids 165536-231072 --add-subgids 165536-231072 "$user"
-# in case of problems run as user: podman system migrate
-
-# Arduino
-usermod -aG uucp,lock "$user"
-
-usermod -aG wireshark "$user"
 
 # sensors
 sensors-detect --auto

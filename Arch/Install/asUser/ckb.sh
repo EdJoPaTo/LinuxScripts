@@ -5,7 +5,7 @@ EXPLICIT=(
 	ckb-next-git
 )
 
-./installWithAurHelper.sh "${EXPLICIT[@]}"
+nice paru --sudo sudo --sudoloop --skipreview --noconfirm --needed -Sy --asdeps "${EXPLICIT[@]}"
 sudo pacman -D --asexplicit --quiet "${EXPLICIT[@]}"
 
 sudo systemctl enable --now ckb-next-daemon.service

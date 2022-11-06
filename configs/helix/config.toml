@@ -5,7 +5,8 @@ cursorline = true
 hidden = false
 
 [editor.indent-guides]
-render = true
+render = false
 
 [editor.whitespace]
-render = "all"
+# Temporary: :set whitespace.render all
+render = "none"
