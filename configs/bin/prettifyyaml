@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -eu
+
+for var in "$@"; do
+    echo "prettify $var"
+	yq --prettyPrint --inplace "$var"
+done
