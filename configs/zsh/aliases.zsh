@@ -23,6 +23,9 @@ hash -d templates=~/git/hub/EdJoPaTo/template
 alias cdf='cd "$(fd --type=directory | fzf)"'
 alias cdg='cd ~/git && cd "$(project-below --directory=.git --list | fzf)"'
 
+alias gitrepodir='git rev-parse --show-toplevel'
+alias cdrepo='cd $(gitrepodir)'
+
 alias brew='nice brew'
 alias cargo='nice cargo'
 alias code='nice -n 5 code'
@@ -77,6 +80,9 @@ alias amp='mpc --host etoPiAmp'
 # see: https://github.com/EdJoPaTo/project-below
 alias gitBelow='project-below --directory=.git git'
 alias gitSubmoduleBelow='project-below --file=.git git'
+
+# --bind 0.0.0.0 when testing with devices on the same network
+alias hugo-serve='hugo server -p 4200 --buildDrafts --buildFuture'
 
 alias podman-image-update='podman pull $(podman image ls --filter=dangling=false --noheading --format="{{.Repository}}:{{.Tag}}" | rg -v localhost)'
 alias podmanBelow='project-below --file=Dockerfile nice -n 19 podman'

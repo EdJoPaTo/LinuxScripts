@@ -51,6 +51,7 @@
         "arch",
         "bash",
         "bigbluebutton",
+        "cc-by-nd",
         "chroot",
         "copyleft",
         "deno",
@@ -63,6 +64,7 @@
         "gitignore",
         "grammy",
         "haw",
+        "heic",
         "kvm",
         "loc",
         "mastodon",
@@ -77,6 +79,7 @@
         "pipewire",
         "pkgbuild",
         "podman",
+        "rain-brainz",
         "relref",
         "semver",
         "systemd",
@@ -97,5 +100,8 @@
         "-W",
         "clippy::nursery"
     ],
+    "[typescript]": {
+        "editor.defaultFormatter": "denoland.vscode-deno"
+    },
     "diffEditor.ignoreTrimWhitespace": false
 }

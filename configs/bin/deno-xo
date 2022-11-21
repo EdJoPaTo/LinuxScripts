@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+set -u
+
+# nice deno run --no-lock -A npm:xo --version
+
+cat <<EOF >.xo-config.json
+{
+	"rules": {
+		"@typescript-eslint/quotes": ["error", "double"],
+		"default-case": "warn",
+
+		"@typescript-eslint/indent": "off",
+		"@typescript-eslint/lines-between-class-members": "off",
+		"@typescript-eslint/naming-convention": "off",
+		"@typescript-eslint/no-unsafe-assignment": "off",
+		"@typescript-eslint/no-unsafe-call": "off",
+		"@typescript-eslint/no-unsafe-return": "off",
+		"@typescript-eslint/non-nullable-type-assertion-style": "off",
+		"@typescript-eslint/object-curly-spacing": "off",
+		"@typescript-eslint/padding-line-between-statements": "off",
+		"@typescript-eslint/restrict-template-expressions": "off",
+		"arrow-parens": "off",
+		"capitalized-comments": "off",
+		"n/file-extension-in-import": "off",
+		"operator-linebreak": "off"
+	}
+}
+EOF
+
+nice deno run \
+	--allow-env --allow-read --allow-sys --allow-write="$HOME/.xo-cache" \
+	--no-lock \
+	npm:xo "$@"
+exit=$?
+
+rm .xo-config.json
+exit $exit

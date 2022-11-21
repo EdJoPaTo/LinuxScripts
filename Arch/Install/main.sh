@@ -166,7 +166,6 @@ DEPS=(
 	npm
 	python-pygments # hugo: syntax-highlight code snippets
 	scour # inkscape optimized svg
-	sshpass # ansible
 	trash-cli
 	webp-pixbuf-loader # webp support for image viewers
 	xdg-desktop-portal
