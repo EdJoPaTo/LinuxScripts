@@ -117,6 +117,14 @@ alias typescript-watch='rm -rf dist && nice ./node_modules/.bin/tsc --sourceMap 
 alias npmBelow='project-below --file=package.json nice -n 19 npm'
 alias npmBelow-clean='project-below --file=package.json --directory=node_modules rm -rf node_modules'
 
+alias denoBelow='project-below --file=deno.jsonc deno'
+deno-pedantic() {
+	deno fmt --check
+	deno lint
+	deno test -A
+	deno check **/*.ts
+}
+
 alias pio-upload='pio run --target upload'
 alias pio-monitor='pio device monitor'
 alias pioBelow='project-below --file=platformio.ini nice -n 19 pio'

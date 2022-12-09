@@ -12,9 +12,11 @@ EXPLICIT=(
 	ansible-lint
 	baobab # Disk Usage Analyzer
 	bat
+	bind # dns
 	curl
 	ddcutil
 	difftastic
+	dog # dns
 	dust
 	eog # image viewer
 	evince # document viewer (PDF, …)
@@ -70,6 +72,7 @@ EXPLICIT=(
 	tmux
 	tokei
 	wget
+	whois # domain checks
 	yq
 	zsh
 	zsh-completions
@@ -127,6 +130,7 @@ EXPLICIT=(
 
 	# programming rust
 	rustup
+	cross
 	cargo-audit
 	cargo-flamegraph
 	cargo-msrv

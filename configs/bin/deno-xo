@@ -18,6 +18,7 @@ cat <<EOF >.xo-config.json
 		"@typescript-eslint/non-nullable-type-assertion-style": "off",
 		"@typescript-eslint/object-curly-spacing": "off",
 		"@typescript-eslint/padding-line-between-statements": "off",
+		"@typescript-eslint/promise-function-async": "off",
 		"@typescript-eslint/restrict-template-expressions": "off",
 		"arrow-parens": "off",
 		"capitalized-comments": "off",

@@ -85,6 +85,7 @@
         "systemd",
         "telegraf",
         "vserver",
+        "websocket",
         "zulip"
     ],
     "markdownlint.config": {
