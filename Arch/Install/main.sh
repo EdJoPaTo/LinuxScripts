@@ -77,7 +77,15 @@ EXPLICIT=(
 	zsh
 	zsh-completions
 	zsh-history-substring-search
+	xdg-user-dirs
 	zsh-syntax-highlighting
+
+	# Sway https://wiki.archlinux.org/title/Sway
+	sway
+	fuzzel
+	grim # sway screenshots
+	i3status-rust
+	wl-clipboard
 
 	# arch base
 	base
@@ -105,6 +113,7 @@ EXPLICIT=(
 	# fonts
 	noto-fonts-emoji # emoji support (in terminal, notifications, ...)
 	ttf-dejavu
+	ttf-font-awesome
 	ttf-opensans
 
 	# Preview in Filemanager
@@ -174,7 +183,17 @@ DEPS=(
 	webp-pixbuf-loader # webp support for image viewers
 	xdg-desktop-portal
 	xdg-desktop-portal-gnome # desktop / window sharing
+	xdg-desktop-portal-wlr
 	xdg-utils # xdg-open
+
+	# Sway
+	bemenu-wayland
+	polkit
+	slurp # select an area for screenshots
+	swaybg
+	swayidle
+	swaylock
+	waybar
 
 	# Audio / Video Tools
 	atomicparsley

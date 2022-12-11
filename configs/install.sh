@@ -33,6 +33,13 @@ link "$(pwd)/mpd.conf" "$HOME/.config/mpd/mpd.conf"
 link "$(pwd)/neovim/init.lua" "$HOME/.config/nvim/init.lua"
 link "$(pwd)/neovim/lua" "$HOME/.config/nvim/lua"
 
+# Sway
+if [[ $OSTYPE = linux* ]]; then
+	link "$(pwd)/sway" "$HOME/.config/sway/config"
+	link "$(pwd)/swaylock" "$HOME/.config/swaylock/config"
+	link "$(pwd)/i3status-rust.toml" "$HOME/.config/i3status-rust/config.toml"
+fi
+
 # Zsh
 mkdir -p "$HOME/.cache/"
 link "$(pwd)/zsh/zshrc" "$HOME/.zshrc"

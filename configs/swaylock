@@ -1,0 +1,14 @@
+show-keyboard-layout
+ignore-empty-password
+color=222222
+image=/usr/share/backgrounds/gnome/field-d.svg
+
+# swaylock-effects
+clock
+indicator
+#grace=2
+fade-in=0.2
+effect-blur=20x10
+#effect-grayscale
+#effect-pixelate=50
+screenshot
