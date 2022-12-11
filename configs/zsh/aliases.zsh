@@ -108,8 +108,8 @@ cargo-clippy-tests() {
 	nice cargo clippy --all-features --all-targets -- -W clippy::pedantic -W clippy::nursery -W clippy::cargo
 }
 
-type /usr/local/opt/nvm/nvm.sh >/dev/null && alias nvm='unalias nvm && source /usr/local/opt/nvm/nvm.sh && nvm'
-type /usr/share/nvm/init-nvm.sh >/dev/null && alias nvm='unalias nvm && source /usr/share/nvm/init-nvm.sh && nvm'
+cat /usr/local/opt/nvm/nvm.sh &>/dev/null && alias nvm='unalias nvm && source /usr/local/opt/nvm/nvm.sh && nvm'
+cat /usr/share/nvm/init-nvm.sh &>/dev/null && alias nvm='unalias nvm && source /usr/share/nvm/init-nvm.sh && nvm'
 alias npx='echo edjopato fixed npx again && PATH=$(pwd)/node_modules/.bin:$PATH nice'
 alias npm-reinstall='rm -rf node_modules package-lock.json && nice npm install && npm outdated || true'
 alias npm-xo-update='npm install --save-dev xo@latest && npm-reinstall && nice ./node_modules/.bin/xo --fix'
