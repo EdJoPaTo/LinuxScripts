@@ -85,6 +85,7 @@ EXPLICIT=(
 	fuzzel
 	grim # sway screenshots
 	i3status-rust
+	playerctl
 	wl-clipboard
 
 	# arch base

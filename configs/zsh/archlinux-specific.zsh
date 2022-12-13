@@ -7,4 +7,7 @@ export MAKEFLAGS="-j$(nproc)"
 
 export MANPAGER=most
 
+# fix ssh key stuff with gnome-keyring
+export SSH_AUTH_SOCK=/run/user/$(id --user)/keyring/ssh
+
 fi

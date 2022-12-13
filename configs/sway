@@ -10,6 +10,9 @@ smart_borders on
 titlebar_border_thickness 0
 titlebar_padding 1 0
 
+# disable titlebar workaround
+font pango:monospace 0
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -223,6 +226,7 @@ bar {
 	position top
 	#status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
 	status_command i3status-rs
+	font pango:monospace 10
 
 	colors {
 		statusline #ffffff
