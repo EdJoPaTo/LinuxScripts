@@ -58,6 +58,7 @@ EXPLICIT=(
 	nodejs
 	openconnect
 	opendoas
+	trash-cli
 	openssh
 	pdfpc
 	pkgstats
@@ -180,7 +181,6 @@ DEPS=(
 	npm
 	python-pygments # hugo: syntax-highlight code snippets
 	scour # inkscape optimized svg
-	trash-cli
 	webp-pixbuf-loader # webp support for image viewers
 	xdg-desktop-portal
 	xdg-desktop-portal-gnome # desktop / window sharing

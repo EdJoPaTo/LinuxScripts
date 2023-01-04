@@ -98,10 +98,9 @@ cargo-pedantic() {
 }
 # remoterun target.server "$(declare -f cargo-clippy-tests); RUSTUP_TOOLCHAIN=nightly cargo-clippy-tests"
 cargo-clippy-tests() {
-	set -e
 	nice cargo check --all-features --all-targets
 	nice cargo build --all-features --all-targets
-	set +e
+
 	nice cargo fmt -- --check
 	nice cargo test --all-features
 	nice cargo doc --all-features --no-deps

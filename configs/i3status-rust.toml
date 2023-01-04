@@ -4,7 +4,6 @@ icons = "awesome"
 [[block]]
 block = "music"
 buttons = ["play"]
-smart_trim = true
 marquee = false
 max_width = 60
 #dynamic_width = true

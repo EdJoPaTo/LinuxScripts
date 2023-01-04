@@ -34,6 +34,8 @@ autoload -U compinit
 zstyle ':completion:*' matcher-list '' 'l:|=* r:|=* m:{a-z}={A-Z}'
 zstyle ':completion:*' menu select
 zstyle ':completion:*' special-dirs ..
+zstyle ':completion:*:default' list-colors --color=auto
+zstyle ':completion:*:messages' format ' %F{purple} -- %d --%f'
 zstyle ':completion:*:warnings' format '%F{red}No matches for:%f %d'
 
 # separate matches into groups
