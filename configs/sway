@@ -10,9 +10,6 @@ smart_borders on
 titlebar_border_thickness 0
 titlebar_padding 1 0
 
-# disable titlebar workaround
-font pango:monospace 0
-
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -50,10 +47,11 @@ output 'Unknown MSI MAG272CQR 0x00000934' resolution 2560x1440 position 5120,0
 # resumed. It will also lock your screen before your computer goes to sleep.
 exec swayidle -w \
 	timeout 120 'swaylock -f' \
-	timeout 125 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+	timeout 125 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+	before-sleep 'playerctl pause' \
 	before-sleep 'swaylock -f' \
 	lock 'swaylock -f' \
-	unlock 'swaymsg "output * dpms on"'
+	unlock 'swaymsg "output * power on"'
 
 for_window [class="."] inhibit_idle fullscreen
 for_window [app_id="."] inhibit_idle fullscreen
@@ -75,6 +73,7 @@ input * {
 	bindsym $mod+Return exec $term
 
 	bindsym $mod+b exec firefox
+	bindsym $mod+e exec nautilus
 
 	bindsym $mod+l exec loginctl lock-session self
 
@@ -84,7 +83,7 @@ input * {
 
 	# Start your launcher
 	bindsym $mod+d exec $menu
-	#bindsym $mod+Space exec $menu
+	bindsym $mod+Space exec $menu
 
 	bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
 	bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
@@ -92,6 +91,9 @@ input * {
 	bindsym XF86AudioPlay exec playerctl play-pause
 	bindsym XF86AudioNext exec playerctl next
 	bindsym XF86AudioPrev exec playerctl previous
+
+	bindsym Print exec grim -g "$(slurp)" ~/Pictures/Screenshots/$(date +%Y-%m-%dT%H-%m-%S).png
+	bindsym $mod+Print exec grim ~/Pictures/Screenshots/$(date +%Y-%m-%dT%H-%m-%S).png
 
 	# Drag floating windows by holding down $mod and left mouse button.
 	# Resize them with right mouse button + $mod.
@@ -221,20 +223,29 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+### Colors
+
+client.focused #ffffff99 #ffffff99 #000000 #ffffff99
+client.unfocused #00000055 #00000055 #ffffff99
+client.focused_inactive #00000055 #00000055 #ffffff99
+
 #
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
 	position top
-	#status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
+	separator_symbol ""
 	status_command i3status-rs
-	font pango:monospace 10
 
 	colors {
-		statusline #ffffff
-		background #000000
-		inactive_workspace #32323200 #32323200 #5c5c5c
+		statusline #ffffffaa
+		background #00000099
+
+		urgent_workspace #ff0000 #ff0000 #000000
+		focused_workspace #ffffff99 #ffffff99 #000000
+		active_workspace #33333399 #33333399 #ffffff
+		inactive_workspace #00000099 #00000099 #cccccc
 	}
 }
 

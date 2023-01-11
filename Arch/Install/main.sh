@@ -194,7 +194,6 @@ DEPS=(
 	swaybg
 	swayidle
 	swaylock
-	waybar
 
 	# Audio / Video Tools
 	atomicparsley

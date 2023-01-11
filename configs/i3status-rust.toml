@@ -1,4 +1,4 @@
-#theme = "native"
+theme = "native"
 icons = "awesome"
 
 [[block]]
@@ -42,4 +42,4 @@ if_command = "test -e /sys/class/power_supply/BAT0"
 [[block]]
 block = "time"
 interval = 5
-format = "%a %d.%m %R"
+format = "%a %d.%b %H:%M"
