@@ -1,8 +1,8 @@
 [Unit]
-Description=Pacman predownload packages every 1h
+Description=Run rustup update regularly for %I
 
 [Timer]
-OnBootSec=1min
+OnStartupSec=30sec
 OnUnitActiveSec=3h
 RandomizedDelaySec=10min
 

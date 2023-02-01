@@ -1,0 +1,10 @@
+[Unit]
+Description=Run rustup update for %I
+ConditionACPower=true
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=rustup update
+User=%i

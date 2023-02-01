@@ -8,6 +8,3 @@ After=network-online.target
 Type=oneshot
 ExecStart=/usr/bin/find . -name ".git" -type d -print -execdir git fetch --all \;
 WorkingDirectory=%h/git
-
-[Install]
-WantedBy=default.target
