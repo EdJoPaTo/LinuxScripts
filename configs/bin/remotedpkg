@@ -1,17 +1,26 @@
 #!/usr/bin/env bash
 set -eu
 
-# usage: remotedpkg server bla.deb
+# usage: remotedpkg server
+
+# sends all *.deb files to the server and uses `sudo dpkg -i bla.deb` on them
 
 server=$1
-package=$2
 
 remotefolder="/tmp/remotedpkg/"
+
+remotefunc() {
+	sudo bash -c 'set -eu; for p in *.deb; do dpkg -i "$p"; done'
+	exitcode=$?
+	uptime
+	exit $exitcode
+}
 
 rsync \
 	--copy-links --times \
 	--compress --checksum \
 	--info=progress2 \
 	--rsync-path="mkdir -p $remotefolder && rsync" \
-	"$package" "$server:$remotefolder"
-ssh -tt "$server" "uptime && sudo dpkg -i $remotefolder$package && rm -rf $remotefolder && uptime"
+	./*.deb "$server:$remotefolder"
+ssh -tt "$server" \
+	"uptime && cd $remotefolder && $(declare -f remotefunc) && remotefunc && rm -rf $remotefolder"
