@@ -7,11 +7,10 @@ set -eu
 
 server=$1
 
-remotefolder="/tmp/remotedpkg/"
-
 remotefunc() {
-	sudo bash -c 'set -eu; for p in *.deb; do dpkg -i "$p"; done'
+	sudo bash -c 'cd /tmp/remotedpkg; set -eu; for p in *.deb; do dpkg -i "$p"; done'
 	exitcode=$?
+	rm -rf /tmp/remotedpkg
 	uptime
 	exit $exitcode
 }
@@ -20,7 +19,7 @@ rsync \
 	--copy-links --times \
 	--compress --checksum \
 	--info=progress2 \
-	--rsync-path="mkdir -p $remotefolder && rsync" \
-	./*.deb "$server:$remotefolder"
+	--rsync-path="mkdir -p /tmp/remotedpkg && rsync" \
+	./*.deb "$server:/tmp/remotedpkg"
 ssh -tt "$server" \
-	"uptime && cd $remotefolder && $(declare -f remotefunc) && remotefunc && rm -rf $remotefolder"
+	"uptime && $(declare -f remotefunc) && remotefunc"
