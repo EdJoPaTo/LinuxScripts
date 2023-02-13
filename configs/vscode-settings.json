@@ -81,6 +81,7 @@
         "telegraf",
         "vserver",
         "websocket",
+        "wikibase",
         "zulip"
     ],
     "markdownlint.config": {

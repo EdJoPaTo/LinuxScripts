@@ -1,7 +1,7 @@
-show-keyboard-layout
+# show-keyboard-layout
 ignore-empty-password
 color=222222
-image=/usr/share/backgrounds/gnome/field-d.svg
+# image=/usr/share/backgrounds/gnome/field-d.svg
 
 # swaylock-effects
 clock
