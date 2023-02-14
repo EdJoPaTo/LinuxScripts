@@ -2,7 +2,6 @@
 set -eu
 
 EXPLICIT_GROUPS=(
-	base-devel
 	texlive-most
 )
 
@@ -16,6 +15,7 @@ EXPLICIT=(
 	curl
 	ddcutil
 	difftastic
+	dive # explore container layers
 	dog # dns
 	dust
 	eog # image viewer
@@ -58,7 +58,6 @@ EXPLICIT=(
 	nodejs
 	openconnect
 	opendoas
-	trash-cli
 	openssh
 	pdfpc
 	pkgstats
@@ -72,13 +71,14 @@ EXPLICIT=(
 	telegram-desktop
 	tmux
 	tokei
+	trash-cli
 	wget
 	whois # domain checks
+	xdg-user-dirs
 	yq
 	zsh
 	zsh-completions
 	zsh-history-substring-search
-	xdg-user-dirs
 	zsh-syntax-highlighting
 
 	# Sway https://wiki.archlinux.org/title/Sway
@@ -91,6 +91,7 @@ EXPLICIT=(
 
 	# arch base
 	base
+	base-devel
 	efibootmgr
 	efivar
 	man-db
@@ -176,8 +177,10 @@ DEPS=(
 	bash-completion
 	eog-plugins
 	gnome-control-center
+	gnome-disk-utility
 	gnome-themes-extra # Adwaita-dark
 	libmythes # Languages
+	lsof # show files of a process in htop
 	npm
 	python-pygments # hugo: syntax-highlight code snippets
 	scour # inkscape optimized svg
@@ -211,9 +214,9 @@ DEPS=(
 
 	# remote locations
 	gvfs-afc
-	gvfs-smb
-	gvfs-gphoto2
 	gvfs-goa
+	gvfs-gphoto2
+	gvfs-smb
 )
 
 if [ "$(uname -m)" == "x86_64" ]; then

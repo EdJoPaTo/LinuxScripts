@@ -3,10 +3,9 @@ set -eu
 
 EXPLICIT=(
 	code-marketplace
-	dive
 	gnome-browser-connector
 	gnome-shell-extension-caffeine-git
-	gnome-shell-extension-system-monitor-git
+	gnome-shell-extension-system-monitor-next-git
 	mpd-mpris
 	mpdris2
 	nautilus-open-any-terminal
