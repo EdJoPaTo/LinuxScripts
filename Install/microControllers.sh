@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 set -eu
 
-mkdir -p ~/.platformio/lib
-mkdir -p ~/Arduino/libraries/Credentials
+mkdir -p ~/.platformio/lib/Credentials
 
-file="$HOME/Arduino/libraries/Credentials/credentials.h"
+file="$HOME/.platformio/lib/Credentials/credentials.h"
 
 insert() {
 	rg -q "$1" "$file" 2> /dev/null || echo "$1$2" >> "$file"
@@ -19,6 +18,8 @@ insert "#define MQTT_SERVER " '""'
 insert "#define MQTT_USERNAME " 'NULL'
 insert "#define MQTT_PASSWORD " 'NULL'
 
-ln -srf ~/Arduino/libraries/Credentials ~/.platformio/lib
+# When using with Arduino comment this out
+# mkdir -p ~/Arduino/libraries
+# ln -srf ~/.platformio/lib/Credentials ~/Arduino/libraries
 
 echo "ensure all #define are correct in $file"
