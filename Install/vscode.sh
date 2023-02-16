@@ -3,7 +3,6 @@
 # Find out installed ones: `code --list-extensions`
 
 packages=(
-	bungcip.better-toml
 	DavidAnson.vscode-markdownlint
 	davidlday.languagetool-linter
 	denoland.vscode-deno
@@ -14,11 +13,14 @@ packages=(
 	redhat.vscode-yaml
 	rust-lang.rust-analyzer
 	serayuzgur.crates
+	tamasfe.even-better-toml
 	timonwong.shellcheck
 	valentjn.vscode-ltex
 )
 
-for package in "${packages[@]}"
-do
+shopt -s expand_aliases
+type codium >/dev/null && alias code='codium'
+
+for package in "${packages[@]}"; do
 	code --force --install-extension "$package"
 done

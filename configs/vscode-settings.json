@@ -2,6 +2,8 @@
     "diffEditor.wordWrap": "on",
     "editor.stickyScroll.enabled": true,
     "editor.suggestSelection": "first",
+    "editor.wordWrap": "on",
+    "editor.wrappingIndent": "indent",
     "explorer.confirmDragAndDrop": false,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
@@ -16,7 +18,7 @@
     "platformio-ide.useBuiltinPIOCore": false,
     "prettier.useTabs": true,
     "redhat.telemetry.enabled": false,
-    "rust-analyzer.checkOnSave.command": "clippy",
+    "rust-analyzer.check.command": "clippy",
     "rust-analyzer.completion.privateEditable.enable": true,
     "rust-analyzer.imports.granularity.group": "module",
     "rust-analyzer.imports.prefix": "crate",
@@ -27,7 +29,6 @@
     "typescript.preferences.importModuleSpecifierEnding": "js",
     "typescript.updateImportsOnFileMove.enabled": "always",
     "window.autoDetectColorScheme": true,
-    "window.menuBarVisibility": "toggle",
     "window.restoreWindows": "none",
     "workbench.colorTheme": "Monokai",
     "workbench.editor.limit.enabled": true,
@@ -60,6 +61,7 @@
         "grammy",
         "haw",
         "heic",
+        "heif",
         "kvm",
         "loc",
         "mastodon",
@@ -89,7 +91,7 @@
         "MD024": false,
         "MD025": false
     },
-    "rust-analyzer.checkOnSave.extraArgs": [
+    "rust-analyzer.check.extraArgs": [
         "--no-deps",
         "--",
         "-W",
