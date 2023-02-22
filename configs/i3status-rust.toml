@@ -1,28 +1,29 @@
+[theme]
 theme = "native"
-icons = "awesome"
+[icons]
+icons = "awesome6"
 
 [[block]]
 block = "music"
-buttons = ["play"]
-marquee = false
-max_width = 60
-#dynamic_width = true
+format = " {$play $combo.str(max_width:60)|}"
+
+[[block]]
+block = "custom"
+command = 'curl "https://wttr.in/?format=%m+%l:+%c%t+%w"'
+interval = 600
 
 [[block]]
 block = "cpu"
 interval = 1
-#format = "{barchart} {utilization} {frequency}"
-format = "{barchart}"
+format = " $icon $utilization $barchart"
 
 [[block]]
 block = "load"
-format = "{1m} {5m} {15m}"
+format = " $icon $1m.eng(w:3) $5m.eng(w:3) $15m.eng(w:3)"
 
 [[block]]
 block = "memory"
-display_type = "memory"
-format_mem = "{mem_used_percents}"
-format_swap = "{swap_used_percents}"
+format = " $icon $mem_used_percents"
 
 [[block]]
 block = "sound"
@@ -34,9 +35,9 @@ device_kind = "source"
 
 [[block]]
 block = "battery"
-if_command = "test -e /sys/class/power_supply/BAT0"
+missing_format = ""
 
 [[block]]
 block = "time"
 interval = 5
-format = "%a %d.%b %H:%M"
+format = " $icon $timestamp.datetime(f:'%a %d.%b %H:%M')"
