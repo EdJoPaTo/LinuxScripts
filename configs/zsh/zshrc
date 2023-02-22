@@ -45,10 +45,26 @@ zstyle ':completion:*'                 group-name ''
 zmodload zsh/complist
 compinit
 
-function set_window_title(){
+set_window_title() {
 	echo -ne "\033]0; $HOST ${PWD/$HOME/~} \007"
 }
 precmd_functions+=(set_window_title)
+
+osc7() {
+    local LC_ALL=C
+    export LC_ALL
+
+    setopt localoptions extendedglob
+    input=( ${(s::)PWD} )
+    uri=${(j::)input/(#b)([^A-Za-z0-9_.\!~*\'\(\)-\/])/%${(l:2::0:)$(([##16]#match))}}
+    print -n "\e]7;file://${HOST}${uri}\e\\"
+}
+chpwd_functions+=(osc7)
+
+osc133() {
+	print -Pn "\e]133;A\e\\"
+}
+precmd_functions+=(osc133)
 
 source "$ZSH_PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 source "$ZSH_PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh"
