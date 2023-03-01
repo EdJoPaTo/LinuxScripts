@@ -2,7 +2,6 @@
 set -eu
 
 CASKS=(
-	balenaetcher
 	element
 	firefox
 	gimp
@@ -27,9 +26,7 @@ FORMULAS=(
 	ansible-lint
 	bat
 	cargo-audit
-	cargo-edit
 	cargo-nextest
-	cargo-watch
 	deno
 	dive
 	dust
@@ -47,7 +44,6 @@ FORMULAS=(
 	moreutils
 	mpc
 	mpd
-	mtr
 	neovim
 	nmap
 	node
