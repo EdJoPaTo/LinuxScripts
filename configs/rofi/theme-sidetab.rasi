@@ -1,0 +1,59 @@
+* {
+	background-color: transparent;
+	border-color: transparent;
+	text-color: whitesmoke;
+	spacing: 2;
+	width: 30em;
+	margin: 0;
+	padding: 0;
+}
+
+#window {
+	background-color: #222222F5;
+	border: 0;
+	padding: 0;
+	location: west;
+	anchor: west;
+	height: 100%;
+	margin: 10px;
+	border-radius: 15px;
+}
+
+#mainbox {
+	spacing: 10px;
+	margin: 0;
+	width: 200px;
+}
+
+#inputbar {
+	children: [prompt,entry];
+}
+
+#listview {
+	fixed-height: true;
+	margin: 0;
+}
+
+#element {
+	padding: 5px;
+}
+
+element selected {
+	background-color: #552222;
+}
+
+element-icon {
+	size: 20px;
+}
+
+#entry {
+	placeholder: "Search";
+	placeholder-color: #555555;
+	font: "Sora Regular 20";
+}
+
+#prompt {
+	margin: 0 5px;
+	padding: 0 5px;
+	font: "Sora Regular 20";
+}

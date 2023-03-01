@@ -29,9 +29,10 @@ set $term alacritty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 #set $menu dmenu_path | dmenu | xargs swaymsg exec --
-set $menu swaymsg exec -- fuzzel --background-color=222222ee --selection-color=000000ee
+set $menu swaymsg exec -- fuzzel
 #set $menu swaymsg exec wldash
 #set $menu bemenu-run --grab --monitor all
+#set $menu rofi -show run
 
 ### Output configuration
 #
@@ -50,11 +51,7 @@ output 'Unknown MSI MAG272CQR 0x00000934' resolution 2560x1440 position 5120,0
 # resumed. It will also lock your screen before your computer goes to sleep.
 exec swayidle -w \
 	timeout 120 'swaylock -f' \
-	timeout 125 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-	before-sleep 'playerctl pause' \
-	before-sleep 'swaylock -f' \
-	lock 'swaylock -f' \
-	unlock 'swaymsg "output * power on"'
+	timeout 125 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
 
 for_window [class="."] inhibit_idle fullscreen
 for_window [app_id="."] inhibit_idle fullscreen
@@ -78,7 +75,7 @@ input * {
 	bindsym $mod+b exec firefox
 	bindsym $mod+e exec nautilus
 
-	bindsym $mod+l exec loginctl lock-session self
+	bindsym $mod+l exec swaylock -f
 
 	# Kill focused window
 	bindsym $mod+Shift+q kill

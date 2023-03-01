@@ -28,6 +28,7 @@ FORMULAS=(
 	bat
 	cargo-audit
 	cargo-edit
+	cargo-nextest
 	cargo-watch
 	deno
 	dive

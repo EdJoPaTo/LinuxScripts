@@ -87,6 +87,7 @@ EXPLICIT=(
 	grim # sway screenshots
 	i3status-rust
 	playerctl
+	rofi
 	wl-clipboard
 
 	# arch base

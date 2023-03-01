@@ -121,7 +121,8 @@ cargo-pedantic() {
 		-W clippy::nursery \
 		-W clippy::pedantic
 	nice cargo build --all-targets "$@" &&
-		nice cargo test --quiet "$@"
+		nice cargo nextest run "$@" &&
+		nice cargo test --doc
 }
 # remoterun target.server "$(declare -f cargo-clippy-tests); RUSTUP_TOOLCHAIN=nightly cargo-clippy-tests"
 cargo-clippy-tests() {

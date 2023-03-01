@@ -29,6 +29,7 @@
     "typescript.preferences.importModuleSpecifierEnding": "js",
     "typescript.updateImportsOnFileMove.enabled": "always",
     "window.autoDetectColorScheme": true,
+    "window.menuBarVisibility": "toggle",
     "window.restoreWindows": "none",
     "workbench.colorTheme": "Monokai",
     "workbench.editor.limit.enabled": true,
