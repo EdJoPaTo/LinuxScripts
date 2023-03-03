@@ -17,7 +17,6 @@ CASKS=(
 	syncthing
 	teamspeak-client
 	telegram
-	telegram-desktop
 	vscodium
 )
 
@@ -43,7 +42,6 @@ FORMULAS=(
 	languagetool
 	moreutils
 	mpc
-	mpd
 	neovim
 	nmap
 	node
