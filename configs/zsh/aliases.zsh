@@ -61,6 +61,7 @@ alias randb='openssl rand -base64 33'
 alias randh='openssl rand -hex 20'
 alias rsynca='rsync --verbose --compress --checksum --delete-delay --archive'
 alias rsyncc='rsync --verbose --compress --recursive --links --copy-unsafe-links --times'
+alias ssh-force-password='ssh -o PreferredAuthentications=password PubkeyAuthentication=no'
 alias svg2pdf='inkscape --export-type=pdf'
 alias svg2png='inkscape --export-type=png'
 alias tss='ts "%H:%M:%.S"'
@@ -90,11 +91,13 @@ alias podmanBelow='project-below --file=Dockerfile nice -n 19 podman'
 export CROSS_CONTAINER_ENGINE=podman
 alias cargo-open-doc='nice cargo doc --open --all-features'
 alias cargoBelow='project-below --file=Cargo.toml nice -n 19 cargo'
+# See lints: https://rust-lang.github.io/rust-clippy/stable/index.html
+# Restriction lints are listed individually
+
+# remoterun target.server "$(declare -f cargo-pedantic); RUSTUP_TOOLCHAIN=nightly cargo-pedantic --all-features"
 cargo-pedantic() {
 	nice cargo fmt -- --check
-	# See lints: https://rust-lang.github.io/rust-clippy/stable/index.html
-	# Restriction lints are listed individually
-	nice cargo clippy --no-deps --all-targets "$@" -- \
+	nice cargo clippy --all-targets "$@" -- \
 		-W clippy::alloc_instead_of_core \
 		-W clippy::as_underscore \
 		-W clippy::create_dir \
@@ -110,59 +113,29 @@ cargo-pedantic() {
 		-W clippy::lossy_float_literal \
 		-W clippy::mixed_read_write_in_expression \
 		-W clippy::multiple_inherent_impl \
-		-W clippy::panic \
 		-W clippy::partial_pub_fields \
 		-W clippy::rest_pat_in_fully_bound_structs \
 		-W clippy::same_name_method \
 		-W clippy::self_named_module_files \
-		-W clippy::std_instead_of_core \
 		-W clippy::unnecessary_self_imports \
-		-W clippy::unwrap_in_result \
 		-W clippy::nursery \
-		-W clippy::pedantic
-	nice cargo build --all-targets "$@" &&
+		-W clippy::pedantic &&
+		nice cargo build --all-targets "$@" &&
 		nice cargo nextest run "$@" &&
-		nice cargo test --doc
+		nice cargo doc --all-features --no-deps
 }
-# remoterun target.server "$(declare -f cargo-clippy-tests); RUSTUP_TOOLCHAIN=nightly cargo-clippy-tests"
-cargo-clippy-tests() {
-	nice cargo check --all-features --all-targets
-	nice cargo build --all-features --all-targets
-
-	nice cargo fmt -- --check
-	nice cargo test --all-features
-	nice cargo doc --all-features --no-deps
-	nice cargo clippy --all-features --all-targets -- \
-		-W clippy::alloc_instead_of_core \
-		-W clippy::as_underscore \
-		-W clippy::create_dir \
-		-W clippy::decimal_literal_representation \
-		-W clippy::empty_drop \
-		-W clippy::empty_structs_with_brackets \
-		-W clippy::filetype_is_file \
-		-W clippy::float_cmp_const \
-		-W clippy::fn_to_numeric_cast_any \
-		-W clippy::format_push_string \
-		-W clippy::if_then_some_else_none \
+cargo-lib-pedantic() {
+	# Run additionally to cargo-pedantic for libraries
+	nice cargo clippy "$@" -- \
 		-W clippy::indexing_slicing \
-		-W clippy::let_underscore_must_use \
-		-W clippy::lossy_float_literal \
-		-W clippy::mixed_read_write_in_expression \
-		-W clippy::multiple_inherent_impl \
 		-W clippy::panic \
-		-W clippy::partial_pub_fields \
-		-W clippy::rest_pat_in_fully_bound_structs \
-		-W clippy::same_name_method \
-		-W clippy::self_named_module_files \
-		-W clippy::std_instead_of_alloc \
 		-W clippy::std_instead_of_core \
-		-W clippy::str_to_string \
-		-W clippy::unnecessary_self_imports \
 		-W clippy::unwrap_in_result \
 		-W clippy::unwrap_used \
 		-W clippy::cargo \
 		-W clippy::nursery \
-		-W clippy::pedantic
+		-W clippy::pedantic &&
+		nice cargo test "$@" --doc
 }
 
 cat /usr/local/opt/nvm/nvm.sh &>/dev/null && alias nvm='unalias nvm && source /usr/local/opt/nvm/nvm.sh && nvm'
@@ -173,6 +146,7 @@ alias npm-xo-update='npm install --save-dev xo@latest && npm-reinstall && nice .
 alias typescript-watch='rm -rf dist && nice ./node_modules/.bin/tsc --sourceMap --pretty --watch'
 alias npmBelow='project-below --file=package.json nice -n 19 npm'
 alias npmBelow-clean='project-below --file=package.json --directory=node_modules rm -rf node_modules'
+alias tscBelow-clean='project-below --file=tsconfig.json --directory=dist rm -rf dist'
 
 alias denoBelow='project-below --file=deno.jsonc deno'
 deno-pedantic() {

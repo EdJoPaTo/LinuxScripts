@@ -6,8 +6,6 @@
 if type paru >/dev/null; then
 	TMP_PACKAGES=(
 		alma-git
-		arduino
-		cargo-diet
 		cargo-license
 		chromium
 		devtools
@@ -18,17 +16,15 @@ if type paru >/dev/null; then
 		gucharmap
 		mqtt-explorer-appimage
 		pandoc
-		podman-compose
 		steam
 		ttf-ms-fonts
 		ventoy-bin
 		vim
-		vlc
 		zoom
 	)
 
 	uff-cache() {
-		paru -Sw --needed --noconfirm "${TMP_PACKAGES[@]}"
+		paru -S --downloadonly --needed --noconfirm "${TMP_PACKAGES[@]}"
 	}
 	uff-uninstall() {
 		doas pacman -Rc $(pacman -Qq "${TMP_PACKAGES[@]}" 2>/dev/null) && paru --clean
@@ -52,9 +48,7 @@ if type paru >/dev/null; then
 # macOS
 elif type brew >/dev/null; then
 	TMP_PACKAGES=(
-		arduino
 		chromium
-		vlc
 	)
 
 	uff-uninstall() {

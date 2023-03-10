@@ -29,6 +29,7 @@ EXPLICIT=(
 	gdm
 	git
 	gnome-backgrounds
+	gnome-boxes
 	gnome-calculator
 	gnome-console
 	gnome-power-manager
@@ -44,6 +45,7 @@ EXPLICIT=(
 	hugo
 	hyperfine
 	jq
+	kanshi # automatic monitor config
 	libreoffice-fresh
 	lshw
 	moreutils # sponge, ts
@@ -94,7 +96,6 @@ EXPLICIT=(
 	base
 	base-devel
 	efibootmgr
-	efivar
 	man-db
 	man-pages
 	pacman-contrib
@@ -145,9 +146,14 @@ EXPLICIT=(
 	rustup
 	cross
 	cargo-audit
+	cargo-binstall
 	cargo-flamegraph
+	cargo-geiger
+	cargo-llvm-cov
 	cargo-msrv
+	cargo-nextest
 	cargo-sort
+	cargo-spellcheck
 
 	# programming language server
 	bash-language-server
@@ -177,6 +183,7 @@ EXPLICIT=(
 DEPS=(
 	bash-completion
 	eog-plugins
+	fuse-overlayfs # podman
 	gnome-control-center
 	gnome-disk-utility
 	gnome-themes-extra # Adwaita-dark
@@ -186,13 +193,13 @@ DEPS=(
 	python-pygments # hugo: syntax-highlight code snippets
 	scour # inkscape optimized svg
 	webp-pixbuf-loader # webp support for image viewers
+	wireplumber
 	xdg-desktop-portal
-	xdg-desktop-portal-gnome # desktop / window sharing
+	xdg-desktop-portal-gnome
 	xdg-desktop-portal-wlr
 	xdg-utils # xdg-open
 
 	# Sway
-	bemenu-wayland
 	polkit
 	slurp # select an area for screenshots
 	swaybg
@@ -222,7 +229,6 @@ DEPS=(
 
 if [ "$(uname -m)" == "x86_64" ]; then
 	EXPLICIT+=(
-		cargo-tarpaulin
 		code
 		deno
 		obs-studio

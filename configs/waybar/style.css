@@ -1,0 +1,88 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: monospace;
+  font-size: 14px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgba(0, 0, 0, 0.6);
+  color: #ccc;
+}
+
+#workspaces {
+  padding: 0;
+}
+
+#workspaces button {
+  padding: 2px;
+  color: inherit;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+  background: #ccc;
+  color: black;
+}
+
+#workspaces button.urgent {
+  color: black;
+  background: red;
+}
+
+tooltip,
+#backlight,
+#battery,
+#clock,
+#cpu,
+#custom-caffeine,
+#custom-language,
+#custom-updates,
+#custom-weather,
+#idle_inhibitor,
+#memory,
+#mode,
+#mpd,
+#network,
+#tray,
+#pulseaudio,
+#window,
+#wireplumber {
+  padding: 3px;
+  margin: 0 8px;
+}
+
+#idle_inhibitor {
+  color: lightyellow;
+}
+
+#idle_inhibitor.activated {
+  background-color: yellow;
+  color: black;
+}
+
+#clock {
+  color: orange;
+}
+
+#network {
+  color: lightyellow;
+}
+
+#pulseaudio,
+#wireplumber {
+  color: lightgreen;
+}
+
+#battery {
+  color: lightblue;
+}
+
+#cpu {
+  color: lightgreen;
+}
+
+#memory {
+  color: lightblue;
+}

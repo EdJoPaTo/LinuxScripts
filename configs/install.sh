@@ -33,11 +33,17 @@ link "$(pwd)/mpd.conf" "$HOME/.config/mpd/mpd.conf"
 link "$(pwd)/neovim/init.lua" "$HOME/.config/nvim/init.lua"
 link "$(pwd)/neovim/lua" "$HOME/.config/nvim/lua"
 
-# Sway
+# Linux only
 if [[ $OSTYPE = linux* ]]; then
+	link "$(pwd)/fuzzel.ini" "$HOME/.config/fuzzel/fuzzel.ini"
+	link "$(pwd)/hyprland.conf" "$HOME/.config/hypr/hyprland.conf"
+	link "$(pwd)/i3status-rust.toml" "$HOME/.config/i3status-rust/config.toml"
+	link "$(pwd)/kanshi" "$HOME/.config/kanshi/config"
+	link "$(pwd)/paru.conf" "$HOME/.config/paru/paru.conf"
+	link "$(pwd)/rofi" "$HOME/.config/rofi"
 	link "$(pwd)/sway" "$HOME/.config/sway/config"
 	link "$(pwd)/swaylock" "$HOME/.config/swaylock/config"
-	link "$(pwd)/i3status-rust.toml" "$HOME/.config/i3status-rust/config.toml"
+	link "$(pwd)/waybar" "$HOME/.config/waybar"
 fi
 
 # Zsh
@@ -52,13 +58,11 @@ link "$(pwd)/.editorconfig" "$HOME/.editorconfig"
 link "$(pwd)/.tokeignore" "$HOME/.tokeignore"
 link "$(pwd)/alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"
 link "$(pwd)/dive.yaml" "$HOME/.config/dive/dive.yaml"
-link "$(pwd)/fuzzel.ini" "$HOME/.config/fuzzel/fuzzel.ini"
 link "$(pwd)/gitconfig" "$HOME/.config/git/config"
 link "$(pwd)/global.gitignore" "$HOME/.config/git/global.gitignore"
 link "$(pwd)/helix" "$HOME/.config/helix"
 link "$(pwd)/htoprc" "$HOME/.config/htop/htoprc"
-link "$(pwd)/paru.conf" "$HOME/.config/paru/paru.conf"
-link "$(pwd)/rofi" "$HOME/.config/rofi"
+link "$(pwd)/starship.toml" "$HOME/.config/starship.toml"
 link "$(pwd)/tmux.conf" "$HOME/.config/tmux/tmux.conf"
 
 rm -f "$HOME/.gitconfig"
