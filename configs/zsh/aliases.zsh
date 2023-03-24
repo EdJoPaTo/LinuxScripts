@@ -121,7 +121,7 @@ cargo-pedantic() {
 		-W clippy::nursery \
 		-W clippy::pedantic &&
 		nice cargo build --all-targets "$@" &&
-		nice cargo nextest run "$@" &&
+		nice cargo test --quiet "$@" &&
 		nice cargo doc --all-features --no-deps
 }
 cargo-lib-pedantic() {
