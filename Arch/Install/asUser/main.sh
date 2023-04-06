@@ -2,6 +2,7 @@
 set -eu
 
 EXPLICIT=(
+	chayang-git # gradually dim the screen
 	code-marketplace
 	gnome-browser-connector
 	gnome-shell-extension-caffeine-git
@@ -14,11 +15,6 @@ EXPLICIT=(
 	platformio
 	rpi-imager
 	wdisplays # temporary update display config
-
-	hyprland
-	grimblast-git
-	waybar-hyprland
-	xdg-desktop-portal-hyprland-git
 )
 
 DEPS=(

@@ -243,6 +243,7 @@ if [ "$(uname -m)" == "x86_64" ]; then
 		libva-intel-driver
 		linux
 		vulkan-intel
+		lib32-vulkan-intel
 	)
 
 	DEPS+=(

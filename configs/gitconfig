@@ -21,7 +21,7 @@
 	renames = copies
 [fetch]
 	prune = true
-	pruneTags = true
+	pruneTags = false
 [init]
 	defaultBranch = main
 [pull]

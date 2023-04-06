@@ -30,7 +30,6 @@ set $term alacritty
 #set $menu dmenu_path | dmenu | xargs swaymsg exec --
 set $menu swaymsg exec -- fuzzel
 #set $menu swaymsg exec wldash
-#set $menu bemenu-run --grab --monitor all
 #set $menu rofi -show run
 
 ### Output configuration
@@ -83,10 +82,12 @@ input * {
 	bindsym $mod+d exec $menu
 	bindsym $mod+Space exec $menu
 
-	bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
-	bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
-	bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
+	bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+	bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+	#bindsym XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+	bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 	bindsym XF86AudioPlay exec playerctl play-pause
+	bindsym XF86AudioStop exec playerctl pause
 	bindsym XF86AudioNext exec playerctl next
 	bindsym XF86AudioPrev exec playerctl previous
 

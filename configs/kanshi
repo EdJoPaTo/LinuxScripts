@@ -5,6 +5,11 @@ profile {
 }
 
 profile {
+	output 'Dell Inc. DELL U2722DE 2M85V83' mode 2560x1440 position 2560,0
+	output 'Dell Inc. DELL U2711 G606T21T077L' mode 2560x1440 position 0,0
+}
+
+profile {
 	output 'Dell Inc. DELL U2722DE 2M85V83' mode 2560x1440 position 0,0
 	output 'Microstep MSI MAG272CQR 0x00000934' mode 2560x1440 position 2560,0
 }
