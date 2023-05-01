@@ -72,7 +72,7 @@ input * {
 	bindsym $mod+b exec firefox
 	bindsym $mod+e exec nautilus
 
-	bindsym $mod+l exec swaylock -f && swaymsg "output * power off"
+	bindsym $mod+l exec swaylock -f && sleep 1 && swaymsg "output * power off"
 
 	# Kill focused window
 	bindsym $mod+Shift+q kill

@@ -159,7 +159,6 @@ EXPLICIT=(
 	bash-language-server
 	lua-language-server
 	python-lsp-server
-	rust-analyzer
 	shfmt
 	texlab
 	typescript-language-server

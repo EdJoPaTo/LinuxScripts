@@ -13,7 +13,6 @@ EXPLICIT=(
 	nvm
 	paru-bin
 	platformio
-	rpi-imager
 	wdisplays # temporary update display config
 )
 

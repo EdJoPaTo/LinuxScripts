@@ -109,7 +109,6 @@ cargo-pedantic() {
 		-W clippy::fn_to_numeric_cast_any \
 		-W clippy::format_push_string \
 		-W clippy::if_then_some_else_none \
-		-W clippy::let_underscore_must_use \
 		-W clippy::lossy_float_literal \
 		-W clippy::mixed_read_write_in_expression \
 		-W clippy::multiple_inherent_impl \
