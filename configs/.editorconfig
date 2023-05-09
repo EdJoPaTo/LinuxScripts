@@ -9,20 +9,24 @@ insert_final_newline = true
 tab_width = 2
 trim_trailing_whitespace = true
 
-[*.{yml,yaml}]
-indent_size = 2
-indent_style = space
-quote_type = double
-
 # https://projectfluent.org/
 [*.ftl]
 indent_size = 2
+indent_style = space
+
+[*.md]
+indent_size = 2
+indent_style = space
+
+[*.py]
+indent_size = 4
 indent_style = space
 
 [*.rs]
 indent_size = 4
 indent_style = space
 
-[*.md]
+[*.{yml,yaml}]
 indent_size = 2
 indent_style = space
+quote_type = double

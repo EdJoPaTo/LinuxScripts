@@ -25,7 +25,6 @@ FORMULAS=(
 	ansible-lint
 	bat
 	cargo-audit
-	cargo-nextest
 	deno
 	dive
 	dust
@@ -51,7 +50,6 @@ FORMULAS=(
 	podman
 	ripgrep
 	rsync
-	rust-analyzer
 	rustup-init
 	shellcheck
 	starship
