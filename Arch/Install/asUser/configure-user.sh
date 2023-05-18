@@ -7,7 +7,6 @@ if [ "$USER" == "root" ]; then
 fi
 
 # podman rootless usage
-sudo touch -a /etc/subuid /etc/subgid
 sudo usermod --add-subuids 165536-231072 --add-subgids 165536-231072 "$USER"
 # in case of problems run as user: podman system migrate
 

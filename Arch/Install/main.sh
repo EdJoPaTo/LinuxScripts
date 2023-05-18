@@ -89,7 +89,6 @@ EXPLICIT=(
 	grim # sway screenshots
 	i3status-rust
 	playerctl
-	rofi
 	wl-clipboard
 
 	# arch base
@@ -146,12 +145,10 @@ EXPLICIT=(
 	rustup
 	cross
 	cargo-audit
-	cargo-binstall
 	cargo-flamegraph
 	cargo-geiger
 	cargo-llvm-cov
 	cargo-msrv
-	cargo-nextest
 	cargo-sort
 	cargo-spellcheck
 
