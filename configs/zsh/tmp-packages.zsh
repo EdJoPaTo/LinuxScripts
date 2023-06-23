@@ -7,15 +7,17 @@ if type paru >/dev/null; then
 	TMP_PACKAGES=(
 		alma-git
 		cargo-license
-		chromium
 		devtools
 		esphome
 		etcher-bin
+		gnome-boxes
 		gnome-characters
 		gnome-info-collect
+		gnome-tweaks
 		gucharmap
 		mqtt-explorer-appimage
 		pandoc
+		speedtest-cli
 		steam
 		ttf-ms-fonts
 		ventoy-bin
@@ -37,7 +39,6 @@ if type paru >/dev/null; then
 		killall -9 chromium
 		rm -rf ~/.cache/chromium
 		rm -rf ~/.config/*chromium*
-		doas pacman -R --noconfirm chromium; true
 	}
 	uff-cleanup-zoom() {
 		killall -9 zoom

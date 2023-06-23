@@ -1,10 +1,6 @@
 #!/usr/bin/env bash
 set -eu
 
-EXPLICIT_GROUPS=(
-	texlive-most
-)
-
 EXPLICIT=(
 	alacritty
 	ansible
@@ -12,6 +8,7 @@ EXPLICIT=(
 	baobab # Disk Usage Analyzer
 	bat
 	bind # dns
+	btop
 	curl
 	ddcutil
 	difftastic
@@ -29,7 +26,6 @@ EXPLICIT=(
 	gdm
 	git
 	gnome-backgrounds
-	gnome-boxes
 	gnome-calculator
 	gnome-console
 	gnome-power-manager
@@ -37,9 +33,6 @@ EXPLICIT=(
 	gnome-software
 	gnome-sudoku
 	gnome-text-editor
-	gnome-tweaks
-	gnuradio-companion
-	gnuradio-osmosdr
 	helix # cli text editor
 	htop
 	hugo
@@ -66,11 +59,11 @@ EXPLICIT=(
 	podman
 	ripgrep
 	rsync
-	speedtest-cli
 	starship
 	syncthing
 	tealdeer # tldr
 	telegram-desktop
+	texlive-meta
 	tmux
 	tokei
 	trash-cli
@@ -145,6 +138,7 @@ EXPLICIT=(
 	rustup
 	cross
 	cargo-audit
+	cargo-expand
 	cargo-flamegraph
 	cargo-geiger
 	cargo-llvm-cov
@@ -165,6 +159,7 @@ EXPLICIT=(
 	yaml-language-server
 
 	# Browser
+	chromium
 	firefox
 	firefox-dark-reader
 	firefox-ublock-origin
@@ -185,10 +180,9 @@ DEPS=(
 	gnome-themes-extra # Adwaita-dark
 	libmythes # Languages
 	lsof # show files of a process in htop
-	npm
+	# npm # wait for npm 9. until then use nvm
 	python-pygments # hugo: syntax-highlight code snippets
 	scour # inkscape optimized svg
-	webp-pixbuf-loader # webp support for image viewers
 	wireplumber
 	xdg-desktop-portal
 	xdg-desktop-portal-gnome
@@ -248,8 +242,8 @@ if [ "$(uname -m)" == "x86_64" ]; then
 	)
 fi
 
-pacman --noconfirm --needed -Sy --asdeps "${DEPS[@]}" "${EXPLICIT[@]}" "${EXPLICIT_GROUPS[@]}"
-pacman -D --asexplicit --quiet "${EXPLICIT[@]}" $(pacman -Qgq "${EXPLICIT_GROUPS[@]}")
+pacman --needed -Sy --asdeps "${DEPS[@]}" "${EXPLICIT[@]}"
+pacman -D --asexplicit --quiet "${EXPLICIT[@]}"
 
 if [ "$(uname -m)" == "x86_64" ]; then
 	echo "v4l2loopback" >/etc/modules-load.d/v4l2.conf

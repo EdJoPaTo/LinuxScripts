@@ -19,11 +19,5 @@ EXPLICIT=(
 DEPS=(
 )
 
-if [ "$(uname -m)" == "x86_64" ]; then
-	EXPLICIT+=(
-		jitsi-meet-desktop-bin
-	)
-fi
-
-nice paru --sudo sudo --sudoloop --skipreview --noconfirm --needed -Sy --asdeps "${DEPS[@]}" "${EXPLICIT[@]}"
+nice paru --sudo sudo --sudoloop --skipreview --needed -Sy --asdeps "${DEPS[@]}" "${EXPLICIT[@]}"
 sudo pacman -D --asexplicit --quiet "${EXPLICIT[@]}"
