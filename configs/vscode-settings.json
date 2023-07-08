@@ -1,4 +1,5 @@
 {
+    "crates.useLocalCargoIndex": false,
     "diffEditor.wordWrap": "on",
     "editor.stickyScroll.enabled": true,
     "editor.suggestSelection": "first",

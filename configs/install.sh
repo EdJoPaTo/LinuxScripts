@@ -35,6 +35,7 @@ link "$(pwd)/neovim/lua" "$HOME/.config/nvim/lua"
 
 # Linux only
 if [[ $OSTYPE = linux* ]]; then
+	link "$(pwd)/envvars.conf" "$HOME/.config/environment.d/envvars.conf"
 	link "$(pwd)/fuzzel.ini" "$HOME/.config/fuzzel/fuzzel.ini"
 	link "$(pwd)/hyprland.conf" "$HOME/.config/hypr/hyprland.conf"
 	link "$(pwd)/i3status-rust.toml" "$HOME/.config/i3status-rust/config.toml"

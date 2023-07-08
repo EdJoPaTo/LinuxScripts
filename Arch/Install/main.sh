@@ -26,6 +26,7 @@ EXPLICIT=(
 	gdm
 	git
 	gnome-backgrounds
+	gnome-browser-connector
 	gnome-calculator
 	gnome-console
 	gnome-power-manager

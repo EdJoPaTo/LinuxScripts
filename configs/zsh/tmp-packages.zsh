@@ -9,14 +9,13 @@ if type paru >/dev/null; then
 		cargo-license
 		devtools
 		esphome
-		etcher-bin
 		gnome-boxes
 		gnome-characters
 		gnome-info-collect
 		gnome-tweaks
 		gucharmap
 		mqtt-explorer-appimage
-		pandoc
+		pandoc-cli
 		speedtest-cli
 		steam
 		ttf-ms-fonts
@@ -42,7 +41,7 @@ if type paru >/dev/null; then
 	}
 	uff-cleanup-zoom() {
 		killall -9 zoom
-		rm -rf ~/.cache/zoom ~/.config/zoomus.conf ~/.zoom
+		rm -rf ~/.cache/zoom ~/.config/zoom*.conf ~/.zoom
 		doas pacman -R --noconfirm zoom; true
 	}
 

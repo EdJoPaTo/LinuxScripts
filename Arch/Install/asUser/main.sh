@@ -4,7 +4,7 @@ set -eu
 EXPLICIT=(
 	chayang-git # gradually dim the screen
 	code-marketplace
-	gnome-browser-connector
+	etcher-bin
 	gnome-shell-extension-caffeine-git
 	gnome-shell-extension-system-monitor-next-git
 	mpd-mpris
