@@ -3,7 +3,7 @@ set -eu
 
 mkdir -p ~/.cache/eto-aurinstall
 
-function dothestuff {
+function installaurpackage {
 	cd ~/.cache/eto-aurinstall
 
 	git clone "https://aur.archlinux.org/$1.git"
@@ -12,7 +12,6 @@ function dothestuff {
 	nice makepkg -sric --needed --noconfirm
 }
 
-for var in "$@"
-do
-	dothestuff "$var"
-done
+installaurpackage paru-bin
+
+paru --gendb
