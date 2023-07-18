@@ -15,6 +15,8 @@
 	s = status --short --branch
 [apply]
 	whitespace = fix
+[commit]
+	gpgsign = true
 [core]
 	excludesFile = ~/.config/git/global.gitignore
 [diff]
@@ -22,8 +24,12 @@
 [fetch]
 	prune = true
 	pruneTags = false
+[gpg]
+	format = ssh
 [init]
 	defaultBranch = main
+[pager]
+	branch = cat
 [pull]
 	ff = only
 [push]
@@ -35,8 +41,7 @@
 	missingCommitsCheck = error
 [status]
 	showStash = true
-[pager]
-	branch = cat
 [user]
 	name = EdJoPaTo
 	email = rfc-conform-git-commit-email@funny-long-domain-label-everyone-hates-as-it-is-too-long.edjopato.de
+	signingkey = ~/.ssh/id_ed25519.pub
