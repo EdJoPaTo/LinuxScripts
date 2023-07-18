@@ -1,8 +1,6 @@
 {
-    "crates.useLocalCargoIndex": false,
     "diffEditor.wordWrap": "on",
     "editor.stickyScroll.enabled": true,
-    "editor.suggestSelection": "first",
     "editor.wordWrap": "on",
     "editor.wrappingIndent": "indent",
     "explorer.confirmDragAndDrop": false,
@@ -34,12 +32,9 @@
     "window.autoDetectColorScheme": true,
     "window.menuBarVisibility": "toggle",
     "window.restoreWindows": "none",
-    "workbench.colorTheme": "Monokai",
     "workbench.editor.limit.enabled": true,
     "workbench.editor.limit.perEditorGroup": true,
     "workbench.editor.limit.value": 6,
-    "workbench.preferredDarkColorTheme": "Monokai",
-    "workbench.preferredLightColorTheme": "Visual Studio Light",
     "workbench.startupEditor": "none",
     "C_Cpp.default.includePath": [
         "${workspaceFolder}/**",
