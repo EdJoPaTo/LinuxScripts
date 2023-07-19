@@ -65,7 +65,7 @@ alias ssh-force-password='ssh -o PreferredAuthentications=password -o PubkeyAuth
 alias svg2pdf='inkscape --export-type=pdf'
 alias svg2png='inkscape --export-type=png'
 alias tss='ts "%H:%M:%.S"'
-alias yt-dlp-mp3='yt-dlp --extract-audio --audio-format mp3'
+alias yt-dlp-mp3='yt-dlp --extract-audio --audio-format mp3 --sponsorblock-remove default'
 alias yt-dlp-720-sponsorblock='yt-dlp --sponsorblock-remove default --format "bestvideo[height<=720]+bestaudio"'
 type openconnect >/dev/null && alias hawvpn-stop='doas killall openconnect'
 type openconnect >/dev/null && alias hawvpn='doas openconnect -u abp507 --authgroup="Student*in" --background vpn.haw-hamburg.de/Studenten'
