@@ -132,9 +132,7 @@ cargo-lib-pedantic() {
 		-W clippy::std_instead_of_core \
 		-W clippy::unwrap_in_result \
 		-W clippy::unwrap_used \
-		-W clippy::cargo \
-		-W clippy::nursery \
-		-W clippy::pedantic &&
+		-W clippy::cargo &&
 		nice cargo test "$@" --doc
 }
 
