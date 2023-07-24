@@ -92,6 +92,7 @@ alias podmanBelow='project-below --file=Dockerfile nice -n 19 podman'
 export CROSS_CONTAINER_ENGINE=podman
 alias cargo-open-doc='nice cargo doc --open --all-features'
 alias cargoBelow='project-below --file=Cargo.toml nice -n 19 cargo'
+alias cargoLibBelow='project-below --file=src/lib.rs nice -n 19 cargo'
 # See lints: https://rust-lang.github.io/rust-clippy/stable/index.html
 # Restriction lints are listed individually
 

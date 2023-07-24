@@ -12,7 +12,6 @@
     "javascript.preferences.importModuleSpecifierEnding": "js",
     "javascript.updateImportsOnFileMove.enabled": "always",
     "ltex.additionalRules.motherTongue": "de-DE",
-    "ltex.checkFrequency": "save",
     "platformio-ide.disablePIOHomeStartup": true,
     "prettier.useTabs": true,
     "redhat.telemetry.enabled": false,
