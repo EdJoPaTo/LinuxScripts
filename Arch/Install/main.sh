@@ -64,6 +64,8 @@ EXPLICIT=(
 	syncthing
 	tealdeer # tldr
 	telegram-desktop
+	texlive-langenglish
+	texlive-langgerman
 	texlive-meta
 	tmux
 	tokei
