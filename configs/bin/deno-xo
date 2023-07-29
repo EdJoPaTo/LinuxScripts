@@ -22,8 +22,11 @@ cat <<EOF >.xo-config.json
 		"@typescript-eslint/restrict-template-expressions": "off",
 		"arrow-parens": "off",
 		"capitalized-comments": "off",
+		"indent": "off",
 		"n/file-extension-in-import": "off",
-		"operator-linebreak": "off"
+		"object-curly-spacing": "off",
+		"operator-linebreak": "off",
+		"quotes": "off"
 	}
 }
 EOF
