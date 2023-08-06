@@ -20,6 +20,7 @@ EXPLICIT=(
 	exa
 	fd
 	file-roller # archives
+	fish
 	flatpak
 	fx # Terminal JSON viewer
 	fzf
@@ -43,7 +44,6 @@ EXPLICIT=(
 	libreoffice-fresh
 	lshw
 	moreutils # sponge, ts
-	most # as MANPAGER
 	mumble
 	nano
 	nautilus
@@ -52,7 +52,6 @@ EXPLICIT=(
 	newsflash
 	nmap
 	nodejs
-	openconnect
 	opendoas
 	openssh
 	pdfpc
@@ -154,7 +153,6 @@ EXPLICIT=(
 	lua-language-server
 	python-lsp-server
 	shfmt
-	texlab
 	typescript-language-server
 	vscode-css-languageserver
 	vscode-html-languageserver

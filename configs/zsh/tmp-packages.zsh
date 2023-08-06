@@ -11,7 +11,6 @@ if type paru >/dev/null; then
 		esphome
 		gnome-boxes
 		gnome-characters
-		gnome-info-collect
 		gnome-tweaks
 		gucharmap
 		mqtt-explorer-appimage

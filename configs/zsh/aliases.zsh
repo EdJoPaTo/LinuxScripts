@@ -18,10 +18,11 @@ alias -g .....='../../../..'
 alias -g ......='../../../../..'
 
 # ZSH Static named directories (~templates can be used then)
-hash -d templates=~/git/hub/EdJoPaTo/template
+hash -d templates=~/git/hub/template
 
 alias cdf='cd "$(fd --type=directory | fzf)"'
-alias cdg='cd ~/git && cd "$(project-below --directory=.git --list | fzf)"'
+alias cdg='cd ~/git && cd "$(project-below --directory=.git --list | rg -v archived\/ | fzf)"'
+alias cdga='cd ~/git && cd "$(project-below --directory=.git --list | fzf)"'
 
 alias gitrepodir='git rev-parse --show-toplevel'
 alias cdrepo='cd $(gitrepodir)'
@@ -36,6 +37,7 @@ alias npm='nice npm'
 alias paru='nice paru'
 alias pio='nice pio'
 alias platformio='nice platformio'
+alias rustup='nice rustup'
 
 # platform independent commands between macOS and Arch Linux
 type codium >/dev/null && alias code='nice -n 5 codium'
@@ -67,8 +69,6 @@ alias svg2png='inkscape --export-type=png'
 alias tss='ts "%H:%M:%.S"'
 alias yt-dlp-mp3='yt-dlp --extract-audio --audio-format mp3'
 alias yt-dlp-720='yt-dlp --format "bestvideo[height<=720]+bestaudio"'
-type openconnect >/dev/null && alias hawvpn-stop='doas killall openconnect'
-type openconnect >/dev/null && alias hawvpn='doas openconnect -u abp507 --authgroup="Student*in" --background vpn.haw-hamburg.de/Studenten'
 
 # https://github.com/chubin/wttr.in
 alias wttr='curl wttr.in && curl v2.wttr.in'
@@ -146,6 +146,7 @@ alias typescript-watch='rm -rf dist && nice ./node_modules/.bin/tsc --sourceMap 
 alias npmBelow='project-below --file=package.json nice -n 19 npm'
 alias npmBelow-clean='project-below --file=package.json --directory=node_modules rm -rf node_modules'
 alias tscBelow-clean='project-below --file=tsconfig.json --directory=dist rm -rf dist'
+alias npmBelow-ci='project-below --file=package.json nice -n 19 bash -c "rm -rf node_modules package-lock.json; git checkout package-lock.json; npm ci || npm i"'
 
 alias denoBelow='project-below --file=deno.jsonc deno'
 deno-pedantic() {

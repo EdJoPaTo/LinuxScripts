@@ -5,19 +5,14 @@ packages = [
 
     # some big packages so running the main script isnt as meh
     "ansible",
-    "arduino",
-    "docker",
     "firefox",
     "gimp",
-    "go",
     "inkscape",
     "languagetool",
     "libreoffice-fresh",
     "podman",
     "teamspeak3",
     "telegram-desktop",
-    "texlive-most",
-    "vlc"
 ]
 aur_packages = [
 ]

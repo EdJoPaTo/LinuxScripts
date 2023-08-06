@@ -19,11 +19,7 @@ for file in "$(pwd)"/bin/*; do
 done
 
 # Git folders
-mkdir -p ~/git/aur
-mkdir -p ~/git/gist
-mkdir -p ~/git/haw
 mkdir -p ~/git/hub/EdJoPaTo/public
-mkdir -p ~/git/other
 
 # Music Player Daemon
 mkdir -p "$HOME/.cache/mpd/"
@@ -49,6 +45,7 @@ fi
 
 # Zsh
 mkdir -p "$HOME/.cache/"
+mkdir -p "$HOME/.config/completions/"
 link "$(pwd)/zsh/zshrc" "$HOME/.zshrc"
 for file in "$(pwd)"/zsh/*.zsh; do
 	filename=$(basename "$file")
@@ -58,6 +55,7 @@ done
 link "$(pwd)/.editorconfig" "$HOME/.editorconfig"
 link "$(pwd)/.tokeignore" "$HOME/.tokeignore"
 link "$(pwd)/alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"
+link "$(pwd)/config.fish" "$HOME/.config/fish/config.fish"
 link "$(pwd)/dive.yaml" "$HOME/.config/dive/dive.yaml"
 link "$(pwd)/gitconfig" "$HOME/.config/git/config"
 link "$(pwd)/global.gitignore" "$HOME/.config/git/global.gitignore"
