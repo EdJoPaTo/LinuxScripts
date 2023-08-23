@@ -37,6 +37,7 @@ alias npm='nice npm'
 alias paru='nice paru'
 alias pio='nice pio'
 alias platformio='nice platformio'
+alias podman='nice podman'
 alias rustup='nice rustup'
 
 # platform independent commands between macOS and Arch Linux
@@ -86,7 +87,7 @@ alias gitSubmoduleBelow='project-below --file=.git git'
 # --bind 0.0.0.0 when testing with devices on the same network
 alias hugo-serve='hugo server -p 4200 --buildDrafts --buildFuture'
 
-alias podman-image-update='podman pull $(podman image ls --filter=dangling=false --noheading --format="{{.Repository}}:{{.Tag}}" | rg -v localhost)'
+alias podman-image-update='nice podman pull $(podman image ls --filter=dangling=false --noheading --format="{{.Repository}}:{{.Tag}}" | rg -v localhost)'
 alias podmanBelow='project-below --file=Dockerfile nice -n 19 podman'
 
 export CROSS_CONTAINER_ENGINE=podman
