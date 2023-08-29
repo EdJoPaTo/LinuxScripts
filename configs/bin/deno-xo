@@ -32,7 +32,8 @@ cat <<EOF >.xo-config.json
 EOF
 
 nice deno run \
-	--allow-env --allow-read --allow-sys --allow-write="$HOME/.xo-cache" \
+	--allow-env --allow-read --allow-sys \
+	--allow-write="$HOME/.xo-cache,./node_modules/.cache/xo-linter,../node_modules/.cache/xo-linter" \
 	--no-lock \
 	npm:xo "$@"
 exit=$?
