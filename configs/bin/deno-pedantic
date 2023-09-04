@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+shopt -s globstar
+set -ux
+
+deno fmt --check
+deno lint
+deno test -A
+deno check ./**/*.ts

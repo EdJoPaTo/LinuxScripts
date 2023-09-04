@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+set -ux
+
+# simple use: cargo-pedantic
+# complex use: RUSTUP_TOOLCHAIN=nightly cargo-pedantic --all-features
+
+nice cargo fmt -- --check
+
+nice cargo clippy --all-targets "$@" -- \
+	-W clippy::alloc_instead_of_core \
+	-W clippy::as_underscore \
+	-W clippy::create_dir \
+	-W clippy::decimal_literal_representation \
+	-W clippy::empty_drop \
+	-W clippy::empty_structs_with_brackets \
+	-W clippy::filetype_is_file \
+	-W clippy::float_cmp_const \
+	-W clippy::fn_to_numeric_cast_any \
+	-W clippy::format_push_string \
+	-W clippy::if_then_some_else_none \
+	-W clippy::lossy_float_literal \
+	-W clippy::mixed_read_write_in_expression \
+	-W clippy::multiple_inherent_impl \
+	-W clippy::partial_pub_fields \
+	-W clippy::rest_pat_in_fully_bound_structs \
+	-W clippy::same_name_method \
+	-W clippy::self_named_module_files \
+	-W clippy::unnecessary_self_imports \
+	-W clippy::nursery \
+	-W clippy::pedantic
+
+set -eux
+
+nice cargo build --all-targets "$@"
+nice cargo test --quiet "$@"
+nice cargo doc --all-features --no-deps

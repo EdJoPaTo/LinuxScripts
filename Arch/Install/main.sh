@@ -69,6 +69,7 @@ EXPLICIT=(
 	tmux
 	tokei
 	trash-cli
+	vim # xxd
 	wget
 	whois # domain checks
 	xdg-user-dirs
@@ -89,6 +90,7 @@ EXPLICIT=(
 	# arch base
 	base
 	base-devel
+	devtools
 	efibootmgr
 	man-db
 	man-pages
@@ -120,6 +122,7 @@ EXPLICIT=(
 	ffmpegthumbnailer
 
 	# Picture Tools
+	d2
 	gimp
 	gnuplot
 	imagemagick
@@ -145,6 +148,7 @@ EXPLICIT=(
 	cargo-geiger
 	cargo-llvm-cov
 	cargo-msrv
+	cargo-outdated
 	cargo-sort
 	cargo-spellcheck
 
@@ -181,7 +185,7 @@ DEPS=(
 	gnome-themes-extra # Adwaita-dark
 	libmythes # Languages
 	lsof # show files of a process in htop
-	# npm # wait for npm 9. until then use nvm
+	npm
 	python-pygments # hugo: syntax-highlight code snippets
 	scour # inkscape optimized svg
 	wireplumber

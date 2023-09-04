@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -ux
+
+killall -9 zoom
+rm -rf ~/.cache/zoom
+rm -rf ~/.config/zoom*.conf
+rm -rf ~/.zoom

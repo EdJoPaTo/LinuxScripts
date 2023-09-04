@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -eux
+
+# Run additionally to cargo-pedantic for libraries
+
+nice cargo clippy "$@" -- \
+	-W clippy::indexing_slicing \
+	-W clippy::panic \
+	-W clippy::std_instead_of_core \
+	-W clippy::unwrap_in_result \
+	-W clippy::unwrap_used \
+	-W clippy::cargo
+
+nice cargo test "$@" --doc

@@ -97,47 +97,6 @@ alias cargoLibBelow='project-below --file=src/lib.rs nice -n 19 cargo'
 # See lints: https://rust-lang.github.io/rust-clippy/stable/index.html
 # Restriction lints are listed individually
 
-# remoterun target.server "$(declare -f cargo-pedantic); RUSTUP_TOOLCHAIN=nightly cargo-pedantic --all-features"
-cargo-pedantic() {
-	nice cargo fmt -- --check
-	nice cargo clippy --all-targets "$@" -- \
-		-W clippy::alloc_instead_of_core \
-		-W clippy::as_underscore \
-		-W clippy::create_dir \
-		-W clippy::decimal_literal_representation \
-		-W clippy::empty_drop \
-		-W clippy::empty_structs_with_brackets \
-		-W clippy::filetype_is_file \
-		-W clippy::float_cmp_const \
-		-W clippy::fn_to_numeric_cast_any \
-		-W clippy::format_push_string \
-		-W clippy::if_then_some_else_none \
-		-W clippy::lossy_float_literal \
-		-W clippy::mixed_read_write_in_expression \
-		-W clippy::multiple_inherent_impl \
-		-W clippy::partial_pub_fields \
-		-W clippy::rest_pat_in_fully_bound_structs \
-		-W clippy::same_name_method \
-		-W clippy::self_named_module_files \
-		-W clippy::unnecessary_self_imports \
-		-W clippy::nursery \
-		-W clippy::pedantic &&
-		nice cargo build --all-targets "$@" &&
-		nice cargo test --quiet "$@" &&
-		nice cargo doc --all-features --no-deps
-}
-cargo-lib-pedantic() {
-	# Run additionally to cargo-pedantic for libraries
-	nice cargo clippy "$@" -- \
-		-W clippy::indexing_slicing \
-		-W clippy::panic \
-		-W clippy::std_instead_of_core \
-		-W clippy::unwrap_in_result \
-		-W clippy::unwrap_used \
-		-W clippy::cargo &&
-		nice cargo test "$@" --doc
-}
-
 cat /usr/local/opt/nvm/nvm.sh &>/dev/null && alias nvm='unalias nvm && source /usr/local/opt/nvm/nvm.sh && nvm'
 cat /usr/share/nvm/init-nvm.sh &>/dev/null && alias nvm='unalias nvm && source /usr/share/nvm/init-nvm.sh && nvm'
 alias npx='echo edjopato fixed npx again && PATH=$(pwd)/node_modules/.bin:$PATH nice'
@@ -150,12 +109,6 @@ alias tscBelow-clean='project-below --file=tsconfig.json --directory=dist rm -rf
 alias npmBelow-ci='project-below --file=package.json nice -n 19 bash -c "rm -rf node_modules package-lock.json; git checkout package-lock.json; npm ci || npm i"'
 
 alias denoBelow='project-below --file=deno.jsonc deno'
-deno-pedantic() {
-	deno fmt --check
-	deno lint
-	deno test -A
-	deno check **/*.ts
-}
 
 alias pio-upload='pio run --target upload'
 alias pio-monitor='pio device monitor'

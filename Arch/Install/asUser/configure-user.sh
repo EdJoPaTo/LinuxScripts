@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -eu
+set -eux
 
 if [ "$USER" == "root" ]; then
 	echo "Do not run as root, run as your user"
@@ -12,3 +12,5 @@ sudo usermod --add-subuids 165536-231072 --add-subgids 165536-231072 "$USER"
 
 # Allow serial communication for users (Platformio, Arduino)
 sudo usermod -aG uucp,lock "$USER"
+
+tldr --update

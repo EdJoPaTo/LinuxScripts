@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -ux
+
+killall -9 chromium
+rm -rf ~/.cache/chromium
+rm -rf ~/.config/*chromium*

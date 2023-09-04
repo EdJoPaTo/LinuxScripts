@@ -13,10 +13,12 @@ EXPLICIT=(
 	nvm
 	paru-bin
 	platformio
+	ventoy-bin
 	wdisplays # temporary update display config
 )
 
 DEPS=(
+	platformio-udev-rules
 )
 
 nice paru --sudo sudo --sudoloop --skipreview --needed -Sy --asdeps "${DEPS[@]}" "${EXPLICIT[@]}"
