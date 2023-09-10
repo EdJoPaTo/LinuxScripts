@@ -29,7 +29,7 @@ FORMULAS=(
 	deno
 	dive
 	dust
-	exa
+	eza
 	fd
 	ffmpeg
 	fzf

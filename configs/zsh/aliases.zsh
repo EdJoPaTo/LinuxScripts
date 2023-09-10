@@ -56,7 +56,7 @@ alias ip='ip --color=auto'
 alias systemctl='systemctl --no-pager --full'
 alias tokei='tokei --sort code'
 alias yt-dlp='nice -n 15 yt-dlp --prefer-free-formats --embed-subs --sub-langs all --embed-thumbnail --embed-metadata --embed-chapters --video-multistreams --audio-multistreams --sponsorblock-remove default'
-type exa >/dev/null && alias ls='exa --git'
+type eza >/dev/null && alias ls='eza --git'
 
 alias ffmpegGif='ffmpeg -an'
 alias ffmpegSound='ffmpeg -vn'

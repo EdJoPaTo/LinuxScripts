@@ -17,7 +17,7 @@ EXPLICIT=(
 	dust
 	eog # image viewer
 	evince # document viewer (PDF, …)
-	exa
+	eza
 	fd
 	file-roller # archives
 	fish
