@@ -1,6 +1,4 @@
-#!/usr/bin/env bash
-shopt -s globstar
-set -ux
+#!/usr/bin/env zsh
 
 deno fmt --check
 deno lint

@@ -26,7 +26,8 @@ cat <<EOF >.xo-config.json
 		"n/file-extension-in-import": "off",
 		"object-curly-spacing": "off",
 		"operator-linebreak": "off",
-		"quotes": "off"
+		"quotes": "off",
+		"semi-spacing": "off"
 	}
 }
 EOF

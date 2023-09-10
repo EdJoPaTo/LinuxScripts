@@ -25,6 +25,7 @@ FORMULAS=(
 	ansible-lint
 	bat
 	cargo-audit
+	d2
 	deno
 	dive
 	dust
