@@ -60,7 +60,7 @@ type eza >/dev/null && alias ls='eza --git'
 
 alias ffmpegGif='ffmpeg -an'
 alias ffmpegSound='ffmpeg -vn'
-alias httpserver='python -m http.server' # usage: httpserver <port>
+alias httpserver='python -m http.server --bind localhost' # usage: httpserver <port>
 alias randb='openssl rand -base64 33'
 alias randh='openssl rand -hex 20'
 alias rsynca='rsync --verbose --compress --checksum --delete-delay --archive'
