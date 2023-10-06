@@ -1,106 +1,106 @@
 {
-  "layer": "top",
-  "modules-left": [
-    "sway/workspaces",
-    "sway/mode",
-    "wlr/workspaces",
-    "sway/window",
-    "hyprland/window"
-  ],
-  "modules-center": [],
-  "modules-right": [
-    "tray",
-    "mpd",
-    "cpu",
-    "memory",
-    "network",
-    "pulseaudio",
-    "idle_inhibitor",
-    "backlight",
-    "battery",
-    "clock"
-  ],
-  "wlr/workspaces": {
-    "sort-by-number": true
-  },
-  "mpd": {
-    "format": "{stateIcon} {artist} - {title}",
-    "tooltip-format": "{stateIcon}  {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{songPosition}|{queueLength} {artist} - {album} - {title} {elapsedTime:%M:%S}/{totalTime:%M:%S}",
-    "consume-icons": {
-      "on": " "
-    },
-    "random-icons": {
-      "off": "<span color=\"#f53c3c\"></span> ",
-      "on": " "
-    },
-    "repeat-icons": {
-      "on": " "
-    },
-    "single-icons": {
-      "on": "1 "
-    },
-    "state-icons": {
-      "paused": "",
-      "playing": ""
-    }
-  },
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "",
-      "deactivated": ""
-    }
-  },
-  "clock": {
-    "tooltip-format": "<big>{:%B %Y}</big>\n<tt>{calendar}</tt>"
-  },
-  "cpu": {
-    "format": "{load} {usage}% ",
-    "on-click": "alacritty --command htop"
-  },
-  "memory": {
-    "format": "{used}/{total}GiB "
-  },
-  "network": {
-    "interval": 10,
-    "format": "{ifname}",
-    "format-wifi": "{essid} ({signalStrength}% {signaldBm} dBm) ",
-    "format-ethernet": "",
-    "format-disconnected": "",
-    "tooltip-format": "{ifname}",
-    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
-    "tooltip-format-ethernet": "{ifname} ",
-    "tooltip-format-disconnected": "Disconnected",
-    "max-length": 50
-  },
-  "battery": {
-    "states": {
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "{capacity}% {icon}",
-    "format-charging": "{capacity}% ",
-    "format-plugged": "{capacity}% ",
-    "format-alt": "{time} {icon}",
-    "format-icons": ["", "", "", "", ""]
-  },
-  "pulseaudio": {
-    "scroll-step": 5, // %, can be a float
-    "format": "{volume}% {icon} {format_source}",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": "<span color=\"red\"> {icon} {format_source}</span>",
-    "format-muted": "<span color=\"red\"> {format_source}</span>",
-    "format-source": "{volume}% ",
-    "format-source-muted": "<span color=\"red\"></span>",
-    "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": ["", "", ""]
-    },
-    "on-click": "pavucontrol"
-  }
+	"layer": "top",
+	"modules-left": [
+		"sway/workspaces",
+		"sway/mode",
+		"wlr/workspaces",
+		"sway/window",
+		"hyprland/window"
+	],
+	"modules-center": [],
+	"modules-right": [
+		"tray",
+		"mpd",
+		"cpu",
+		"memory",
+		"network",
+		"pulseaudio",
+		"idle_inhibitor",
+		"backlight",
+		"battery",
+		"clock"
+	],
+	"wlr/workspaces": {
+		"sort-by-number": true
+	},
+	"mpd": {
+		"format": "{stateIcon} {artist} - {title}",
+		"tooltip-format": "{stateIcon}  {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{songPosition}|{queueLength} {artist} - {album} - {title} {elapsedTime:%M:%S}/{totalTime:%M:%S}",
+		"consume-icons": {
+			"on": " "
+		},
+		"random-icons": {
+			"off": "<span color=\"#f53c3c\"></span> ",
+			"on": " "
+		},
+		"repeat-icons": {
+			"on": " "
+		},
+		"single-icons": {
+			"on": "1 "
+		},
+		"state-icons": {
+			"paused": "",
+			"playing": ""
+		}
+	},
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "",
+			"deactivated": ""
+		}
+	},
+	"clock": {
+		"tooltip-format": "<big>{:%B %Y}</big>\n<tt>{calendar}</tt>"
+	},
+	"cpu": {
+		"format": "{load} {usage}% ",
+		"on-click": "alacritty --command htop"
+	},
+	"memory": {
+		"format": "{used}/{total}GiB "
+	},
+	"network": {
+		"interval": 10,
+		"format": "{ifname}",
+		"format-wifi": "{essid} ({signalStrength}% {signaldBm} dBm) ",
+		"format-ethernet": "",
+		"format-disconnected": "",
+		"tooltip-format": "{ifname}",
+		"tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+		"tooltip-format-ethernet": "{ifname} ",
+		"tooltip-format-disconnected": "Disconnected",
+		"max-length": 50
+	},
+	"battery": {
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{capacity}% {icon}",
+		"format-charging": "{capacity}% ",
+		"format-plugged": "{capacity}% ",
+		"format-alt": "{time} {icon}",
+		"format-icons": ["", "", "", "", ""]
+	},
+	"pulseaudio": {
+		"scroll-step": 5, // %, can be a float
+		"format": "{volume}% {icon} {format_source}",
+		"format-bluetooth": "{volume}% {icon} {format_source}",
+		"format-bluetooth-muted": "<span color=\"red\"> {icon} {format_source}</span>",
+		"format-muted": "<span color=\"red\"> {format_source}</span>",
+		"format-source": "{volume}% ",
+		"format-source-muted": "<span color=\"red\"></span>",
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["", "", ""]
+		},
+		"on-click": "pavucontrol"
+	}
 }
