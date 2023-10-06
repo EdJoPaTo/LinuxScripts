@@ -169,7 +169,6 @@ EXPLICIT=(
 	firefox-dark-reader
 	firefox-ublock-origin
 	## https://addons.mozilla.org/firefox/addon/clearurls/
-	## https://addons.mozilla.org/firefox/addon/firefox-translations/
 	## https://addons.mozilla.org/firefox/addon/gnome-shell-integration/
 	## https://addons.mozilla.org/firefox/addon/localcdn-fork-of-decentraleyes/
 	## https://addons.mozilla.org/firefox/addon/privacy-redirect/

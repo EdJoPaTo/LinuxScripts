@@ -1,9 +1,12 @@
 {
+	"deno.cacheOnSave": true,
 	"diffEditor.wordWrap": "on",
 	"editor.stickyScroll.enabled": true,
 	"editor.wordWrap": "on",
 	"editor.wrappingIndent": "indent",
 	"explorer.confirmDragAndDrop": false,
+	"extensions.ignoreRecommendations": true,
+	"files.autoSave": "onFocusChange",
 	"files.insertFinalNewline": true,
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
@@ -49,6 +52,9 @@
 		"~/Arduino/libraries/**",
 		"~/.arduino15/packages/**"
 	],
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": true
+	},
 	"languageToolLinter.languageTool.ignoredWordsGlobal": [
 		"alpine",
 		"arch",
