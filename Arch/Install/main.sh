@@ -15,7 +15,6 @@ EXPLICIT=(
 	dive # explore container layers
 	dog # dns
 	dust
-	eog # image viewer
 	evince # document viewer (PDF, …)
 	eza
 	fd
@@ -42,6 +41,7 @@ EXPLICIT=(
 	jq
 	kanshi # automatic monitor config
 	libreoffice-fresh
+	loupe # image viewer
 	lshw
 	moreutils # sponge, ts
 	mumble
@@ -59,6 +59,7 @@ EXPLICIT=(
 	podman
 	ripgrep
 	rsync
+	snapshot # camera and webcam
 	starship
 	syncthing
 	tealdeer # tldr
@@ -177,7 +178,6 @@ EXPLICIT=(
 
 DEPS=(
 	bash-completion
-	eog-plugins
 	fuse-overlayfs # podman
 	gnome-control-center
 	gnome-disk-utility
