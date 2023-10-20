@@ -19,7 +19,7 @@ packages=(
 )
 
 shopt -s expand_aliases
-type codium >/dev/null && alias code='codium'
+type codium &>/dev/null && alias code='codium'
 
 for package in "${packages[@]}"; do
 	code --force --install-extension "$package"
