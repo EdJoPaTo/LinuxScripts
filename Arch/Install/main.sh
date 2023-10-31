@@ -56,6 +56,7 @@ EXPLICIT=(
 	openssh
 	pdfpc
 	pkgstats
+	platformio-core
 	podman
 	ripgrep
 	rsync
@@ -185,6 +186,7 @@ DEPS=(
 	libmythes # Languages
 	lsof # show files of a process in htop
 	npm
+	platformio-core-udev
 	python-pygments # hugo: syntax-highlight code snippets
 	scour # inkscape optimized svg
 	wireplumber
