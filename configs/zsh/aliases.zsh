@@ -10,7 +10,7 @@ export BAT_THEME=ansi
 export FZF_DEFAULT_COMMAND="rg --files"
 export LESS="--RAW-CONTROL-CHARS --quit-if-one-screen --ignore-case"
 export MEETING_PIXELMATRIX=espMatrix-etHorizontal:1337
-export MQTTUI_BROKER=mqtt://etoPiHome1
+export MQTTUI_BROKER=mqtt://etoPiHome3
 
 alias -g ...='../..'
 alias -g ....='../../..'
@@ -78,7 +78,7 @@ alias wttr-short='curl "wttr.in/?format=%l:+%c+%t,+%w+%m"'
 
 alias mpc-clearadd='mpc clear -q && mpc add'
 alias mpc-cropadd='mpc crop && mpc add'
-alias amp='mpc --host etoPiAmp'
+alias amp='mpc --host etoPiBedAmp'
 
 # example usage: `gitBelow fetch`
 # see: https://github.com/EdJoPaTo/project-below
