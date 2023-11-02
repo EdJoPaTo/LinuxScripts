@@ -1,34 +1,34 @@
 * {
-  border: none;
-  border-radius: 0;
-  font-family: monospace;
-  font-size: 14px;
-  min-height: 0;
+	border: none;
+	border-radius: 0;
+	font-family: monospace;
+	font-size: 14px;
+	min-height: 0;
 }
 
 window#waybar {
-  background: rgba(0, 0, 0, 0.6);
-  color: #ccc;
+	background: rgba(0, 0, 0, 0.6);
+	color: #ccc;
 }
 
 #workspaces {
-  padding: 0;
+	padding: 0;
 }
 
 #workspaces button {
-  padding: 2px;
-  color: inherit;
+	padding: 2px;
+	color: inherit;
 }
 
 #workspaces button.focused,
 #workspaces button.active {
-  background: #ccc;
-  color: black;
+	background: #ccc;
+	color: black;
 }
 
 #workspaces button.urgent {
-  color: black;
-  background: red;
+	color: black;
+	background: red;
 }
 
 tooltip,
@@ -49,40 +49,40 @@ tooltip,
 #pulseaudio,
 #window,
 #wireplumber {
-  padding: 3px;
-  margin: 0 8px;
+	padding: 3px;
+	margin: 0 8px;
 }
 
 #idle_inhibitor {
-  color: lightyellow;
+	color: lightyellow;
 }
 
 #idle_inhibitor.activated {
-  background-color: yellow;
-  color: black;
+	background-color: yellow;
+	color: black;
 }
 
 #clock {
-  color: orange;
+	color: orange;
 }
 
 #network {
-  color: lightyellow;
+	color: lightyellow;
 }
 
 #pulseaudio,
 #wireplumber {
-  color: lightgreen;
+	color: lightgreen;
 }
 
 #battery {
-  color: lightblue;
+	color: lightblue;
 }
 
 #cpu {
-  color: lightgreen;
+	color: lightgreen;
 }
 
 #memory {
-  color: lightblue;
+	color: lightblue;
 }

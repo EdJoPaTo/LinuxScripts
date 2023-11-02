@@ -4,6 +4,8 @@
 		"sway/workspaces",
 		"sway/mode",
 		"wlr/workspaces",
+		"hyprland/workspaces",
+		"hyprland/submap",
 		"sway/window",
 		"hyprland/window"
 	],
