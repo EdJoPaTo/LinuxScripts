@@ -7,6 +7,7 @@ echo "Backup old mirrorlist"
 sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
 echo "Set new mirrorlist"
 sudo mv /tmp/mirrorlist /etc/pacman.d/mirrorlist
+sudo chown -R root:root /etc/pacman.d
 
 echo "Download Updates with new Mirrorlist"
 sudo pacman -Syy --asdeps --needed --noconfirm archlinux-keyring
