@@ -9,8 +9,11 @@ nice cargo fmt -- --check
 nice cargo clippy --all-targets "$@" -- \
 	-W clippy::alloc_instead_of_core \
 	-W clippy::as_underscore \
+	-W clippy::assertions_on_result_states \
 	-W clippy::create_dir \
 	-W clippy::decimal_literal_representation \
+	-W clippy::deref_by_slicing \
+	-W clippy::else_if_without_else \
 	-W clippy::empty_drop \
 	-W clippy::empty_structs_with_brackets \
 	-W clippy::filetype_is_file \
@@ -18,14 +21,31 @@ nice cargo clippy --all-targets "$@" -- \
 	-W clippy::fn_to_numeric_cast_any \
 	-W clippy::format_push_string \
 	-W clippy::if_then_some_else_none \
+	-W clippy::impl_trait_in_params \
+	-W clippy::large_include_file \
+	-W clippy::let_underscore_untyped \
 	-W clippy::lossy_float_literal \
+	-W clippy::map_err_ignore \
+	-W clippy::missing_assert_message \
 	-W clippy::mixed_read_write_in_expression \
 	-W clippy::multiple_inherent_impl \
+	-W clippy::needless_raw_strings \
 	-W clippy::partial_pub_fields \
+	-W clippy::redundant_type_annotations \
+	-W clippy::ref_patterns \
 	-W clippy::rest_pat_in_fully_bound_structs \
 	-W clippy::same_name_method \
 	-W clippy::self_named_module_files \
+	-W clippy::semicolon_inside_block \
+	-W clippy::str_to_string \
+	-W clippy::string_lit_chars_any \
+	-W clippy::string_to_string \
+	-W clippy::try_err \
+	-W clippy::unnecessary_safety_comment \
 	-W clippy::unnecessary_self_imports \
+	-W clippy::unneeded_field_pattern \
+	-W clippy::unseparated_literal_suffix \
+	-W clippy::verbose_file_reads \
 	-W clippy::nursery \
 	-W clippy::pedantic
 

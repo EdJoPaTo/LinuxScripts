@@ -4,11 +4,17 @@ set -eux
 # Run additionally to cargo-pedantic for libraries
 
 nice cargo clippy "$@" -- \
+	-W clippy::arithmetic_side_effects \
+	-W clippy::exhaustive_enums \
 	-W clippy::indexing_slicing \
+	-W clippy::integer_division \
+	-W clippy::min_ident_chars \
 	-W clippy::panic \
 	-W clippy::std_instead_of_core \
+	-W clippy::string_slice \
 	-W clippy::unwrap_in_result \
 	-W clippy::unwrap_used \
+	-W clippy::use_debug \
 	-W clippy::cargo
 
 nice cargo test "$@" --doc
