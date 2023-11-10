@@ -31,6 +31,7 @@ EXPLICIT=(
 	gnome-console
 	gnome-power-manager
 	gnome-screenshot
+	gnome-shell-extension-caffeine
 	gnome-software
 	gnome-sudoku
 	gnome-text-editor

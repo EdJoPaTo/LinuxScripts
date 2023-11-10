@@ -5,7 +5,8 @@ EXPLICIT=(
 	chayang-git # gradually dim the screen
 	code-marketplace
 	etcher-bin
-	gnome-shell-extension-caffeine-git
+	extension-manager
+	gnome-shell-extension-blur-my-shell
 	gnome-shell-extension-system-monitor-next-git
 	mpd-mpris
 	mpdris2
