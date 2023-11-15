@@ -1,8 +1,6 @@
 # Aliases
-type helix >/dev/null && export EDITOR=helix
-type helix >/dev/null && export VISUAL=helix
-type hx >/dev/null && export EDITOR=hx
-type hx >/dev/null && export VISUAL=hx
+export EDITOR=hx
+export VISUAL=hx
 
 export PATH=$PATH:$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin
 
@@ -42,13 +40,11 @@ alias rustup='nice rustup'
 
 # platform independent commands between macOS and Arch Linux
 type codium >/dev/null && alias code='nice -n 5 codium'
-type helix >/dev/null && alias hx='helix'
-type xdg-open >/dev/null && alias open='xdg-open'
 
 # Help to migrate to new commands (space at start -> no history entry)
 type doas >/dev/null && alias sudo=' echo use doas && false --'
-type rg >/dev/null && alias grep=' echo use rg && false --'
-type fx >/dev/null && alias jq='echo consider fx for jq && jq'
+alias grep=' echo use rg && false --'
+alias jq='echo consider fx for jq && jq'
 
 # Add default arguments to commands (which are then always used)
 alias ffmpeg='nice -n 15 ffmpeg -stats -hide_banner'
@@ -56,7 +52,7 @@ alias ip='ip --color=auto'
 alias systemctl='systemctl --no-pager --full'
 alias tokei='tokei --sort code'
 alias yt-dlp='nice -n 15 yt-dlp --prefer-free-formats --embed-subs --sub-langs all --embed-thumbnail --embed-metadata --embed-chapters --video-multistreams --audio-multistreams --sponsorblock-remove default'
-type eza >/dev/null && alias ls='eza --git'
+alias ls='eza --git'
 
 alias ffmpegGif='ffmpeg -an'
 alias ffmpegSound='ffmpeg -vn'

@@ -32,6 +32,8 @@ FORMULAS=(
 	eza
 	fd
 	ffmpeg
+	fish
+	fx
 	fzf
 	gnuplot
 	htop

@@ -256,6 +256,9 @@ if [ "$(uname -m)" == "x86_64" ]; then
 	echo "v4l2loopback" >/etc/modules-load.d/v4l2.conf
 fi
 
+ln -sf /usr/bin/helix /usr/bin/hx
+ln -sf /usr/bin/xdg-open /usr/bin/open
+
 # report package usage
 systemctl start pkgstats.timer
 
