@@ -4,3 +4,7 @@ set -ux
 killall -9 chromium
 rm -rf ~/.cache/chromium
 rm -rf ~/.config/*chromium*
+rm -rf ~/Library/Application\ Support/Chromium
+rm -rf ~/Library/Caches/Chromium
+rm -rf ~/Library/Preferences/*chromium*
+rm -rf ~/Library/Saved\ Application\ State/*chromium*
