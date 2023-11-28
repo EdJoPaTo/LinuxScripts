@@ -2,14 +2,13 @@
 set -eu
 
 EXPLICIT=(
+	org.gnome.Fractal
+	com.mattjakeman.ExtensionManager
+	io.gitlab.adhami3310.Footage
 	org.jitsi.jitsi-meet
 	org.raspberrypi.rpi-imager
 	# org.signal.Signal
 	# org.telegram.desktop
 )
-
-flatpak remote-add --user --if-not-exists gnome-nightly https://nightly.gnome.org/gnome-nightly.flatpakrepo
-
-flatpak install --user gnome-nightly org.gnome.Fractal.Devel
 
 flatpak install "${EXPLICIT[@]}"

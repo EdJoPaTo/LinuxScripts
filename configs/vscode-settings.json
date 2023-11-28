@@ -47,11 +47,6 @@
 	"[typescript]": {
 		"editor.defaultFormatter": "denoland.vscode-deno"
 	},
-	"C_Cpp.default.includePath": [
-		"${workspaceFolder}/**",
-		"~/Arduino/libraries/**",
-		"~/.arduino15/packages/**"
-	],
 	"editor.codeActionsOnSave": {
 		"source.organizeImports": true
 	},
@@ -100,9 +95,9 @@
 		"zulip"
 	],
 	"markdownlint.config": {
+		"MD010": false,
 		"MD013": false,
-		"MD024": false,
-		"MD025": false
+		"MD024": { "allow_different_nesting": true }
 	},
 	"rust-analyzer.check.extraArgs": [
 		"--no-deps",
