@@ -69,6 +69,9 @@ precmd_functions+=(osc133)
 source "$ZSH_PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 source "$ZSH_PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh"
 
+source ~/.config/aliases
+source ~/.config/env
+
 # Load stuff
 for config_file ($HOME/.config/zsh/*.zsh); do
 	source $config_file

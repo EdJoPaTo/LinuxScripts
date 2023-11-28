@@ -4,6 +4,9 @@ set -ux
 # simple use: cargo-pedantic
 # complex use: RUSTUP_TOOLCHAIN=nightly cargo-pedantic --all-features
 
+# See lints: https://rust-lang.github.io/rust-clippy/stable/index.html
+# Restriction lints are listed individually
+
 nice cargo fmt -- --check
 
 nice cargo clippy --all-targets "$@" -- \
