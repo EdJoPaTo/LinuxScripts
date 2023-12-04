@@ -2,7 +2,6 @@
 set -eu
 
 EXPLICIT=(
-	chayang-git # gradually dim the screen
 	code-marketplace
 	etcher-bin
 	gnome-shell-extension-blur-my-shell

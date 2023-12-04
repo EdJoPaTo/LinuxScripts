@@ -2,6 +2,7 @@
 set -eu
 
 EXPLICIT=(
+	acpi
 	alacritty
 	ansible
 	ansible-lint
@@ -29,6 +30,7 @@ EXPLICIT=(
 	gnome-browser-connector
 	gnome-calculator
 	gnome-console
+	gnome-disk-utility
 	gnome-power-manager
 	gnome-screenshot
 	gnome-shell-extension-caffeine
@@ -42,6 +44,7 @@ EXPLICIT=(
 	jq
 	kanshi # automatic monitor config
 	libreoffice-fresh
+	lostfiles
 	loupe # image viewer
 	lshw
 	moreutils # sponge, ts
@@ -52,7 +55,7 @@ EXPLICIT=(
 	networkmanager
 	newsflash
 	nmap
-	nodejs
+	npm
 	opendoas
 	openssh
 	pdfpc
@@ -77,7 +80,6 @@ EXPLICIT=(
 	whois # domain checks
 	xdg-user-dirs
 	yq
-	zsh
 	zsh-completions
 	zsh-history-substring-search
 	zsh-syntax-highlighting
@@ -99,11 +101,6 @@ EXPLICIT=(
 	man-pages
 	pacman-contrib
 
-	# system readout / sensors
-	acpi
-	lm_sensors
-	lostfiles
-
 	# Languages
 	hunspell-de
 	hunspell-en_gb
@@ -117,6 +114,7 @@ EXPLICIT=(
 	# fonts
 	noto-fonts-emoji # emoji support (in terminal, notifications, ...)
 	ttf-dejavu
+	ttf-firacode-nerd
 	ttf-font-awesome
 	ttf-opensans
 
@@ -181,19 +179,20 @@ EXPLICIT=(
 DEPS=(
 	bash-completion
 	fuse-overlayfs # podman
+	fwupd
 	gnome-control-center
-	gnome-disk-utility
 	gnome-themes-extra # Adwaita-dark
-	libmythes # Languages
+	libmythes # thesaurus
+	linux
+	linux-firmware
 	lsof # show files of a process in htop
-	npm
 	platformio-core-udev
-	python-pygments # hugo: syntax-highlight code snippets
-	scour # inkscape optimized svg
+	qt5-wayland
+	qt6-wayland
 	wireplumber
-	xdg-desktop-portal
 	xdg-desktop-portal-gnome
 	xdg-desktop-portal-wlr
+	lm_sensors
 	xdg-utils # xdg-open
 
 	# Sway
@@ -208,7 +207,7 @@ DEPS=(
 	pipewire-jack
 	pipewire-pulse
 	pipewire-v4l2
-	rtmpdump
+	python-mutagen
 
 	# file-roller optionals
 	# lrzip
