@@ -24,18 +24,18 @@ alias rustup='nice rustup'
 
 type codium >/dev/null 2>/dev/null && alias code='nice -n 5 codium'
 
-# Help to migrate to new commands (space at start -> no history entry)
-alias sudo=' echo use doas && false --'
+# Help to migrate to new commands (space at start -> no zsh history entry)
 alias grep=' echo use rg && false --'
 alias jq='echo consider fx for jq && jq'
+alias sudo=' echo use doas && false --'
 
 # Add default arguments to commands (which are then always used)
 alias ffmpeg='nice -n 15 ffmpeg -stats -hide_banner'
 alias ip='ip --color=auto'
+alias ls='eza --git'
 alias systemctl='systemctl --no-pager --full'
 alias tokei='tokei --sort code'
 alias yt-dlp='nice -n 15 yt-dlp --prefer-free-formats --embed-subs --sub-langs all --embed-thumbnail --embed-metadata --embed-chapters --video-multistreams --audio-multistreams --sponsorblock-remove default'
-alias ls='eza --git'
 
 alias ffmpegGif='ffmpeg -an'
 alias ffmpegSound='ffmpeg -vn'
