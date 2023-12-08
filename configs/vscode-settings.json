@@ -29,7 +29,12 @@
 	"rust-analyzer.inlayHints.lifetimeElisionHints.useParameterNames": true,
 	"scm.defaultViewMode": "tree",
 	"terminal.external.linuxExec": "alacritty",
+	"typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+	"typescript.inlayHints.parameterNames.enabled": "all",
+	"typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+	"typescript.inlayHints.variableTypes.enabled": true,
 	"typescript.preferences.importModuleSpecifierEnding": "js",
+	"typescript.preferences.preferTypeOnlyAutoImports": true,
 	"typescript.updateImportsOnFileMove.enabled": "always",
 	"window.autoDetectColorScheme": true,
 	"window.menuBarVisibility": "toggle",
@@ -38,6 +43,7 @@
 	"workbench.editor.limit.perEditorGroup": true,
 	"workbench.editor.limit.value": 6,
 	"workbench.startupEditor": "none",
+	"workbench.tree.enableStickyScroll": true,
 	"[json]": {
 		"editor.defaultFormatter": "denoland.vscode-deno"
 	},
@@ -48,7 +54,7 @@
 		"editor.defaultFormatter": "denoland.vscode-deno"
 	},
 	"editor.codeActionsOnSave": {
-		"source.organizeImports": true
+		"source.organizeImports": "explicit"
 	},
 	"languageToolLinter.languageTool.ignoredWordsGlobal": [
 		"alpine",
