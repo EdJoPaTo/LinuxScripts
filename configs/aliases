@@ -26,7 +26,6 @@ type codium >/dev/null 2>/dev/null && alias code='nice -n 5 codium'
 
 # Help to migrate to new commands (space at start -> no zsh history entry)
 alias grep=' echo use rg && false --'
-alias jq='echo consider fx for jq && jq'
 alias sudo=' echo use doas && false --'
 
 # Add default arguments to commands (which are then always used)
@@ -74,6 +73,7 @@ alias podman-image-update='nice podman pull $(podman image ls --filter=dangling=
 alias podmanBelow='project-below --file=Dockerfile nice -n 19 podman'
 
 alias cargo-open-doc='nice cargo doc --open --all-features'
+alias cargo-features='cargo metadata --no-deps --format-version=1 | jq ".packages.[].features"'
 alias cargoBelow='project-below --file=Cargo.toml nice -n 19 cargo'
 alias cargoLibBelow='project-below --file=src/lib.rs nice -n 19 cargo'
 
