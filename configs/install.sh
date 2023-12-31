@@ -54,7 +54,7 @@ done
 
 link ".editorconfig" "$HOME/.editorconfig"
 link ".tokeignore" "$HOME/.tokeignore"
-link "alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"
+link "alacritty.toml" "$HOME/.config/alacritty/alacritty.toml"
 link "aliases" "$HOME/.config/aliases"
 link "config.fish" "$HOME/.config/fish/config.fish"
 link "dive.yaml" "$HOME/.config/dive/dive.yaml"
