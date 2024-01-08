@@ -12,35 +12,38 @@ export async function exec(cmd: string, ...args: string[]): Promise<string> {
 	return output;
 }
 
+const packageDetails: Record<string, string> = {};
+async function preloadPackageDetails(
+	packages: readonly string[],
+): Promise<void> {
+	const AMOUNT = navigator.hardwareConcurrency;
+	const needed = packages.filter((p) => !packageDetails[p]);
+	for (let i = 0; i < needed.length; i += AMOUNT) {
+		const slice = needed.slice(i, i + AMOUNT);
+		await Promise.all(slice.map(async (p) => {
+			packageDetails[p] = await exec("pacman", "-Qi", p);
+		}));
+	}
+}
+function isRequired(packageName: string): boolean {
+	return !packageDetails[packageName].includes("Required By     : None");
+}
+
 const allExplicitsRaw = await exec("pacman", "-Qeq");
 const allExplicits = allExplicitsRaw.split("\n").filter(Boolean);
+await preloadPackageDetails(allExplicits);
 console.log("allExplicits", allExplicits.length);
 
 const allDependenciesRaw = await exec("pacman", "-Qdq");
 const allDependencies = allDependenciesRaw.split("\n").filter(Boolean);
+await preloadPackageDetails(allDependencies);
 console.log("allDependencies", allDependencies.length);
 
-const onlyOptionalsUnfiltered = await Promise.all(
-	allDependencies.map(async (p) => {
-		const output = await exec("pacman", "-Qi", p);
-		const isRequired = !output.includes("Required By     : None");
-		return isRequired ? "" : p;
-	}),
-);
-const onlyOptionals = onlyOptionalsUnfiltered.filter(Boolean);
-
+const onlyOptionals = allDependencies.filter(p => !isRequired(p));
 console.log("optional", onlyOptionals.length, onlyOptionals.join(" "));
 console.log();
 
-const unfiltered = await Promise.all(
-	allExplicits.map(async (p) => {
-		const output = await exec("pacman", "-Qi", p);
-		const isRequired = !output.includes("Required By     : None");
-		return isRequired ? p : "";
-	}),
-);
-const onlyExplicitDependencies = unfiltered.filter(Boolean);
-
+const onlyExplicitDependencies = allExplicits.filter(isRequired);
 console.log(
 	"explicit&required",
 	onlyExplicitDependencies.length,
