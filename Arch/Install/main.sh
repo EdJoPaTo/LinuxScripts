@@ -90,7 +90,6 @@ EXPLICIT=(
 	grim # sway screenshots
 	i3status-rust
 	playerctl
-	wl-clipboard
 
 	# arch base
 	base
@@ -147,6 +146,7 @@ EXPLICIT=(
 	cargo-expand
 	cargo-flamegraph
 	cargo-geiger
+	cargo-hack
 	cargo-llvm-cov
 	cargo-msrv
 	cargo-outdated
@@ -185,14 +185,15 @@ DEPS=(
 	libmythes # thesaurus
 	linux
 	linux-firmware
+	lm_sensors
 	lsof # show files of a process in htop
 	platformio-core-udev
 	qt5-wayland
 	qt6-wayland
 	wireplumber
+	wl-clipboard
 	xdg-desktop-portal-gnome
 	xdg-desktop-portal-wlr
-	lm_sensors
 	xdg-utils # xdg-open
 
 	# Sway

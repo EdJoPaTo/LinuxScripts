@@ -28,6 +28,8 @@
 	format = ssh
 [init]
 	defaultBranch = main
+[merge]
+	conflictStyle = zdiff3
 [pager]
 	branch = cat
 [pull]

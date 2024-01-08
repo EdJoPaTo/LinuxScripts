@@ -85,7 +85,7 @@ alias typescript-watch='rm -rf dist && nice ./node_modules/.bin/tsc --sourceMap 
 alias npmBelow='project-below --file=package.json nice -n 19 npm'
 alias npmBelow-clean='project-below --file=package.json --directory=node_modules rm -rf node_modules'
 alias tscBelow-clean='project-below --file=tsconfig.json --directory=dist rm -rf dist'
-alias npmBelow-ci='project-below --file=package.json nice -n 19 bash -c "rm -rf node_modules package-lock.json; git checkout package-lock.json; npm ci || npm i"'
+alias npmBelow-ci='project-below --file=package.json nice -n 19 bash -c "rm -rf node_modules package-lock.json; git checkout package-lock.json; npm ci 2>/dev/null || npm i"'
 
 alias denoBelow='project-below --file=deno.jsonc deno'
 

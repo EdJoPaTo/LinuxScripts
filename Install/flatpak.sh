@@ -2,9 +2,10 @@
 set -eu
 
 EXPLICIT=(
-	org.gnome.Fractal
 	com.mattjakeman.ExtensionManager
+	io.github.realmazharhussain.GdmSettings
 	io.gitlab.adhami3310.Footage
+	org.gnome.Fractal
 	org.jitsi.jitsi-meet
 	org.raspberrypi.rpi-imager
 	# org.signal.Signal

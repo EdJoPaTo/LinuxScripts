@@ -1,4 +1,5 @@
 {
+	"lock": false,
 	"fmt": {
 		"exclude": ["**/*.md"],
 		"useTabs": true
