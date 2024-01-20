@@ -56,6 +56,9 @@
 	"editor.codeActionsOnSave": {
 		"source.organizeImports": "explicit"
 	},
+	"editor.rulers": [
+		80
+	],
 	"languageToolLinter.languageTool.ignoredWordsGlobal": [
 		"alpine",
 		"arch",
@@ -103,7 +106,9 @@
 	"markdownlint.config": {
 		"MD010": false,
 		"MD013": false,
-		"MD024": { "allow_different_nesting": true }
+		"MD024": {
+			"allow_different_nesting": true
+		}
 	},
 	"rust-analyzer.check.extraArgs": [
 		"--no-deps",

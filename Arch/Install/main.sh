@@ -29,6 +29,7 @@ EXPLICIT=(
 	gnome-backgrounds
 	gnome-browser-connector
 	gnome-calculator
+	gnome-characters
 	gnome-console
 	gnome-disk-utility
 	gnome-power-manager
@@ -79,6 +80,7 @@ EXPLICIT=(
 	wget
 	whois # domain checks
 	xdg-user-dirs
+	xorg-xeyes
 	yq
 	zsh-completions
 	zsh-history-substring-search
@@ -94,6 +96,7 @@ EXPLICIT=(
 	# arch base
 	base
 	base-devel
+	dbus-broker-units
 	devtools
 	efibootmgr
 	man-db
