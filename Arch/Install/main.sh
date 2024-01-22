@@ -269,5 +269,8 @@ systemctl start pkgstats.timer
 # communicate with monitors via ddc (ddcutil)
 echo "i2c-dev" >/etc/modules-load.d/ddc.conf
 
+# Prevent to expose user mpd.socket to the network
+sed -i 's/=6600/=127.0.0.1:6600/g' /usr/lib/systemd/user/mpd.socket
+
 # sensors
 sensors-detect --auto

@@ -13,4 +13,6 @@ sudo usermod --add-subuids 165536-231072 --add-subgids 165536-231072 "$USER"
 # Allow serial communication for users (Platformio, Arduino)
 sudo usermod -aG uucp,lock "$USER"
 
+systemctl --user enable --now mpd.socket mpd-mpris.service
+
 tldr --update

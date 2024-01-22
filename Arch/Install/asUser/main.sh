@@ -7,7 +7,6 @@ EXPLICIT=(
 	gnome-shell-extension-blur-my-shell
 	gnome-shell-extension-system-monitor-next-git
 	mpd-mpris
-	mpdris2
 	nautilus-open-any-terminal
 	nvm
 	paru-bin
