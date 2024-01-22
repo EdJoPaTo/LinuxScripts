@@ -161,6 +161,7 @@ EXPLICIT=(
 	lua-language-server
 	python-lsp-server
 	shfmt
+	taplo-cli
 	typescript-language-server
 	vscode-css-languageserver
 	vscode-html-languageserver
