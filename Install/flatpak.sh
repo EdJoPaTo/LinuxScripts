@@ -3,7 +3,6 @@ set -eu
 
 EXPLICIT=(
 	com.mattjakeman.ExtensionManager
-	io.github.realmazharhussain.GdmSettings
 	io.gitlab.adhami3310.Footage
 	org.gnome.Fractal
 	org.jitsi.jitsi-meet

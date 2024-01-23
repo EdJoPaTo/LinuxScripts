@@ -2,13 +2,10 @@
 set -eu
 
 EXPLICIT=(
-	acpi
 	alacritty
 	ansible
 	ansible-lint
-	baobab # Disk Usage Analyzer
 	bat
-	bind # dns
 	btop
 	curl
 	ddcutil
@@ -22,12 +19,10 @@ EXPLICIT=(
 	file-roller # archives
 	fish
 	flatpak
-	fx # Terminal JSON viewer
 	fzf
 	gdm
 	git
 	gnome-backgrounds
-	gnome-browser-connector
 	gnome-calculator
 	gnome-characters
 	gnome-console
@@ -38,7 +33,7 @@ EXPLICIT=(
 	gnome-software
 	gnome-sudoku
 	gnome-text-editor
-	helix # cli text editor
+	helix
 	htop
 	hugo
 	hyperfine
@@ -47,8 +42,6 @@ EXPLICIT=(
 	libreoffice-fresh
 	lostfiles
 	loupe # image viewer
-	lshw
-	moreutils # sponge, ts
 	mumble
 	nano
 	nautilus
@@ -65,7 +58,6 @@ EXPLICIT=(
 	podman
 	ripgrep
 	rsync
-	snapshot # camera and webcam
 	starship
 	syncthing
 	tealdeer # tldr
@@ -78,10 +70,6 @@ EXPLICIT=(
 	trash-cli
 	vim # xxd
 	wget
-	whois # domain checks
-	xdg-user-dirs
-	xorg-xeyes
-	yq
 	zsh-completions
 	zsh-history-substring-search
 	zsh-syntax-highlighting
@@ -158,10 +146,8 @@ EXPLICIT=(
 
 	# programming language server
 	bash-language-server
-	lua-language-server
 	python-lsp-server
 	shfmt
-	taplo-cli
 	typescript-language-server
 	vscode-css-languageserver
 	vscode-html-languageserver
@@ -174,7 +160,6 @@ EXPLICIT=(
 	firefox-dark-reader
 	firefox-ublock-origin
 	## https://addons.mozilla.org/firefox/addon/clearurls/
-	## https://addons.mozilla.org/firefox/addon/gnome-shell-integration/
 	## https://addons.mozilla.org/firefox/addon/localcdn-fork-of-decentraleyes/
 	## https://addons.mozilla.org/firefox/addon/privacy-redirect/
 	## https://addons.mozilla.org/firefox/addon/temporary-containers/
@@ -183,7 +168,6 @@ EXPLICIT=(
 DEPS=(
 	bash-completion
 	fuse-overlayfs # podman
-	fwupd
 	gnome-control-center
 	gnome-themes-extra # Adwaita-dark
 	libmythes # thesaurus
@@ -195,7 +179,6 @@ DEPS=(
 	qt5-wayland
 	qt6-wayland
 	wireplumber
-	wl-clipboard
 	xdg-desktop-portal-gnome
 	xdg-desktop-portal-wlr
 	xdg-utils # xdg-open
@@ -208,7 +191,6 @@ DEPS=(
 	swaylock
 
 	# Audio / Video Tools
-	atomicparsley
 	pipewire-jack
 	pipewire-pulse
 	pipewire-v4l2
@@ -244,7 +226,7 @@ if [ "$(uname -m)" == "x86_64" ]; then
 		libva-intel-driver
 		linux
 		vulkan-intel
-		lib32-vulkan-intel
+		# lib32-vulkan-intel
 	)
 
 	DEPS+=(

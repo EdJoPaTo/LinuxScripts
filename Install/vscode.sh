@@ -4,7 +4,6 @@
 
 packages=(
 	DavidAnson.vscode-markdownlint
-	davidlday.languagetool-linter
 	denoland.vscode-deno
 	EditorConfig.EditorConfig
 	James-Yu.latex-workshop

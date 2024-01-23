@@ -31,13 +31,11 @@ link "neovim/lua" "$HOME/.config/nvim/lua"
 
 # Linux only
 if [[ $OSTYPE = linux* ]]; then
-	link "envvars.conf" "$HOME/.config/environment.d/envvars.conf"
 	link "fuzzel.ini" "$HOME/.config/fuzzel/fuzzel.ini"
 	link "hyprland.conf" "$HOME/.config/hypr/hyprland.conf"
 	link "i3status-rust.toml" "$HOME/.config/i3status-rust/config.toml"
 	link "kanshi" "$HOME/.config/kanshi/config"
 	link "paru.conf" "$HOME/.config/paru/paru.conf"
-	link "rofi" "$HOME/.config/rofi"
 	link "sway" "$HOME/.config/sway/config"
 	link "swaylock" "$HOME/.config/swaylock/config"
 	link "waybar" "$HOME/.config/waybar"

@@ -30,7 +30,6 @@ set $term alacritty
 #set $menu dmenu_path | dmenu | xargs swaymsg exec --
 set $menu swaymsg exec -- fuzzel
 #set $menu swaymsg exec wldash
-#set $menu rofi -show run
 
 ### Output configuration
 #
