@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -eux
 
-ddcutil --async --display=1 $@
-ddcutil --async --display=2 $@
-ddcutil --async --display=3 $@
+ddcutil --display=1 $@
+ddcutil --display=2 $@
+ddcutil --display=3 $@
