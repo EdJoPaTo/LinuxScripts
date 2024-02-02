@@ -38,7 +38,6 @@ alias yt-dlp='nice -n 15 yt-dlp --prefer-free-formats --embed-subs --sub-langs a
 
 alias ffmpegGif='ffmpeg -an'
 alias ffmpegSound='ffmpeg -vn'
-alias httpserver='python -m http.server --bind localhost' # usage: httpserver <port>
 alias randb='openssl rand -base64 33'
 alias randh='openssl rand -hex 20'
 alias rgf='rg --files-with-matches'

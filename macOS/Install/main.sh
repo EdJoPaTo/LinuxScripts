@@ -42,6 +42,7 @@ FORMULAS=(
 	imagemagick
 	jq
 	languagetool
+	miniserve
 	moreutils
 	mpc
 	neovim

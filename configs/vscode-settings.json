@@ -51,13 +51,15 @@
 		"editor.defaultFormatter": "denoland.vscode-deno"
 	},
 	"[typescript]": {
-		"editor.defaultFormatter": "denoland.vscode-deno"
-	},
-	"editor.codeActionsOnSave": {
-		"source.organizeImports": "explicit"
+		"editor.defaultFormatter": "denoland.vscode-deno",
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": "explicit"
+		}
 	},
 	"editor.rulers": [
-		80
+		80,
+		100,
+		160
 	],
 	"markdownlint.config": {
 		"MD010": false,

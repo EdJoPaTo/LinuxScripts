@@ -35,7 +35,6 @@ nice cargo clippy --all-targets "$@" -- \
 	-W clippy::needless_raw_strings \
 	-W clippy::partial_pub_fields \
 	-W clippy::redundant_type_annotations \
-	-W clippy::ref_patterns \
 	-W clippy::rest_pat_in_fully_bound_structs \
 	-W clippy::same_name_method \
 	-W clippy::self_named_module_files \

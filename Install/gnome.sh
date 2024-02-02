@@ -25,6 +25,7 @@ gset org.gnome.settings-daemon.plugins.media-keys home "['<Super>e']"
 gset org.gnome.settings-daemon.plugins.media-keys www "['<Super>b']"
 gset org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type nothing
 gset org.gnome.shell.extensions.caffeine inhibit-apps "['mpv.desktop']"
+gset org.gnome.shell.extensions.caffeine show-notifications false
 
 EXTENSIONS=(
 	blur-my-shell@aunetx

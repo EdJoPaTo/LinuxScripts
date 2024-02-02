@@ -14,4 +14,5 @@ export VISUAL=hx
 export BAT_THEME=ansi
 export LESS="--RAW-CONTROL-CHARS --quit-if-one-screen --ignore-case"
 export MEETING_PIXELMATRIX=espMatrix-etHorizontal:1337
+export MINISERVE_INTERFACE=::1
 export MQTTUI_BROKER=mqtt://etoPiHome3
