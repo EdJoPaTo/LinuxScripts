@@ -39,7 +39,7 @@ const allDependencies = allDependenciesRaw.split("\n").filter(Boolean);
 await preloadPackageDetails(allDependencies);
 console.log("allDependencies", allDependencies.length);
 
-const onlyOptionals = allDependencies.filter(p => !isRequired(p));
+const onlyOptionals = allDependencies.filter((p) => !isRequired(p));
 console.log("optional", onlyOptionals.length, onlyOptionals.join(" "));
 console.log();
 
