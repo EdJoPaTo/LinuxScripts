@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -eux
+set -eux -o pipefail
 
 # copy stuff
 sudo cp -rv system user /etc/systemd

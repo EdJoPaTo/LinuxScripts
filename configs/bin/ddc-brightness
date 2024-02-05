@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-set -eux
+set -eux -o pipefail
 
-ddc-all setvcp 10 $1
+ddc-all setvcp 10 "$1"

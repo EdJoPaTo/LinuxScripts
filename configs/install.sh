@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -eu
+set -eu -o pipefail
 
 function link() {
 	mkdir -p "$(dirname "$2")"

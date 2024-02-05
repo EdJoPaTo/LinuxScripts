@@ -51,7 +51,7 @@ nice cargo clippy --all-targets "$@" -- \
 	-W clippy::nursery \
 	-W clippy::pedantic
 
-set -eux
+set -eux -o pipefail
 
 nice cargo build --all-targets "$@"
 nice cargo test --quiet "$@"

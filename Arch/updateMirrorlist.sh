@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -eux
+set -eux -o pipefail
 
 echo "Download Mirrorlist and rank them..."
 reflector --latest 20 --protocol https --ipv4 --ipv6 --country de,be,fr,nl --connection-timeout 1 --sort rate | tee /tmp/mirrorlist

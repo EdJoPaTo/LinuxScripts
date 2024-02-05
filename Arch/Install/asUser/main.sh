@@ -21,6 +21,6 @@ DEPS=(
 # This should either error or be migrated to the non AUR installation
 pacman -Sqi "${DEPS[@]}" "${EXPLICIT[@]}" 2>/dev/stdout | rg -v 'was not found'
 
-set -eu
+set -eu -o pipefail
 nice paru --sudo sudo --sudoloop --skipreview --needed -Sy --asdeps "${DEPS[@]}" "${EXPLICIT[@]}"
 sudo pacman -D --asexplicit --quiet "${EXPLICIT[@]}"

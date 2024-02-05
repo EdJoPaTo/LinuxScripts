@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -eux
+set -eux -o pipefail
 
 if [ "$USER" == "root" ]; then
 	echo "Do not run as root, run as your user"

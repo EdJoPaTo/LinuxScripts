@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 set -ux
 
-rm isolate-0x*-v8.log 2> /dev/zero
+rm isolate-0x*-v8.log 2>/dev/zero
 
-time node --prof $@
+time node --prof "$@"
 
 echo "Exit Code: $?"
 
-node --prof-process ./*.log > analysis.txt
-rm isolate-0x*-v8.log 2> /dev/zero
+node --prof-process ./*.log >analysis.txt
+rm isolate-0x*-v8.log 2>/dev/zero

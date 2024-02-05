@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -eux
+set -eux -o pipefail
 
 # Run additionally to cargo-pedantic for libraries
 

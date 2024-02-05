@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -eu
+set -eu -o pipefail
 
 # See https://github.com/sindresorhus/quick-look-plugins
 PLUGINS=(

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-set -eux
+set -eux -o pipefail
 
-ddcutil --display=1 $@
-ddcutil --display=2 $@
-ddcutil --display=3 $@
+ddcutil --display=1 "$@"
+ddcutil --display=2 "$@"
+ddcutil --display=3 "$@"

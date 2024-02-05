@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -eu
+set -eu -o pipefail
 
 # usage: remoterun server command which should be executed
 # usage: remoterun my.server.tld cargo build
