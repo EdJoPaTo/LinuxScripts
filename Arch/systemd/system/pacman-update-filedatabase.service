@@ -8,6 +8,3 @@ After=network-online.target
 Type=oneshot
 Nice=15
 ExecStart=/usr/bin/pacman -Fy --noprogressbar
-
-[Install]
-WantedBy=multi-user.target
