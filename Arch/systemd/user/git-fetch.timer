@@ -1,10 +1,10 @@
 [Unit]
-Description=Fetch git folders in ~/git every now and then
+Description=Fetch git repositories in ~/git every morning
 
 [Timer]
-OnStartupSec=30sec
-OnUnitActiveSec=50min
-RandomizedDelaySec=1min
+OnCalendar=04:42:00
+Persistent=true
+RandomizedDelaySec=8min
 
 [Install]
 WantedBy=timers.target
