@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+set -eu -o pipefail
+
+function requires-attention {
+	set -eu -o pipefail
+
+	relevant=()
+
+	branches=$(git branch --verbose --verbose)
+	if [[ $branches =~ "ahead " ]]; then
+		relevant+=("ahead")
+	fi
+	if [[ $branches =~ ": gone" ]]; then
+		relevant+=("gone")
+	fi
+	if [[ $branches == "" ]]; then
+		relevant+=("empty")
+	fi
+
+	# changes=$(git status --porcelain=v1 --short | wc -l)
+	# if (( changes > 0 )); then
+	# 	relevant+=("uncommited-changes")
+	# fi
+
+	if ((${#relevant[@]} != 0)); then
+		printf "\n%s   %s\n" "$PWD" "${relevant[*]}"
+		git branch --verbose --verbose --ignore-case
+		# git status --short
+		exit 1
+	fi
+}
+
+export -f requires-attention
+
+project-below --directory=.git --no-harness bash -c requires-attention
