@@ -6,12 +6,19 @@ function requires-attention {
 
 	relevant=()
 
-	branches=$(git branch --verbose --verbose)
-	if [[ $branches =~ "ahead " ]]; then
+	branches=$(git branch --format "%(refname:short) %(upstream:short) %(upstream:track)")
+	remoteless=' {2}$' # ends with two spaces -> both upstream fieldnames are empty, only the spaces remain
+	if [[ $branches =~ $remoteless ]]; then
+		relevant+=("remoteless")
+	fi
+	if [[ $branches == *"[ahead "* ]]; then
 		relevant+=("ahead")
 	fi
-	if [[ $branches =~ ": gone" ]]; then
+	if [[ $branches == *"[gone]"* ]]; then
 		relevant+=("gone")
+	fi
+	if [[ $branches == *"detached"* ]]; then
+		relevant+=("detached")
 	fi
 	if [[ $branches == "" ]]; then
 		relevant+=("empty")
