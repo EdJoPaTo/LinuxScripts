@@ -61,6 +61,7 @@ link "gitconfig" "$HOME/.config/git/config"
 link "global.gitignore" "$HOME/.config/git/global.gitignore"
 link "helix" "$HOME/.config/helix"
 link "htoprc" "$HOME/.config/htop/htoprc"
+link "ripgreprc" "$HOME/.config/ripgreprc"
 link "starship.toml" "$HOME/.config/starship.toml"
 link "tmux.conf" "$HOME/.config/tmux/tmux.conf"
 

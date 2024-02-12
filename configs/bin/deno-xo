@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -u
 
+# deno cache --reload --no-lock npm:xo
 # nice deno run --no-lock -A npm:xo --version
 
 cat <<EOF >.xo-config.json
@@ -9,6 +10,7 @@ cat <<EOF >.xo-config.json
 		"@typescript-eslint/quotes": ["error", "double"],
 		"default-case": "warn",
 
+		"@typescript-eslint/comma-dangle": "off",
 		"@typescript-eslint/indent": "off",
 		"@typescript-eslint/lines-between-class-members": "off",
 		"@typescript-eslint/naming-convention": "off",
@@ -24,6 +26,7 @@ cat <<EOF >.xo-config.json
 		"capitalized-comments": "off",
 		"indent": "off",
 		"n/file-extension-in-import": "off",
+		"object-curly-newline": "off",
 		"object-curly-spacing": "off",
 		"operator-linebreak": "off",
 		"quotes": "off",

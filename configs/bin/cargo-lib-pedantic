@@ -7,6 +7,7 @@ nice cargo clippy "$@" -- \
 	-W clippy::arithmetic_side_effects \
 	-W clippy::exhaustive_enums \
 	-W clippy::indexing_slicing \
+	-W clippy::infinite_loop \
 	-W clippy::integer_division \
 	-W clippy::min_ident_chars \
 	-W clippy::panic \

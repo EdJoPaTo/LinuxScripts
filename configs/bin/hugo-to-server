@@ -15,6 +15,6 @@ rsync \
 	--recursive \
 	--verbose \
 	public/ xmas2014.3t0.de:"/var/www/$folder/" |
-	grep -v '^tags/' |
-	grep -v '^categories/' |
-	grep -v '/page/'
+	rg -v '^tags/' |
+	rg -v '^categories/' |
+	rg -v 'page/\d+'
