@@ -1,12 +1,17 @@
-vim.env.FZF_DEFAULT_COMMAND="rg --files"
+vim.env.FZF_DEFAULT_COMMAND = "rg --files"
 
-vim.opt.mouse = "a"
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-vim.opt.relativenumber = true
-vim.opt.wildmenu = true
+-- https://neovim.io/doc/user/options.html
+vim.o.breakindent = true
+vim.o.breakindentopt = 'shift:2'
+vim.o.ignorecase = true
+vim.o.mouse = "a"
+vim.o.number = true
+vim.o.signcolumn = 'yes'
+vim.o.smartcase = true
+vim.o.undofile = true
 
 vim.g.mapleader = " " -- leader key
+vim.g.maplocalleader = " "
 
 -- fzf to switch files quickly
 vim.keymap.set('n', '<leader>b', '<Cmd>Buffers<CR>')
