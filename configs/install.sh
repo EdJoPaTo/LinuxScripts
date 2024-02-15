@@ -25,10 +25,6 @@ mkdir -p ~/git/hub/EdJoPaTo/public
 mkdir -p "$HOME/.cache/mpd/"
 link "mpd.conf" "$HOME/.config/mpd/mpd.conf"
 
-# Neovim
-link "neovim/init.lua" "$HOME/.config/nvim/init.lua"
-link "neovim/lua" "$HOME/.config/nvim/lua"
-
 # Linux only
 if [[ $OSTYPE = linux* ]]; then
 	link "fuzzel.ini" "$HOME/.config/fuzzel/fuzzel.ini"
@@ -61,6 +57,7 @@ link "gitconfig" "$HOME/.config/git/config"
 link "global.gitignore" "$HOME/.config/git/global.gitignore"
 link "helix" "$HOME/.config/helix"
 link "htoprc" "$HOME/.config/htop/htoprc"
+link "neovim-init.lua" "$HOME/.config/nvim/init.lua"
 link "ripgreprc" "$HOME/.config/ripgreprc"
 link "starship.toml" "$HOME/.config/starship.toml"
 link "tmux.conf" "$HOME/.config/tmux/tmux.conf"
