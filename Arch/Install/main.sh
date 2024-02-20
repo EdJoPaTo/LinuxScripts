@@ -33,7 +33,6 @@ EXPLICIT=(
 	gnome-software
 	gnome-sudoku
 	gnome-text-editor
-	helix
 	htop
 	hugo
 	hyperfine
@@ -128,6 +127,7 @@ EXPLICIT=(
 	mpc
 	mpd
 	mpv
+	mpv-mpris
 	pavucontrol
 	yt-dlp
 
@@ -138,15 +138,21 @@ EXPLICIT=(
 	cargo-expand
 	cargo-flamegraph
 	cargo-geiger
+	cargo-generate
 	cargo-hack
 	cargo-llvm-cov
 	cargo-msrv
+	cargo-nextest
 	cargo-outdated
+	cargo-public-api
 	cargo-sort
 	cargo-spellcheck
 
 	# programming language server
+	ansible-language-server
 	bash-language-server
+	gopls
+	lua-language-server
 	python-lsp-server
 	shfmt
 	typescript-language-server
@@ -178,6 +184,7 @@ DEPS=(
 	lm_sensors
 	lsof # show files of a process in htop
 	platformio-core-udev
+	power-profiles-daemon
 	qt5-wayland
 	qt6-wayland
 	wireplumber
@@ -243,9 +250,6 @@ pacman -D --asexplicit --quiet "${EXPLICIT[@]}"
 if [ "$(uname -m)" == "x86_64" ]; then
 	echo "v4l2loopback" >/etc/modules-load.d/v4l2.conf
 fi
-
-ln -sf /usr/bin/helix /usr/bin/hx
-ln -sf /usr/bin/xdg-open /usr/bin/open
 
 # report package usage
 systemctl start pkgstats.timer

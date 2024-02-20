@@ -18,4 +18,5 @@ nice cargo clippy "$@" -- \
 	-W clippy::use_debug \
 	-W clippy::cargo
 
-nice cargo test "$@" --doc
+# Only needed with cargo nextest as it does not work with doctests
+# nice cargo test "$@" --doc

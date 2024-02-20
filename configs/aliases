@@ -25,6 +25,7 @@ type codium >/dev/null 2>/dev/null && alias code='nice -n 5 codium'
 
 # Help to migrate to new commands (space at start -> no zsh history entry)
 alias grep=' echo use rg && false --'
+alias hx=' echo use nvim && false --'
 alias sudo=' echo use doas && false --'
 
 # Add default arguments to commands (which are then always used)
@@ -38,6 +39,7 @@ alias yt-dlp='nice -n 15 yt-dlp --prefer-free-formats --embed-subs --sub-langs a
 
 alias ffmpegGif='ffmpeg -an'
 alias ffmpegSound='ffmpeg -vn'
+alias open='xdg-open'
 alias randb='openssl rand -base64 33'
 alias randh='openssl rand -hex 20'
 alias rgf='rg --files-with-matches'
@@ -45,6 +47,8 @@ alias rsynca='rsync --verbose --checksum --delete-delay --archive'
 alias rsyncc='rsync --verbose --recursive --links --copy-unsafe-links --times'
 alias ssh-force-password='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no'
 alias tree='eza -al --tree --git --git-ignore'
+alias vi='nvim'
+alias vim='nvim'
 alias yt-dlp-1440='yt-dlp --format "(bestvideo+bestaudio/best)[height<=1440]"'
 alias yt-dlp-720='yt-dlp --format "(bestvideo+bestaudio/best)[height<=720]"'
 alias yt-dlp-mp3='yt-dlp --extract-audio --audio-format mp3'

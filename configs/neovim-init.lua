@@ -1,4 +1,4 @@
-vim.env.FZF_DEFAULT_COMMAND = "rg --files"
+vim.env.FZF_DEFAULT_COMMAND = "fd --hidden --type=file"
 
 -- https://neovim.io/doc/user/options.html
 vim.o.breakindent = true

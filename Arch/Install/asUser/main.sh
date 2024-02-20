@@ -2,7 +2,6 @@
 set -u
 
 EXPLICIT=(
-	code-marketplace
 	etcher-bin
 	gnome-shell-extension-blur-my-shell
 	gnome-shell-extension-system-monitor-next-git

@@ -1,8 +1,8 @@
 [Unit]
-Description=Fetch git repositories in ~/git every morning
+Description=Fetch git repositories in ~/git
 
 [Timer]
-OnCalendar=04:42:00
+OnCalendar=04/12:42:00
 Persistent=true
 RandomizedDelaySec=8min
 
