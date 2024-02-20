@@ -29,6 +29,7 @@ nice cargo clippy --all-targets "$@" -- \
 	-W clippy::let_underscore_untyped \
 	-W clippy::lossy_float_literal \
 	-W clippy::map_err_ignore \
+	-W clippy::min_ident_chars \
 	-W clippy::missing_assert_message \
 	-W clippy::mixed_read_write_in_expression \
 	-W clippy::multiple_inherent_impl \
@@ -41,6 +42,7 @@ nice cargo clippy --all-targets "$@" -- \
 	-W clippy::semicolon_inside_block \
 	-W clippy::str_to_string \
 	-W clippy::string_lit_chars_any \
+	-W clippy::string_slice \
 	-W clippy::string_to_string \
 	-W clippy::try_err \
 	-W clippy::unnecessary_safety_comment \
