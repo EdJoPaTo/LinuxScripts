@@ -84,4 +84,69 @@ require('lazy').setup({
 			require('onedark').load()
 		end,
 	},
+
+	{
+		'nvim-treesitter/nvim-treesitter',
+		dependencies = {
+			'nvim-treesitter/nvim-treesitter-textobjects',
+		},
+		build = ':TSUpdate',
+	},
 })
+
+-- [[ Configure Treesitter ]]
+-- See `:help nvim-treesitter`
+-- Defer Treesitter setup after first render to improve startup time of 'nvim {filename}'
+vim.defer_fn(function()
+	require('nvim-treesitter.configs').setup {
+		ensure_installed = {
+			'bash',
+			'c',
+			'comment',
+			'cpp',
+			'css',
+			'csv',
+			'dockerfile',
+			'fish',
+			'git_config',
+			'git_rebase',
+			'gitcommit',
+			'gitignore',
+			'go',
+			'gomod',
+			'html',
+			'hyprlang',
+			'ini',
+			'javascript',
+			'jsdoc',
+			'json',
+			'jsonc',
+			'lua',
+			'markdown',
+			'nix',
+			'passwd',
+			'python',
+			'regex',
+			'rust',
+			'slint',
+			'sparql',
+			'ssh_config',
+			'toml',
+			'tsx',
+			'tsx',
+			'typescript',
+			'vim',
+			'vimdoc',
+			'yaml',
+		},
+		highlight = { enable = true },
+		indent = { enable = true },
+		incremental_selection = {
+			enable = true,
+			keymaps = {
+				init_selection = '<c-space>',
+				node_incremental = '<c-space>',
+			},
+		},
+	}
+end, 0)
