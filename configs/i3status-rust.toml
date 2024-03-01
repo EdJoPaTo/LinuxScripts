@@ -30,10 +30,6 @@ block = "sound"
 device_kind = "sink"
 
 [[block]]
-block = "sound"
-device_kind = "source"
-
-[[block]]
 block = "battery"
 missing_format = ""
 
@@ -41,3 +37,8 @@ missing_format = ""
 block = "time"
 interval = 5
 format = " $icon $timestamp.datetime(f:'%a %d.%b %H:%M')"
+
+[[block]]
+block = "privacy"
+[[block.driver]]
+name = "pipewire"

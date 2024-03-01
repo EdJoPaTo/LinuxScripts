@@ -10,9 +10,6 @@ smart_borders on
 titlebar_border_thickness 0
 titlebar_padding 1 0
 
-# disable titlebar workaround
-font pango:monospace 0
-
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -27,7 +24,7 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-#set $menu dmenu_path | dmenu | xargs swaymsg exec --
+#set $menu dmenu_path | wmenu | xargs swaymsg exec --
 set $menu swaymsg exec -- fuzzel
 #set $menu swaymsg exec wldash
 
@@ -237,7 +234,6 @@ bar {
 	position top
 	separator_symbol ""
 	status_command i3status-rs
-	font pango:monospace 10
 
 	colors {
 		statusline #ffffffaa
