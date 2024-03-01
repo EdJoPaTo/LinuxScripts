@@ -1,7 +1,13 @@
 #!/usr/bin/env bash
-set -eux -o pipefail
 
 # Run additionally to cargo-pedantic for libraries
+
+# When used as cargo lib-pedantic (and not cargo-lib-pedantic) remove the lib-pedantic from the arguments
+if [[ "$1" == "lib-pedantic" ]]; then
+	shift 1
+fi
+
+set -eux -o pipefail
 
 nice cargo clippy "$@" -- \
 	-W clippy::arithmetic_side_effects \

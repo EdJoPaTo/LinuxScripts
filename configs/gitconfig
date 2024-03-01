@@ -9,7 +9,9 @@
 	shows = show --ignore-space-change
 	showw = show --color-words
 
-	amend = commit --amend --reset-author --no-edit
+	amend = commit --amend --reset-author
+	fixup = commit --amend --no-edit
+
 	enfore-ignore = !git rm -r --cached --quiet . && git add . && git status --short
 	puff = push -u --force-with-lease
 	s = status --short --branch

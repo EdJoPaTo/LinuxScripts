@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -ux
 
 # simple use: cargo-pedantic
 # complex use: RUSTUP_TOOLCHAIN=nightly cargo-pedantic --all-features
@@ -7,7 +6,13 @@ set -ux
 # See lints: https://rust-lang.github.io/rust-clippy/stable/index.html
 # Restriction lints are listed individually
 
-cargo fmt -- --check
+
+# When used as cargo pedantic (and not cargo-pedantic) remove the pedantic from the arguments
+if [[ "$1" == "pedantic" ]]; then
+	shift 1
+fi
+
+set -ux
 
 nice cargo clippy --all-targets "$@" -- \
 	-W clippy::alloc_instead_of_core \
@@ -53,8 +58,10 @@ nice cargo clippy --all-targets "$@" -- \
 	-W clippy::nursery \
 	-W clippy::pedantic
 
+cargo fmt
+
 set -eux -o pipefail
 
-nice cargo build --all-targets "$@"
+nice cargo build --all-targets --keep-going "$@"
 nice cargo test --quiet "$@"
 nice cargo doc --all-features --no-deps
