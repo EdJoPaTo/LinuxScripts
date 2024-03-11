@@ -7,7 +7,7 @@ function requires-attention {
 	relevant=()
 
 	branches=$(git branch --format "%(refname:short) %(upstream:short) %(upstream:track)")
-	remoteless=' {2}$' # ends with two spaces -> both upstream fieldnames are empty, only the spaces remain
+	remoteless=' {2}' # ends with two spaces -> both upstream fieldnames are empty, only the spaces remain. Can be on any branch so $ as end does not work.
 	if [[ $branches =~ $remoteless ]]; then
 		relevant+=("remoteless")
 	fi
