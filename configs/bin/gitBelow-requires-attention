@@ -24,6 +24,11 @@ function requires-attention {
 		relevant+=("empty")
 	fi
 
+	stashes=$(git stash list)
+	if [[ $stashes != "" ]]; then
+		relevant+=("stash")
+	fi
+
 	# changes=$(git status --porcelain=v1 --short | wc -l)
 	# if (( changes > 0 )); then
 	# 	relevant+=("uncommited-changes")
