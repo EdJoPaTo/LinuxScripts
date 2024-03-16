@@ -75,7 +75,10 @@
 		}
 	},
 	"rust-analyzer.check.extraArgs": [
-		"--no-deps"
+		"--no-deps",
+		"--",
+		"-W",
+		"clippy::min_ident_chars"
 	],
 	"diffEditor.ignoreTrimWhitespace": false
 }
