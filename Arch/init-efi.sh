@@ -8,4 +8,4 @@ efibootmgr \
 	--label 'Arch Linux' \
 	--loader /vmlinuz-linux \
 	--unicode \
-	'root=/dev/sda2 rw initrd=\intel-ucode.img initrd=\initramfs-linux.img'
+	'root=/dev/sda2 rw initrd=\initramfs-linux.img'
