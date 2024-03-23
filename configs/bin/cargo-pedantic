@@ -23,6 +23,7 @@ nice cargo clippy --all-targets "$@" -- \
 	-W clippy::deref_by_slicing \
 	-W clippy::else_if_without_else \
 	-W clippy::empty_drop \
+	-W clippy::empty_enum_variants_with_brackets \
 	-W clippy::empty_structs_with_brackets \
 	-W clippy::filetype_is_file \
 	-W clippy::float_cmp_const \
@@ -30,6 +31,7 @@ nice cargo clippy --all-targets "$@" -- \
 	-W clippy::format_push_string \
 	-W clippy::if_then_some_else_none \
 	-W clippy::impl_trait_in_params \
+	-W clippy::iter_over_hash_type \
 	-W clippy::large_include_file \
 	-W clippy::let_underscore_untyped \
 	-W clippy::lossy_float_literal \
@@ -50,6 +52,7 @@ nice cargo clippy --all-targets "$@" -- \
 	-W clippy::string_slice \
 	-W clippy::string_to_string \
 	-W clippy::try_err \
+	-W clippy::uninhabited_references \
 	-W clippy::unnecessary_safety_comment \
 	-W clippy::unnecessary_self_imports \
 	-W clippy::unneeded_field_pattern \
