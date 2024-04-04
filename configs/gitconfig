@@ -1,5 +1,5 @@
 [alias]
-	lg = log --graph --pretty=format:'%C(auto)%h%d %s %Cgreen(%ar) %C(blue)<%an>%Creset' --abbrev-commit
+	lg = log --graph --pretty=format:'%C(auto)%h%d %s %Cgreen(%ar  %ch) %C(blue)<%an>%Creset' --abbrev-commit
 	lga = lg --all
 	lgr = lg --reflog
 	release-log = log --pretty='format:- %s %Cblue%H%C(auto)%d%Creset'

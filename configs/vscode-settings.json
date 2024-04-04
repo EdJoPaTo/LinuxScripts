@@ -26,7 +26,6 @@
 	"rust-analyzer.imports.merge.glob": false,
 	"rust-analyzer.inlayHints.bindingModeHints.enable": true,
 	"rust-analyzer.inlayHints.closureReturnTypeHints.enable": "always",
-	"rust-analyzer.inlayHints.implicitDrops.enable": true,
 	"rust-analyzer.inlayHints.lifetimeElisionHints.enable": "always",
 	"rust-analyzer.inlayHints.lifetimeElisionHints.useParameterNames": true,
 	"rust-analyzer.inlayHints.rangeExclusiveHints.enable": true,

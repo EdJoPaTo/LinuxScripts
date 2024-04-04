@@ -7,11 +7,9 @@ EXPLICIT=(
 	ansible-lint
 	bat
 	btop
-	curl
 	ddcutil
 	difftastic
 	dive # explore container layers
-	dog # dns
 	dust
 	evince # document viewer (PDF, …)
 	eza
@@ -36,7 +34,6 @@ EXPLICIT=(
 	htop
 	hugo
 	hyperfine
-	jq
 	kanshi # automatic monitor config
 	libreoffice-fresh
 	lostfiles
@@ -48,7 +45,6 @@ EXPLICIT=(
 	neovim
 	networkmanager
 	newsflash
-	nmap
 	npm
 	opendoas
 	openssh
@@ -57,7 +53,7 @@ EXPLICIT=(
 	platformio-core
 	podman
 	ripgrep
-	rsync
+	shfmt
 	starship
 	syncthing
 	tealdeer # tldr
@@ -69,7 +65,6 @@ EXPLICIT=(
 	tokei
 	trash-cli
 	vim # xxd
-	wget
 	zsh-completions
 	zsh-history-substring-search
 	zsh-syntax-highlighting
@@ -91,7 +86,7 @@ EXPLICIT=(
 	man-pages
 	pacman-contrib
 
-	# Languages
+	# languages
 	hunspell-de
 	hunspell-en_gb
 	hunspell-en_us
@@ -100,6 +95,7 @@ EXPLICIT=(
 	languagetool
 	mythes-de
 	mythes-en
+	typos
 
 	# fonts
 	noto-fonts-emoji # emoji support (in terminal, notifications, ...)
@@ -112,7 +108,7 @@ EXPLICIT=(
 	totem
 	ffmpegthumbnailer
 
-	# Picture Tools
+	# picture
 	d2
 	gimp
 	gnuplot
@@ -120,7 +116,7 @@ EXPLICIT=(
 	inkscape
 	oxipng
 
-	# Audio / Video Tools
+	# audio / video
 	ffmpeg
 	helvum # pipewire patch bay
 	kid3-qt
@@ -130,6 +126,19 @@ EXPLICIT=(
 	mpv-mpris
 	pavucontrol
 	yt-dlp
+
+	# data
+	fx
+	yq # and thereby jq
+
+	# network
+	bind
+	curl
+	dog
+	nmap
+	rsync
+	wget
+	whois
 
 	# programming rust
 	rustup
@@ -142,6 +151,7 @@ EXPLICIT=(
 	cargo-hack
 	cargo-llvm-cov
 	cargo-msrv
+	cargo-semver-checks
 	cargo-nextest
 	cargo-outdated
 	cargo-public-api
@@ -154,7 +164,6 @@ EXPLICIT=(
 	gopls
 	lua-language-server
 	python-lsp-server
-	shfmt
 	typescript-language-server
 	vscode-css-languageserver
 	vscode-html-languageserver
