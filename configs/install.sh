@@ -12,18 +12,30 @@ function link() {
 	fi
 }
 
-# Bin files
+# Git folders
+mkdir -p ~/git/hub/EdJoPaTo/public
+
 for file in bin/*; do
 	filename=$(basename "$file")
 	link "$file" "$HOME/bin/$filename"
 done
 
-# Git folders
-mkdir -p ~/git/hub/EdJoPaTo/public
+for file in completions/*; do
+	filename=$(basename "$file")
+	link "$file" "$HOME/.config/completions/$filename"
+done
 
 # Music Player Daemon
 mkdir -p "$HOME/.cache/mpd/"
 link "mpd.conf" "$HOME/.config/mpd/mpd.conf"
+
+# Zsh
+mkdir -p "$HOME/.cache/"
+link "zsh/zshrc" "$HOME/.zshrc"
+for file in zsh/*.zsh; do
+	filename=$(basename "$file")
+	link "$file" "$HOME/.config/zsh/$filename"
+done
 
 # Linux only
 if [[ $OSTYPE = linux* ]]; then
@@ -36,15 +48,6 @@ if [[ $OSTYPE = linux* ]]; then
 	link "swaylock" "$HOME/.config/swaylock/config"
 	link "waybar" "$HOME/.config/waybar"
 fi
-
-# Zsh
-mkdir -p "$HOME/.cache/"
-mkdir -p "$HOME/.config/completions/"
-link "zsh/zshrc" "$HOME/.zshrc"
-for file in zsh/*.zsh; do
-	filename=$(basename "$file")
-	link "$file" "$HOME/.config/zsh/$filename"
-done
 
 link ".editorconfig" "$HOME/.editorconfig"
 link ".tokeignore" "$HOME/.tokeignore"

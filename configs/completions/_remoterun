@@ -1,0 +1,12 @@
+#compdef remoterun
+
+_remoterun() {
+	integer ret=1
+	_arguments -w -s -S \
+'::host -- Target host to connect to:_hosts' \
+'*::command -- Command to be executed remotely:_cmdambivalent' \
+&& ret=0
+	return ret
+}
+
+_remoterun "$@"
