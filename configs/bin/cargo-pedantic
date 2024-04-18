@@ -14,7 +14,7 @@ fi
 
 set -ux
 
-nice cargo clippy --all-targets "$@" -- \
+nice cargo clippy --all-targets --keep-going "$@" -- \
 	-W clippy::alloc_instead_of_core \
 	-W clippy::as_underscore \
 	-W clippy::assertions_on_result_states \
@@ -66,5 +66,5 @@ cargo fmt
 set -eux -o pipefail
 
 nice cargo build --all-targets --keep-going "$@"
-nice cargo test --quiet "$@"
+nice cargo test --quiet --no-fail-fast "$@"
 nice cargo doc --all-features --no-deps

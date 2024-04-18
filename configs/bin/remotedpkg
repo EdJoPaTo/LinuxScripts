@@ -15,4 +15,4 @@ rsync \
 	./*.deb "$server:/tmp/remotedpkg"
 
 ssh -tt "$server" bash -c \
-	"uptime && cd /tmp/remotedpkg && sudo bash -c 'set -eu -o pipefail && for p in *.deb; do dpkg -i \"\$p\"; done' && rm -rf /tmp/remotedpkg && uptime"
+	"uptime && cd /tmp/remotedpkg && sudo bash -c 'set -eu -o pipefail && for p in *.deb; do dpkg --force-bad-verify -i \"\$p\"; done' && rm -rf /tmp/remotedpkg && uptime"

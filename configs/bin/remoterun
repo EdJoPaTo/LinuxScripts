@@ -22,4 +22,4 @@ rsync \
 	. "$server:$remotefolder"
 
 ssh -tt "$server" bash -c \
-	"uptime && cd '$remotefolder' && bash -cl -- 'set -x && $command' && uptime"
+	"uptime && cd '$remotefolder' && time bash -cl -- 'set -x && $command' && uptime"

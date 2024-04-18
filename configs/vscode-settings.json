@@ -1,5 +1,6 @@
 {
 	"deno.cacheOnSave": true,
+	"diffEditor.experimental.showMoves": true,
 	"diffEditor.wordWrap": "on",
 	"editor.stickyScroll.enabled": true,
 	"editor.wordWrap": "on",
@@ -75,6 +76,7 @@
 	},
 	"rust-analyzer.check.extraArgs": [
 		"--no-deps",
+		"--keep-going",
 		"--",
 		"-W",
 		"clippy::min_ident_chars"
