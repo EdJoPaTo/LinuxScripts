@@ -34,7 +34,6 @@ EXPLICIT=(
 	htop
 	hugo
 	hyperfine
-	kanshi # automatic monitor config
 	libreoffice-fresh
 	lostfiles
 	loupe # image viewer
@@ -68,13 +67,6 @@ EXPLICIT=(
 	zsh-completions
 	zsh-history-substring-search
 	zsh-syntax-highlighting
-
-	# Sway https://wiki.archlinux.org/title/Sway
-	sway
-	fuzzel
-	grim # sway screenshots
-	i3status-rust
-	playerctl
 
 	# arch base
 	base
@@ -158,18 +150,6 @@ EXPLICIT=(
 	cargo-sort
 	cargo-spellcheck
 
-	# programming language server
-	ansible-language-server
-	bash-language-server
-	gopls
-	lua-language-server
-	python-lsp-server
-	typescript-language-server
-	vscode-css-languageserver
-	vscode-html-languageserver
-	vscode-json-languageserver
-	yaml-language-server
-
 	# Browser
 	chromium
 	firefox
@@ -198,15 +178,7 @@ DEPS=(
 	qt6-wayland
 	wireplumber
 	xdg-desktop-portal-gnome
-	xdg-desktop-portal-wlr
 	xdg-utils # xdg-open
-
-	# Sway
-	polkit
-	slurp # select an area for screenshots
-	swaybg
-	swayidle
-	swaylock
 
 	# Audio / Video Tools
 	pipewire-jack

@@ -10,7 +10,6 @@ EXPLICIT=(
 	nvm
 	paru-bin
 	ventoy-bin
-	wdisplays # temporary update display config
 )
 
 DEPS=(
