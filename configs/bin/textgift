@@ -2,6 +2,7 @@
 set -eu -o pipefail
 
 textgift=(
+	'aber'
 	'auch mal'
 	'durchaus'
 	'echt'
@@ -14,6 +15,7 @@ textgift=(
 	'natürlich'
 	'nun'
 	'nämlich'
+	'wirklich'
 	'wohl'
 	'ziemlich'
 )

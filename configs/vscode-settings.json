@@ -30,6 +30,7 @@
 	"rust-analyzer.inlayHints.lifetimeElisionHints.enable": "always",
 	"rust-analyzer.inlayHints.lifetimeElisionHints.useParameterNames": true,
 	"rust-analyzer.inlayHints.rangeExclusiveHints.enable": true,
+	"rust-analyzer.references.excludeImports": true,
 	"rust-analyzer.showUnlinkedFileNotification": false,
 	"rust-analyzer.typing.autoClosingAngleBrackets.enable": true,
 	"scm.defaultViewMode": "tree",
@@ -75,11 +76,12 @@
 		}
 	},
 	"rust-analyzer.check.extraArgs": [
-		"--no-deps",
+		"--all-features",
 		"--keep-going",
+		"--no-deps",
 		"--",
-		"-W",
-		"clippy::min_ident_chars"
+		"-Wclippy::min_ident_chars",
+		"-Aclippy::cargo"
 	],
 	"diffEditor.ignoreTrimWhitespace": false
 }

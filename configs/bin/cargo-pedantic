@@ -14,6 +14,9 @@ fi
 
 set -ux
 
+cargo +nightly fmt \
+	-- --config imports_granularity=Module,group_imports=StdExternalCrate,format_code_in_doc_comments=true
+
 nice cargo clippy --all-targets --keep-going "$@" -- \
 	-W clippy::alloc_instead_of_core \
 	-W clippy::as_underscore \
@@ -60,8 +63,6 @@ nice cargo clippy --all-targets --keep-going "$@" -- \
 	-W clippy::verbose_file_reads \
 	-W clippy::nursery \
 	-W clippy::pedantic
-
-cargo fmt
 
 set -eux -o pipefail
 
