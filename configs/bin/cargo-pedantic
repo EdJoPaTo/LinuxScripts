@@ -2,12 +2,12 @@
 
 # simple use: cargo-pedantic
 # complex use: RUSTUP_TOOLCHAIN=nightly cargo-pedantic --all-features
+# fix: cargo-pedantic --all-features --fix --allow-staged
 
-# See lints: https://rust-lang.github.io/rust-clippy/stable/index.html
-# Restriction lints are listed individually
+# Lint docs: https://rust-lang.github.io/rust-clippy/stable/index.html
 
 
-# When used as cargo pedantic (and not cargo-pedantic) remove the pedantic from the arguments
+# When used as cargo pedantic (and not cargo-pedantic) cleanup the arguments
 if [[ "$1" == "pedantic" ]]; then
 	shift 1
 fi
