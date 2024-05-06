@@ -2,6 +2,7 @@
 	"deno.cacheOnSave": true,
 	"diffEditor.experimental.showMoves": true,
 	"diffEditor.wordWrap": "on",
+	"editor.accessibilitySupport": "off",
 	"editor.stickyScroll.enabled": true,
 	"editor.wordWrap": "on",
 	"editor.wrappingIndent": "indent",
