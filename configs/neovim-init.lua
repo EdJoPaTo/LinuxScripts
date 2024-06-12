@@ -1,3 +1,5 @@
+-- https://github.com/nvim-lua/kickstart.nvim/blob/master/init.lua
+
 vim.env.FZF_DEFAULT_COMMAND = "fd --hidden --type=file"
 
 -- https://neovim.io/doc/user/options.html
@@ -35,7 +37,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
-	{ 'nvim-lualine/lualine.nvim', opts = { theme = 'onedark' } },
+	{ 'nvim-lualine/lualine.nvim', opts = { theme = 'base16' } },
 	{ 'lewis6991/gitsigns.nvim', opts = {} },
 	{
 		"junegunn/fzf.vim",
@@ -43,9 +45,6 @@ require('lazy').setup({
 			"junegunn/fzf"
 		}
 	},
-
-	-- "gc" to comment visual regions/lines
-	{ 'numToStr/Comment.nvim', opts = {} },
 
 	-- Autocomplete commands
 	{ 'gelguy/wilder.nvim', opts = { modes = { ':', '/', '?' } } },
@@ -69,19 +68,10 @@ require('lazy').setup({
 	},
 
 	{
-		-- Theme inspired by Atom
-		'navarasu/onedark.nvim',
-		priority = 1000,
-		lazy = false,
+		'saecki/crates.nvim',
+		event = { "BufRead Cargo.toml" },
 		config = function()
-			require('onedark').setup({
-				style = 'warmer',
-				transparent = true,
-				lualine = {
-					transparent = true,
-				}
-			})
-			require('onedark').load()
+			require('crates').setup()
 		end,
 	},
 
@@ -121,6 +111,7 @@ vim.defer_fn(function()
 			'jsdoc',
 			'json',
 			'jsonc',
+			'kdl',
 			'lua',
 			'markdown',
 			'nix',
@@ -138,6 +129,7 @@ vim.defer_fn(function()
 			'vim',
 			'vimdoc',
 			'yaml',
+			'zig',
 		},
 		highlight = { enable = true },
 		indent = { enable = true },

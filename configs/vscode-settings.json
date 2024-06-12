@@ -79,7 +79,6 @@
 		}
 	},
 	"rust-analyzer.check.extraArgs": [
-		"--all-features",
 		"--keep-going",
 		"--no-deps",
 		"--",

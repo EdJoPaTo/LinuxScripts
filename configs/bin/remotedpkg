@@ -14,5 +14,5 @@ rsync \
 	--rsync-path="mkdir -p /tmp/remotedpkg && rsync" \
 	./*.deb "$server:/tmp/remotedpkg"
 
-ssh -tt "$server" bash -c \
+ssh -tt "$server" -- \
 	"uptime && cd /tmp/remotedpkg && sudo bash -c 'set -eu -o pipefail && for p in *.deb; do dpkg --force-bad-verify -i \"\$p\"; done' && rm -rf /tmp/remotedpkg && uptime"
