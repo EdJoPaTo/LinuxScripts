@@ -3,8 +3,8 @@
 # This file is meant to compatible with multiple shells, including: bash, fish, zsh
 
 alias cdf='cd "$(fd --type=directory | fzf)"'
-alias cdg='cd ~/git && cd "$(project-below --directory=.git --list | rg -v archived\/ | fzf)"'
-alias cdga='cd ~/git && cd "$(project-below --directory=.git --list | fzf)"'
+alias cdg='cd "$HOME/git/$(project-below --base-dir=$HOME/git --directory=.git --list | fzf)"'
+alias cdgh='cd "$HOME/git/$(project-below --base-dir=$HOME/git --directory=.git --hidden --list | fzf)"'
 
 alias gitrepodir='git rev-parse --show-toplevel'
 alias cdrepo='cd $(gitrepodir)'
