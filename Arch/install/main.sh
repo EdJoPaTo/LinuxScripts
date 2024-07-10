@@ -232,9 +232,6 @@ if [ "$(uname -m)" == "x86_64" ]; then
 	echo "v4l2loopback" >/etc/modules-load.d/v4l2.conf
 fi
 
-# report package usage
-systemctl start pkgstats.timer
-
 # communicate with monitors via ddc (ddcutil)
 echo "i2c-dev" >/etc/modules-load.d/ddc.conf
 
