@@ -39,7 +39,7 @@ EXPLICIT=(
 	loupe # image viewer
 	miniserve
 	mumble
-	nano
+	mqttui
 	nautilus
 	neovim
 	networkmanager
@@ -60,10 +60,10 @@ EXPLICIT=(
 	texlive-langenglish
 	texlive-langgerman
 	texlive-meta
+	tinyxxd
 	tmux
 	tokei
 	trash-cli
-	vim # xxd
 	zsh-completions
 	zsh-history-substring-search
 	zsh-syntax-highlighting
@@ -72,7 +72,6 @@ EXPLICIT=(
 	base
 	base-devel
 	dbus-broker-units
-	devtools
 	efibootmgr
 	man-db
 	man-pages
@@ -97,7 +96,6 @@ EXPLICIT=(
 	ttf-opensans
 
 	# Preview in Filemanager
-	totem
 	ffmpegthumbnailer
 
 	# picture
@@ -110,13 +108,11 @@ EXPLICIT=(
 
 	# audio / video
 	ffmpeg
-	helvum # pipewire patch bay
 	kid3-qt
 	mpc
 	mpd
 	mpv
 	mpv-mpris
-	pavucontrol
 	yt-dlp
 
 	# data
@@ -138,15 +134,14 @@ EXPLICIT=(
 	cargo-audit
 	cargo-expand
 	cargo-flamegraph
-	cargo-geiger
 	cargo-generate
 	cargo-hack
 	cargo-llvm-cov
 	cargo-msrv
-	cargo-semver-checks
 	cargo-nextest
 	cargo-outdated
 	cargo-public-api
+	cargo-semver-checks
 	cargo-sort
 	cargo-spellcheck
 
@@ -171,13 +166,9 @@ DEPS=(
 	linux
 	linux-firmware
 	lm_sensors
-	lsof # show files of a process in htop
 	platformio-core-udev
-	power-profiles-daemon
 	qt5-wayland
 	qt6-wayland
-	wireplumber
-	xdg-desktop-portal-gnome
 	xdg-utils # xdg-open
 
 	# Audio / Video Tools
@@ -185,6 +176,7 @@ DEPS=(
 	pipewire-pulse
 	pipewire-v4l2
 	python-mutagen
+	wireplumber
 
 	# file-roller optionals
 	# lrzip
@@ -214,7 +206,6 @@ if [ "$(uname -m)" == "x86_64" ]; then
 		intel-media-sdk
 		intel-ucode
 		libva-intel-driver
-		linux
 		vulkan-intel
 		# lib32-vulkan-intel
 	)

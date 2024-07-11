@@ -15,4 +15,6 @@ sudo usermod -aG uucp,lock "$USER"
 
 systemctl --user enable --now mpd.socket mpd-mpris.service
 
+xdg-mime default org.gnome.Nautilus.desktop inode/directory
+
 tldr --update
