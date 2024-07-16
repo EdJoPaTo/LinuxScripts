@@ -64,6 +64,7 @@ link "neovim-init.lua" "$HOME/.config/nvim/init.lua"
 link "ripgreprc" "$HOME/.config/ripgreprc"
 link "starship.toml" "$HOME/.config/starship.toml"
 link "tmux.conf" "$HOME/.config/tmux/tmux.conf"
+link "zed-settings.jsonc" "$HOME/.config/zed/settings.json"
 
 rm -f "$HOME/.gitconfig"
 

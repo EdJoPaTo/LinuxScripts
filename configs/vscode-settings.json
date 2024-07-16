@@ -79,7 +79,6 @@
 		}
 	},
 	"rust-analyzer.check.extraArgs": [
-		"--keep-going",
 		"--no-deps",
 		"--",
 		"-Wclippy::min_ident_chars",

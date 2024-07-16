@@ -13,7 +13,7 @@
 	fixup = commit --amend --no-edit
 
 	enfore-ignore = !git rm -r --cached --quiet . && git add . && git status --short
-	puff = push -u --force-with-lease
+	puff = push -u --atomic --force-with-lease
 	s = status --short --branch
 [apply]
 	whitespace = fix
