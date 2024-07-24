@@ -64,6 +64,7 @@ EXPLICIT=(
 	tmux
 	tokei
 	trash-cli
+	zed
 	zsh-completions
 	zsh-history-substring-search
 	zsh-syntax-highlighting

@@ -18,6 +18,7 @@ CASKS=(
 	teamspeak-client
 	telegram
 	vscodium
+	zed
 )
 
 FORMULAS=(

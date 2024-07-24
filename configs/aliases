@@ -23,6 +23,8 @@ alias podman='nice podman'
 alias rustup='nice rustup'
 
 type codium >/dev/null 2>/dev/null && alias code='nice -n 5 codium'
+type xdg-open >/dev/null 2>/dev/null && alias open='xdg-open'
+type zeditor >/dev/null 2>/dev/null && alias zed='zeditor'
 
 # Help to migrate to new commands (space at start -> no zsh history entry)
 alias grep=' echo use rg && false --'
@@ -42,7 +44,6 @@ alias yt-dlp='nice -n 15 yt-dlp --prefer-free-formats --embed-subs --sub-langs a
 
 alias ffmpegGif='ffmpeg -an'
 alias ffmpegSound='ffmpeg -vn'
-alias open='xdg-open'
 alias oxipngz='oxipng --zopfli --opt=max --fast'
 alias randb='openssl rand -base64 33'
 alias randh='openssl rand -hex 20'
