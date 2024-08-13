@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+rm -rf deno.lock
+fd --extension=ts --exec-batch deno cache --reload

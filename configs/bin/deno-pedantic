@@ -1,6 +1,6 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 deno fmt --check
 deno lint
 deno test -A
-deno check ./**/*.ts
+fd --extension=ts --exec-batch deno check
