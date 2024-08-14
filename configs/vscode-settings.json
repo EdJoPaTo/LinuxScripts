@@ -7,6 +7,7 @@
 	"editor.wordWrap": "on",
 	"editor.wrappingIndent": "indent",
 	"explorer.confirmDragAndDrop": false,
+	"explorer.fileNesting.enabled": true,
 	"extensions.ignoreRecommendations": true,
 	"files.autoSave": "onFocusChange",
 	"files.insertFinalNewline": true,
