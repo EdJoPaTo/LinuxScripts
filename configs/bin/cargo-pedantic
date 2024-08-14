@@ -4,7 +4,8 @@
 # complex use: RUSTUP_TOOLCHAIN=nightly cargo-pedantic --all-features
 # fix: cargo-pedantic --all-features --fix --allow-staged
 
-# Lint docs: https://rust-lang.github.io/rust-clippy/stable/index.html
+# clippy lints: https://rust-lang.github.io/rust-clippy/stable/index.html
+# rustc lints: https://doc.rust-lang.org/rustc/lints/listing/allowed-by-default.html
 # rustfmt: https://github.com/rust-lang/rustfmt/blob/master/Configurations.md
 
 # When used as cargo pedantic (and not cargo-pedantic) cleanup the arguments
@@ -69,6 +70,23 @@ nice cargo clippy --all-targets --keep-going "$@" -- \
 	-W clippy::unneeded_field_pattern \
 	-W clippy::unseparated_literal_suffix \
 	-W clippy::verbose_file_reads \
+	-W deprecated_safe \
+	-W explicit_outlives_requirements \
+	-W meta_variable_misuse \
+	-W missing_abi \
+	-W non_ascii_idents \
+	-W non_local_definitions \
+	-W redundant_lifetimes \
+	-W single_use_lifetimes \
+	-W trivial_casts \
+	-W trivial_numeric_casts \
+	-W unit_bindings \
+	-W unsafe_op_in_unsafe_fn \
+	-W unused_extern_crates \
+	-W unused_lifetimes \
+	-W unused_macro_rules \
+	-W unused_qualifications \
+	-W rust_2024_compatibility \
 	-W clippy::nursery \
 	-W clippy::pedantic
 

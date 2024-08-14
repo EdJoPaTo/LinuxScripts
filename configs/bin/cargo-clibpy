@@ -15,12 +15,15 @@ nice cargo clippy "$@" -- \
 	-W clippy::indexing_slicing \
 	-W clippy::infinite_loop \
 	-W clippy::integer_division \
+	-W clippy::let_underscore_must_use \
 	-W clippy::panic \
 	-W clippy::std_instead_of_core \
 	-W clippy::unwrap_in_result \
 	-W clippy::unwrap_used \
 	-W clippy::use_debug \
-	-W clippy::cargo
+	-W unnameable_types \
+	-W clippy::cargo \
+	-A clippy::multiple_crate_versions
 
 # Only needed with cargo nextest as it does not work with doctests
 # nice cargo test "$@" --doc

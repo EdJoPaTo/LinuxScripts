@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# When used as cargo cdt (and not cargo-cdt) cleanup the arguments
+if [[ "$1" == "cdt" ]]; then
+	shift 1
+fi
+
+set -eux -o pipefail
+
+nice cargo clippy --all-targets --keep-going "$@"
+
+nice cargo doc --all-features --no-deps
+
+# nice cargo build --all-targets --keep-going "$@"
+nice cargo test --quiet --no-fail-fast "$@"
