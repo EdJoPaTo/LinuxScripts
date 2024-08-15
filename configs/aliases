@@ -81,7 +81,7 @@ alias hugo-serve='hugo server -p 4200 --buildDrafts --buildFuture'
 alias podman-image-update='nice podman pull $(podman image ls --filter=dangling=false --noheading --format="{{.Repository}}:{{.Tag}}" | rg -v localhost)'
 alias podmanBelow='project-below --file=Dockerfile nice -n 19 podman'
 
-alias cargo-open-doc='nice cargo doc --open --all-features'
+alias cargo-open-doc='nice cargo doc --open'
 alias cargo-features='cargo metadata --no-deps --format-version=1 | jq ".packages.[].features"'
 alias cargoBelow-clean='project-below --hidden --file=Cargo.toml --directory=target cargo clean'
 alias cargoBelow-fetch='project-below --file=Cargo.toml bash -c "cargo update --quiet && cargo fetch && cargo +nightly -Zmsrv-policy update --quiet && cargo fetch && git checkout --quiet Cargo.lock 2>/dev/null; cargo fetch"'

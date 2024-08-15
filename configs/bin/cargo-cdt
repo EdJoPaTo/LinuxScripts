@@ -1,15 +1,17 @@
 #!/usr/bin/env bash
 
-# When used as cargo cdt (and not cargo-cdt) cleanup the arguments
-if [[ "$1" == "cdt" ]]; then
+# When used as a cargo subcommand the first argument is the subcommand which should be removed
+if [[ -n $1 ]] && [[ "$0" == *"$1" ]]; then
 	shift 1
 fi
 
-set -eux -o pipefail
+set -ux
+
+cargo +nightly fmt --check
 
 nice cargo clippy --all-targets --keep-going "$@"
 
-nice cargo doc --all-features --no-deps
+nice cargo doc --no-deps "$@"
 
 # nice cargo build --all-targets --keep-going "$@"
 nice cargo test --quiet --no-fail-fast "$@"

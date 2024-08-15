@@ -2,8 +2,8 @@
 
 # Run additionally to cargo-pedantic for libraries
 
-# When used as cargo clibpy (and not cargo-clibpy) cleanup the arguments
-if [[ "$1" == "clibpy" ]]; then
+# When used as a cargo subcommand the first argument is the subcommand which should be removed
+if [[ -n $1 ]] && [[ "$0" == *"$1" ]]; then
 	shift 1
 fi
 
@@ -24,6 +24,3 @@ nice cargo clippy "$@" -- \
 	-W unnameable_types \
 	-W clippy::cargo \
 	-A clippy::multiple_crate_versions
-
-# Only needed with cargo nextest as it does not work with doctests
-# nice cargo test "$@" --doc
