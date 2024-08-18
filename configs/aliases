@@ -84,7 +84,6 @@ alias podmanBelow='project-below --file=Dockerfile nice -n 19 podman'
 alias cargo-open-doc='nice cargo doc --open'
 alias cargo-features='cargo metadata --no-deps --format-version=1 | jq ".packages.[].features"'
 alias cargoBelow-clean='project-below --hidden --file=Cargo.toml --directory=target cargo clean'
-alias cargoBelow-fetch='project-below --file=Cargo.toml bash -c "cargo update --quiet && cargo fetch && cargo +nightly -Zmsrv-policy update --quiet && cargo fetch && git checkout --quiet Cargo.lock 2>/dev/null; cargo fetch"'
 alias cargoBelow='project-below --file=Cargo.toml nice -n 19 cargo'
 alias cargoLibBelow='project-below --file=Cargo.toml --file=src/lib.rs nice -n 19 cargo'
 

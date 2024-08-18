@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# When used as a cargo subcommand the first argument is the subcommand which should be removed
+if [[ -n $1 ]] && [[ "$0" == *"$1" ]]; then
+	shift 1
+fi
+
+set -u -o pipefail
+
+# Uses https://github.com/rust-lang/cargo/issues/13873
+
+CARGO_RESOLVER_INCOMPATIBLE_RUST_VERSIONS=allow cargo +nightly -Zmsrv-policy update --quiet &&
+	cargo fetch
+CARGO_RESOLVER_INCOMPATIBLE_RUST_VERSIONS=fallback cargo +nightly -Zmsrv-policy update --quiet &&
+	cargo fetch
+git checkout --quiet Cargo.lock 2>/dev/null
+cargo fetch
