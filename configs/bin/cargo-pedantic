@@ -5,6 +5,7 @@
 
 # clippy lints: https://rust-lang.github.io/rust-clippy/stable/index.html
 # rustc lints: https://doc.rust-lang.org/rustc/lints/listing/allowed-by-default.html
+# rustdoc lints: https://doc.rust-lang.org/rustdoc/lints.html
 
 # When used as a cargo subcommand the first argument is the subcommand which should be removed
 if [[ -n $1 ]] && [[ "$0" == *"$1" ]]; then

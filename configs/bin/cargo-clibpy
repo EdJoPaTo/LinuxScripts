@@ -7,7 +7,7 @@ if [[ -n $1 ]] && [[ "$0" == *"$1" ]]; then
 	shift 1
 fi
 
-set -eux -o pipefail
+set -eu -o pipefail
 
 nice cargo clippy "$@" -- \
 	-W clippy::arithmetic_side_effects \
@@ -24,3 +24,9 @@ nice cargo clippy "$@" -- \
 	-W unnameable_types \
 	-W clippy::cargo \
 	-A clippy::multiple_crate_versions
+
+nice cargo rustdoc --keep-going --lib "$@" -- \
+	-W rustdoc::missing_crate_level_docs \
+	-W rustdoc::private_doc_tests \
+	-W rustdoc::unescaped_backticks \
+	-W missing_docs

@@ -9,6 +9,21 @@ set -ux
 
 cargo +nightly fmt --check
 
+function rgrs {
+	rg --glob '*.rs' --case-sensitive --no-heading --trim "$@"
+}
+
+rg --files --glob mod.rs
+rg --files-with-matches --multiline --glob '*.rs' --case-sensitive 'mod .+;[\s\S]*\n(?:pub )?use .+;' | sort
+rgrs 'Result<.+, String>'
+rgrs 'Result<.+, \S*io::Error>'
+rgrs '\{err(?:or)?\}' && echo 'use {err:#} with anyhow or {err:?} without'
+rgrs 'use .+\WResult\W'
+rgrs 'prelude::'
+rgrs once_cell && echo 'replace with std::sync::LazyLock' || rg --glob Cargo.toml once_cell
+rg --quiet --glob Cargo.toml anyhow && rgrs 'map_err\('
+rg --quiet --glob Cargo.toml anyhow && rgrs '\{err(?:or)?:\?\}' && echo 'prefer {err:#} with anyhow'
+
 nice cargo clippy --all-targets --keep-going "$@"
 
 nice cargo doc --no-deps "$@"
