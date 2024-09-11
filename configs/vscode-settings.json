@@ -1,6 +1,7 @@
 {
 	"deno.cacheOnSave": true,
 	"diffEditor.experimental.showMoves": true,
+	"diffEditor.ignoreTrimWhitespace": false,
 	"diffEditor.wordWrap": "on",
 	"editor.accessibilitySupport": "off",
 	"editor.stickyScroll.enabled": true,
@@ -17,7 +18,10 @@
 	"git.suggestSmartCommit": false,
 	"javascript.preferences.importModuleSpecifierEnding": "js",
 	"javascript.updateImportsOnFileMove.enabled": "always",
+	"ltex.additionalRules.enablePickyRules": true,
 	"ltex.additionalRules.motherTongue": "de-DE",
+	"ltex.completionEnabled": true,
+	"ltex.languageToolHttpServerUri": "http://localhost:8081/",
 	"platformio-ide.disablePIOHomeStartup": true,
 	"prettier.useTabs": true,
 	"redhat.telemetry.enabled": false,
@@ -72,6 +76,22 @@
 		100,
 		160
 	],
+	"ltex.enabled": [
+		"rust",
+		"typescript",
+		"c",
+		"c++",
+		"shellscript",
+		"bibtex",
+		"context",
+		"context.tex",
+		"html",
+		"latex",
+		"markdown",
+		"org",
+		"restructuredtext",
+		"rsweave"
+	],
 	"markdownlint.config": {
 		"MD010": false,
 		"MD013": false,
@@ -82,8 +102,6 @@
 	"rust-analyzer.check.extraArgs": [
 		"--no-deps",
 		"--",
-		"-Wclippy::min_ident_chars",
 		"-Aclippy::cargo"
-	],
-	"diffEditor.ignoreTrimWhitespace": false
+	]
 }
