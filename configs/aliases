@@ -2,13 +2,6 @@
 
 # This file is meant to compatible with multiple shells, including: bash, fish, zsh
 
-alias cdf='cd "$(fd --type=directory | fzf)"'
-alias cdg='cd "$HOME/git/$(project-below --base-dir=$HOME/git --directory=.git --list | fzf --scheme=path --tiebreak=end,length)"'
-alias cdgh='cd "$HOME/git/$(project-below --base-dir=$HOME/git --directory=.git --hidden --list | fzf --scheme=path --tiebreak=end,length)"'
-
-alias gitrepodir='git rev-parse --show-toplevel'
-alias cdrepo='cd $(gitrepodir)'
-
 alias brew='nice brew'
 alias cargo='nice cargo'
 alias code='nice -n 5 code'
@@ -43,9 +36,14 @@ alias systemctl='systemctl --no-pager --full'
 alias tokei='tokei --sort code'
 alias yt-dlp='nice -n 15 yt-dlp --prefer-free-formats --embed-subs --sub-langs=all --embed-thumbnail --embed-metadata --embed-chapters --video-multistreams --audio-multistreams --sponsorblock-remove=default --paths=temp:/tmp/yt-dlp'
 
+alias cargo-features='cargo metadata --no-deps --format-version=1 | jq ".packages.[].features"'
 alias ffmpegGif='ffmpeg -an'
 alias ffmpegSound='ffmpeg -vn'
+alias hugo-serve='hugo server -p 4200 --buildDrafts --buildFuture' # --bind 0.0.0.0 when testing with devices on the same network
 alias oxipngz='oxipng --zopfli --opt=max --fast'
+alias pio-monitor='pio device monitor'
+alias pio-upload='pio run --target upload'
+alias podman-image-update='nice podman pull $(podman image ls --filter=dangling=false --noheading --format="{{.Repository}}:{{.Tag}}" | rg -v localhost)'
 alias randb='openssl rand -base64 33'
 alias randh='openssl rand -hex 20'
 alias rgf='rg --files-with-matches'
@@ -71,37 +69,35 @@ alias mpc-clearadd='mpc clear -q && mpc add'
 alias mpc-cropadd='mpc crop && mpc add'
 alias amp='mpc --host etoPiBedAmp'
 
-# example usage: `gitBelow fetch`
-# see: https://github.com/EdJoPaTo/project-below
-alias gitBelow='project-below --directory=.git git'
-alias gitSubmoduleBelow='project-below --file=.git git'
-
-# --bind 0.0.0.0 when testing with devices on the same network
-alias hugo-serve='hugo server -p 4200 --buildDrafts --buildFuture'
-
-alias podman-image-update='nice podman pull $(podman image ls --filter=dangling=false --noheading --format="{{.Repository}}:{{.Tag}}" | rg -v localhost)'
-alias podmanBelow='project-below --file=Dockerfile nice -n 19 podman'
-
-alias cargo-open-doc='nice cargo doc --open'
-alias cargo-features='cargo metadata --no-deps --format-version=1 | jq ".packages.[].features"'
-alias cargoBelow-clean='project-below --hidden --file=Cargo.toml --directory=target cargo clean'
-alias cargoBelow='project-below --file=Cargo.toml nice -n 19 cargo'
-alias cargoLibBelow='project-below --file=Cargo.toml --file=src/lib.rs nice -n 19 cargo'
-
 alias npx='echo edjopato fixed npx again && PATH=$(pwd)/node_modules/.bin:$PATH nice'
 alias node-jsr='nice deno run --reload --no-lock --node-modules-dir=false --allow-env --allow-read --allow-run --allow-write=.npmrc npm:jsr'
 alias node-test='node --enable-source-maps --test --experimental-test-coverage'
 alias npm-reinstall='rm -rf node_modules package-lock.json && nice npm install --no-fund && npm outdated; npm test'
 alias npm-xo-update='rm -rf node_modules package-lock.json && nice npm install --no-fund --save-dev xo@latest && nice ./node_modules/.bin/xo --fix'
-alias npmBelow-ci='project-below --file=package.json nice -n 19 bash -c "rm -rf node_modules package-lock.json; git checkout package-lock.json; npm ci --no-fund 2>/dev/null || npm i --no-fund"'
-alias npmBelow-clean='project-below --hidden --file=package.json --directory=node_modules rm -rf node_modules'
-alias npmBelow='project-below --file=package.json nice -n 19 npm'
 alias tsc-watch='rm -rf dist && nice ./node_modules/.bin/tsc --sourceMap --watch'
-alias tscBelow-clean='project-below --hidden --file=tsconfig.json --directory=dist rm -rf dist'
 
-alias denoBelow='project-below --file=deno.jsonc deno'
+alias gitrepodir='git rev-parse --show-toplevel'
+alias cdrepo='cd $(gitrepodir)'
 
-alias pio-upload='pio run --target upload'
-alias pio-monitor='pio device monitor'
-alias pioBelow='project-below --file=platformio.ini nice -n 19 pio'
+alias cdf='cd "$(fd --type=directory | fzf)"'
+alias cdg='cd "$HOME/git/$(project-below --base-dir=$HOME/git --directory=.git --list | fzf --scheme=path --tiebreak=end,length)"'
+alias cdgh='cd "$HOME/git/$(project-below --base-dir=$HOME/git --directory=.git --hidden --list | fzf --scheme=path --tiebreak=end,length)"'
+
+# example usage: `gitBelow fetch`
+# see: https://github.com/EdJoPaTo/project-below
+alias gitBelow='project-below --directory=.git git'
+alias gitSubmoduleBelow='project-below --file=.git git'
+
+alias cargoBelow='nice -n 19 project-below --file=Cargo.toml cargo'
+alias cargoLibBelow='nice -n 19 project-below --file=Cargo.toml --file=src/lib.rs cargo'
+alias denoBelow='nice -n 19 project-below --file=deno.jsonc deno'
+alias npmBelow='nice -n 19 project-below --file=package.json npm'
+alias pioBelow='nice -n 19 project-below --file=platformio.ini pio'
+alias podmanBelow='nice -n 19 project-below --file=Dockerfile podman'
+
+alias npmBelow-ci='nice -n 19 project-below --file=package.json bash -c "rm -rf node_modules package-lock.json; git checkout package-lock.json; npm ci --no-fund 2>/dev/null || npm i --no-fund"'
+
+alias cargoBelow-clean='project-below --hidden --file=Cargo.toml --directory=target cargo clean'
+alias npmBelow-clean='project-below --hidden --file=package.json --directory=node_modules rm -rf node_modules'
 alias pioBelow-clean='project-below --hidden --file=platformio.ini --directory=.pio rm -rf .pio'
+alias tscBelow-clean='project-below --hidden --file=tsconfig.json --directory=dist rm -rf dist'
