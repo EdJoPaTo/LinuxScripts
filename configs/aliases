@@ -80,13 +80,13 @@ alias gitrepodir='git rev-parse --show-toplevel'
 alias cdrepo='cd $(gitrepodir)'
 
 alias cdf='cd "$(fd --type=directory | fzf)"'
-alias cdg='cd "$HOME/git/$(project-below --base-dir=$HOME/git --directory=.git --list | fzf --scheme=path --tiebreak=end,length)"'
-alias cdgh='cd "$HOME/git/$(project-below --base-dir=$HOME/git --directory=.git --hidden --list | fzf --scheme=path --tiebreak=end,length)"'
+alias cdg='cd "$HOME/git/$(project-below --base-dir=$HOME/git --directory=.git | fzf --scheme=path --tiebreak=end,length)"'
+alias cdgh='cd "$HOME/git/$(project-below --base-dir=$HOME/git --directory=.git --hidden | fzf --scheme=path --tiebreak=end,length)"'
 
 # example usage: `gitBelow fetch`
 # see: https://github.com/EdJoPaTo/project-below
-alias gitBelow='project-below --directory=.git git'
-alias gitSubmoduleBelow='project-below --file=.git git'
+alias gitBelow='project-below --directory=.git --result=non-zero git'
+alias gitSubmoduleBelow='project-below --file=.git --result=non-zero git'
 
 alias cargoBelow='nice -n 19 project-below --file=Cargo.toml cargo'
 alias cargoLibBelow='nice -n 19 project-below --file=Cargo.toml --file=src/lib.rs cargo'
@@ -98,6 +98,6 @@ alias podmanBelow='nice -n 19 project-below --file=Dockerfile podman'
 alias npmBelow-ci='nice -n 19 project-below --file=package.json bash -c "rm -rf node_modules package-lock.json; git checkout package-lock.json; npm ci --no-fund 2>/dev/null || npm i --no-fund"'
 
 alias cargoBelow-clean='project-below --hidden --file=Cargo.toml --directory=target cargo clean'
-alias npmBelow-clean='project-below --hidden --file=package.json --directory=node_modules rm -rf node_modules'
-alias pioBelow-clean='project-below --hidden --file=platformio.ini --directory=.pio rm -rf .pio'
-alias tscBelow-clean='project-below --hidden --file=tsconfig.json --directory=dist rm -rf dist'
+alias npmBelow-clean='project-below --hidden --file=package.json --directory=node_modules --only-result rm -rf node_modules'
+alias pioBelow-clean='project-below --hidden --file=platformio.ini --directory=.pio --only-result rm -rf .pio'
+alias tscBelow-clean='project-below --hidden --file=tsconfig.json --directory=dist --only-result rm -rf dist'
