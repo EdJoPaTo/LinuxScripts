@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+set -u -o pipefail
+
+cd ~/git || exit
+
+function splitter {
+	echo
+	echo "#"
+	echo "##"
+	echo "### $1"
+	echo
+}
+
+splitter "git fetch"
+project-below --directory=.git --result=non-zero git fetch --all
+
+
+splitter "deno cache"
+project-below --file=deno.lock --directory=.git --output=null --result=non-zero \
+	git checkout deno.lock
+echo "git checkout deno.lock done"
+project-below --file='deno.json*' --output=null --result=always \
+	fd --extension=ts --exec-batch deno cache --node-modules-dir=false
+
+
+splitter "cargo prefetch"
+project-below --file=Cargo.toml --result=non-zero cargo-prefetch
