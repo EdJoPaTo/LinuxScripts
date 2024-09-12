@@ -37,6 +37,7 @@ alias tokei='tokei --sort code'
 alias yt-dlp='nice -n 15 yt-dlp --prefer-free-formats --embed-subs --sub-langs=all --embed-thumbnail --embed-metadata --embed-chapters --video-multistreams --audio-multistreams --sponsorblock-remove=default --paths=temp:/tmp/yt-dlp'
 
 alias cargo-features='cargo metadata --no-deps --format-version=1 | jq ".packages.[].features"'
+alias cargo-open-doc='RUSTDOCFLAGS="--cfg docsrs" cargo +nightly doc --all-features --open'
 alias ffmpegGif='ffmpeg -an'
 alias ffmpegSound='ffmpeg -vn'
 alias hugo-serve='hugo server -p 4200 --buildDrafts --buildFuture' # --bind 0.0.0.0 when testing with devices on the same network
