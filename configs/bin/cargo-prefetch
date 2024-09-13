@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 
+# Use to fetch dependencies into the local cache.
+# Helpful to prepare for travel as stuff is probably already downloaded then.
+# Uses https://github.com/rust-lang/cargo/issues/13873
+
 # When used as a cargo subcommand the first argument is the subcommand which should be removed
 if [[ -n $1 ]] && [[ "$0" == *"$1" ]]; then
 	shift 1
 fi
 
 set -u -o pipefail
-
-# Uses https://github.com/rust-lang/cargo/issues/13873
 
 CARGO_RESOLVER_INCOMPATIBLE_RUST_VERSIONS=allow cargo +nightly -Zmsrv-policy update --quiet &&
 	cargo fetch
