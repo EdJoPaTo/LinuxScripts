@@ -16,6 +16,7 @@ function link() {
 mkdir -p ~/git/hub/EdJoPaTo/public
 
 for file in bin/*; do
+	chmod +x "$file"
 	filename=$(basename "$file")
 	link "$file" "$HOME/bin/$filename"
 done
