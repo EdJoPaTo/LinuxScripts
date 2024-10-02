@@ -65,6 +65,9 @@
 	"[jsonc]": {
 		"editor.defaultFormatter": "denoland.vscode-deno"
 	},
+	"[rust]": {
+		"editor.formatOnSave": true
+	},
 	"[typescript]": {
 		"editor.defaultFormatter": "denoland.vscode-deno",
 		"editor.codeActionsOnSave": {
