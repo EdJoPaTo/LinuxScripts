@@ -1,6 +1,7 @@
 [Unit]
 Description=Pacman predownload packages
 ConditionACPower=true
+RequiresMountsFor="/var/lib/pacman/sync"
 Wants=network-online.target
 After=network-online.target
 
