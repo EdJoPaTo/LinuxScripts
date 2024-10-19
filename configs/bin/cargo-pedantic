@@ -42,6 +42,7 @@ nice cargo clippy --keep-going "$@" -- \
 	-W clippy::multiple_inherent_impl \
 	-W clippy::needless_raw_strings \
 	-W clippy::partial_pub_fields \
+	-W clippy::pathbuf_init_then_push \
 	-W clippy::redundant_type_annotations \
 	-W clippy::rest_pat_in_fully_bound_structs \
 	-W clippy::same_name_method \
@@ -57,6 +58,7 @@ nice cargo clippy --keep-going "$@" -- \
 	-W clippy::unnecessary_self_imports \
 	-W clippy::unneeded_field_pattern \
 	-W clippy::unseparated_literal_suffix \
+	-W clippy::unused_result_ok \
 	-W clippy::verbose_file_reads \
 	-W deprecated_safe \
 	-W explicit_outlives_requirements \
