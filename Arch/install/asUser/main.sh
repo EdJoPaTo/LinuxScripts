@@ -5,7 +5,6 @@ EXPLICIT=(
 	etcher-bin
 	gnome-shell-extension-blur-my-shell
 	gnome-shell-extension-system-monitor-next-git
-	mpd-mpris
 	nautilus-open-any-terminal
 	nvm
 	paru-bin

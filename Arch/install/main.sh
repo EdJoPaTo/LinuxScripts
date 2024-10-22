@@ -112,6 +112,7 @@ EXPLICIT=(
 	kid3-qt
 	mpc
 	mpd
+	mpd-mpris
 	mpv
 	mpv-mpris
 	yt-dlp
@@ -129,7 +130,7 @@ EXPLICIT=(
 	wget
 	whois
 
-	# programming rust
+	# programming Rust
 	rustup
 	cross
 	cargo-audit
@@ -143,6 +144,7 @@ EXPLICIT=(
 	cargo-outdated
 	cargo-public-api
 	cargo-semver-checks
+	cargo-show-asm
 	cargo-sort
 	cargo-spellcheck
 
