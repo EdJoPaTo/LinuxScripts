@@ -17,6 +17,3 @@ export MEETING_PIXELMATRIX=espMatrix-etHorizontal:1337
 export MINISERVE_INTERFACE=::1
 export MQTTUI_BROKER=mqtt://etoPiHome3
 export RIPGREP_CONFIG_PATH="$HOME/.config/ripgreprc"
-
-# https://github.com/rust-lang/cargo/issues/13873
-export CARGO_RESOLVER_INCOMPATIBLE_RUST_VERSIONS=fallback
