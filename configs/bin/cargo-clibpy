@@ -10,6 +10,8 @@ fi
 set -eu -o pipefail
 
 nice cargo clippy "$@" -- \
+	-W clippy::allow_attributes \
+	-W clippy::allow_attributes_without_reason \
 	-W clippy::arithmetic_side_effects \
 	-W clippy::exhaustive_enums \
 	-W clippy::indexing_slicing \

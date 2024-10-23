@@ -25,6 +25,7 @@ nice cargo clippy --keep-going "$@" -- \
 	-W clippy::empty_drop \
 	-W clippy::empty_enum_variants_with_brackets \
 	-W clippy::empty_structs_with_brackets \
+	-W clippy::field_scoped_visibility_modifiers \
 	-W clippy::filetype_is_file \
 	-W clippy::float_cmp_const \
 	-W clippy::fn_to_numeric_cast_any \
@@ -60,12 +61,14 @@ nice cargo clippy --keep-going "$@" -- \
 	-W clippy::unseparated_literal_suffix \
 	-W clippy::unused_result_ok \
 	-W clippy::verbose_file_reads \
+	-W ambiguous_negative_literals \
 	-W deprecated_safe \
 	-W explicit_outlives_requirements \
 	-W meta_variable_misuse \
 	-W missing_abi \
 	-W non_ascii_idents \
 	-W non_local_definitions \
+	-W redundant_imports \
 	-W redundant_lifetimes \
 	-W single_use_lifetimes \
 	-W trivial_casts \
