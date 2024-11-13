@@ -1,13 +1,15 @@
 {
 	"layer": "top",
 	"modules-left": [
-		"sway/workspaces",
-		"sway/mode",
-		"wlr/workspaces",
 		"hyprland/workspaces",
+		"niri/workspaces",
+		"sway/workspaces",
+		"wlr/workspaces",
+		"sway/mode",
 		"hyprland/submap",
-		"sway/window",
-		"hyprland/window"
+		"hyprland/window",
+		"niri/window",
+		"sway/window"
 	],
 	"modules-center": [],
 	"modules-right": [
