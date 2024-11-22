@@ -14,7 +14,7 @@
 	"modules-center": [],
 	"modules-right": [
 		"tray",
-		"mpd",
+		"mpris",
 		"cpu",
 		"memory",
 		"network",
@@ -27,26 +27,9 @@
 	"wlr/workspaces": {
 		"sort-by-number": true
 	},
-	"mpd": {
-		"format": "{stateIcon} {artist} - {title}",
-		"tooltip-format": "{stateIcon}  {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{songPosition}|{queueLength} {artist} - {album} - {title} {elapsedTime:%M:%S}/{totalTime:%M:%S}",
-		"consume-icons": {
-			"on": " "
-		},
-		"random-icons": {
-			"off": "<span color=\"#f53c3c\"></span> ",
-			"on": " "
-		},
-		"repeat-icons": {
-			"on": " "
-		},
-		"single-icons": {
-			"on": "1 "
-		},
-		"state-icons": {
-			"paused": "",
-			"playing": ""
-		}
+	"mpris": {
+		"format": "{dynamic}",
+		"format-paused": "🎵"
 	},
 	"idle_inhibitor": {
 		"format": "{icon}",
@@ -59,7 +42,9 @@
 		"tooltip-format": "<big>{:%B %Y}</big>\n<tt>{calendar}</tt>"
 	},
 	"cpu": {
+		"interval": 1,
 		"format": "{load} {usage}% ",
+		"min-length": 10,
 		"on-click": "alacritty --command htop"
 	},
 	"memory": {

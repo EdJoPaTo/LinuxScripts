@@ -44,6 +44,7 @@ if [[ $OSTYPE = linux* ]]; then
 	link "hyprland.conf" "$HOME/.config/hypr/hyprland.conf"
 	link "i3status-rust.toml" "$HOME/.config/i3status-rust/config.toml"
 	link "kanshi" "$HOME/.config/kanshi/config"
+	link "niri.kdl" "$HOME/.config/niri/config.kdl"
 	link "paru.conf" "$HOME/.config/paru/paru.conf"
 	link "sway" "$HOME/.config/sway/config"
 	link "swaylock" "$HOME/.config/swaylock/config"

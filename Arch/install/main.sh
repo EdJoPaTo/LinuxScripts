@@ -78,6 +78,12 @@ EXPLICIT=(
 	man-pages
 	pacman-contrib
 
+	niri
+	fuzzel
+	swayidle
+	swaylock
+	waybar
+
 	# languages
 	hunspell-de
 	hunspell-en_gb
