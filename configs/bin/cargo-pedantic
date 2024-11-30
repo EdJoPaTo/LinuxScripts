@@ -42,6 +42,7 @@ nice cargo clippy --keep-going "$@" -- \
 	-W clippy::mixed_read_write_in_expression \
 	-W clippy::multiple_inherent_impl \
 	-W clippy::needless_raw_strings \
+	-W clippy::non_zero_suggestions \
 	-W clippy::partial_pub_fields \
 	-W clippy::pathbuf_init_then_push \
 	-W clippy::redundant_type_annotations \
@@ -60,6 +61,7 @@ nice cargo clippy --keep-going "$@" -- \
 	-W clippy::unneeded_field_pattern \
 	-W clippy::unseparated_literal_suffix \
 	-W clippy::unused_result_ok \
+	-W clippy::unused_trait_names \
 	-W clippy::verbose_file_reads \
 	-W ambiguous_negative_literals \
 	-W deprecated_safe \
