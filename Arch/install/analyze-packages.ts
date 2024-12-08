@@ -1,4 +1,4 @@
-#!/usr/bin/env -S deno run --allow-run=pacman
+#!/usr/bin/env -S deno --allow-run=pacman
 
 export async function exec(cmd: string, ...args: string[]): Promise<string> {
 	const process = new Deno.Command(cmd, { args, stdout: "piped" }).spawn();

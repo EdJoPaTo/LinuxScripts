@@ -42,7 +42,6 @@ alias cargo-open-llvm-cov='cargo +nightly llvm-cov test --no-cfg-coverage --no-c
 alias cargo-update-msrv='CARGO_RESOLVER_INCOMPATIBLE_RUST_VERSIONS=fallback cargo +nightly -Zmsrv-policy update --verbose && cargo outdated -e' # https://github.com/rust-lang/cargo/issues/13873
 alias curltime='curl --output /dev/null --silent --write-out "namelookup:%{time_namelookup} connect:%{time_connect} appconnect:%{time_appconnect} pretransfer:%{time_pretransfer} redirect:%{time_redirect} starttransfer:%{time_starttransfer} total:%{time_total}\n"'
 alias deno-coverage='deno test --allow-all --reporter=dot --doc --clean --coverage=/tmp/deno-coverage && deno coverage /tmp/deno-coverage'
-alias deno-future='DENO_FUTURE=1 deno-pedantic; git checkout deno.lock 2>/dev/null; true'
 alias ffmpegGif='ffmpeg -an'
 alias ffmpegSound='ffmpeg -vn'
 alias hugo-serve='hugo server -p 4200 --buildDrafts --buildFuture' # --bind 0.0.0.0 when testing with devices on the same network
@@ -76,7 +75,7 @@ alias mpc-cropadd='mpc crop && mpc add'
 alias amp='mpc --host etoPiBedAmp'
 
 alias npx='echo edjopato fixed npx again && PATH=$(pwd)/node_modules/.bin:$PATH nice'
-alias node-jsr='nice deno run --reload --no-lock --node-modules-dir=false --allow-env --allow-read --allow-run --allow-write=.npmrc npm:jsr'
+alias node-jsr='nice deno --reload --no-lock --node-modules-dir=false --allow-env --allow-read --allow-run --allow-write=.npmrc npm:jsr'
 alias node-test='node --enable-source-maps --test --experimental-test-coverage'
 alias npm-reinstall='rm -rf node_modules package-lock.json && nice npm install --no-fund && npm outdated; npm test'
 alias npm-xo-update='rm -rf node_modules package-lock.json && nice npm install --no-fund --save-dev xo@latest && nice ./node_modules/.bin/xo --fix'

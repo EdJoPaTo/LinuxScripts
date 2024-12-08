@@ -2,7 +2,7 @@
 set -u
 
 # deno cache --reload --no-lock --node-modules-dir=false npm:xo
-# nice deno run --no-lock --node-modules-dir=false -A npm:xo --version
+# nice deno --no-lock --node-modules-dir=false -A npm:xo --version
 
 cat <<EOF >.xo-config.json
 {
@@ -35,7 +35,7 @@ cat <<EOF >.xo-config.json
 }
 EOF
 
-nice deno run \
+nice deno \
 	--allow-env --allow-read --allow-sys \
 	--allow-write="$HOME/.xo-cache,./node_modules/.cache/xo-linter,../node_modules/.cache/xo-linter" \
 	--no-lock --node-modules-dir=false \
