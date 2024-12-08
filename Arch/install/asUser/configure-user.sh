@@ -17,6 +17,7 @@ sudo usermod -aG uucp,lock "$USER"
 mkdir -p ~/.config/systemd/user/niri.service.wants/
 ln --verbose --symbolic --force /usr/lib/systemd/user/waybar.service ~/.config/systemd/user/niri.service.wants/
 
+systemctl --user disable --now mpd.service
 systemctl --user enable --now mpd.socket mpd-mpris.service
 
 xdg-mime default org.gnome.Nautilus.desktop inode/directory

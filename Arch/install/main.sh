@@ -78,12 +78,6 @@ EXPLICIT=(
 	man-pages
 	pacman-contrib
 
-	niri
-	fuzzel
-	swayidle
-	swaylock
-	waybar
-
 	# languages
 	hunspell-de
 	hunspell-en_gb
@@ -161,9 +155,8 @@ EXPLICIT=(
 	firefox-ublock-origin
 	## https://addons.mozilla.org/firefox/addon/clearurls/
 	## https://addons.mozilla.org/firefox/addon/languagetool/
-	## https://addons.mozilla.org/firefox/addon/localcdn-fork-of-decentraleyes/
 	## https://addons.mozilla.org/firefox/addon/privacy-redirect/
-	## https://addons.mozilla.org/firefox/addon/temporary-containers/
+	## https://addons.mozilla.org/firefox/addon/sponsorblock/
 )
 
 DEPS=(
@@ -231,6 +224,12 @@ pacman -D --asexplicit --quiet "${EXPLICIT[@]}"
 if [ "$(uname -m)" == "x86_64" ]; then
 	echo "v4l2loopback" >/etc/modules-load.d/v4l2.conf
 fi
+
+# Set doas settings
+echo "permit setenv { EDITOR VISUAL LANG LC_ALL LC_ADDRESS LC_MEASUREMENT LC_MONETARY LC_NUMERIC LC_PAPER LC_TELEPHONE LC_TIME } :wheel" >/etc/doas.conf
+
+# npm is updated by the system (or nvm)
+echo "update-notifier=false" >/etc/npmrc
 
 # communicate with monitors via ddc (ddcutil)
 echo "i2c-dev" >/etc/modules-load.d/ddc.conf
