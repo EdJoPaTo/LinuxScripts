@@ -37,9 +37,11 @@ nice cargo clippy --keep-going "$@" -- \
 	-W clippy::let_underscore_untyped \
 	-W clippy::lossy_float_literal \
 	-W clippy::map_err_ignore \
+	-W clippy::map_with_unused_argument_over_ranges \
 	-W clippy::min_ident_chars \
 	-W clippy::missing_assert_message \
 	-W clippy::mixed_read_write_in_expression \
+	-W clippy::module_name_repetitions \
 	-W clippy::multiple_inherent_impl \
 	-W clippy::needless_raw_strings \
 	-W clippy::non_zero_suggestions \
@@ -82,5 +84,8 @@ nice cargo clippy --keep-going "$@" -- \
 	-W unused_macro_rules \
 	-W unused_qualifications \
 	-W rust_2024_compatibility \
+	-A edition-2024-expr-fragment-specifier \
+	-A if-let-rescope \
+	-A tail-expr-drop-order \
 	-W clippy::nursery \
 	-W clippy::pedantic
