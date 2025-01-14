@@ -109,6 +109,7 @@ EXPLICIT=(
 
 	# audio / video
 	ffmpeg
+	helvum
 	kid3-qt
 	mpc
 	mpd
@@ -181,11 +182,13 @@ DEPS=(
 	wireplumber
 
 	# file-roller optionals
+	7zip
 	# lrzip
-	p7zip
 	# squashfs-tools
 	# unace
 	# unrar
+	unzip
+	zip
 
 	# remote locations
 	gvfs-afc
