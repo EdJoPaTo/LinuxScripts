@@ -38,8 +38,8 @@ EXPLICIT=(
 	lostfiles
 	loupe # image viewer
 	miniserve
-	mumble
 	mqttui
+	mumble
 	nautilus
 	neovim
 	networkmanager
