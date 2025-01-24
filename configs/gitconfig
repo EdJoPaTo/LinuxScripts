@@ -12,7 +12,7 @@
 	amend = commit --amend --reset-author
 	fixup = commit --amend --no-edit
 
-	cloneshallow = clone --shallow-submodules --depth=1
+	cloneshallow = clone --recurse-submodules --shallow-submodules --depth=1
 	enfore-ignore = !git rm -r --cached --quiet . && git add . && git status --short
 	puff = push -u --atomic --force-with-lease
 	s = status --short --branch

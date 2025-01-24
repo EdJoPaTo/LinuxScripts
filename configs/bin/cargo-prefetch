@@ -17,3 +17,17 @@ CARGO_RESOLVER_INCOMPATIBLE_RUST_VERSIONS=fallback cargo +nightly -Zmsrv-policy 
 	cargo fetch
 git checkout --quiet Cargo.lock 2>/dev/null
 cargo fetch
+
+set -e
+
+folder=${PWD##*/}
+tmpfolder="/tmp/cargo-prefetch-$UID/$folder"
+
+rm -rf "$tmpfolder"
+mkdir -p "$tmpfolder"
+git clone --quiet --depth=1 --shallow-submodule --recurse-submodules "file://$PWD" "$tmpfolder"
+cd "$tmpfolder"
+set +e
+cargo +nightly -Zunstable-options update --quiet --breaking &&
+	cargo fetch
+rm -rf "$tmpfolder"
