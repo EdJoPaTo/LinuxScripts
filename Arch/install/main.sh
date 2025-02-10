@@ -11,7 +11,6 @@ EXPLICIT=(
 	difftastic
 	dive # explore container layers
 	dust
-	evince # document viewer (PDF, …)
 	eza
 	fd
 	file-roller # archives
@@ -47,6 +46,7 @@ EXPLICIT=(
 	npm
 	opendoas
 	openssh
+	papers
 	pdfpc
 	pkgstats
 	platformio-core
