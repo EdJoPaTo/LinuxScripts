@@ -11,11 +11,6 @@ fi
 
 set -u -o pipefail
 
-CARGO_RESOLVER_INCOMPATIBLE_RUST_VERSIONS=allow cargo +nightly -Zmsrv-policy update --quiet &&
-	cargo fetch
-CARGO_RESOLVER_INCOMPATIBLE_RUST_VERSIONS=fallback cargo +nightly -Zmsrv-policy update --quiet &&
-	cargo fetch
-git checkout --quiet Cargo.lock 2>/dev/null
 cargo fetch
 
 set -e
@@ -28,6 +23,10 @@ mkdir -p "$tmpfolder"
 git clone --quiet --depth=1 --shallow-submodule --recurse-submodules "file://$PWD" "$tmpfolder"
 cd "$tmpfolder"
 set +e
+CARGO_RESOLVER_INCOMPATIBLE_RUST_VERSIONS=fallback cargo update --quiet &&
+	cargo fetch
+CARGO_RESOLVER_INCOMPATIBLE_RUST_VERSIONS=allow cargo update --quiet &&
+	cargo fetch
 cargo +nightly -Zunstable-options update --quiet --breaking &&
 	cargo fetch
 rm -rf "$tmpfolder"
