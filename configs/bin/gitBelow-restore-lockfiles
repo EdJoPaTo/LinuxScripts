@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -eux -o pipefail
+
+for file in Cargo.lock deno.lock package-lock.json; do
+	project-below --directory=.git --file="$file" --hidden --only-result git restore --quiet "$file"
+done

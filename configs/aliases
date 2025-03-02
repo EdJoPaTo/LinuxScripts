@@ -101,8 +101,6 @@ alias npmBelow='nice -n 19 project-below --file=package.json npm'
 alias pioBelow='nice -n 19 project-below --file=platformio.ini pio'
 alias podmanBelow='nice -n 19 project-below --file=Dockerfile podman'
 
-alias gitBelow-checkout-lockfiles='project-below --directory=.git --hidden --quiet git checkout Cargo.lock deno.lock package-lock.json'
-
 alias npmBelow-ci='nice -n 19 project-below --file=package.json bash -c "rm -rf node_modules package-lock.json; git checkout package-lock.json; npm ci --no-fund 2>/dev/null || npm i --no-fund"'
 
 alias cargoBelow-clean='project-below --hidden --file=Cargo.toml --directory=target cargo clean'
