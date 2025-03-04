@@ -16,7 +16,7 @@ cargo fetch
 set -e
 
 folder=${PWD##*/}
-tmpfolder="/tmp/cargo-prefetch-$UID/$folder"
+tmpfolder="/tmp/cargo-prefetch-$USER/$folder"
 
 rm -rf "$tmpfolder"
 mkdir -p "$tmpfolder"
