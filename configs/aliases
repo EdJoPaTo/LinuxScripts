@@ -34,7 +34,7 @@ alias ip='ip --color=auto'
 alias ls='eza --git'
 alias systemctl='systemctl --no-pager --full'
 alias tokei='tokei --sort code'
-alias yt-dlp='nice -n 15 yt-dlp --prefer-free-formats --embed-subs --sub-langs=all --embed-thumbnail --embed-metadata --embed-chapters --video-multistreams --audio-multistreams --sponsorblock-remove=default --paths=temp:"/tmp/yt-dlp-$USER" --format-sort=vcodec:h264'
+alias yt-dlp='nice -n 15 yt-dlp --prefer-free-formats --embed-subs --sub-langs=all --embed-thumbnail --embed-metadata --embed-chapters --video-multistreams --audio-multistreams --sponsorblock-remove=default --paths=temp:"/tmp/yt-dlp-$USER" --restrict-filenames --trim-filenames=80 --format-sort=vcodec:h264'
 
 alias cargo-features='cargo metadata --no-deps --format-version=1 | jq ".packages.[].features"'
 alias cargo-open-doc='RUSTDOCFLAGS="--cfg docsrs" cargo +nightly doc --all-features --open'
@@ -62,10 +62,11 @@ alias ssht='ssh -t -o RemoteCommand="exec tmux new-session -A -s ssht"'
 alias sshtop='ssh -t -o RemoteCommand="exec htop"'
 alias sshuptime='ssh -t -o RemoteCommand="exec watch -x uptime"'
 alias tree='eza -al --tree --git --git-ignore'
-alias yt-dlp-1080='yt-dlp --format-sort=vcodec:h264,res~1080'
-alias yt-dlp-1440='yt-dlp --format-sort=vcodec:h264,res~1440'
-alias yt-dlp-720='yt-dlp --format-sort=vcodec:h264,res~720'
+alias yt-dlp-1080='yt-dlp --format-sort=res~1080'
+alias yt-dlp-1440='yt-dlp --format-sort=res~1440'
+alias yt-dlp-720='yt-dlp --format-sort=res~720'
 alias yt-dlp-audio='yt-dlp --extract-audio' # --audio-format=mp3 can be helpful
+alias yt-dlp-smallest='yt-dlp --format-sort=vcodec:h264,+size,+br,+res,+fps'
 
 # https://github.com/chubin/wttr.in
 alias wttr='curl wttr.in && curl v2.wttr.in'
