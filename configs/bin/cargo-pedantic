@@ -16,6 +16,7 @@ set -eu -o pipefail
 
 nice cargo clippy --keep-going "$@" -- \
 	-W clippy::alloc_instead_of_core \
+	-W clippy::allow_attributes \
 	-W clippy::as_underscore \
 	-W clippy::assertions_on_result_states \
 	-W clippy::create_dir \
@@ -66,8 +67,10 @@ nice cargo clippy --keep-going "$@" -- \
 	-W clippy::unused_trait_names \
 	-W clippy::verbose_file_reads \
 	-W ambiguous_negative_literals \
+	-W closure_returning_async_block \
 	-W deprecated_safe \
 	-W explicit_outlives_requirements \
+	-W impl_trait_redundant_captures \
 	-W meta_variable_misuse \
 	-W missing_abi \
 	-W non_ascii_idents \
