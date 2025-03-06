@@ -12,14 +12,13 @@
   "buffer_font_size": 14,
   "inlay_hints": { "enabled": true },
   "soft_wrap": "editor_width",
-  "ui_font_size": 16,
+  "wrap_guides": [80, 100, 160],
   "languages": {
-    "TypeScript": {
-      "code_actions_on_format": {
-        "source.organizeImports": true
-      }
+    "TOML": {
+      "preferred_line_length": 160,
+      "format_on_save": "off"
     },
-    "TSX": {
+    "TypeScript": {
       "code_actions_on_format": {
         "source.organizeImports": true
       }
@@ -30,13 +29,16 @@
       "initialization_options": {
         "check": {
           "command": "clippy" // rust-analyzer.check.command (default: "check")
+        },
+        "rustfmt": {
+          "extraArgs": ["+nightly"]
         }
       }
     }
   },
   "theme": {
     "mode": "system",
-    "light": "One Dark",
-    "dark": "One Dark"
+    "light": "Ayu Mirage",
+    "dark": "Ayu Dark"
   }
 }

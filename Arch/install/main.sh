@@ -149,6 +149,10 @@ EXPLICIT=(
 	cargo-sort
 	cargo-spellcheck
 
+	# programming ESP with Rust
+	espup
+	espflash
+
 	# Browser
 	chromium
 	firefox
