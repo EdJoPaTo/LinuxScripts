@@ -4,8 +4,6 @@ set -eu -o pipefail
 # usage: remoterun server command which should be executed
 # usage: remoterun my.server.tld cargo build
 
-exclude=${REMOTERUN_EXCLUDE:-"--exclude=.git --exclude-from=.gitignore"}
-
 server=$1
 shift 1
 command=$*
@@ -16,8 +14,10 @@ remotefolder=".cache/remoterun/$folder/"
 rsync \
 	--recursive --links --copy-unsafe-links --perms --times --omit-dir-times \
 	--compress --verbose --checksum \
-	--delete-delay \
-	$exclude \
+	--delete \
+	--exclude-from="$HOME/.config/git/ignore" \
+	--filter="- .git" \
+	--filter=":C .gitignore" \
 	--rsync-path="mkdir -p $remotefolder && rsync" \
 	. "$server:$remotefolder"
 
