@@ -5,6 +5,7 @@
 alias brew='nice brew'
 alias cargo='nice cargo'
 alias code='nice -n 5 code'
+alias codium='nice -n 5 codium'
 alias esphome='nice esphome'
 alias makepkg='nice makepkg'
 alias npm='nice npm'
@@ -15,10 +16,9 @@ alias platformio='nice platformio'
 alias podman='nice podman'
 alias rustup='nice rustup'
 alias zed='nice -n 5 zed'
+alias zeditor='nice -n 5 zeditor'
 
 type codium >/dev/null 2>/dev/null && alias code='nice -n 5 codium'
-type xdg-open >/dev/null 2>/dev/null && alias open='xdg-open'
-type zeditor >/dev/null 2>/dev/null && alias zed='nice -n 5 zeditor'
 
 # Help to migrate to new commands (space at start -> no zsh history entry)
 alias grep=' echo use rg && false --'
