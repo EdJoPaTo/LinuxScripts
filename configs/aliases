@@ -2,6 +2,8 @@
 
 # This file is meant to compatible with multiple shells, including: bash, fish, zsh
 
+command -v codium >/dev/null 2>/dev/null && alias code='nice -n 5 codium'
+
 alias brew='nice brew'
 alias cargo='nice cargo'
 alias code='nice -n 5 code'
@@ -17,8 +19,6 @@ alias podman='nice podman'
 alias rustup='nice rustup'
 alias zed='nice -n 5 zed'
 alias zeditor='nice -n 5 zeditor'
-
-type codium >/dev/null 2>/dev/null && alias code='nice -n 5 codium'
 
 # Help to migrate to new commands (space at start -> no zsh history entry)
 alias grep=' echo use rg && false --'
