@@ -30,6 +30,7 @@ EXPLICIT=(
 	gnome-software
 	gnome-sudoku
 	gnome-text-editor
+	gnome-themes-extra # Adwaita-dark
 	htop
 	hugo
 	hyperfine
@@ -44,6 +45,7 @@ EXPLICIT=(
 	networkmanager
 	newsflash
 	npm
+	nvm
 	opendoas
 	openssh
 	papers
@@ -51,6 +53,7 @@ EXPLICIT=(
 	pkgstats
 	platformio-core
 	podman
+	remmina
 	ripgrep
 	shfmt
 	starship
@@ -103,6 +106,7 @@ EXPLICIT=(
 	d2
 	gimp
 	gnuplot
+	graphviz
 	imagemagick
 	inkscape
 	oxipng
@@ -133,7 +137,6 @@ EXPLICIT=(
 
 	# programming Rust
 	rustup
-	cross
 	cargo-audit
 	cargo-expand
 	cargo-flamegraph
@@ -148,10 +151,9 @@ EXPLICIT=(
 	cargo-show-asm
 	cargo-sort
 	cargo-spellcheck
-
-	# programming ESP with Rust
-	espup
+	cross
 	espflash
+	espup
 
 	# Browser
 	chromium
@@ -166,9 +168,9 @@ EXPLICIT=(
 
 DEPS=(
 	bash-completion
+	freerdp
 	fuse-overlayfs # podman
 	gnome-control-center
-	gnome-themes-extra # Adwaita-dark
 	libmythes # thesaurus
 	linux
 	linux-firmware
@@ -248,4 +250,4 @@ ln --verbose --symbolic --force /usr/bin/xdg-open /usr/local/bin/open
 ln --verbose --symbolic --force /usr/bin/zeditor /usr/local/bin/zed
 
 # sensors
-sensors-detect --auto
+sensors-detect --auto >/dev/null

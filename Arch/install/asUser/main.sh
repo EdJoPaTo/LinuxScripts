@@ -6,7 +6,6 @@ EXPLICIT=(
 	gnome-shell-extension-blur-my-shell
 	gnome-shell-extension-system-monitor-next-git
 	nautilus-open-any-terminal
-	nvm
 	paru-bin
 	ventoy-bin
 )
