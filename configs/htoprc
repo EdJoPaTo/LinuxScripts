@@ -1,6 +1,6 @@
 # Beware! This file is rewritten by htop when settings are changed in the interface.
 # The parser is also very primitive, and not human-friendly.
-fields=0 48 18 39 119 2 50 46 47 49 20 1
+fields=0 48 18 39 2 50 46 132 47 131 49 20 1
 hide_kernel_threads=1
 hide_userland_threads=1
 hide_running_in_container=0
@@ -25,6 +25,7 @@ show_cpu_usage=1
 show_cpu_frequency=1
 show_cpu_temperature=1
 degree_fahrenheit=0
+show_cached_memory=1
 update_process_names=1
 account_guest_in_cpu_meter=1
 color_scheme=0
@@ -32,10 +33,10 @@ enable_mouse=1
 delay=15
 hide_function_bar=1
 header_layout=two_50_50
-left_meters=AllCPUs2 Memory Swap DiskIO NetworkIO Hostname
-left_meter_modes=1 1 1 2 2 2
-right_meters=Tasks Systemd LoadAverage PressureStallCPUSome PressureStallIOSome PressureStallMemorySome Uptime
-right_meter_modes=2 2 2 2 2 2 2
+left_meters=AllCPUs2 GPU Memory Swap DiskIO NetworkIO Hostname
+left_meter_modes=1 1 1 1 2 2 2
+right_meters=Tasks Systemd SystemdUser LoadAverage PressureStallCPUSome PressureStallIOSome PressureStallIRQFull PressureStallMemorySome Uptime DateTime
+right_meter_modes=2 2 2 2 2 2 2 2 2 2
 tree_view=1
 sort_key=49
 tree_sort_key=20
