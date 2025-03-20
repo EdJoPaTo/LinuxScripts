@@ -9,11 +9,9 @@ if [[ -n $1 ]] && [[ "$0" == *"$1" ]]; then
 	shift 1
 fi
 
-set -u -o pipefail
+set -eu -o pipefail
 
 cargo fetch
-
-set -e
 
 folder=${PWD##*/}
 tmpfolder="/tmp/cargo-prefetch-$USER/$folder"
