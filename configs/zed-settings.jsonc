@@ -13,6 +13,9 @@
   "inlay_hints": { "enabled": true },
   "soft_wrap": "editor_width",
   "wrap_guides": [80, 100, 160],
+  "file_types": {
+    "YAML": ["*.ksy"]
+  },
   "languages": {
     "TOML": {
       "preferred_line_length": 160,
@@ -32,6 +35,17 @@
         },
         "rustfmt": {
           "extraArgs": ["+nightly"]
+        }
+      }
+    },
+    "yaml-language-server": {
+      "settings": {
+        "yaml": {
+          "schemas": {
+            "https://raw.githubusercontent.com/kaitai-io/ksy_schema/master/ksy_schema.json": [
+              "*.ksy"
+            ]
+          }
         }
       }
     }
