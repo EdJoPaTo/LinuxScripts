@@ -6,7 +6,7 @@ set -eu -o pipefail
 
 server=$1
 shift 1
-command=$*
+command=$(printf '%q ' "$@")
 
 base=$(git rev-parse --show-toplevel 2>/dev/null || pwd)
 relative=$(git rev-parse --show-prefix 2>/dev/null || true)
