@@ -16,6 +16,7 @@
 	enfore-ignore = !git rm -r --cached --quiet . && git add . && git status --short
 	open-remote = "!f() { git remote get-url \"${1:-origin}\" | sed -E \"s,^git@([^:]*):/*(.*)$,https://\\1/\\2,\" | sed -E \"s,^ssh://[^@]*@*([^:/]*)[^/]*/*(.*)$,https://\\1/\\2,\" | sed \"s/.git$//\" | xargs open; }; f"
 	puff = push -u --atomic --force-with-lease
+	restore-lockfiles = !git ls-files -z '*.lock' '*-lock.json' | xargs -0 --no-run-if-empty git restore --staged --worktree --
 	s = status --short --branch
 [apply]
 	whitespace = fix
