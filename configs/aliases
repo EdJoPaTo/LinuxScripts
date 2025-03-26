@@ -83,9 +83,6 @@ alias npm-reinstall='rm -rf node_modules package-lock.json && nice npm install -
 alias npm-xo-update='rm -rf node_modules package-lock.json && nice npm install --no-fund --save-dev xo@latest && nice ./node_modules/.bin/xo --fix'
 alias tsc-watch='rm -rf dist && nice ./node_modules/.bin/tsc --sourceMap --watch'
 
-alias gitrepodir='git rev-parse --show-toplevel'
-alias cdrepo='cd $(gitrepodir)'
-
 alias cdf='cd "$(fd --type=directory | fzf)"'
 alias cdg='cd "$HOME/git/$(project-below --base-dir=$HOME/git --directory=.git | fzf --scheme=path --tiebreak=end,length)"'
 alias cdgh='cd "$HOME/git/$(project-below --base-dir=$HOME/git --directory=.git --hidden | fzf --scheme=path --tiebreak=end,length)"'

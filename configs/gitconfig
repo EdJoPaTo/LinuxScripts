@@ -18,6 +18,7 @@
 	puff = push -u --atomic --force-with-lease
 	restore-lockfiles = !git ls-files -z '*.lock' '*-lock.json' | xargs -0 --no-run-if-empty git restore --staged --worktree --
 	s = status --short --branch
+	toplevel = rev-parse --show-toplevel
 [apply]
 	whitespace = fix
 [commit]
