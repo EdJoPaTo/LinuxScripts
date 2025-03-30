@@ -21,5 +21,6 @@ systemctl --user disable --now mpd.service
 systemctl --user enable --now mpd.socket mpd-mpris.service
 
 xdg-mime default org.gnome.Nautilus.desktop inode/directory
+xdg-settings set default-web-browser firefox.desktop
 
 tldr --update
