@@ -75,7 +75,6 @@ EXPLICIT=(
 	# arch base
 	base
 	base-devel
-	dbus-broker-units
 	efibootmgr
 	man-db
 	man-pages
@@ -96,8 +95,6 @@ EXPLICIT=(
 	noto-fonts-emoji # emoji support (in terminal, notifications, ...)
 	ttf-dejavu
 	ttf-firacode-nerd
-	ttf-font-awesome
-	ttf-opensans
 
 	# Preview in Filemanager
 	ffmpegthumbnailer
@@ -168,13 +165,17 @@ EXPLICIT=(
 
 DEPS=(
 	bash-completion
+	crun
+	dbus-broker-units
 	freerdp
 	fuse-overlayfs # podman
 	gnome-control-center
+	gnu-netcat
 	libmythes # thesaurus
 	linux
 	linux-firmware
 	lm_sensors
+	mkinitcpio
 	platformio-core-udev
 	qt5-wayland
 	qt6-wayland
