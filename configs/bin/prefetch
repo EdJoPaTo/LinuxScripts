@@ -12,7 +12,7 @@ function splitter {
 }
 
 splitter "git fetch"
-project-below --directory=.git --result=non-zero git fetch --all
+project-below --directory=.git --result=non-zero git fetch --all --recurse-submodules
 
 
 splitter "deno cache"
