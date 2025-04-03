@@ -48,8 +48,10 @@ nice cargo clippy --keep-going "$@" -- \
 	-W clippy::non_zero_suggestions \
 	-W clippy::partial_pub_fields \
 	-W clippy::pathbuf_init_then_push \
+	-W clippy::precedence_bits \
 	-W clippy::redundant_type_annotations \
 	-W clippy::rest_pat_in_fully_bound_structs \
+	-W clippy::return_and_then \
 	-W clippy::same_name_method \
 	-W clippy::self_named_module_files \
 	-W clippy::semicolon_inside_block \
@@ -71,8 +73,8 @@ nice cargo clippy --keep-going "$@" -- \
 	-W deprecated_safe \
 	-W explicit_outlives_requirements \
 	-W impl_trait_redundant_captures \
+	-W linker_messages \
 	-W meta_variable_misuse \
-	-W missing_abi \
 	-W non_ascii_idents \
 	-W non_local_definitions \
 	-W redundant_imports \
