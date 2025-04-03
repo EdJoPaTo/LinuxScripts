@@ -25,6 +25,7 @@ gset org.gnome.Console theme auto
 gset org.gnome.desktop.calendar show-weekdate true
 gset org.gnome.desktop.interface accent-color orange
 gset org.gnome.desktop.interface clock-show-date true
+gset org.gnome.desktop.interface clock-show-weekday true
 gset org.gnome.desktop.notifications show-in-lock-screen false
 gset org.gnome.desktop.peripherals.mouse natural-scroll true
 gset org.gnome.desktop.privacy old-files-age 14
@@ -39,6 +40,7 @@ gset org.gnome.settings-daemon.plugins.media-keys www "['<Super>b']"
 gset org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type nothing
 gset org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'Alacritty.desktop']"
 gset org.gnome.shell.extensions.blur-my-shell.panel override-background-dynamically true
+gset org.gnome.shell.extensions.caffeine show-notifications false
 gset org.gnome.system.locale region 'de_DE.UTF-8'
 gset org.gnome.system.location enabled true
 
