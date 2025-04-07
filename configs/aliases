@@ -22,8 +22,6 @@ alias zeditor='nice -n 5 zeditor'
 
 # Help to migrate to new commands (space at start -> no zsh history entry)
 alias grep=' echo use rg && false --'
-alias hx=' echo use nvim && false --'
-alias sudo=' echo use doas && false --'
 alias vi=' echo use nvim && false --'
 alias vim=' echo use nvim && false --'
 
