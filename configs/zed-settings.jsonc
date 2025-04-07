@@ -13,6 +13,10 @@
   "inlay_hints": { "enabled": true },
   "soft_wrap": "editor_width",
   "wrap_guides": [80, 100, 160],
+  "features": {
+    "copilot": false,
+    "edit_prediction_provider": "none"
+  },
   "file_types": {
     "YAML": ["*.ksy"]
   },

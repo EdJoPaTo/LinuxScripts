@@ -34,6 +34,7 @@ alias systemctl='systemctl --no-pager --full'
 alias tokei='tokei --sort code'
 alias yt-dlp='nice -n 15 yt-dlp --prefer-free-formats --embed-subs --sub-langs=all --embed-thumbnail --embed-metadata --embed-chapters --video-multistreams --audio-multistreams --sponsorblock-remove=default --paths=temp:"/tmp/yt-dlp-$USER" --restrict-filenames --trim-filenames=80 --format-sort=vcodec:h264'
 
+alias alpine='podman run --rm --mount=type=bind,source=.,destination=/app --workdir=/app -it docker.io/library/alpine:edge' # add: sh -c "apk add fish && exec fish"
 alias cargo-features='cargo metadata --no-deps --format-version=1 | jq ".packages.[].features"'
 alias cargo-open-doc='RUSTDOCFLAGS="--cfg docsrs" cargo +nightly doc --all-features --open'
 alias cargo-open-llvm-cov='cargo +nightly llvm-cov test --no-cfg-coverage --no-cfg-coverage-nightly --no-fail-fast --all-features --open'
@@ -46,8 +47,8 @@ alias hugo-serve='hugo server -p 4200 --buildDrafts --buildFuture' # --bind 0.0.
 alias oxipngz='oxipng --zopfli --opt=max --fast'
 alias pio-monitor='pio device monitor'
 alias pio-upload='pio run --target upload'
-alias podman-untag-localhost='podman image ls --format "{{.Repository}}:{{.Tag}}" | rg "^localhost/" | xargs -n1 podman untag'
 alias podman-image-update='nice podman pull $(podman image ls --filter=dangling=false --noheading --format="{{.Repository}}:{{.Tag}}" | rg -v "^localhost/")'
+alias podman-untag-localhost='podman image ls --format "{{.Repository}}:{{.Tag}}" | rg "^localhost/" | xargs -n1 podman untag'
 alias randb='openssl rand -base64 33'
 alias randh='openssl rand -hex 20'
 alias rgf='rg --files-with-matches'
@@ -97,6 +98,7 @@ alias npmBelow='nice -n 19 project-below --file=package.json npm'
 alias pioBelow='nice -n 19 project-below --file=platformio.ini pio'
 alias podmanBelow='nice -n 19 project-below --file=Dockerfile podman'
 
+alias cargoBelow-check-quiet='nice -n 19 project-below --file=Cargo.toml --only-result --threads -- cargo check --quiet --jobs=1 --all-targets --all-features --keep-going'
 alias npmBelow-ci='nice -n 19 project-below --file=package.json bash -c "rm -rf node_modules package-lock.json; git checkout package-lock.json; npm ci --no-fund 2>/dev/null || npm i --no-fund"'
 
 alias cargoBelow-clean='project-below --hidden --file=Cargo.toml --directory=target cargo clean'

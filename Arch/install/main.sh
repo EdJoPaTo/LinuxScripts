@@ -2,6 +2,7 @@
 set -eu -o pipefail
 
 EXPLICIT=(
+	aisleriot
 	alacritty
 	ansible
 	ansible-lint
@@ -55,6 +56,7 @@ EXPLICIT=(
 	podman
 	remmina
 	ripgrep
+	ripgrep-all
 	shfmt
 	starship
 	syncthing
@@ -67,6 +69,7 @@ EXPLICIT=(
 	tmux
 	tokei
 	trash-cli
+	xorg-xeyes # easily know which windows are still X11
 	zed
 	zsh-completions
 	zsh-history-substring-search
@@ -93,6 +96,8 @@ EXPLICIT=(
 
 	# fonts
 	noto-fonts-emoji # emoji support (in terminal, notifications, ...)
+	otf-atkinson-hyperlegible
+	ttf-atkinson-hyperlegible
 	ttf-dejavu
 	ttf-firacode-nerd
 
