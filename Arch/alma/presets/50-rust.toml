@@ -1,9 +1,0 @@
-packages = [
-    "rustup"
-]
-shared_directories = ["LinuxScripts"]
-script = """
-set -eux
-cd /shared_dirs/LinuxScripts/Install
-su -c - edjopato "./rust.sh"
-"""

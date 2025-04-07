@@ -1,7 +1,0 @@
-packages = ["git"]
-script = """
-set -eux
-mkdir -p /home/edjopato/git/hub/EdJoPaTo/public/
-git clone https://github.com/EdJoPaTo/LinuxScripts.git /home/edjopato/git/hub/EdJoPaTo/public/LinuxScripts
-chown -R edjopato:wheel /home/edjopato
-"""
