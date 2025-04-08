@@ -3,6 +3,7 @@
 # This file is meant to compatible with multiple shells, including: bash, fish, zsh
 
 command -v codium >/dev/null 2>/dev/null && alias code='nice -n 5 codium'
+command -v eza >/dev/null 2>/dev/null && alias ls='eza --git'
 
 alias brew='nice brew'
 alias cargo='nice cargo'
@@ -29,7 +30,6 @@ alias vim=' echo use nvim && false --'
 alias ffmpeg='nice -n 15 ffmpeg -stats -hide_banner'
 alias ffprobe='ffprobe -hide_banner'
 alias ip='ip --color=auto'
-alias ls='eza --git'
 alias systemctl='systemctl --no-pager --full'
 alias tokei='tokei --sort code'
 alias yt-dlp='nice -n 15 yt-dlp --prefer-free-formats --embed-subs --sub-langs=all --embed-thumbnail --embed-metadata --embed-chapters --video-multistreams --audio-multistreams --sponsorblock-remove=default --paths=temp:"/tmp/yt-dlp-$USER" --restrict-filenames --trim-filenames=80 --format-sort=vcodec:h264'

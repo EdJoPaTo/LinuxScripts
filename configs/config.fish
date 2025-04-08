@@ -7,4 +7,4 @@ end
 source ~/.config/aliases
 source ~/.config/env
 
-starship init fish | source
+command -v starship >/dev/null 2>/dev/null && starship init fish | source
