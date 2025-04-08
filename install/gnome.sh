@@ -14,7 +14,7 @@ gset() {
 }
 
 dset() {
-  echo "## $1"
+	echo "## $1"
 	dconf read "$1"
 	echo "$2"
 	dconf write "$1" "$2"
