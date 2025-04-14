@@ -14,11 +14,9 @@ function splitter {
 splitter "git fetch"
 project-below --directory=.git --result=non-zero git fetch --all --recurse-submodules
 
-
 splitter "deno cache"
 project-below --file='deno.json*' --output=null --result=always \
-	fd --extension=ts --exec-batch deno cache --node-modules-dir=false
-
+	deno cache --allow-import --node-modules-dir=false **/*.ts
 
 splitter "cargo prefetch"
 project-below --file=Cargo.toml --result=non-zero cargo-prefetch
