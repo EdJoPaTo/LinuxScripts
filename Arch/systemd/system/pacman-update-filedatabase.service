@@ -6,6 +6,7 @@ Wants=network-online.target
 After=network-online.target nss-lookup.target
 
 [Service]
+ExecCondition=/usr/local/bin/nm-metered
 Type=oneshot
 Nice=15
 ExecStart=/usr/bin/pacman -Fy --noprogressbar

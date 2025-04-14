@@ -5,6 +5,7 @@ Wants=network-online.target
 After=network-online.target nss-lookup.target
 
 [Service]
+ExecCondition=/usr/local/bin/nm-metered
 Type=oneshot
 ExecStart=rustup update
 User=%i

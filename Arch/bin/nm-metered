@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+set -eu -o pipefail
+
+# Script inspired from: https://github.com/jdorel/systemd-metered-connection-dependency
+#
+# https://www.networkmanager.dev/docs/api/latest/nm-dbus-types.html#NMMetered
+# NM_METERED_UNKNOWN = 0 The metered status is unknown
+# NM_METERED_YES = 1 Metered, the value was explicitly configured
+# NM_METERED_NO = 2 Not metered, the value was explicitly configured
+# NM_METERED_GUESS_YES = 3 Metered, the value was guessed
+# NM_METERED_GUESS_NO = 4 Not metered, the value was guessed
+
+metered_status=$(dbus-send --system --print-reply=literal \
+	--dest=org.freedesktop.NetworkManager \
+	/org/freedesktop/NetworkManager \
+	org.freedesktop.DBus.Properties.Get \
+	string:org.freedesktop.NetworkManager string:Metered |
+	grep -o ".$")
+
+echo "Current metered status is $metered_status"
+
+if [[ $metered_status =~ (2|4) ]]; then
+	echo "Current connection is not metered and freely usable"
+	exit 0
+else
+	echo "There is no connection or its metered"
+	exit 1
+fi

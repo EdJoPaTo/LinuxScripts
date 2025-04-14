@@ -5,6 +5,7 @@ Wants=network-online.target
 After=network-online.target
 
 [Service]
+ExecCondition=/usr/local/bin/nm-metered
 Type=oneshot
 ExecStart=/usr/bin/find . -name ".git" -type d -print -execdir git fetch --all \;
 WorkingDirectory=%h/git
