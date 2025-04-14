@@ -233,12 +233,10 @@ if [ "$(uname -m)" == "x86_64" ]; then
 	)
 fi
 
-pacman --needed -Sy --asdeps "${DEPS[@]}" "${EXPLICIT[@]}"
+pacman -Sy --needed --asdeps "${DEPS[@]}" "${EXPLICIT[@]}"
 pacman -D --asexplicit --quiet "${EXPLICIT[@]}"
 
-if [ "$(uname -m)" == "x86_64" ]; then
-	echo "v4l2loopback" >/etc/modules-load.d/v4l2.conf
-fi
+echo "v4l2loopback" >/etc/modules-load.d/v4l2.conf
 
 # Set doas settings
 echo "permit setenv { EDITOR VISUAL LANG LC_ALL LC_ADDRESS LC_MEASUREMENT LC_MONETARY LC_NUMERIC LC_PAPER LC_TELEPHONE LC_TIME } :wheel" >/etc/doas.conf
