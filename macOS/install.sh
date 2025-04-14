@@ -69,6 +69,16 @@ FORMULAS=(
 	# gpg stuff
 	pinentry
 	pinentry-mac
+
+	# quick look
+	# See https://github.com/sindresorhus/quick-look-plugins
+	apparency
+	qlcolorcode
+	qlImageSize
+	qlmarkdown
+	qlstephen
+	qlvideo
+	quicklook-json
 )
 
 # Ensure everything is up to date or else brew fails (which is dumb as same version is a warning)
@@ -77,3 +87,6 @@ brew upgrade --greedy --no-quarantine
 
 brew install --no-quarantine "${FORMULAS[@]}"
 brew install --cask --no-quarantine "${CASKS[@]}"
+
+# Remove the quarantine flag to allow macOS to run these "untrusted" extensions
+xattr -d -r com.apple.quarantine ~/Library/QuickLook
