@@ -12,9 +12,6 @@ function link() {
 	fi
 }
 
-# Git folders
-mkdir -p ~/git/hub/EdJoPaTo/public
-
 for file in bin/*; do
 	chmod +x "$file"
 	filename=$(basename "$file")

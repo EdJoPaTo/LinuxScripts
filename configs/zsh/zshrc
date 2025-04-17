@@ -3,6 +3,8 @@ uptime
 if [ -d /usr/share/zsh/plugins ]; then
 	# probably Arch Linux
 	ZSH_PLUGINS=/usr/share/zsh/plugins
+elif [ -d /opt/homebrew/share ]; then
+	ZSH_PLUGINS=/opt/homebrew/share
 else
 	# probably macOS
 	ZSH_PLUGINS=/usr/local/share

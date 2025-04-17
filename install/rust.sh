@@ -24,8 +24,7 @@ for target in "${targets[@]}"; do
 done
 
 # Remove big components for every toolchain except stable to save diskspace and traffic on updates
-mapfile -t toolchains < <(rustup toolchain list --quiet | rg -v stable)
-for toolchain in "${toolchains[@]}"; do
+for toolchain in $(rustup toolchain list --quiet | rg -v stable); do
 	installed=$(rustup component list --installed --toolchain="$toolchain")
 	for component in "rust-analyzer" "rust-docs"; do
 		if echo "$installed" | grep -q "$component"; then

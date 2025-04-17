@@ -2,13 +2,9 @@
 
 # This file is meant to compatible with multiple shells, including: bash, fish, zsh
 
-command -v codium >/dev/null 2>/dev/null && alias code='nice -n 5 codium'
-command -v eza >/dev/null 2>/dev/null && alias ls='eza --git'
-
 alias brew='nice brew'
 alias cargo='nice cargo'
 alias code='nice -n 5 code'
-alias codium='nice -n 5 codium'
 alias esphome='nice esphome'
 alias makepkg='nice makepkg'
 alias npm='nice npm'
@@ -20,6 +16,9 @@ alias podman='nice podman'
 alias rustup='nice rustup'
 alias zed='nice -n 5 zed'
 alias zeditor='nice -n 5 zeditor'
+
+command -v codium >/dev/null 2>/dev/null && alias code='nice -n 5 codium'
+command -v eza >/dev/null 2>/dev/null && alias ls='eza --git'
 
 # Help to migrate to new commands (space at start -> no zsh history entry)
 alias grep=' echo use rg && false --'

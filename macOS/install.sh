@@ -26,9 +26,12 @@ FORMULAS=(
 	ansible-lint
 	bat
 	cargo-audit
+	cargo-msrv
 	d2
 	deno
+	difftastic
 	dive
+	dog
 	dust
 	eza
 	fd
@@ -37,6 +40,7 @@ FORMULAS=(
 	fx
 	fzf
 	gnuplot
+	graphviz
 	htop
 	hugo
 	hyperfine
@@ -55,10 +59,15 @@ FORMULAS=(
 	podman
 	ripgrep
 	rsync
-	rustup-init
+	rustup
 	shellcheck
+	shfmt
 	starship
 	tokei
+	typos-cli
+	watch
+	wget
+	yamllint
 	yq
 	yt-dlp
 	zsh
@@ -69,16 +78,6 @@ FORMULAS=(
 	# gpg stuff
 	pinentry
 	pinentry-mac
-
-	# quick look
-	# See https://github.com/sindresorhus/quick-look-plugins
-	apparency
-	qlcolorcode
-	qlImageSize
-	qlmarkdown
-	qlstephen
-	qlvideo
-	quicklook-json
 )
 
 # Ensure everything is up to date or else brew fails (which is dumb as same version is a warning)
