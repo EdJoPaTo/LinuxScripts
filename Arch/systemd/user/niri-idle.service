@@ -4,6 +4,7 @@ After=graphical-session.target
 Requisite=graphical-session.target
 
 [Service]
+Type=exec
 ExecStart=/usr/bin/swayidle -w \
 	timeout 302 'niri msg action power-off-monitors' \
 	timeout 300 'swaylock --daemonize' \
