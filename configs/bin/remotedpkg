@@ -15,4 +15,4 @@ rsync \
 	./*.deb "$server:/tmp/remotedpkg"
 
 ssh -tt "$server" -- \
-	"sudo bash -c 'set -eu && for p in /tmp/remotedpkg/*.deb; do dpkg --force-bad-verify -i \"\$p\"; done' && rm -rf /tmp/remotedpkg"
+	"sudo sh -c 'set -eu; for p in /tmp/remotedpkg/*.deb; do dpkg --force-bad-verify -i \"\$p\"; done && rm -rf /tmp/remotedpkg'"
