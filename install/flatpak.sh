@@ -17,3 +17,5 @@ EXPLICIT=(
 )
 
 flatpak install "${EXPLICIT[@]}"
+
+flatpak uninstall --unused
