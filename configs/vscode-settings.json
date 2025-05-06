@@ -81,6 +81,9 @@
 		100,
 		160
 	],
+	"files.associations": {
+		"*.ksy": "yaml"
+	},
 	"ltex.enabled": [
 		"rust",
 		"typescript",
