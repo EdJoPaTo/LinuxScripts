@@ -20,8 +20,7 @@ ln --verbose --symbolic --force /usr/lib/systemd/user/waybar.service ~/.config/s
 systemctl --user disable mpd.service
 systemctl --user enable --now mpd.socket mpd-mpris.service
 
-xdg-mime default org.gnome.Nautilus.desktop inode/directory
-xdg-mime default org.gnome.Papers.desktop application/pdf
+xdg-mime default firefox.desktop text/html
 xdg-settings set default-web-browser firefox.desktop
 
 tldr --update
