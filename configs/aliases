@@ -103,7 +103,8 @@ alias pioBelow-clean='project-below --hidden --file=platformio.ini --directory=.
 alias tscBelow-clean='project-below --hidden --file=tsconfig.json --directory=dist --only-result rm -rf dist'
 
 alias podman-image-update='nice podman pull $(podman image ls --filter=dangling=false --noheading --format="{{.Repository}}:{{.Tag}}" | rg -v "^localhost/")'
-alias podman-run-interactive='podman run --interactive --tty --rm --mount=type=bind,source=.,destination=/app --workdir=/app --volume=podman-run-interactive-apk:/var/cache/apk' # use podman-run-interactive docker.io/library/alpine:edge sh -c "apk add fish && exec fish"
+alias podman-run-interactive='podman run --interactive --tty --rm --mount=type=bind,source=.,destination=/app --workdir=/app --volume=podman-run-interactive-apk:/var/cache/apk --volume=podman-run-interactive-apt-lists:/var/lib/apt/lists --volume=podman-run-interactive-dnf-repos:/var/lib/dnf/repos --volume=podman-run-interactive-pacman-sync:/var/lib/pacman/sync --volume=podman-run-interactive-pacman-cache:/var/cache/pacman' # use podman-run-interactive docker.io/library/alpine:edge sh -c "apk add fish && exec fish"
 alias podman-untag-localhost='podman image ls --format "{{.Repository}}:{{.Tag}}" | rg "^localhost/" | xargs -n1 podman untag'
 
+alias arch='podman-run-interactive docker.io/library/archlinux:base-devel' # add: sh -c "pacman -Syu --noconfirm fish && exec fish"
 alias alpine='podman-run-interactive docker.io/library/alpine:edge' # add: sh -c "apk add fish && exec fish"
