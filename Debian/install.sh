@@ -8,6 +8,7 @@ EXPLICIT=(
 	htop
 	neovim
 	ripgrep
+	shellcheck
 )
 
 apt-get update
