@@ -147,7 +147,6 @@ EXPLICIT=(
 	cargo-llvm-cov
 	cargo-msrv
 	cargo-nextest
-	cargo-outdated
 	cargo-public-api
 	cargo-semver-checks
 	cargo-show-asm

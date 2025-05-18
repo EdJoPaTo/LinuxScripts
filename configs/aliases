@@ -36,7 +36,7 @@ alias yt-dlp='nice -n 15 yt-dlp --prefer-free-formats --embed-subs --sub-langs=a
 alias cargo-features='cargo metadata --no-deps --format-version=1 | jq ".packages.[].features"'
 alias cargo-open-doc='RUSTDOCFLAGS="--cfg docsrs" cargo +nightly doc --all-features --open'
 alias cargo-open-llvm-cov='cargo +nightly llvm-cov test --no-cfg-coverage --no-cfg-coverage-nightly --no-fail-fast --all-features --open'
-alias cargo-update-msrv='CARGO_RESOLVER_INCOMPATIBLE_RUST_VERSIONS=fallback cargo +nightly -Zmsrv-policy update --verbose && cargo outdated -e' # https://github.com/rust-lang/cargo/issues/13873
+alias cargo-update-msrv='CARGO_RESOLVER_INCOMPATIBLE_RUST_VERSIONS=fallback cargo +nightly update --verbose'
 alias curltime='curl --output /dev/null --silent --write-out "namelookup:%{time_namelookup} connect:%{time_connect} appconnect:%{time_appconnect} pretransfer:%{time_pretransfer} redirect:%{time_redirect} starttransfer:%{time_starttransfer} total:%{time_total}\n"'
 alias deno-coverage='deno test --allow-all --reporter=dot --doc --clean --coverage=/tmp/deno-coverage && deno coverage /tmp/deno-coverage'
 alias ffmpegGif='ffmpeg -an'
