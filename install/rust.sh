@@ -6,6 +6,9 @@ set -eu -o pipefail
 rustup set profile minimal
 rustup override unset --nonexistent
 
+# minimal stable for like test runners
+# rustup toolchain install stable --profile=minimal --component=clippy,rustfmt
+
 rustup toolchain install stable --profile=default \
 	--component=rust-analyzer,llvm-tools
 rustup toolchain install nightly --profile=minimal \
