@@ -20,9 +20,6 @@ rgrs 'Result<.+, \S*io::Error>'
 rgrs '\{err(?:or)?\}' && echo 'use {err:#} with anyhow or {err:?} without'
 rgrs 'use .+\WResult\W'
 rgrs 'prelude::'
-rgrs 'anyhow!\('
-rg --quiet --glob Cargo.toml anyhow && rgrs 'map_err\('
-rg --quiet --glob Cargo.toml anyhow && rgrs 'ok_or_else\('
 rg --quiet --glob Cargo.toml anyhow && rgrs '\{err(?:or)?:\?\}' && echo 'prefer {err:#} with anyhow'
 
 nice cargo clippy --all-targets --keep-going "$@"
