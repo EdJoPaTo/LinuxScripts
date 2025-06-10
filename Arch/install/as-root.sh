@@ -114,6 +114,7 @@ EXPLICIT=(
 	oxipng
 
 	# audio / video
+	audio-sharing
 	ffmpeg
 	helvum
 	kid3-qt
@@ -189,6 +190,7 @@ DEPS=(
 	pipewire-jack
 	pipewire-pulse
 	pipewire-v4l2
+	pipewire-zeroconf
 	python-mutagen
 	wireplumber
 
@@ -248,6 +250,17 @@ echo "i2c-dev" >/etc/modules-load.d/ddc.conf
 
 # Prevent to expose user mpd.socket to the network
 sed -i 's/=6600/=127.0.0.1:6600/g' /usr/lib/systemd/user/mpd.socket
+
+# AirPlay via PipeWire
+systemctl enable --now avahi-daemon.service
+cat <<EOF > /etc/pipewire/pipewire.conf.d/raop-discover.conf
+context.modules = [
+	{
+		name = libpipewire-module-raop-discover
+		args = { }
+	}
+]
+EOF
 
 ln --symbolic --force /usr/bin/xdg-open /usr/local/bin/open
 ln --symbolic --force /usr/bin/zeditor /usr/local/bin/zed
