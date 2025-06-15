@@ -5,16 +5,15 @@ if [[ -n $1 ]] && [[ "$0" == *"$1" ]]; then
 	shift 1
 fi
 
+shopt -s expand_aliases
+alias rgrs='rg --glob '*.rs' --case-sensitive --no-heading --trim'
+
 set -ux
 
 cargo +nightly fmt --check
 
-function rgrs {
-	rg --glob '*.rs' --case-sensitive --no-heading --trim "$@"
-}
-
 rg --files --glob mod.rs
-rg --files-with-matches --multiline --glob '*.rs' --case-sensitive 'mod .+;[\s\S]*\n(?:pub )?use .+;' | sort
+rg --glob '*.rs' --case-sensitive --files-with-matches --multiline 'mod .+;[\s\S]*\n(?:pub )?use .+;' | sort
 rgrs 'Result<.+, String>'
 rgrs 'Result<.+, \S*io::Error>'
 rgrs '\{err(?:or)?\}' && echo 'use {err:#} with anyhow or {err:?} without'
