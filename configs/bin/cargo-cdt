@@ -12,14 +12,13 @@ set -ux
 
 cargo +nightly fmt --check
 
-rg --files --glob mod.rs
+rg --glob mod.rs --files
 rg --glob '*.rs' --case-sensitive --files-with-matches --multiline 'mod .+;[\s\S]*\n(?:pub )?use .+;' | sort
 rgrs 'Result<.+, String>'
 rgrs 'Result<.+, \S*io::Error>'
-rgrs '\{err(?:or)?\}' && echo 'use {err:#} with anyhow or {err:?} without'
 rgrs 'use .+\WResult\W'
 rgrs 'prelude::'
-rg --quiet --glob Cargo.toml anyhow && rgrs '\{err(?:or)?:\?\}' && echo 'prefer {err:#} with anyhow'
+rg --glob Cargo.toml --quiet anyhow && rgrs '\{err(or)?(:\?)?\}' && echo 'prefer {error:#} with anyhow'
 
 nice cargo clippy --all-targets --keep-going "$@"
 
