@@ -251,8 +251,7 @@ echo "i2c-dev" >/etc/modules-load.d/ddc.conf
 # Prevent to expose user mpd.socket to the network
 sed -i 's/=6600/=127.0.0.1:6600/g' /usr/lib/systemd/user/mpd.socket
 
-# AirPlay via PipeWire
-systemctl enable --now avahi-daemon.service
+# AirPlay via PipeWire (start avahi-daemon.service when wanted)
 cat <<EOF > /etc/pipewire/pipewire.conf.d/raop-discover.conf
 context.modules = [
 	{
