@@ -45,6 +45,7 @@ EXPLICIT=(
 	neovim
 	networkmanager
 	newsflash
+	niri
 	npm
 	nvm
 	opendoas
@@ -59,6 +60,7 @@ EXPLICIT=(
 	ripgrep-all
 	shfmt
 	starship
+	swww # wallpaper
 	syncthing
 	tealdeer # tldr
 	telegram-desktop
@@ -174,6 +176,7 @@ DEPS=(
 	dbus-broker-units
 	freerdp
 	fuse-overlayfs # podman
+	fuzzel
 	gnome-control-center
 	gnu-netcat
 	libmythes # thesaurus
@@ -184,6 +187,8 @@ DEPS=(
 	platformio-core-udev
 	qt5-wayland
 	qt6-wayland
+	swaylock
+	waybar
 	xdg-utils # xdg-open
 
 	# Audio / Video Tools

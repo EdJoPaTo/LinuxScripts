@@ -1,0 +1,12 @@
+[Unit]
+PartOf=graphical-session.target
+After=graphical-session.target
+Requisite=graphical-session.target
+
+[Service]
+Type=exec
+ExecStart=/usr/bin/swww-daemon
+Restart=on-failure
+
+[Install]
+WantedBy=niri.service
