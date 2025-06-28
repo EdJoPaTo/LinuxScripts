@@ -49,6 +49,7 @@ nice cargo clippy --keep-going "$@" -- \
 	-W clippy::partial_pub_fields \
 	-W clippy::pathbuf_init_then_push \
 	-W clippy::precedence_bits \
+	-W clippy::redundant_test_prefix \
 	-W clippy::redundant_type_annotations \
 	-W clippy::rest_pat_in_fully_bound_structs \
 	-W clippy::return_and_then \
