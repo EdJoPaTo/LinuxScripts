@@ -118,7 +118,7 @@ layout {
 
     // always-center-single-column
 
-    empty-workspace-above-first
+    // empty-workspace-above-first
 
     // You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
     preset-column-widths {

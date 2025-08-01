@@ -31,7 +31,7 @@ alias ffprobe='ffprobe -hide_banner'
 alias ip='ip --color=auto'
 alias systemctl='systemctl --no-pager --full'
 alias tokei='tokei --sort code'
-alias yt-dlp='nice -n 15 yt-dlp --prefer-free-formats --embed-subs --sub-langs=en-orig,en,de,no --embed-thumbnail --embed-metadata --embed-chapters --video-multistreams --audio-multistreams --sponsorblock-remove=default --paths=temp:"/tmp/yt-dlp-$USER" --restrict-filenames --trim-filenames=80 --format-sort=vcodec:h264'
+alias yt-dlp='nice -n 15 yt-dlp --prefer-free-formats --embed-subs --sub-langs=en-orig,en,de,no --embed-metadata --embed-chapters --video-multistreams --audio-multistreams --sponsorblock-remove=default --paths=temp:"/tmp/yt-dlp-$USER" --restrict-filenames --trim-filenames=80 --format-sort=vcodec:h264'
 
 alias cargo-features='cargo metadata --no-deps --format-version=1 | jq ".packages.[].features"'
 alias cargo-open-doc='RUSTDOCFLAGS="--cfg docsrs" cargo +nightly doc --all-features --open'
@@ -60,7 +60,7 @@ alias tree='eza -al --tree --git --git-ignore'
 alias yt-dlp-1080='yt-dlp --format-sort=res~1080'
 alias yt-dlp-1440='yt-dlp --format-sort=res~1440'
 alias yt-dlp-720='yt-dlp --format-sort=res~720'
-alias yt-dlp-audio='yt-dlp --extract-audio' # --audio-format=mp3 can be helpful
+alias yt-dlp-audio='yt-dlp --embed-thumbnail --extract-audio' # --audio-format=mp3 can be helpful
 alias yt-dlp-smallest='yt-dlp --format-sort=vcodec:h264,+size,+br,+res,+fps'
 alias yt-dlp-subs='yt-dlp --skip-download'
 
@@ -76,8 +76,9 @@ alias npx='echo edjopato fixed npx again && PATH=$(pwd)/node_modules/.bin:$PATH 
 alias node-jsr='nice deno --reload --no-lock --node-modules-dir=false --allow-env --allow-read --allow-run --allow-write=.npmrc npm:jsr'
 alias node-test='node --enable-source-maps --test --experimental-test-coverage'
 alias npm-reinstall='rm -rf node_modules package-lock.json && nice npm install --no-fund && npm outdated; npm test'
-alias npm-xo-update='rm -rf node_modules package-lock.json && nice npm install --no-fund --save-dev xo@latest && nice ./node_modules/.bin/xo --fix'
+alias npm-xo-update='rm -rf node_modules package-lock.json && nice npm install --no-fund --save-dev typescript@latest xo@latest && xo-fix-with-deno-fmt'
 alias tsc-watch='rm -rf dist && nice ./node_modules/.bin/tsc --sourceMap --watch'
+alias xo-fix-with-deno-fmt='deno fmt --quiet --use-tabs --prose-wrap=preserve && nice ./node_modules/.bin/xo --fix'
 
 alias cdf='cd "$(fd --type=directory | fzf)"'
 alias cdg='cd "$HOME/git/$(project-below --base-dir=$HOME/git --directory=.git | fzf --scheme=path --tiebreak=end,length)"'

@@ -14,5 +14,8 @@ rsync \
 	--rsync-path="mkdir -p /tmp/remotedpkg && rsync" \
 	./*.deb "$server:/tmp/remotedpkg"
 
-ssh -tt "$server" -- \
-	"sudo sh -c 'set -eu; for p in /tmp/remotedpkg/*.deb; do dpkg --force-bad-verify -i \"\$p\"; done && rm -rf /tmp/remotedpkg'"
+for p in ./*.deb; do
+	ssh -l root "$server" -- dpkg --force-bad-verify -i "/tmp/remotedpkg/$p"
+done
+
+ssh "$server" -- rm -rf /tmp/remotedpkg

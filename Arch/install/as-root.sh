@@ -35,6 +35,7 @@ EXPLICIT=(
 	htop
 	hugo
 	hyperfine
+	impression
 	libreoffice-fresh
 	lostfiles
 	loupe # image viewer
@@ -55,7 +56,6 @@ EXPLICIT=(
 	pkgstats
 	platformio-core
 	podman
-	remmina
 	ripgrep
 	ripgrep-all
 	shfmt
@@ -125,6 +125,7 @@ EXPLICIT=(
 	mpd-mpris
 	mpv
 	mpv-mpris
+	video-trimmer
 	yt-dlp
 
 	# data
@@ -139,6 +140,9 @@ EXPLICIT=(
 	rsync
 	wget
 	whois
+
+	# programming Go
+	go
 
 	# programming Rust
 	rustup
@@ -174,7 +178,6 @@ DEPS=(
 	bash-completion
 	crun
 	dbus-broker-units
-	freerdp
 	fuse-overlayfs # podman
 	fuzzel
 	gnome-control-center
@@ -245,7 +248,8 @@ pacman -D --asexplicit --quiet "${EXPLICIT[@]}"
 echo "v4l2loopback" >/etc/modules-load.d/v4l2.conf
 
 # Set doas settings
-echo "permit setenv { EDITOR VISUAL LANG LC_ALL LC_ADDRESS LC_MEASUREMENT LC_MONETARY LC_NUMERIC LC_PAPER LC_TELEPHONE LC_TIME } :wheel" >/etc/doas.conf
+echo "permit persist setenv { EDITOR VISUAL LANG LC_ALL LC_ADDRESS LC_MEASUREMENT LC_MONETARY LC_NUMERIC LC_PAPER LC_TELEPHONE LC_TIME PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin } :wheel" >/etc/doas.conf
+chmod 0400 /etc/doas.conf
 
 # npm is updated by the system (or nvm)
 echo "update-notifier=false" >/etc/npmrc

@@ -2,7 +2,7 @@
 
 # This file is meant to compatible with multiple shells, including: bash, fish, zsh
 
-export PATH="$HOME/bin":"$HOME/.local/bin":"$HOME/.cargo/bin":"$HOME/.deno/bin":/opt/homebrew/opt/rustup/bin:"$PATH"
+export PATH="$HOME/.local/bin":"$HOME/.cargo/bin":"$HOME/.deno/bin":"$HOME/go/bin":/opt/homebrew/opt/rustup/bin:"$PATH"
 
 # Set executables
 export CROSS_CONTAINER_ENGINE=podman
