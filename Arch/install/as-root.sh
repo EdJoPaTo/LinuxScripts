@@ -67,6 +67,7 @@ EXPLICIT=(
 	texlive-langenglish
 	texlive-langgerman
 	texlive-meta
+	time # builtins dont have --format
 	tinyxxd
 	tmux
 	tokei
@@ -116,7 +117,6 @@ EXPLICIT=(
 	oxipng
 
 	# audio / video
-	audio-sharing
 	ffmpeg
 	helvum
 	kid3-qt
@@ -136,7 +136,6 @@ EXPLICIT=(
 	bind
 	curl
 	dog
-	nmap
 	rsync
 	wget
 	whois
@@ -160,8 +159,6 @@ EXPLICIT=(
 	cargo-sort
 	cargo-spellcheck
 	cross
-	espflash
-	espup
 
 	# Browser
 	chromium
@@ -170,7 +167,6 @@ EXPLICIT=(
 	firefox-ublock-origin
 	## https://addons.mozilla.org/firefox/addon/clearurls/
 	## https://addons.mozilla.org/firefox/addon/languagetool/
-	## https://addons.mozilla.org/firefox/addon/privacy-redirect/
 	## https://addons.mozilla.org/firefox/addon/sponsorblock/
 )
 
@@ -178,7 +174,6 @@ DEPS=(
 	bash-completion
 	crun
 	dbus-broker-units
-	fuse-overlayfs # podman
 	fuzzel
 	gnome-control-center
 	gnu-netcat
@@ -186,7 +181,6 @@ DEPS=(
 	linux
 	linux-firmware
 	lm_sensors
-	mkinitcpio
 	platformio-core-udev
 	qt5-wayland
 	qt6-wayland

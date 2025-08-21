@@ -12,6 +12,7 @@
   "buffer_font_size": 14,
   "disable_ai": true,
   "inlay_hints": { "enabled": true },
+  "max_tabs": 6,
   "soft_wrap": "editor_width",
   "wrap_guides": [80, 100, 120, 160],
   "features": {
