@@ -74,6 +74,7 @@ EXPLICIT=(
 	trash-cli
 	xorg-xeyes # easily know which windows are still X11
 	zed
+	zram-generator
 	zsh-completions
 	zsh-history-substring-search
 	zsh-syntax-highlighting
@@ -240,6 +241,8 @@ pacman -Sy --needed --asdeps "${DEPS[@]}" "${EXPLICIT[@]}"
 pacman -D --asexplicit --quiet "${EXPLICIT[@]}"
 
 echo "v4l2loopback" >/etc/modules-load.d/v4l2.conf
+
+echo "[zram0]" >/etc/systemd/zram-generator.conf
 
 # Set doas settings
 echo "permit persist setenv { EDITOR VISUAL LANG LC_ALL LC_ADDRESS LC_MEASUREMENT LC_MONETARY LC_NUMERIC LC_PAPER LC_TELEPHONE LC_TIME PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin } :wheel" >/etc/doas.conf
