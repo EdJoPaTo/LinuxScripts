@@ -59,7 +59,6 @@ nice cargo clippy --keep-going "$@" -- \
 	-W clippy::str_to_string \
 	-W clippy::string_lit_chars_any \
 	-W clippy::string_slice \
-	-W clippy::string_to_string \
 	-W clippy::try_err \
 	-W clippy::uninhabited_references \
 	-W clippy::unnecessary_safety_comment \
