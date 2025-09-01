@@ -47,11 +47,12 @@ alias pio-monitor='pio device monitor'
 alias pio-upload='pio run --target upload'
 alias randb='openssl rand -base64 33'
 alias randh='openssl rand -hex 20'
+alias rgc='rg --no-filename --no-heading --no-line-number' # useful with --only-matching, --replace='$1' or | sort | uniq
 alias rgf='rg --files-with-matches'
-alias rgm='rg --no-filename --no-heading --no-line-number --only-matching' # useful with --replace='$1' and | sort | uniq
 alias rsynca='rsync --verbose --human-readable --delete-delay --archive'
 alias rsyncc='rsync --verbose --human-readable --recursive --links --copy-unsafe-links --times'
 alias ssh-force-password='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no'
+alias ssh-copy-id-force-password='ssh-copy-id -o PreferredAuthentications=password -o PubkeyAuthentication=no'
 alias sshf='ssh -t -o RemoteCommand="exec fish"'
 alias ssht='ssh -t -o RemoteCommand="exec tmux new-session -A -s ssht"'
 alias sshtop='ssh -t -o RemoteCommand="exec htop"'
