@@ -25,4 +25,4 @@ rsync \
 	"$base/" "$server:$remotebase"
 
 ssh -tt "$server" -- \
-	"uptime && cd '$remotebase' && git init --quiet && cd '$relative' && bash -cl -- 'set -x && $command' && uptime"
+	"uptime && cd '$remotebase' && git init --quiet; cd '$relative' && bash -cl -- 'set -x && $command' && uptime"
