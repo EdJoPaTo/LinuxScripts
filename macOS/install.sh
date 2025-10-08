@@ -39,6 +39,7 @@ FORMULAS=(
 	fish
 	fx
 	fzf
+	gnu-time
 	gnuplot
 	graphviz
 	htop
