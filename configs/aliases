@@ -82,7 +82,7 @@ alias tsc-watch='rm -rf dist && nice ./node_modules/.bin/tsc --sourceMap --watch
 alias xo-fix-with-deno-fmt='deno fmt --quiet --use-tabs --prose-wrap=preserve && nice ./node_modules/.bin/xo --fix'
 
 alias cdf='cd "$(fd --type=directory | fzf)"'
-alias cdg='cd "$HOME/git/$(project-below --base-dir=$HOME/git --directory=.git | fzf --scheme=path --tiebreak=end,length)"'
+alias cdg='cd "$HOME/git/$(project-below --base-dir=$HOME/git --directory=.git | fzf --scheme=path --tiebreak=end,length --preview-window=up,30% --preview="git -C ~/git/{} -c color.status=always  status --short --branch")"'
 alias cdgh='cd "$HOME/git/$(project-below --base-dir=$HOME/git --directory=.git --hidden | fzf --scheme=path --tiebreak=end,length)"'
 
 # example usage: `gitBelow fetch`
