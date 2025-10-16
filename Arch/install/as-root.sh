@@ -162,7 +162,6 @@ EXPLICIT=(
 	cross
 
 	# Browser
-	chromium
 	firefox
 	firefox-dark-reader
 	firefox-ublock-origin
@@ -177,15 +176,16 @@ DEPS=(
 	dbus-broker-units
 	fuzzel
 	gnome-control-center
-	gnu-netcat
 	libmythes # thesaurus
 	linux
 	linux-firmware
 	lm_sensors
+	ntfs-3g
 	platformio-core-udev
 	qt5-wayland
 	qt6-wayland
 	swaylock
+	udisks2-btrfs
 	waybar
 	xdg-utils # xdg-open
 
