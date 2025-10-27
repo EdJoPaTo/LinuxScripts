@@ -37,6 +37,16 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
+	{
+		"ethersync/ethersync-nvim",
+		keys = {
+			{ "<leader>ej", "<cmd>EthersyncJumpToCursor<cr>" },
+			{ "<leader>ef", "<cmd>EthersyncFollow<cr>" },
+			{ "<esc>", mode = { "n" }, "<cmd>EthersyncUnfollow<cr>" },
+		},
+		lazy = false,
+	},
+
 	{ 'nvim-lualine/lualine.nvim', opts = { theme = 'base16' } },
 	{ 'lewis6991/gitsigns.nvim', opts = {} },
 	{

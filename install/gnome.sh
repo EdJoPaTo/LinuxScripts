@@ -25,7 +25,7 @@ gset org.gnome.Console theme auto
 gset org.gnome.Sudoku autoclean-earmarks true
 gset org.gnome.Sudoku highlight-numbers true
 gset org.gnome.Sudoku highlighter true
-gset org.gnome.Sudoku show-earmark-warnings true
+gset org.gnome.Sudoku earmark-warnings true
 gset org.gnome.desktop.calendar show-weekdate true
 gset org.gnome.desktop.interface accent-color orange
 gset org.gnome.desktop.interface clock-show-date true
