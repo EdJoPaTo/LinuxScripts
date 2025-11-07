@@ -8,7 +8,6 @@ fi
 
 EXPLICIT=(
 	ckb-next-git
-	etcher-bin
 	gnome-shell-extension-blur-my-shell
 	gnome-shell-extension-system-monitor-next-git
 	nautilus-open-any-terminal

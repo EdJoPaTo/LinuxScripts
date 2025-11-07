@@ -182,6 +182,7 @@ DEPS=(
 	lm_sensors
 	ntfs-3g
 	platformio-core-udev
+	power-profiles-daemon
 	qt5-wayland
 	qt6-wayland
 	swaylock
@@ -222,7 +223,16 @@ if [ "$(uname -m)" == "x86_64" ]; then
 		shellcheck
 		signal-desktop
 		teamspeak3
+	)
 
+	DEPS+=(
+		linux-headers # dkms
+		v4l2loopback-dkms # obs virtual cam
+	)
+fi
+
+if grep -q 'GenuineIntel' /proc/cpuinfo; then
+	EXPLICIT+=(
 		# Intel NUC
 		intel-media-sdk
 		intel-ucode
@@ -230,11 +240,14 @@ if [ "$(uname -m)" == "x86_64" ]; then
 		vulkan-intel
 		# lib32-vulkan-intel
 	)
-
-	DEPS+=(
-		linux-headers # dkms
-		v4l2loopback-dkms # obs virtual cam
+elif grep -q 'AuthenticAMD' /proc/cpuinfo; then
+	EXPLICIT+=(
+		amd-ucode
+		vulkan-radeon
+		# lib32-vulkan-radeon
 	)
+else
+	echo 'Unknown CPU vendor'
 fi
 
 pacman -Sy --needed --asdeps "${DEPS[@]}" "${EXPLICIT[@]}"
