@@ -176,6 +176,7 @@ DEPS=(
 	dbus-broker-units
 	fuzzel
 	gnome-control-center
+	gnome-keyring
 	libmythes # thesaurus
 	linux
 	linux-firmware
