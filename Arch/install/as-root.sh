@@ -215,6 +215,12 @@ DEPS=(
 	gvfs-smb
 )
 
+if grep -Eq "^\[multilib\]" /etc/pacman.conf; then
+	EXPLICIT+=(
+		steam
+	)
+fi
+
 if [ "$(uname -m)" == "x86_64" ]; then
 	EXPLICIT+=(
 		code
@@ -234,19 +240,23 @@ fi
 
 if grep -q 'GenuineIntel' /proc/cpuinfo; then
 	EXPLICIT+=(
-		# Intel NUC
-		intel-media-sdk
 		intel-ucode
+	)
+	DEPS+=(
+		intel-media-sdk
 		libva-intel-driver
 		vulkan-intel
-		# lib32-vulkan-intel
 	)
+	grep -Eq "^\[multilib\]" /etc/pacman.conf && DEPS+=(lib32-vulkan-intel)
 elif grep -q 'AuthenticAMD' /proc/cpuinfo; then
 	EXPLICIT+=(
 		amd-ucode
-		vulkan-radeon
-		# lib32-vulkan-radeon
 	)
+	DEPS+=(
+		rocm-smi-lib
+		vulkan-radeon
+	)
+	grep -Eq "^\[multilib\]" /etc/pacman.conf && DEPS+=(lib32-vulkan-radeon)
 else
 	echo 'Unknown CPU vendor'
 fi
