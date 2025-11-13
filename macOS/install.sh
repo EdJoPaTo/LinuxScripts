@@ -83,10 +83,10 @@ FORMULAS=(
 
 # Ensure everything is up to date or else brew fails (which is dumb as same version is a warning)
 brew update
-brew upgrade --greedy --no-quarantine
+brew upgrade --greedy
 
-brew install --no-quarantine "${FORMULAS[@]}"
-brew install --cask --no-quarantine "${CASKS[@]}"
+brew install "${FORMULAS[@]}"
+brew install --cask "${CASKS[@]}"
 
 # Remove the quarantine flag to allow macOS to run these "untrusted" extensions
 xattr -d -r com.apple.quarantine ~/Library/QuickLook
