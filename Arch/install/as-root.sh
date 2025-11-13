@@ -63,6 +63,7 @@ EXPLICIT=(
 	swww # wallpaper
 	syncthing
 	tealdeer # tldr
+	teamtype
 	telegram-desktop
 	texlive-langenglish
 	texlive-langgerman

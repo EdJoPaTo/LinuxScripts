@@ -38,11 +38,10 @@ end
 vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
 	{
-		"ethersync/ethersync-nvim",
+		"teamtype/teamtype-nvim",
 		keys = {
-			{ "<leader>ej", "<cmd>EthersyncJumpToCursor<cr>" },
-			{ "<leader>ef", "<cmd>EthersyncFollow<cr>" },
-			{ "<esc>", mode = { "n" }, "<cmd>EthersyncUnfollow<cr>" },
+			{ "<leader>ej", "<cmd>TeamtypeJumpToCursor<cr>" },
+			{ "<leader>ef", "<cmd>TeamtypeFollow<cr>" },
 		},
 		lazy = false,
 	},
