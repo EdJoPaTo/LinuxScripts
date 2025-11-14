@@ -191,6 +191,7 @@ DEPS=(
 	udisks2-btrfs
 	waybar
 	xdg-utils # xdg-open
+	yt-dlp-ejs
 
 	# Audio / Video Tools
 	pipewire-jack
