@@ -1,5 +1,5 @@
 [Unit]
-Description=Update Pacman Filedatabase every 20h
+Description=Update Pacman Filedatabase
 
 [Timer]
 OnBootSec=30min

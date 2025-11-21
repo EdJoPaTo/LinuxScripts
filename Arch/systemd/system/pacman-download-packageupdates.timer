@@ -1,5 +1,5 @@
 [Unit]
-Description=Pacman predownload packages every 3h
+Description=Pacman predownload packages
 
 [Timer]
 OnBootSec=1min
