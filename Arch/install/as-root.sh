@@ -47,6 +47,7 @@ EXPLICIT=(
 	networkmanager
 	newsflash
 	niri
+	nmap
 	npm
 	nvm
 	opendoas
@@ -178,6 +179,7 @@ DEPS=(
 	fuzzel
 	gnome-control-center
 	gnome-keyring
+	jre-openjdk # mainly for languagetool
 	libmythes # thesaurus
 	linux
 	linux-firmware
