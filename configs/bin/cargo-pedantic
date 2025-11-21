@@ -63,7 +63,6 @@ nice cargo clippy --keep-going "$@" -- \
 	-W clippy::uninhabited_references \
 	-W clippy::unnecessary_safety_comment \
 	-W clippy::unnecessary_self_imports \
-	-W clippy::unneeded_field_pattern \
 	-W clippy::unseparated_literal_suffix \
 	-W clippy::unused_result_ok \
 	-W clippy::unused_trait_names \
