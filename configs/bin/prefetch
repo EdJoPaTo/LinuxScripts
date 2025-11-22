@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -eu -o pipefail
 
-cd ~/git || exit
-
 function splitter {
 	echo
 	echo "#"
