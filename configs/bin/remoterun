@@ -20,6 +20,8 @@ rsync \
 	--delete \
 	--exclude-from="$HOME/.config/git/ignore" \
 	--filter="- .git" \
+	--filter="- .jj" \
+	--filter="- .teamtype" \
 	--filter=":C .gitignore" \
 	--rsync-path="mkdir -p $remotebase && rsync" \
 	"$base/" "$server:$remotebase"
