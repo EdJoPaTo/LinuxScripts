@@ -61,8 +61,9 @@ alias tree='eza -al --tree --git --git-ignore'
 alias yt-dlp-1080='yt-dlp --format-sort=res~1080'
 alias yt-dlp-1440='yt-dlp --format-sort=res~1440'
 alias yt-dlp-720='yt-dlp --format-sort=res~720'
-alias yt-dlp-audio='yt-dlp --embed-thumbnail --extract-audio' # --audio-format=mp3 can be helpful
+alias yt-dlp-audio='yt-dlp --embed-thumbnail --extract-audio'
 alias yt-dlp-h264='yt-dlp --format-sort=vcodec:h264'
+alias yt-dlp-mp3='yt-dlp-audio --audio-format=mp3'
 alias yt-dlp-smallest='yt-dlp --format-sort=vcodec:h264,+size,+br,+res,+fps'
 alias yt-dlp-subs='yt-dlp --skip-download'
 
