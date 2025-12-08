@@ -26,5 +26,11 @@ rsync \
 	--rsync-path="mkdir -p $remotebase && rsync" \
 	"$base/" "$server:$remotebase"
 
-ssh -tt "$server" -- \
-	"uptime && cd '$remotebase' && git init --quiet; cd '$relative' && bash -cl -- 'set -x && $command' && uptime"
+set +e
+
+ssh -ttq "$server" -- \
+	"uptime && cd '$remotebase' && git init --quiet; cd '$relative' && exec bash -cl -- '$command'"
+
+exitcode="$?"
+ssh "$server" uptime
+exit $exitcode
