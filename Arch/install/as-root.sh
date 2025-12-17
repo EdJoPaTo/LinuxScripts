@@ -150,6 +150,7 @@ EXPLICIT=(
 	# programming Rust
 	rustup
 	cargo-audit
+	cargo-deb
 	cargo-expand
 	cargo-flamegraph
 	cargo-generate

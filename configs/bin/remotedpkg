@@ -9,7 +9,7 @@ server=$1
 
 rsync \
 	--copy-links --times \
-	--compress --checksum \
+	--checksum \
 	--info=progress2 \
 	--rsync-path="mkdir -p /tmp/remotedpkg && rsync" \
 	./*.deb "$server:/tmp/remotedpkg"
