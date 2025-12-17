@@ -358,7 +358,7 @@ binds {
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Mod+B hotkey-overlay-title="Open a Browser: firefox" { spawn "firefox"; }
     Mod+E hotkey-overlay-title="Open a File Manager: nautilus" { spawn "nautilus"; }
-    Mod+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "bash" "-c" "swaylock --daemonize && niri msg action power-off-monitors"; }
+    Mod+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "sh" "-c" "swaylock --daemonize && niri msg action power-off-monitors"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -eu -o pipefail
 
-function link() {
+link() {
 	mkdir -p "$(dirname "$2")"
 	rm -rf "$2"
 	if [[ $OSTYPE = darwin* ]]; then

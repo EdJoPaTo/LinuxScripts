@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
-set -eu -o pipefail
+#!/usr/bin/env sh
+set -eu
 
-hugo new content "post/$(date +%Y/%m/%d)/$1/index.md"
+exec hugo new content "post/$(date +%Y/%m/%d)/$1/index.md"

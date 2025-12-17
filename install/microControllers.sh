@@ -1,5 +1,5 @@
-#!/usr/bin/env bash
-set -eu -o pipefail
+#!/usr/bin/env sh
+set -eu
 
 mkdir -p ~/.platformio/lib/Credentials
 

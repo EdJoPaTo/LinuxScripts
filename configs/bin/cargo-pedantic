@@ -14,7 +14,7 @@ fi
 
 set -eu -o pipefail
 
-nice cargo clippy --keep-going "$@" -- \
+exec nice cargo clippy --keep-going "$@" -- \
 	-W clippy::alloc_instead_of_core \
 	-W clippy::allow_attributes \
 	-W clippy::as_underscore \

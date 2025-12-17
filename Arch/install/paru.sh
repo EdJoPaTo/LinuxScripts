@@ -1,14 +1,14 @@
-#!/usr/bin/env bash
-set -eu -o pipefail
+#!/usr/bin/env sh
+set -eu
 
-if [ "$USER" == "root" ]; then
+if [ "$USER" = "root" ]; then
 	echo "Do not run as root, run as your user"
 	exit 1
 fi
 
 mkdir -p ~/.cache/paru/clone
 
-function installaurpackage {
+installaurpackage() {
 	cd ~/.cache/paru/clone
 	git clone --depth=1 "https://aur.archlinux.org/$1"
 	cd "$1"

@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 rm -rf deno.lock
 fd --extension=ts --exec-batch deno cache --reload
 
-deno-pedantic
+exec deno-pedantic

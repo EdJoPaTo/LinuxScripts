@@ -6,7 +6,7 @@ if [[ -n $1 ]] && [[ "$0" == *"$1" ]]; then
 fi
 
 shopt -s expand_aliases
-alias rgrs='rg --glob '*.rs' --case-sensitive --no-heading --trim'
+alias rgrs='rg --glob "*.rs" --case-sensitive --no-heading --trim'
 
 set -ux
 

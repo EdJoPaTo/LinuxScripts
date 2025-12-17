@@ -29,4 +29,4 @@ EOF
 nice ./node_modules/.bin/knip --fix --no-exit-code
 rm .knip.jsonc
 
-nice npm test
+exec nice npm test

@@ -8,6 +8,7 @@ EXPLICIT=(
 	ansible-lint
 	bat
 	btop
+	dash
 	ddcutil
 	difftastic
 	dive # explore container layers
@@ -225,7 +226,7 @@ if grep -Eq "^\[multilib\]" /etc/pacman.conf; then
 	)
 fi
 
-if [ "$(uname -m)" == "x86_64" ]; then
+if [ "$(uname -m)" = "x86_64" ]; then
 	EXPLICIT+=(
 		code
 		deno
@@ -286,7 +287,7 @@ echo "i2c-dev" >/etc/modules-load.d/ddc.conf
 sed -i 's/=6600/=127.0.0.1:6600/g' /usr/lib/systemd/user/mpd.socket
 
 # AirPlay via PipeWire (start avahi-daemon.service when wanted)
-cat <<EOF > /etc/pipewire/pipewire.conf.d/raop-discover.conf
+cat <<EOF >/etc/pipewire/pipewire.conf.d/raop-discover.conf
 context.modules = [
 	{
 		name = libpipewire-module-raop-discover
@@ -295,6 +296,7 @@ context.modules = [
 ]
 EOF
 
+ln --symbolic --force /usr/bin/dash /usr/local/bin/sh
 ln --symbolic --force /usr/bin/xdg-open /usr/local/bin/open
 ln --symbolic --force /usr/bin/zeditor /usr/local/bin/zed
 

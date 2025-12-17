@@ -1,12 +1,8 @@
-#!/usr/bin/env bash
-set -eu -o pipefail
+#!/usr/bin/env sh
+set -eu
 
-function splitter {
-	echo
-	echo "#"
-	echo "##"
-	echo "### $1"
-	echo
+splitter() {
+	printf "\n#\n##\n### %s\n\n" "$1"
 }
 
 splitter "git fetch"
@@ -14,7 +10,7 @@ project-below --directory=.git --result=non-zero git fetch --all --recurse-submo
 
 splitter "deno cache"
 project-below --file='deno.json*' --output=null --result=always \
-	deno cache --allow-import --node-modules-dir=false **/*.ts
+	deno cache --allow-import --node-modules-dir=false ./**/*.ts
 
 splitter "cargo prefetch"
 project-below --file=Cargo.toml --result=non-zero cargo-prefetch

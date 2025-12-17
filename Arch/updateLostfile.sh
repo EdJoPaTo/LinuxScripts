@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -eu
+set -eu -o pipefail
 
 sudo lostfiles -s |
 	rg -v /\.updated$ |

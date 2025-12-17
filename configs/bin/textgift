@@ -25,7 +25,7 @@ for arg in "${textgift[@]}"; do
 	args+=('-e' "$arg")
 done
 
-rg --word-regexp --ignore-case --sort path --stats \
+exec rg --word-regexp --ignore-case --sort path --stats \
 	--type markdown \
 	--type tex \
 	--type txt \

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -u
 
-if [ "$USER" == "root" ]; then
+if [ "$USER" = "root" ]; then
 	echo "Do not run as root, run as your user"
 	exit 1
 fi

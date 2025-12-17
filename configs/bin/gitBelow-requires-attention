@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -eu -o pipefail
 
-function requires-attention {
+requiresAttention() {
 	set -eu -o pipefail
 
 	relevant=()
@@ -42,6 +42,6 @@ function requires-attention {
 	fi
 }
 
-export -f requires-attention
+export -f requiresAttention
 
-project-below --directory=.git --no-harness bash -c requires-attention
+exec project-below --directory=.git --no-harness bash -c requiresAttention
