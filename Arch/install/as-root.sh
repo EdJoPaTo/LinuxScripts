@@ -108,9 +108,6 @@ EXPLICIT=(
 	ttf-dejavu
 	ttf-firacode-nerd
 
-	# Preview in Filemanager
-	ffmpegthumbnailer
-
 	# picture
 	d2
 	gimp

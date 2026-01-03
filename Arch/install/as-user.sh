@@ -24,7 +24,7 @@ pacman -Sqi "${DEPS[@]}" "${EXPLICIT[@]}" 2>/dev/stdout | rg -v 'was not found'
 
 set -eu -o pipefail
 
-nice paru --sudo sudo --sudoloop --skipreview -Sy --needed --asdeps "${DEPS[@]}" "${EXPLICIT[@]}"
+nice paru --sudo /usr/bin/sudo --sudoloop --skipreview -Sy --needed --asdeps "${DEPS[@]}" "${EXPLICIT[@]}"
 sudo pacman -D --asexplicit --quiet "${EXPLICIT[@]}"
 
 sudo systemctl enable --now ckb-next-daemon.service
