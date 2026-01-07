@@ -178,6 +178,7 @@ DEPS=(
 	fuzzel
 	gnome-control-center
 	gnome-keyring
+	gst-plugin-pipewire
 	jre-openjdk # mainly for languagetool
 	libmythes # thesaurus
 	linux
