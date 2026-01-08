@@ -265,7 +265,7 @@ else
 	echo 'Unknown CPU vendor'
 fi
 
-pacman -Sy --needed --asdeps "${DEPS[@]}" "${EXPLICIT[@]}"
+pacman -Syu --needed --asdeps "${DEPS[@]}" "${EXPLICIT[@]}"
 pacman -D --asexplicit --quiet "${EXPLICIT[@]}"
 
 echo "v4l2loopback" >/etc/modules-load.d/v4l2.conf
