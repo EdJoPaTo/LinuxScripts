@@ -2,5 +2,5 @@
 
 deno fmt --check
 deno lint
-deno test -A
+deno test -A # --permission-set
 fd --extension=ts --exec-batch deno check

@@ -295,6 +295,9 @@ context.modules = [
 ]
 EOF
 
+# see fwupd
+systemctl mask --now passim.service
+
 ln --symbolic --force /usr/bin/dash /usr/local/bin/sh
 ln --symbolic --force /usr/bin/xdg-open /usr/local/bin/open
 ln --symbolic --force /usr/bin/zeditor /usr/local/bin/zed
