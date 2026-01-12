@@ -29,7 +29,6 @@ alias vim=' echo use nvim && false --'
 alias ffmpeg='nice -n 15 ffmpeg -stats -hide_banner'
 alias ffprobe='ffprobe -hide_banner'
 alias ip='ip --color=auto'
-alias systemctl='systemctl --no-pager --full'
 alias tokei='tokei --sort code'
 alias yt-dlp='nice -n 15 yt-dlp --prefer-free-formats --embed-subs --sub-langs=en-orig,en,de,no --embed-metadata --embed-chapters --video-multistreams --audio-multistreams --sponsorblock-remove=default --paths=temp:"/tmp/yt-dlp-$USER" --restrict-filenames --trim-filenames=80'
 

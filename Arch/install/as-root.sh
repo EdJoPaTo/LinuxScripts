@@ -273,7 +273,7 @@ echo "v4l2loopback" >/etc/modules-load.d/v4l2.conf
 echo "[zram0]" >/etc/systemd/zram-generator.conf
 
 # Set doas settings
-echo "permit persist setenv { EDITOR VISUAL LANG LC_ALL LC_ADDRESS LC_MEASUREMENT LC_MONETARY LC_NUMERIC LC_PAPER LC_TELEPHONE LC_TIME PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin } :wheel" >/etc/doas.conf
+echo "permit persist setenv { EDITOR SYSTEMD_PAGER VISUAL LANG LC_ALL LC_ADDRESS LC_MEASUREMENT LC_MONETARY LC_NUMERIC LC_PAPER LC_TELEPHONE LC_TIME PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin } :wheel" >/etc/doas.conf
 chmod 0400 /etc/doas.conf
 
 # npm is updated by the system (or nvm)

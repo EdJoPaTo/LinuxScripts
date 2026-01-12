@@ -16,6 +16,7 @@
 export CROSS_CONTAINER_ENGINE=podman
 export EDITOR=nvim
 export FZF_DEFAULT_COMMAND="rg --files"
+export SYSTEMD_PAGER=cat
 export VISUAL=nvim
 
 # Set arguments
