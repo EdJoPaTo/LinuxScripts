@@ -10,7 +10,6 @@ EXPLICIT=(
 	io.github.diegoivan.pdf_metadata_editor
 	io.gitlab.adhami3310.Footage
 	org.gnome.Fractal
-	org.raspberrypi.rpi-imager
 	# org.jitsi.jitsi-meet
 	# org.signal.Signal
 	# org.telegram.desktop

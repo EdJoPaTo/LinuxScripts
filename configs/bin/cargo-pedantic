@@ -22,6 +22,7 @@ exec nice cargo clippy --keep-going "$@" -- \
 	-W clippy::create_dir \
 	-W clippy::decimal_literal_representation \
 	-W clippy::deref_by_slicing \
+	-W clippy::doc_paragraphs_missing_punctuation \
 	-W clippy::else_if_without_else \
 	-W clippy::empty_drop \
 	-W clippy::empty_enum_variants_with_brackets \

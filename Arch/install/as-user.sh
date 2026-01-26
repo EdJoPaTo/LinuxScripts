@@ -11,7 +11,8 @@ EXPLICIT=(
 	gnome-shell-extension-blur-my-shell
 	gnome-shell-extension-system-monitor-next-git
 	nautilus-open-any-terminal
-	paru-bin
+	obs-pipewire-audio-capture
+	paru
 	ventoy-bin
 )
 

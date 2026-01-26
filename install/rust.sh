@@ -16,6 +16,8 @@ rustup toolchain install nightly --profile=minimal \
 
 rustup default stable
 
+printf '[unstable]\nrustc-unicode = true\n' >~/.cargo/config.toml
+
 targets=(
 	wasm32-unknown-unknown
 )

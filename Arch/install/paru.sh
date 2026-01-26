@@ -15,7 +15,7 @@ installaurpackage() {
 	nice makepkg --syncdeps --clean --install --needed --asdeps --noconfirm
 }
 
-pacman -Qq paru >/dev/null 2>/dev/null || installaurpackage paru-bin
-sudo pacman -D --asexplicit --quiet paru-bin
+pacman -Qq paru >/dev/null 2>/dev/null || installaurpackage paru
+sudo pacman -D --asexplicit --quiet paru
 
 paru --gendb

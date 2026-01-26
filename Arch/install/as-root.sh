@@ -60,6 +60,7 @@ EXPLICIT=(
 	podman
 	ripgrep
 	ripgrep-all
+	rpi-imager
 	shfmt
 	starship
 	swww # wallpaper
