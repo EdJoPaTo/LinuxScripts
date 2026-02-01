@@ -1,0 +1,11 @@
+#compdef cross-remotedeb
+
+_cross-remotedeb() {
+	integer ret=1
+	_arguments -w -s -S \
+'::host -- Target host to compile for and install on:_hosts' \
+&& ret=0
+	return ret
+}
+
+_cross-remotedeb "$@"
