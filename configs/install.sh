@@ -1,16 +1,10 @@
-#!/usr/bin/env bash
-set -eu -o pipefail
+#!/usr/bin/env sh
+set -eu
 
-link() {
-	mkdir -p "$(dirname "$2")"
-	rm -rf "$2"
-	if [[ $OSTYPE = darwin* ]]; then
-		# verbose symbolic force
-		ln -vsf "$(realpath "$1")" "$2"
-	else
-		ln --verbose --relative --symbolic --force "$1" "$2"
-	fi
-}
+case "$(uname)" in
+Darwin) link() { mkdir -p "$(dirname "$2")" && rm -rf "$2" && ln -vsf "$(realpath "$1")" "$2"; } ;;
+*)      link() { mkdir -p "$(dirname "$2")" && rm -rf "$2" && ln -vsf --relative "$1" "$2"; } ;;
+esac
 
 for file in bin/*; do
 	chmod +x "$file"
@@ -36,7 +30,7 @@ for file in zsh/*.zsh; do
 done
 
 # Linux only
-if [[ $OSTYPE = linux* ]]; then
+if [ "$(uname)" = "Linux" ]; then
 	link "fuzzel.ini" "$HOME/.config/fuzzel/fuzzel.ini"
 	link "hyprland.conf" "$HOME/.config/hypr/hyprland.conf"
 	link "i3status-rust.toml" "$HOME/.config/i3status-rust/config.toml"
@@ -68,8 +62,11 @@ link "zed-settings.jsonc" "$HOME/.config/zed/settings.json"
 
 rm -f "$HOME/.gitconfig"
 
-if [[ $OSTYPE = darwin* ]]; then
+case "$(uname)" in
+Darwin)
 	link "vscode-settings.json" "$HOME/Library/Application Support/VSCodium/User/settings.json"
-else
+	;;
+*)
 	link "vscode-settings.json" "$HOME/.config/Code - OSS/User/settings.json"
-fi
+	;;
+esac

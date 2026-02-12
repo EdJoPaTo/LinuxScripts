@@ -19,7 +19,7 @@ metered_status=$(dbus-send --system --print-reply=literal \
 
 echo "Current metered status is $metered_status"
 
-if [[ $metered_status =~ (2|4) ]]; then
+if [ "$metered_status" = "2" ] || [ "$metered_status" = "4" ]; then
 	echo "Current connection is not metered and freely usable"
 	exit 0
 else
