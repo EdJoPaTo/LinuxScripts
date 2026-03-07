@@ -62,6 +62,7 @@ alias yt-dlp-1440='yt-dlp --format-sort=res~1440'
 alias yt-dlp-720='yt-dlp --format-sort=res~720'
 alias yt-dlp-audio='yt-dlp --embed-thumbnail --extract-audio'
 alias yt-dlp-h264='yt-dlp --format-sort=vcodec:h264'
+alias yt-dlp-h265='yt-dlp --format-sort=vcodec:h265'
 alias yt-dlp-mp3='yt-dlp-audio --audio-format=mp3'
 alias yt-dlp-smallest='yt-dlp --format-sort=vcodec:h264,+size,+br,+res,+fps'
 alias yt-dlp-subs='yt-dlp --skip-download'
@@ -111,8 +112,9 @@ alias tscBelow-clean='project-below --hidden --file=tsconfig.json --directory=di
 alias containerfile-baseimages='rg --no-filename --no-heading --no-line-number --only-matching --iglob="*Containerfile*" --iglob="*Dockerfile*" "^FROM (\S+)" --replace=\$1 | sort | uniq'
 alias podman-image-update='nice podman pull $(podman image ls --filter=dangling=false --noheading --format="{{.Repository}}:{{.Tag}}" | rg -v "^localhost/")'
 alias podman-run-interactive='podman run --interactive --tty --rm --mount=type=bind,source=.,destination=/app --workdir=/app --tmpfs=/tmp --volume=podman-run-interactive-apk:/var/cache/apk --volume=podman-run-interactive-apt-lists:/var/lib/apt/lists --volume=podman-run-interactive-dnf-repos:/var/lib/dnf/repos --volume=podman-run-interactive-pacman-sync:/var/lib/pacman/sync --volume=podman-run-interactive-pacman-cache:/var/cache/pacman --volume=podman-run-interactive-home-root:/root' # use podman-run-interactive docker.io/library/alpine:edge sh -c "apk add fish && exec fish"
-alias podman-untag-localhost='podman image ls --filter="reference=localhost/*" -q --no-trunc | xargs -n1 --no-run-if-empty podman untag'
 alias podman-untag-all='podman image ls --filter=dangling=false -q --no-trunc | xargs -n1 --no-run-if-empty podman untag'
+alias podman-untag-localhost='podman image ls --filter="reference=localhost/*" -q --no-trunc | xargs -n1 --no-run-if-empty podman untag'
+alias podman-volume-size='podman volume ls --filter=driver=local --format="{{.Mountpoint}}" | xargs --no-run-if-empty sudo du -sh'
 
 alias arch='podman-run-interactive docker.io/library/archlinux:base-devel' # add: sh -c "pacman -Syu --noconfirm fish && exec fish"
 alias alpine='podman-run-interactive docker.io/library/alpine:edge' # add: sh -c "apk add fish && exec fish"

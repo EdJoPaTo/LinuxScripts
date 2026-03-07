@@ -155,7 +155,6 @@ EXPLICIT=(
 	cargo-hack
 	cargo-llvm-cov
 	cargo-msrv
-	cargo-nextest
 	cargo-public-api
 	cargo-semver-checks
 	cargo-show-asm

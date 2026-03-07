@@ -10,7 +10,7 @@ mkdir -p ~/.cache/paru/clone
 
 installaurpackage() {
 	cd ~/.cache/paru/clone
-	git clone --depth=1 "https://aur.archlinux.org/$1"
+	git clone --depth=1 "https://aur.archlinux.org/$1" || true
 	cd "$1"
 	nice makepkg --syncdeps --clean --install --needed --asdeps --noconfirm
 }
