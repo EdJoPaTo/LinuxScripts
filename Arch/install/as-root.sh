@@ -2,7 +2,6 @@
 set -eu -o pipefail
 
 EXPLICIT=(
-	aisleriot
 	alacritty
 	ansible
 	ansible-lint
@@ -47,7 +46,6 @@ EXPLICIT=(
 	neovim
 	networkmanager
 	newsflash
-	niri
 	nmap
 	npm
 	nvm
@@ -63,7 +61,6 @@ EXPLICIT=(
 	rpi-imager
 	shfmt
 	starship
-	swww # wallpaper
 	syncthing
 	tealdeer # tldr
 	teamtype
@@ -75,7 +72,6 @@ EXPLICIT=(
 	tinyxxd
 	tmux
 	tokei
-	trash-cli
 	xorg-xeyes # easily know which windows are still X11
 	zed
 	zram-generator
@@ -127,7 +123,6 @@ EXPLICIT=(
 	mpd-mpris
 	mpv
 	mpv-mpris
-	video-trimmer
 	yt-dlp
 
 	# data
@@ -142,16 +137,12 @@ EXPLICIT=(
 	wget
 	whois
 
-	# programming Go
-	go
-
 	# programming Rust
 	rustup
 	cargo-audit
 	cargo-deb
 	cargo-expand
 	cargo-flamegraph
-	cargo-generate
 	cargo-hack
 	cargo-llvm-cov
 	cargo-msrv
@@ -175,7 +166,6 @@ DEPS=(
 	bash-completion
 	crun
 	dbus-broker-units
-	fuzzel
 	gnome-control-center
 	gnome-keyring
 	gst-plugin-pipewire
@@ -189,9 +179,8 @@ DEPS=(
 	power-profiles-daemon
 	qt5-wayland
 	qt6-wayland
-	swaylock
+	trash-cli
 	udisks2-btrfs
-	waybar
 	xdg-utils # xdg-open
 	yt-dlp-ejs
 

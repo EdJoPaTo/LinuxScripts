@@ -25,6 +25,7 @@ FORMULAS=(
 	ansible
 	ansible-lint
 	bat
+	btop
 	cargo-audit
 	cargo-msrv
 	d2
@@ -59,11 +60,13 @@ FORMULAS=(
 	platformio
 	podman
 	ripgrep
+	ripgrep-all
 	rsync
 	rustup
 	shellcheck
 	shfmt
 	starship
+	teamtype
 	tokei
 	typos-cli
 	watch
