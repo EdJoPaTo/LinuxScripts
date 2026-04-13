@@ -2,15 +2,16 @@
 set -eu
 
 splitter() {
-	printf "\n#\n##\n### %s\n\n" "$1"
+	command -v "$1" >/dev/null 2>/dev/null &&
+		printf '\n#\n##\n### %s\n\n' "$*"
 }
 
-splitter "git fetch"
-project-below --directory=.git --result=non-zero git fetch --all --recurse-submodules
+splitter git fetch &&
+	project-below --directory=.git --result=non-zero git fetch --all --recurse-submodules
 
-splitter "deno cache"
-project-below --file='deno.json*' --output=null --result=always \
-	deno cache --allow-import --node-modules-dir=false ./**/*.ts
+splitter deno cache &&
+	project-below --file='deno.json*' --output=null --result=always \
+		deno cache --allow-import --node-modules-dir=false ./**/*.ts
 
-splitter "cargo prefetch"
-project-below --file=Cargo.toml --result=non-zero cargo-prefetch
+splitter "cargo-prefetch" &&
+	project-below --file=Cargo.toml --result=non-zero cargo-prefetch
