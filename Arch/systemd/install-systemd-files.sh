@@ -1,8 +1,7 @@
 #!/usr/bin/env sh
 set -eux
 
-# copy stuff
-sudo cp -rv system user /etc/systemd
+sudo install -Dm644 user/* -t /usr/local/lib/systemd/user/
 
 # reload systemd
 sudo systemctl daemon-reload
