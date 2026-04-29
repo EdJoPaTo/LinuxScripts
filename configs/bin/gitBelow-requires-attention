@@ -31,7 +31,7 @@ requiresAttention() {
 
 	# changes=$(git status --porcelain=v1 --short | wc -l)
 	# if (( changes > 0 )); then
-	# 	relevant+=("uncommited-changes")
+	# 	relevant+=("uncommitted-changes")
 	# fi
 
 	if ((${#relevant[@]} != 0)); then

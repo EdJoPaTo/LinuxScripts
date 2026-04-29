@@ -2,7 +2,7 @@
 
 Scripts to install my Arch Linux Packages.
 
-The basic idea is to install everything as a dependency and then mark some as explictly installed.
+The basic idea is to install everything as a dependency and then mark some as explicitly installed.
 This way dependency / explicitly relations are handled well.
 
 This also simplifies finding randomly installed stuff not by this script:

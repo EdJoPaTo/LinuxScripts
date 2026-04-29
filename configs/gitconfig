@@ -13,7 +13,7 @@
 	fixup = commit --amend --no-edit
 
 	cloneshallow = clone --recurse-submodules --shallow-submodules --depth=1
-	enfore-ignore = !git rm -r --cached --quiet . && git add . && git status --short
+	enforce-ignore = !git rm -r --cached --quiet . && git add . && git status --short
 	puff = push -u --atomic --force-with-lease
 	restore-lockfiles = !git ls-files -z '*.lock' '*-lock.json' | xargs -0 --no-run-if-empty git restore --staged --worktree --
 	s = status --short --branch
