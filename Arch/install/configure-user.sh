@@ -13,9 +13,7 @@ sudo usermod --add-subuids 165536-231072 --add-subgids 165536-231072 "$USER"
 # Allow serial communication for users (Platformio, Arduino)
 sudo usermod -aG uucp,lock "$USER"
 
-# enable services for niri
-mkdir -p ~/.config/systemd/user/niri.service.wants/
-ln --verbose --symbolic --force /usr/lib/systemd/user/waybar.service ~/.config/systemd/user/niri.service.wants/
+systemctl --user add-wants niri.service waybar.service || true
 
 systemctl --user disable mpd.service
 systemctl --user enable --now mpd.socket mpd-mpris.service
