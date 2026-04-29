@@ -5,7 +5,7 @@ Requisite=graphical-session.target
 
 [Service]
 Type=exec
-ExecStart=/usr/bin/swww-daemon
+ExecStart=/usr/bin/awww-daemon
 Restart=on-failure
 
 [Install]
