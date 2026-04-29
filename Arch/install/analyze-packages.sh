@@ -3,6 +3,7 @@ set -eu -o pipefail
 
 echo "explicit:     $(pacman -Qqe | wc -l)"
 echo "dependencies: $(pacman -Qqd | wc -l)"
+echo "superfluous:  $(pacman -Qqdtn | wc -l)"
 
 echo
 echo "# optional dependencies"
