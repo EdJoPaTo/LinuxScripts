@@ -3,6 +3,7 @@
 	lga = lg --all
 	lgr = lg --reflog
 	release-log = log --pretty='format:- %s %Cblue%H%C(auto)%d%Creset'
+	distancelog = !"f() { n=0; git log --oneline -n30 --since=2weeks \"$@\" | while read -r line; do printf '%3d %s\n' \"$n\" \"$line\"; n=$((n+1)); done; }; f" # useful for git commit --fixup=HEAD~42
 
 	diffs = diff --ignore-space-change
 	diffw = diff --color-words
