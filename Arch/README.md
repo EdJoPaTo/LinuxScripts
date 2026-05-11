@@ -1,4 +1,6 @@
-# Arch Linux Package Install Scripts
+# Arch Linux
+
+## Package Install Scripts
 
 Scripts to install my Arch Linux Packages.
 
