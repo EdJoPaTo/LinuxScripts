@@ -254,6 +254,7 @@ else
 	echo 'Unknown CPU vendor'
 fi
 
+pacman -Rc fwupd passim || true
 pacman -Syu --needed --asdeps "${DEPS[@]}" "${EXPLICIT[@]}"
 pacman -D --asexplicit --quiet "${EXPLICIT[@]}"
 
@@ -286,6 +287,7 @@ EOF
 
 # see fwupd
 systemctl mask --now passim.service
+rm -rf /var/cache/fwupd /var/lib/fwupd
 
 ln --symbolic --force /usr/bin/dash /usr/local/bin/sh
 ln --symbolic --force /usr/bin/xdg-open /usr/local/bin/open
