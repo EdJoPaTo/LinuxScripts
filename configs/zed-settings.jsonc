@@ -54,6 +54,10 @@
       }
     }
   },
+  "project_panel": {
+    "dock": "left",
+    "starts_open": true
+  },
   "theme": {
     "mode": "system",
     "light": "One Light",

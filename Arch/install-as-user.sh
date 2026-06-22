@@ -10,6 +10,8 @@ EXPLICIT=(
 	ckb-next-git
 	gnome-shell-extension-blur-my-shell
 	gnome-shell-extension-system-monitor-next-git
+	inkstitch
+	kaitai-struct-visualizer
 	nautilus-open-any-terminal
 	obs-pipewire-audio-capture
 	paru

@@ -16,6 +16,7 @@ rustup toolchain install nightly --profile=minimal \
 
 rustup default stable
 
+mkdir -p ~/.cargo
 printf '[unstable]\nrustc-unicode = true\n' >~/.cargo/config.toml
 
 targets=(

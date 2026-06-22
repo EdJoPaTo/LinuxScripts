@@ -4,9 +4,8 @@ set -eu -o pipefail
 # List installed: flatpak list --app
 
 EXPLICIT=(
-	com.github.tenderowl.frog
+	com.cassidyjames.butler
 	com.mattjakeman.ExtensionManager
-	in.varb.Ausweiskopie
 	io.github.diegoivan.pdf_metadata_editor
 	io.gitlab.adhami3310.Footage
 	org.gnome.Fractal
