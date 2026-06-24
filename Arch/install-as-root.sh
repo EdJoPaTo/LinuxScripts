@@ -174,7 +174,7 @@ DEPS=(
 	linux
 	linux-firmware
 	lm_sensors
-	ntfs-3g
+	ntfsprogs
 	platformio-core-udev
 	power-profiles-daemon
 	qt5-wayland
