@@ -40,6 +40,7 @@ if [ "$(uname)" = "Linux" ]; then
 	link "sway" "$HOME/.config/sway/config"
 	link "swaylock" "$HOME/.config/swaylock/config"
 	link "waybar" "$HOME/.config/waybar"
+	link "wireplumber-disable-webcam-audio.conf" "$HOME/.config/wireplumber/wireplumber.conf.d/52-disable-webcam-audio.conf"
 fi
 
 link ".editorconfig" "$HOME/.editorconfig"

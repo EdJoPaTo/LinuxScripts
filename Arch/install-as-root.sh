@@ -32,6 +32,7 @@ EXPLICIT=(
 	gnome-sudoku
 	gnome-text-editor
 	gnome-themes-extra # Adwaita-dark
+	headsetcontrol
 	htop
 	hugo
 	hyperfine
@@ -56,6 +57,7 @@ EXPLICIT=(
 	pkgstats
 	platformio-core
 	podman
+	resources
 	ripgrep
 	ripgrep-all
 	rpi-imager
@@ -165,6 +167,7 @@ EXPLICIT=(
 DEPS=(
 	bash-completion
 	crun
+	dart-sass
 	dbus-broker-units
 	gnome-control-center
 	gnome-keyring
