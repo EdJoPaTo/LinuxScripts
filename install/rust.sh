@@ -1,7 +1,16 @@
-#!/usr/bin/env bash
-set -eu -o pipefail
+#!/usr/bin/env sh
+set -eux
 
 # https://rust-lang.github.io/rustup/concepts/profiles.html
+
+# Remove big components for every toolchain except stable to save diskspace and traffic on updates
+for toolchain in $(rustup toolchain list --quiet | grep -v stable); do
+	for component in $(rustup component list --installed --toolchain="$toolchain" | grep -E '^(rust-analyzer|rust-docs)'); do
+		rustup component remove "$component" --toolchain="$toolchain"
+	done
+done
+
+rustup update # update everything in parallel first
 
 rustup set profile minimal
 rustup override unset --nonexistent
@@ -19,21 +28,8 @@ rustup default stable
 mkdir -p ~/.cargo
 printf '[unstable]\nrustc-unicode = true\n' >~/.cargo/config.toml
 
-targets=(
-	wasm32-unknown-unknown
-)
 for toolchain in "stable" "nightly"; do
 	echo "Install targets for toolchain $toolchain"
-	rustup target add --toolchain="$toolchain" "${targets[@]}"
-done
-
-# Remove big components for every toolchain except stable to save diskspace and traffic on updates
-for toolchain in $(rustup toolchain list --quiet | rg -v stable); do
-	installed=$(rustup component list --installed --toolchain="$toolchain")
-	for component in "rust-analyzer" "rust-docs"; do
-		if echo "$installed" | grep -q "$component"; then
-			echo "On toolchain $toolchain remove component $component"
-			rustup component remove "$component" --toolchain="$toolchain"
-		fi
-	done
+	rustup target add --toolchain="$toolchain" \
+		wasm32-unknown-unknown
 done
