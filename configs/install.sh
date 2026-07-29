@@ -9,7 +9,7 @@ esac
 for file in bin/*; do
 	chmod +x "$file"
 	filename=$(basename "$file")
-	link "$file" "$HOME/.local/bin/$filename"
+	link "$file" "$HOME/.local/bin/${filename%.*}"
 done
 
 for file in completions/*; do
