@@ -15,9 +15,11 @@ set -eu -o pipefail
 
 # ensure it currently has no warnings
 cargo +nightly fmt --check
-cargo clippy --all-features --all-targets --workspace -- -Dwarnings
+cargo clippy --workspace --all-targets --all-features       -- -Dwarnings
+cargo clippy --workspace --all-targets                      -- -Dwarnings
+cargo clippy --workspace --lib --bins --no-default-features -- -Dwarnings
 
-lints=$(cargo clippy --keep-going --all-features --all-targets --workspace --message-format=json "$@" |
+lints=$(cargo clippy --keep-going --workspace --all-targets --all-features --message-format=json "$@" |
 	jq -r '.message | select(.children[]?.spans[]?.suggestion_applicability == "MachineApplicable") | .code.code | select(.)' |
 	sort -h |
 	uniq)
@@ -31,9 +33,12 @@ apply_lint() {
 	sed -i "/^${lint#clippy::}/d" Cargo.toml
 	git add Cargo.toml
 
-	cargo clippy --all-features --all-targets --workspace --fix --allow-staged
+	cargo clippy --workspace --all-targets --fix --allow-staged --all-features
+	cargo clippy --workspace --all-targets --fix --allow-staged --allow-dirty
 	cargo +nightly fmt
-	cargo clippy --all-features --all-targets --workspace -- -Dwarnings
+	cargo clippy --workspace --all-targets --all-features       -- -Dwarnings
+	cargo clippy --workspace --all-targets                      -- -Dwarnings
+	cargo clippy --workspace --lib --bins --no-default-features -- -Dwarnings
 
 	git commit -am "$lint
 
