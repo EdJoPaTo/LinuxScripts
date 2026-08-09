@@ -1,5 +1,8 @@
 #!/usr/bin/env sh
 set -eu
 
-chmod +x bin/*
-sudo cp bin/* /usr/local/bin/
+for file in bin/*; do
+	chmod +x "$file"
+	filename=$(basename "$file")
+	sudo cp "$file" "$HOME/.local/bin/${filename%.*}"
+done
