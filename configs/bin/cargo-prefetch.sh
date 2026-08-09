@@ -2,7 +2,7 @@
 
 # Use to fetch dependencies into the local cache.
 # Helpful to prepare for travel as stuff is probably already downloaded then.
-# Uses https://github.com/rust-lang/cargo/issues/13873
+# Uses MSRV-aware resolver, see https://github.com/rust-lang/cargo/issues/13873
 
 # When used as a cargo subcommand the first argument is the subcommand which should be removed
 if [[ -n $1 ]] && [[ "$0" == *"$1" ]]; then
