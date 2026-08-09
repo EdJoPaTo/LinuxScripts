@@ -27,6 +27,8 @@ FORMULAS=(
 	bat
 	btop
 	cargo-audit
+	cargo-hack
+	cargo-llvm-cov
 	cargo-msrv
 	d2
 	deno
@@ -78,10 +80,6 @@ FORMULAS=(
 	zsh-completions
 	zsh-history-substring-search
 	zsh-syntax-highlighting
-
-	# gpg stuff
-	pinentry
-	pinentry-mac
 )
 
 # Ensure everything is up to date or else brew fails (which is dumb as same version is a warning)
