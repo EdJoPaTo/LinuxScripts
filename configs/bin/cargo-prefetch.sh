@@ -26,6 +26,6 @@ CARGO_RESOLVER_INCOMPATIBLE_RUST_VERSIONS=fallback cargo update --quiet &&
 	cargo fetch
 CARGO_RESOLVER_INCOMPATIBLE_RUST_VERSIONS=allow cargo update --quiet &&
 	cargo fetch
-cargo +nightly -Zunstable-options update --quiet --breaking &&
+cargo +nightly -Zunstable-options update --quiet --breaking 2>/dev/null &&
 	cargo fetch
 rm -rf "$tmpfolder"
