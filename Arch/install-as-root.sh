@@ -169,6 +169,7 @@ DEPS=(
 	crun
 	dart-sass
 	dbus-broker-units
+	fprintd
 	gnome-control-center
 	gnome-keyring
 	gst-plugin-pipewire
