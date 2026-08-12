@@ -299,6 +299,12 @@ rm -rf /var/cache/fwupd /var/lib/fwupd
 ln --symbolic --force /usr/bin/dash /usr/local/bin/sh
 ln --symbolic --force /usr/bin/xdg-open /usr/local/bin/open
 ln --symbolic --force /usr/bin/zeditor /usr/local/bin/zed
+for file in bin/*; do
+	chmod +x "$file"
+	filename=$(basename "$file")
+	install --verbose --compare -m755 \
+		"$file" "/usr/local/bin/${filename%.*}"
+done
 
 # sensors
 sensors-detect --auto >/dev/null
