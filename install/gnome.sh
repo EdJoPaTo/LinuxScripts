@@ -34,6 +34,7 @@ gset org.gnome.desktop.calendar show-weekdate true
 gset org.gnome.desktop.interface accent-color orange
 gset org.gnome.desktop.interface clock-show-date true
 gset org.gnome.desktop.interface clock-show-weekday true
+gset org.gnome.desktop.interface show-battery-percentage true
 gset org.gnome.desktop.notifications show-in-lock-screen false
 gset org.gnome.desktop.peripherals.mouse natural-scroll true
 gset org.gnome.desktop.privacy old-files-age 14
