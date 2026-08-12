@@ -70,6 +70,7 @@ EXPLICIT=(
 	texlive-langenglish
 	texlive-langgerman
 	texlive-meta
+	thermald
 	time # builtins dont have --format
 	tinyxxd
 	tmux
@@ -308,3 +309,9 @@ done
 
 # sensors
 sensors-detect --auto >/dev/null
+
+systemctl enable --now --no-block \
+	bluetooth.service \
+	gdm.service \
+	NetworkManager.service \
+	thermald.service
