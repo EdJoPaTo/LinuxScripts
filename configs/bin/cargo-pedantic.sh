@@ -21,6 +21,7 @@ exec nice cargo clippy --keep-going "$@" -- \
 	-W clippy::assertions_on_result_states \
 	-W clippy::create_dir \
 	-W clippy::decimal_literal_representation \
+	-W clippy::definition_in_module_root \
 	-W clippy::deref_by_slicing \
 	-W clippy::doc_paragraphs_missing_punctuation \
 	-W clippy::else_if_without_else \
@@ -34,6 +35,7 @@ exec nice cargo clippy --keep-going "$@" -- \
 	-W clippy::format_push_string \
 	-W clippy::if_then_some_else_none \
 	-W clippy::impl_trait_in_params \
+	-W clippy::inline_trait_bounds \
 	-W clippy::iter_over_hash_type \
 	-W clippy::large_include_file \
 	-W clippy::let_underscore_untyped \
@@ -53,6 +55,7 @@ exec nice cargo clippy --keep-going "$@" -- \
 	-W clippy::redundant_test_prefix \
 	-W clippy::redundant_type_annotations \
 	-W clippy::rest_pat_in_fully_bound_structs \
+	-W clippy::rest_pattern_accessible_field \
 	-W clippy::return_and_then \
 	-W clippy::same_name_method \
 	-W clippy::self_named_module_files \
@@ -62,6 +65,7 @@ exec nice cargo clippy --keep-going "$@" -- \
 	-W clippy::string_slice \
 	-W clippy::try_err \
 	-W clippy::uninhabited_references \
+	-W clippy::unnecessary_rest_pattern \
 	-W clippy::unnecessary_safety_comment \
 	-W clippy::unnecessary_self_imports \
 	-W clippy::unseparated_literal_suffix \

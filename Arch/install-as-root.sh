@@ -32,7 +32,7 @@ EXPLICIT=(
 	gnome-sudoku
 	gnome-text-editor
 	gnome-themes-extra # Adwaita-dark
-	headsetcontrol
+	guvcview
 	htop
 	hugo
 	hyperfine
