@@ -75,6 +75,8 @@ EXPLICIT=(
 	tinyxxd
 	tmux
 	tokei
+	tree-sitter-cli
+	tree-sitter-grammars
 	xorg-xeyes # easily know which windows are still X11
 	zed
 	zram-generator

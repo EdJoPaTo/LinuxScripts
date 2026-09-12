@@ -86,68 +86,70 @@ require('lazy').setup({
 
 	{
 		'nvim-treesitter/nvim-treesitter',
-		dependencies = {
-			'nvim-treesitter/nvim-treesitter-textobjects',
-		},
+		lazy = false,
 		build = ':TSUpdate',
+		config = function()
+			-- https://stackoverflow.com/questions/79850814/how-to-finish-tree-sitter-plugin-in-neovim-by-lazy-nvim/79889920#79889920
+			local ts = require("nvim-treesitter")
+			local languages = {
+				'bash',
+				'c',
+				'comment',
+				'cpp',
+				'css',
+				'csv',
+				'dockerfile',
+				'fish',
+				'git_config',
+				'git_rebase',
+				'gitcommit',
+				'gitignore',
+				'go',
+				'gomod',
+				'html',
+				'hyprlang',
+				'ini',
+				'javascript',
+				'jsdoc',
+				'json',
+				'kdl',
+				'lua',
+				'markdown',
+				'nix',
+				'passwd',
+				'python',
+				'regex',
+				'rust',
+				'slint',
+				'sparql',
+				'ssh_config',
+				'toml',
+				'tsx',
+				'tsx',
+				'typescript',
+				'vim',
+				'vimdoc',
+				'yaml',
+				'zig',
+			}
+			ts.setup({})
+			ts.install(languages)
+
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = languages,
+				callback = function()
+					-- Enable native Neovim treesitter highlighting
+					vim.treesitter.start()
+
+					-- Configure code folding
+					vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+					vim.wo.foldmethod = "expr"
+					vim.wo.foldlevel = 99
+
+					-- Enable treesitter-based indentation
+					vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+				end,
+	    })
+		end,
 	},
 })
-
--- [[ Configure Treesitter ]]
--- See `:help nvim-treesitter`
--- Defer Treesitter setup after first render to improve startup time of 'nvim {filename}'
-vim.defer_fn(function()
-	require('nvim-treesitter.configs').setup {
-		ensure_installed = {
-			'bash',
-			'c',
-			'comment',
-			'cpp',
-			'css',
-			'csv',
-			'dockerfile',
-			'fish',
-			'git_config',
-			'git_rebase',
-			'gitcommit',
-			'gitignore',
-			'go',
-			'gomod',
-			'html',
-			'hyprlang',
-			'ini',
-			'javascript',
-			'jsdoc',
-			'json',
-			'jsonc',
-			'kdl',
-			'lua',
-			'markdown',
-			'nix',
-			'passwd',
-			'python',
-			'regex',
-			'rust',
-			'slint',
-			'sparql',
-			'ssh_config',
-			'toml',
-			'tsx',
-			'tsx',
-			'typescript',
-			'vim',
-			'vimdoc',
-			'yaml',
-			'zig',
-		},
-		highlight = { enable = true },
-		indent = { enable = true },
-		incremental_selection = {
-			enable = true,
-			keymaps = {
-				init_selection = '<c-space>',
-				node_incremental = '<c-space>',
-			},
-		},
-	}
-end, 0)
