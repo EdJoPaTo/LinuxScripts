@@ -7,6 +7,7 @@ EXPLICIT=(
 	ansible-lint
 	bat
 	btop
+	chromium
 	dash
 	ddcutil
 	difftastic
@@ -37,6 +38,7 @@ EXPLICIT=(
 	hugo
 	hyperfine
 	impression
+	kicad
 	libreoffice-fresh
 	lostfiles
 	loupe # image viewer
@@ -177,6 +179,8 @@ DEPS=(
 	gnome-keyring
 	gst-plugin-pipewire
 	jre-openjdk # mainly for languagetool
+	kicad-library
+	kicad-library-3d
 	libmythes # thesaurus
 	linux
 	linux-firmware

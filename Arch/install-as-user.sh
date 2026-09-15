@@ -8,6 +8,7 @@ fi
 
 EXPLICIT=(
 	ckb-next-git
+	git-backdate-git
 	gnome-shell-extension-blur-my-shell
 	gnome-shell-extension-system-monitor-next-git
 	inkstitch
