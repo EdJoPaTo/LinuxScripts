@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -eu -o pipefail
 
+GROUP=(
+	tree-sitter-grammars
+)
+
 EXPLICIT=(
 	alacritty
 	ansible
@@ -78,7 +82,6 @@ EXPLICIT=(
 	tmux
 	tokei
 	tree-sitter-cli
-	tree-sitter-grammars
 	xorg-xeyes # easily know which windows are still X11
 	zed
 	zram-generator
@@ -266,8 +269,11 @@ else
 fi
 
 pacman -Rc fwupd passim || true
-pacman -Syu --needed --asdeps "${DEPS[@]}" "${EXPLICIT[@]}"
+
+pacman -Syu --needed --asdeps "${GROUP[@]}" "${DEPS[@]}" "${EXPLICIT[@]}"
+
 pacman -D --asexplicit --quiet "${EXPLICIT[@]}"
+pacman -Qqgt "${GROUP[@]}" | xargs --no-run-if-empty pacman -D --asexplicit --quiet
 
 echo "v4l2loopback" >/etc/modules-load.d/v4l2.conf
 
