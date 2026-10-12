@@ -75,7 +75,7 @@ alias mpc-clearadd='mpc clear -q && mpc add'
 alias mpc-cropadd='mpc crop && mpc add'
 alias amp='mpc --host etoPiBedAmp'
 
-alias npx='echo edjopato fixed npx again && PATH=$(pwd)/node_modules/.bin:$PATH nice'
+alias npx='echo edjopato fixed npx again && PATH="$PWD/node_modules/.bin:$PATH" nice'
 alias node-jsr='nice deno --reload --no-lock --node-modules-dir=false --allow-env --allow-read --allow-run --allow-write=.npmrc npm:jsr'
 alias node-test='node --enable-source-maps --test --experimental-test-coverage'
 alias npm-reinstall='rm -rf node_modules package-lock.json && nice npm install --no-fund && npm outdated; npm test'
