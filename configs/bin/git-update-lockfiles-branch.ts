@@ -1,6 +1,10 @@
-#!/usr/bin/env -S deno run --allow-env=HOME --allow-read=/tmp --allow-write=/tmp --allow-run
+#!/usr/bin/env node
 
-import { existsSync } from "node:fs";
+import { execFileSync, spawnSync } from "node:child_process";
+import { existsSync, mkdtempDisposableSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+import { cwd, env } from "node:process";
 
 const COMMANDS = {
 	"Cargo.lock":
@@ -11,40 +15,23 @@ const COMMANDS = {
 		"rm -f package-lock.json && npm install --no-audit --no-fund --no-update-notifier --package-lock-only",
 } as const;
 
-const HOME = Deno.env.get("HOME")!;
+const HOME = env["HOME"];
 if (!HOME) {
 	throw new Error("Your shell should set your HOME directory as env");
 }
 
-async function exec(cmd: string, ...args: string[]): Promise<void> {
-	const process = new Deno.Command(cmd, { args }).spawn();
-	const status = await process.status;
-	if (!status.success) {
-		Deno.exit(1);
-	}
-}
-
-async function updateLockfiles(dir: string) {
+function updateLockfiles(dir: string) {
 	function git(...args: string[]): string {
-		const output = new Deno.Command("git", {
-			args,
-			cwd: dir,
-		}).outputSync();
-		if (!output.success) {
-			throw new Error(`git command was not successful: ${args}`);
-		}
-
-		return new TextDecoder().decode(output.stdout);
+		return execFileSync("git", args, { cwd: dir, encoding: "utf8" });
 	}
 
 	function willPushBeRelevant() {
-		const output = new Deno.Command("git", {
-			args: ["diff", "--shortstat", "origin/lockfiles"],
-			cwd: dir,
-		}).outputSync();
-		if (!output.success) return true;
-		const stdout = new TextDecoder().decode(output.stdout);
-		return stdout.length > 0;
+		try {
+			const stdout = git("diff", "--shortstat", "origin/lockfiles");
+			return stdout.length > 0;
+		} catch {
+			return true;
+		}
 	}
 
 	for (const [lockfile, command] of Object.entries(COMMANDS)) {
@@ -54,14 +41,17 @@ async function updateLockfiles(dir: string) {
 
 		console.log("run update command for", lockfile, "...");
 
-		const process = new Deno.Command("/usr/bin/nice", {
-			args: ["bash", "-rlc", "set -x && " + command],
-			clearEnv: true,
-			cwd: dir,
-			env: { HOME },
-		}).spawn();
-		const status = await process.status;
-		if (!status.success) {
+		const result = spawnSync(
+			"/usr/bin/nice",
+			["bash", "-rlc", "set -x && " + command],
+			{
+				cwd: dir,
+				env: { HOME },
+				stdio: ["ignore", "inherit", "inherit"],
+			},
+		);
+
+		if (result.status !== 0) {
 			throw new Error("Update lockfile command was not successful");
 		}
 	}
@@ -74,17 +64,12 @@ async function updateLockfiles(dir: string) {
 	if (!hasChanges) {
 		// No changes -> delete remote branch
 
-		const remoteBranchExists = new Deno.Command("git", {
-			args: [
-				"show-ref",
-				"--verify",
-				"--quiet",
-				"refs/remotes/origin/lockfiles",
-			],
-			cwd: dir,
-		}).outputSync().success;
-		if (remoteBranchExists) {
+		try {
+			git("show-ref", "--verify", "--quiet", "refs/remotes/origin/lockfiles");
+			// successful -> remote branch exists
 			git("push", "--quiet", "origin", ":lockfiles");
+		} catch {
+			// failed -> no remote branch exists, everything as it should be
 		}
 
 		return;
@@ -99,22 +84,18 @@ async function updateLockfiles(dir: string) {
 	}
 }
 
-const prefix = `git-lockfiles-${Deno.cwd()}-`.replaceAll(
-	/[^a-zA-Z0-9]+/g,
-	"-",
-);
-const tmpdir = await Deno.makeTempDir({ prefix });
+const prefix = `git-lockfiles-${cwd()}-`.replaceAll(/[^a-zA-Z0-9]+/g, "-");
+using worktree = mkdtempDisposableSync(join(tmpdir(), prefix));
 
-await exec(
-	"git",
+execFileSync("git", [
 	"worktree",
 	"add",
 	"--quiet",
 	"--no-track",
 	"-Blockfiles",
-	tmpdir,
+	worktree.path,
 	"origin/main",
-);
-await updateLockfiles(tmpdir);
-await exec("git", "worktree", "remove", tmpdir);
-await exec("git", "branch", "--quiet", "-D", "lockfiles");
+]);
+updateLockfiles(worktree.path);
+execFileSync("git", ["worktree", "remove", worktree.path]);
+execFileSync("git", ["branch", "--quiet", "-D", "lockfiles"]);
