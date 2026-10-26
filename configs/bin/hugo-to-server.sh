@@ -12,6 +12,7 @@ rsync \
 	--delete-delay \
 	--exclude=.DS_Store \
 	--perms \
+	--prune-empty-dirs \
 	--recursive \
 	--verbose \
 	public/ xmas2014.3t0.de:"/var/www/$folder/" |
