@@ -47,6 +47,7 @@ EXPLICIT=(
 	lostfiles
 	loupe # image viewer
 	miniserve
+	moreutils # sponge
 	mqttui
 	mumble
 	nautilus

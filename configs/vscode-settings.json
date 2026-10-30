@@ -1,5 +1,4 @@
 {
-	"deno.cacheOnSave": true,
 	"diffEditor.experimental.showMoves": true,
 	"diffEditor.ignoreTrimWhitespace": false,
 	"diffEditor.wordWrap": "on",
@@ -61,17 +60,10 @@
 	"workbench.layoutControl.enabled": false,
 	"workbench.startupEditor": "none",
 	"workbench.tree.enableStickyScroll": true,
-	"[json]": {
-		"editor.defaultFormatter": "denoland.vscode-deno"
-	},
-	"[jsonc]": {
-		"editor.defaultFormatter": "denoland.vscode-deno"
-	},
 	"[rust]": {
 		"editor.formatOnSave": true
 	},
 	"[typescript]": {
-		"editor.defaultFormatter": "denoland.vscode-deno",
 		"editor.codeActionsOnSave": {
 			"source.organizeImports": "explicit"
 		}
