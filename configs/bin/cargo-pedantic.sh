@@ -78,6 +78,7 @@ exec nice cargo clippy --keep-going "$@" -- \
 	-W impl_trait_redundant_captures \
 	-W meta_variable_misuse \
 	-W non_ascii_idents \
+	-W raw_borrows_via_references \
 	-W redundant_imports \
 	-W redundant_lifetimes \
 	-W single_use_lifetimes \
@@ -88,6 +89,7 @@ exec nice cargo clippy --keep-going "$@" -- \
 	-W unused_lifetimes \
 	-W unused_macro_rules \
 	-W unused_qualifications \
+	-W variant_size_differences \
 	-W rust_2024_compatibility \
 	-A edition-2024-expr-fragment-specifier \
 	-A if-let-rescope \
